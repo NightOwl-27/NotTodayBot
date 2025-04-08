@@ -12,11 +12,13 @@ app = Flask(__name__)
 def load_logs():
     log_file = os.path.join("logs", "malicious_packets.log")
     if not os.path.exists(log_file):
-        return ["No logs yet."], []
+        return ["No logs yet."], [], [], 0
+
     with open(log_file, "r") as f:
         lines = f.readlines()
 
     log_entries = []
+    attack_types_set = set()
 
     for line in lines:
         try:
@@ -24,22 +26,26 @@ def load_logs():
             timestamp = datetime.strptime(timestamp_str, "%Y-%m-%d %H:%M:%S,%f")
             tag = line.split("[")[1].split("]")[0] if "[" in line and "]" in line else "Unknown"
             log_entries.append((timestamp, tag, line))
+            attack_types_set.add(tag)
         except Exception:
             continue
 
     # Sort by timestamp
     log_entries.sort(key=lambda x: x[0])
 
-    # Return sorted lines only
+    # Reconstruct output
     sorted_lines = [entry[2] for entry in log_entries]
     timestamps = [entry[0] for entry in log_entries]
     attack_types = [entry[1] for entry in log_entries]
 
-    return sorted_lines, timestamps, attack_types
+    # Estimate total packets processed: 20,000 per attack type
+    total_processed = len(attack_types_set) * 20_000
+
+    return sorted_lines, timestamps, attack_types, total_processed
 
 
 # Generate EDA charts
-def generate_eda_charts(timestamps, attack_types):
+def generate_eda_charts(timestamps, attack_types, total_packets):
     static_dir = "web_dashboard/static"
     os.makedirs(static_dir, exist_ok=True)
 
@@ -49,10 +55,9 @@ def generate_eda_charts(timestamps, attack_types):
             os.remove(os.path.join(static_dir, filename))
         except FileNotFoundError:
             pass
+
     if not timestamps:
         return
-
-    os.makedirs("web_dashboard/static", exist_ok=True)
 
     # Line Chart - Malicious Detections Over Time
     day_counts = Counter(ts.strftime("%Y-%m-%d") for ts in timestamps)
@@ -70,10 +75,10 @@ def generate_eda_charts(timestamps, attack_types):
     plt.close()
 
     # Pie Chart - Total Packet Breakdown
-    total_packets = len(timestamps) + 50  # assuming 50 benign packets
     malicious_count = len(timestamps)
+    benign_count = total_packets - malicious_count
     labels = ['Malicious', 'Benign']
-    sizes = [malicious_count, total_packets - malicious_count]
+    sizes = [malicious_count, benign_count]
 
     plt.figure(figsize=(5, 5))
     plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)
@@ -93,6 +98,11 @@ def generate_eda_charts(timestamps, attack_types):
         plt.close()
 
 # HTML template with tabs and integrated chart
+        return ["No logs yet."]
+    with open(log_file, "r") as f:
+        return f.readlines()
+
+# HTML template as a multi-line string
 template = """
 <!DOCTYPE html>
 <html>
@@ -201,9 +211,10 @@ template = """
 
 @app.route("/")
 def home():
-    logs, timestamps, attack_types = load_logs()
-    generate_eda_charts(timestamps, attack_types)
+    logs, timestamps, attack_types, total_packets = load_logs()
+    generate_eda_charts(timestamps, attack_types, total_packets)
     return render_template_string(template, logs="".join(logs))
+
 
 @app.route("/static/<path:filename>")
 def static_files(filename):
