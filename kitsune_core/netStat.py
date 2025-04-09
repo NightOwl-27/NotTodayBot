@@ -4,7 +4,7 @@ import os
 import subprocess
 import pyximport
 pyximport.install()
-import AfterImage as af
+from kitsune_core import AfterImage as af
 #import AfterImage_NDSS as af
 
 #

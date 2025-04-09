@@ -1,9 +1,15 @@
+import sys
 import logging
 import os
+sys.path.append(os.path.dirname(__file__))
 import numpy as np
-from scapy.all import sniff, IP, TCP, UDP
+from time import time
+from scapy.all import sniff, IP, TCP, UDP, Raw
 from tensorflow.keras.models import load_model
 from sklearn.preprocessing import StandardScaler
+from my_feature_extractor import LiveFeatureExtractor
+
+
 
 # --- CONFIGURATION ---
 MODEL_DIR = "models"
@@ -26,11 +32,20 @@ logging.basicConfig(
 # --- LOAD MODELS ---
 model_files = [f for f in os.listdir(MODEL_DIR) if f.endswith(".h5")]
 models = [load_model(os.path.join(MODEL_DIR, f)) for f in model_files]
-print(f"✅ Loaded models: {model_files}")
+print(f"Loaded models: {model_files}")
 
-# --- FEATURE EXTRACTION PLACEHOLDER ---
+# --- FEATURE EXTRACTOR SETUP ---
+feature_extractor = LiveFeatureExtractor()
+
+# --- FEATURE EXTRACTION ---
 def extract_features(packet):
-    return np.random.rand(FEATURE_DIM)
+    try:
+        features = feature_extractor.extract_from_packet(packet)
+        print("Feature vector length:", len(features))
+        return features
+    except Exception as e:
+        print("Feature extraction error:", e)
+        return None
 
 # --- VOTING SYSTEM ---
 def is_packet_malicious(features):
@@ -42,18 +57,26 @@ def is_packet_malicious(features):
 # --- PACKET CALLBACK ---
 def process_packet(packet):
     try:
-        features = extract_features(packet)
+        ts = time()
+        features = feature_extractor.process_packet(packet, ts)
+        print("Extracted feature length:", len(features))
+        if features is None:
+            return
         if is_packet_malicious(features):
             msg = "Malicious packet detected [Live]"
             logging.info(msg)
             print("\033[91m" + msg + "\033[0m")
     except Exception as e:
-        print("⚠️ Error processing packet:", e)
+        print("Error processing packet:", e)
 
 # --- START SNIFFING ---
-print("📡 Sniffing live traffic (ports: 80, 443, 22, 53, 3389)...")
+# Ports based on Kitsune's attack types: web (80/443), DNS (53), SSH (22), RDP (3389), SSDP (1900), and custom IoT (47808)
+print("Sniffing live traffic (ports: 80, 443, 22, 53, 3389, 1900, 47808)...")
 sniff(
-    filter="tcp port 80 or tcp port 443 or port 22 or port 53 or port 3389",
+    filter="tcp port 80 or tcp port 443 or port 22 or port 53 or port 3389 or udp port 1900 or udp port 47808",
     prn=process_packet,
     store=0
 )
+
+
+

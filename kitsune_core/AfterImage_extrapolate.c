@@ -4,12 +4,12 @@
 {
     "distutils": {
         "depends": [],
-        "name": "AfterImage_extrapolate",
+        "name": "kitsune_core.AfterImage_extrapolate",
         "sources": [
             "kitsune_core/AfterImage_extrapolate.pyx"
         ]
     },
-    "module_name": "AfterImage_extrapolate"
+    "module_name": "kitsune_core.AfterImage_extrapolate"
 }
 END: Cython Metadata */
 
@@ -1246,8 +1246,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__AfterImage_extrapolate
-#define __PYX_HAVE_API__AfterImage_extrapolate
+#define __PYX_HAVE__kitsune_core__AfterImage_extrapolate
+#define __PYX_HAVE_API__kitsune_core__AfterImage_extrapolate
 /* Early includes */
 #include <string.h>
 #include <stdio.h>
@@ -1533,12 +1533,12 @@ static const char *__pyx_f[] = {
 struct arrayobject;
 typedef struct arrayobject arrayobject;
 #endif
-struct __pyx_obj_22AfterImage_extrapolate_incStat;
-struct __pyx_obj_22AfterImage_extrapolate_incStat_cov;
-struct __pyx_obj_22AfterImage_extrapolate_incStatDB;
-struct __pyx_obj_22AfterImage_extrapolate_Queue;
-struct __pyx_obj_22AfterImage_extrapolate_extrapolator;
-struct __pyx_obj_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords;
+struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat;
+struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov;
+struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB;
+struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue;
+struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator;
+struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords;
 struct __pyx_opt_args_7cpython_11contextvars_get_value;
 struct __pyx_opt_args_7cpython_11contextvars_get_value_no_default;
 
@@ -1565,69 +1565,69 @@ struct __pyx_opt_args_7cpython_11contextvars_get_value_no_default {
   int __pyx_n;
   PyObject *default_value;
 };
-struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_insert;
-struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_getHeaders_1D;
-struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_getHeaders_2D;
-struct __pyx_opt_args_22AfterImage_extrapolate_11incStat_cov_getHeaders;
+struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_insert;
+struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_getHeaders_1D;
+struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_getHeaders_2D;
+struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_getHeaders;
 
-/* "AfterImage_extrapolate.pyx":57
+/* "kitsune_core/AfterImage_extrapolate.pyx":57
  *         self.covs = [] # a list of incStat_covs (references) with relate to this incStat
  * 
  *     cdef insert(self, double v, double t=0):  # v is a scalar, t is v's arrival the timestamp             # <<<<<<<<<<<<<<
  *         if self.isTypeDiff:
  *             if t - self.lastTimestamp > 0:
  */
-struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_insert {
+struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_insert {
   int __pyx_n;
   double t;
 };
 
-/* "AfterImage_extrapolate.pyx":167
+/* "kitsune_core/AfterImage_extrapolate.pyx":167
  *         return stats1D + stats2D
  * 
  *     cdef getHeaders_1D(self, suffix=True):             # <<<<<<<<<<<<<<
  *         if self.ID is None:
  *             s0=""
  */
-struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_getHeaders_1D {
+struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_getHeaders_1D {
   int __pyx_n;
   PyObject *suffix;
 };
 
-/* "AfterImage_extrapolate.pyx":177
+/* "kitsune_core/AfterImage_extrapolate.pyx":177
  *         return headers
  * 
  *     cdef getHeaders_2D(self, ID2, suffix=True):             # <<<<<<<<<<<<<<
  *         hdrs1D = self.getHeaders_1D(suffix)
  *         if self.ID is None:
  */
-struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_getHeaders_2D {
+struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_getHeaders_2D {
   int __pyx_n;
   PyObject *suffix;
 };
 
-/* "AfterImage_extrapolate.pyx":314
+/* "kitsune_core/AfterImage_extrapolate.pyx":314
  *         return [self.incS1.w,self.incS1.mean(),self.incS1.std(),self.incS2.w,self.incS2.mean(),self.incS2.std(), self.incS1.radius([self.incS2]),self.incS1.magnitude([self.incS2]),self.cov(), self.pcc()]
  * 
  *     cdef getHeaders(self,int ver,int suffix=True): #ver = {1,2,3,4}             # <<<<<<<<<<<<<<
  *         headers = []
  *         s0 = "0"
  */
-struct __pyx_opt_args_22AfterImage_extrapolate_11incStat_cov_getHeaders {
+struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_getHeaders {
   int __pyx_n;
   int suffix;
 };
 
-/* "AfterImage_extrapolate.pyx":31
+/* "kitsune_core/AfterImage_extrapolate.pyx":31
  * import pyximport; pyximport.install()
  * 
  * cdef class incStat:             # <<<<<<<<<<<<<<
  *     cdef str ID
  *     cdef double CF1
  */
-struct __pyx_obj_22AfterImage_extrapolate_incStat {
+struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat {
   PyObject_HEAD
-  struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *__pyx_vtab;
+  struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_vtab;
   PyObject *ID;
   double CF1;
   double CF2;
@@ -1642,88 +1642,88 @@ struct __pyx_obj_22AfterImage_extrapolate_incStat {
 };
 
 
-/* "AfterImage_extrapolate.pyx":213
+/* "kitsune_core/AfterImage_extrapolate.pyx":213
  * #like incStat, but maintains stats between two streams
  * #TODO: make it possble to call incstat magnitude and raduis withour list of incstsats (just single incstat objects) for cov.getstats2 typcast call
  * cdef class incStat_cov:             # <<<<<<<<<<<<<<
  *     cdef double CF3
  *     cdef double w3
  */
-struct __pyx_obj_22AfterImage_extrapolate_incStat_cov {
+struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov {
   PyObject_HEAD
-  struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov *__pyx_vtab;
+  struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_vtab;
   double CF3;
   double w3;
   double lastTimestamp_cf3;
-  struct __pyx_obj_22AfterImage_extrapolate_incStat *incS1;
-  struct __pyx_obj_22AfterImage_extrapolate_incStat *incS2;
-  struct __pyx_obj_22AfterImage_extrapolate_extrapolator *ex1;
-  struct __pyx_obj_22AfterImage_extrapolate_extrapolator *ex2;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *incS1;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *incS2;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *ex1;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *ex2;
 };
 
 
-/* "AfterImage_extrapolate.pyx":335
+/* "kitsune_core/AfterImage_extrapolate.pyx":335
  * 
  * 
  * cdef class incStatDB:             # <<<<<<<<<<<<<<
  *     cdef double limit
  *     cdef double df_lambda
  */
-struct __pyx_obj_22AfterImage_extrapolate_incStatDB {
+struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB {
   PyObject_HEAD
-  struct __pyx_vtabstruct_22AfterImage_extrapolate_incStatDB *__pyx_vtab;
+  struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_vtab;
   double limit;
   double df_lambda;
   PyObject *HT;
 };
 
 
-/* "AfterImage_extrapolate.pyx":701
+/* "kitsune_core/AfterImage_extrapolate.pyx":701
  * #import cython
  * 
  * cdef class Queue:             # <<<<<<<<<<<<<<
  * 
  *     cdef double[3] q
  */
-struct __pyx_obj_22AfterImage_extrapolate_Queue {
+struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue {
   PyObject_HEAD
-  struct __pyx_vtabstruct_22AfterImage_extrapolate_Queue *__pyx_vtab;
+  struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_Queue *__pyx_vtab;
   double q[3];
   int indx;
   unsigned int n;
 };
 
 
-/* "AfterImage_extrapolate.pyx":754
+/* "kitsune_core/AfterImage_extrapolate.pyx":754
  *             return dif/2
  * 
  * cdef class extrapolator:             # <<<<<<<<<<<<<<
  * 
  *     cdef Queue Qt
  */
-struct __pyx_obj_22AfterImage_extrapolate_extrapolator {
+struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator {
   PyObject_HEAD
-  struct __pyx_vtabstruct_22AfterImage_extrapolate_extrapolator *__pyx_vtab;
-  struct __pyx_obj_22AfterImage_extrapolate_Queue *Qt;
-  struct __pyx_obj_22AfterImage_extrapolate_Queue *Qv;
+  struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_extrapolator *__pyx_vtab;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *Qt;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *Qv;
 };
 
 
-/* "AfterImage_extrapolate.pyx":536
+/* "kitsune_core/AfterImage_extrapolate.pyx":536
  *     #cleans out records that have a weight less than the cutoff.
  *     #returns number or removed records.
  *     def cleanOutOldRecords(self,double cutoffWeight,double curTime):             # <<<<<<<<<<<<<<
  *         cdef int n
  *         cdef double W
  */
-struct __pyx_obj_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords {
+struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords {
   PyObject_HEAD
   double __pyx_v_curTime;
 };
 
 
 
-/* "AfterImage_extrapolate.pyx":31
+/* "kitsune_core/AfterImage_extrapolate.pyx":31
  * import pyximport; pyximport.install()
  * 
  * cdef class incStat:             # <<<<<<<<<<<<<<
@@ -1731,27 +1731,27 @@ struct __pyx_obj_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords
  *     cdef double CF1
  */
 
-struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat {
-  PyObject *(*insert)(struct __pyx_obj_22AfterImage_extrapolate_incStat *, double, struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_insert *__pyx_optional_args);
-  PyObject *(*processDecay)(struct __pyx_obj_22AfterImage_extrapolate_incStat *, double);
-  PyObject *(*weight)(struct __pyx_obj_22AfterImage_extrapolate_incStat *);
-  PyObject *(*mean)(struct __pyx_obj_22AfterImage_extrapolate_incStat *);
-  PyObject *(*var)(struct __pyx_obj_22AfterImage_extrapolate_incStat *);
-  PyObject *(*std)(struct __pyx_obj_22AfterImage_extrapolate_incStat *);
-  PyObject *(*cov)(struct __pyx_obj_22AfterImage_extrapolate_incStat *, PyObject *);
-  PyObject *(*pcc)(struct __pyx_obj_22AfterImage_extrapolate_incStat *, PyObject *);
-  PyObject *(*cov_pcc)(struct __pyx_obj_22AfterImage_extrapolate_incStat *, PyObject *);
-  PyObject *(*radius)(struct __pyx_obj_22AfterImage_extrapolate_incStat *, PyObject *);
-  PyObject *(*magnitude)(struct __pyx_obj_22AfterImage_extrapolate_incStat *, PyObject *);
-  PyObject *(*allstats_1D)(struct __pyx_obj_22AfterImage_extrapolate_incStat *);
-  PyObject *(*allstats_2D)(struct __pyx_obj_22AfterImage_extrapolate_incStat *, PyObject *);
-  PyObject *(*getHeaders_1D)(struct __pyx_obj_22AfterImage_extrapolate_incStat *, struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_getHeaders_1D *__pyx_optional_args);
-  PyObject *(*getHeaders_2D)(struct __pyx_obj_22AfterImage_extrapolate_incStat *, PyObject *, struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_getHeaders_2D *__pyx_optional_args);
+struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat {
+  PyObject *(*insert)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, double, struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_insert *__pyx_optional_args);
+  PyObject *(*processDecay)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, double);
+  PyObject *(*weight)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *);
+  PyObject *(*mean)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *);
+  PyObject *(*var)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *);
+  PyObject *(*std)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *);
+  PyObject *(*cov)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, PyObject *);
+  PyObject *(*pcc)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, PyObject *);
+  PyObject *(*cov_pcc)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, PyObject *);
+  PyObject *(*radius)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, PyObject *);
+  PyObject *(*magnitude)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, PyObject *);
+  PyObject *(*allstats_1D)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *);
+  PyObject *(*allstats_2D)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, PyObject *);
+  PyObject *(*getHeaders_1D)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_getHeaders_1D *__pyx_optional_args);
+  PyObject *(*getHeaders_2D)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, PyObject *, struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_getHeaders_2D *__pyx_optional_args);
 };
-static struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *__pyx_vtabptr_22AfterImage_extrapolate_incStat;
+static struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_vtabptr_12kitsune_core_22AfterImage_extrapolate_incStat;
 
 
-/* "AfterImage_extrapolate.pyx":213
+/* "kitsune_core/AfterImage_extrapolate.pyx":213
  * #like incStat, but maintains stats between two streams
  * #TODO: make it possble to call incstat magnitude and raduis withour list of incstsats (just single incstat objects) for cov.getstats2 typcast call
  * cdef class incStat_cov:             # <<<<<<<<<<<<<<
@@ -1759,21 +1759,21 @@ static struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *__pyx_vtabptr_2
  *     cdef double w3
  */
 
-struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov {
-  PyObject *(*update_cov)(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *, PyObject *, double, double);
-  PyObject *(*processDecay)(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *, double);
-  PyObject *(*cov)(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *);
-  PyObject *(*pcc)(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *);
-  PyObject *(*get_stats1)(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *);
-  PyObject *(*get_stats2)(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *);
-  PyObject *(*get_stats3)(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *);
-  PyObject *(*get_stats4)(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *);
-  PyObject *(*getHeaders)(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *, int, struct __pyx_opt_args_22AfterImage_extrapolate_11incStat_cov_getHeaders *__pyx_optional_args);
+struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov {
+  PyObject *(*update_cov)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *, PyObject *, double, double);
+  PyObject *(*processDecay)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *, double);
+  PyObject *(*cov)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *);
+  PyObject *(*pcc)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *);
+  PyObject *(*get_stats1)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *);
+  PyObject *(*get_stats2)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *);
+  PyObject *(*get_stats3)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *);
+  PyObject *(*get_stats4)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *);
+  PyObject *(*getHeaders)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *, int, struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_getHeaders *__pyx_optional_args);
 };
-static struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov *__pyx_vtabptr_22AfterImage_extrapolate_incStat_cov;
+static struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_vtabptr_12kitsune_core_22AfterImage_extrapolate_incStat_cov;
 
 
-/* "AfterImage_extrapolate.pyx":335
+/* "kitsune_core/AfterImage_extrapolate.pyx":335
  * 
  * 
  * cdef class incStatDB:             # <<<<<<<<<<<<<<
@@ -1781,13 +1781,13 @@ static struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov *__pyx_vtabp
  *     cdef double df_lambda
  */
 
-struct __pyx_vtabstruct_22AfterImage_extrapolate_incStatDB {
-  PyObject *(*get_lambda)(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *, double);
+struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStatDB {
+  PyObject *(*get_lambda)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *, double);
 };
-static struct __pyx_vtabstruct_22AfterImage_extrapolate_incStatDB *__pyx_vtabptr_22AfterImage_extrapolate_incStatDB;
+static struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_vtabptr_12kitsune_core_22AfterImage_extrapolate_incStatDB;
 
 
-/* "AfterImage_extrapolate.pyx":701
+/* "kitsune_core/AfterImage_extrapolate.pyx":701
  * #import cython
  * 
  * cdef class Queue:             # <<<<<<<<<<<<<<
@@ -1795,16 +1795,16 @@ static struct __pyx_vtabstruct_22AfterImage_extrapolate_incStatDB *__pyx_vtabptr
  *     cdef double[3] q
  */
 
-struct __pyx_vtabstruct_22AfterImage_extrapolate_Queue {
-  PyObject *(*insert)(struct __pyx_obj_22AfterImage_extrapolate_Queue *, double);
-  PyObject *(*unroll)(struct __pyx_obj_22AfterImage_extrapolate_Queue *);
-  PyObject *(*get_last)(struct __pyx_obj_22AfterImage_extrapolate_Queue *);
-  PyObject *(*get_mean_diff)(struct __pyx_obj_22AfterImage_extrapolate_Queue *);
+struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_Queue {
+  PyObject *(*insert)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *, double);
+  PyObject *(*unroll)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *);
+  PyObject *(*get_last)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *);
+  PyObject *(*get_mean_diff)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *);
 };
-static struct __pyx_vtabstruct_22AfterImage_extrapolate_Queue *__pyx_vtabptr_22AfterImage_extrapolate_Queue;
+static struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_Queue *__pyx_vtabptr_12kitsune_core_22AfterImage_extrapolate_Queue;
 
 
-/* "AfterImage_extrapolate.pyx":754
+/* "kitsune_core/AfterImage_extrapolate.pyx":754
  *             return dif/2
  * 
  * cdef class extrapolator:             # <<<<<<<<<<<<<<
@@ -1812,10 +1812,10 @@ static struct __pyx_vtabstruct_22AfterImage_extrapolate_Queue *__pyx_vtabptr_22A
  *     cdef Queue Qt
  */
 
-struct __pyx_vtabstruct_22AfterImage_extrapolate_extrapolator {
-  PyObject *(*interpolate)(struct __pyx_obj_22AfterImage_extrapolate_extrapolator *, double, arrayobject *, arrayobject *);
+struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_extrapolator {
+  PyObject *(*interpolate)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *, double, arrayobject *, arrayobject *);
 };
-static struct __pyx_vtabstruct_22AfterImage_extrapolate_extrapolator *__pyx_vtabptr_22AfterImage_extrapolate_extrapolator;
+static struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_extrapolator *__pyx_vtabptr_12kitsune_core_22AfterImage_extrapolate_extrapolator;
 /* #### Code section: utility_code_proto ### */
 
 /* --- Runtime support code (head) --- */
@@ -2891,36 +2891,36 @@ static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 /* #### Code section: module_declarations ### */
 static CYTHON_INLINE double __pyx_f_7cpython_7complex_7complex_4real_real(PyComplexObject *__pyx_v_self); /* proto*/
 static CYTHON_INLINE double __pyx_f_7cpython_7complex_7complex_4imag_imag(PyComplexObject *__pyx_v_self); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, double __pyx_v_v, struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_insert *__pyx_optional_args); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_processDecay(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, double __pyx_v_timestamp); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_weight(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_mean(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_var(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_std(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_ID2); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_pcc(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_ID2); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov_pcc(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_ID2); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_radius(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_other_incStats); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_magnitude(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_other_incStats); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_1D(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_2D(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_ID2); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_1D(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_getHeaders_1D *__pyx_optional_args); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_ID2, struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_getHeaders_2D *__pyx_optional_args); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_v, double __pyx_v_t); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_processDecay(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, double __pyx_v_t); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_cov(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_pcc(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats1(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats2(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats3(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats4(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, int __pyx_v_ver, struct __pyx_opt_args_22AfterImage_extrapolate_11incStat_cov_getHeaders *__pyx_optional_args); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_9incStatDB_get_lambda(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, double __pyx_v_Lambda); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_insert(struct __pyx_obj_22AfterImage_extrapolate_Queue *__pyx_v_self, double __pyx_v_v); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj_22AfterImage_extrapolate_Queue *__pyx_v_self); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_get_last(struct __pyx_obj_22AfterImage_extrapolate_Queue *__pyx_v_self); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_get_mean_diff(struct __pyx_obj_22AfterImage_extrapolate_Queue *__pyx_v_self); /* proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate_12extrapolator_interpolate(CYTHON_UNUSED struct __pyx_obj_22AfterImage_extrapolate_extrapolator *__pyx_v_self, double __pyx_v_tp, arrayobject *__pyx_v_tm, arrayobject *__pyx_v_ym); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_insert(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, double __pyx_v_v, struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_insert *__pyx_optional_args); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_processDecay(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, double __pyx_v_timestamp); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_weight(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_mean(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_var(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_std(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_cov(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_ID2); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_pcc(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_ID2); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_cov_pcc(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_ID2); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_radius(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_other_incStats); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_magnitude(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_other_incStats); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_allstats_1D(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_allstats_2D(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_ID2); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_getHeaders_1D(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_getHeaders_1D *__pyx_optional_args); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_ID2, struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_getHeaders_2D *__pyx_optional_args); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_update_cov(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_v, double __pyx_v_t); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_processDecay(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, double __pyx_v_t); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_cov(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_pcc(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_get_stats1(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_get_stats2(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_get_stats3(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_get_stats4(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_getHeaders(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, int __pyx_v_ver, struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_getHeaders *__pyx_optional_args); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_9incStatDB_get_lambda(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, double __pyx_v_Lambda); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_5Queue_insert(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *__pyx_v_self, double __pyx_v_v); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *__pyx_v_self); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_5Queue_get_last(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *__pyx_v_self); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_5Queue_get_mean_diff(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *__pyx_v_self); /* proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_12extrapolator_interpolate(CYTHON_UNUSED struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *__pyx_v_self, double __pyx_v_tp, arrayobject *__pyx_v_tm, arrayobject *__pyx_v_ym); /* proto*/
 
 /* Module declarations from "cpython.version" */
 
@@ -3013,22 +3013,22 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_12extrapolator_interpolate(CYT
 /* Module declarations from "cpython.array" */
 static CYTHON_INLINE int __pyx_f_7cpython_5array_extend_buffer(arrayobject *, char *, Py_ssize_t); /*proto*/
 
-/* Module declarations from "AfterImage_extrapolate" */
-static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStat__set_state(struct __pyx_obj_22AfterImage_extrapolate_incStat *, PyObject *); /*proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStat_cov__set_state(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *, PyObject *); /*proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStatDB__set_state(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *, PyObject *); /*proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_Queue__set_state(struct __pyx_obj_22AfterImage_extrapolate_Queue *, PyObject *); /*proto*/
-static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_extrapolator__set_state(struct __pyx_obj_22AfterImage_extrapolate_extrapolator *, PyObject *); /*proto*/
+/* Module declarations from "kitsune_core.AfterImage_extrapolate" */
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_incStat__set_state(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, PyObject *); /*proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_incStat_cov__set_state(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *, PyObject *); /*proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_incStatDB__set_state(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *, PyObject *); /*proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_Queue__set_state(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *, PyObject *); /*proto*/
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_extrapolator__set_state(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *, PyObject *); /*proto*/
 static CYTHON_INLINE PyObject *__Pyx_carray_to_py_double(double *, Py_ssize_t); /*proto*/
 static CYTHON_INLINE PyObject *__Pyx_carray_to_tuple_double(double *, Py_ssize_t); /*proto*/
 static int __Pyx_carray_from_py_double(PyObject *, double *, Py_ssize_t); /*proto*/
 /* #### Code section: typeinfo ### */
 /* #### Code section: before_global_var ### */
-#define __Pyx_MODULE_NAME "AfterImage_extrapolate"
-extern int __pyx_module_is_main_AfterImage_extrapolate;
-int __pyx_module_is_main_AfterImage_extrapolate = 0;
+#define __Pyx_MODULE_NAME "kitsune_core.AfterImage_extrapolate"
+extern int __pyx_module_is_main_kitsune_core__AfterImage_extrapolate;
+int __pyx_module_is_main_kitsune_core__AfterImage_extrapolate = 0;
 
-/* Implementation of "AfterImage_extrapolate" */
+/* Implementation of "kitsune_core.AfterImage_extrapolate" */
 /* #### Code section: global_var ### */
 static PyObject *__pyx_builtin_LookupError;
 static PyObject *__pyx_builtin_sorted;
@@ -3074,7 +3074,6 @@ static const char __pyx_k_1_2[] = "1";
 static const char __pyx_k_ID1[] = "ID1";
 static const char __pyx_k_ID2[] = "ID2";
 static const char __pyx_k_IDs[] = "IDs";
-static const char __pyx_k_Inf[] = "Inf";
 static const char __pyx_k__13[] = "*";
 static const char __pyx_k__94[] = "?";
 static const char __pyx_k_bin[] = "bin";
@@ -3082,6 +3081,7 @@ static const char __pyx_k_cov[] = "cov";
 static const char __pyx_k_doc[] = "__doc__";
 static const char __pyx_k_get[] = "get";
 static const char __pyx_k_inc[] = "inc";
+static const char __pyx_k_inf[] = "inf";
 static const char __pyx_k_key[] = "key";
 static const char __pyx_k_log[] = "log";
 static const char __pyx_k_mag[] = "mag";
@@ -3255,7 +3255,6 @@ static const char __pyx_k_pyx_unpickle_incStat[] = "__pyx_unpickle_incStat";
 static const char __pyx_k_Queue___reduce_cython[] = "Queue.__reduce_cython__";
 static const char __pyx_k_incStat_cov_isRelated[] = "incStat_cov.isRelated";
 static const char __pyx_k_update_get_1D2D_Stats[] = "update_get_1D2D_Stats";
-static const char __pyx_k_AfterImage_extrapolate[] = "AfterImage_extrapolate";
 static const char __pyx_k_incStatDB_get_1D_Stats[] = "incStatDB.get_1D_Stats";
 static const char __pyx_k_incStatDB_get_2D_Stats[] = "incStatDB.get_2D_Stats";
 static const char __pyx_k_incStatDB_get_nD_Stats[] = "incStatDB.get_nD_Stats";
@@ -3284,67 +3283,68 @@ static const char __pyx_k_incStatDB_update_get_1D2D_Stats[] = "incStatDB.update_
 static const char __pyx_k_would_exceed_incStatHT_1D_limit[] = "\nwould exceed incStatHT 1D limit of ";
 static const char __pyx_k_Incompatible_checksums_0x_x_vs_0[] = "Incompatible checksums (0x%x vs (0xd3a4dbc, 0x5593093, 0x33e9a18) = (CF1, CF2, ID, Lambda, covs, cur_mean, cur_std, cur_var, isTypeDiff, lastTimestamp, w))";
 static const char __pyx_k_cleanOutOldRecords_locals_lambda[] = "cleanOutOldRecords.<locals>.<lambda>";
-static const char __pyx_k_kitsune_core_AfterImage_extrapol[] = "kitsune_core\\AfterImage_extrapolate.pyx";
+static const char __pyx_k_kitsune_core_AfterImage_extrapol[] = "kitsune_core.AfterImage_extrapolate";
 static const char __pyx_k_Incompatible_checksums_0x_x_vs_0_2[] = "Incompatible checksums (0x%x vs (0x26f0d32, 0xa9a0c4b, 0x2c417a3) = (CF3, ex1, ex2, incS1, incS2, lastTimestamp_cf3, w3))";
 static const char __pyx_k_Incompatible_checksums_0x_x_vs_0_3[] = "Incompatible checksums (0x%x vs (0xe6a429e, 0xf64af8d, 0xe0273d6) = (HT, df_lambda, limit))";
 static const char __pyx_k_Incompatible_checksums_0x_x_vs_0_4[] = "Incompatible checksums (0x%x vs (0xcd3c8b8, 0xc0d0456, 0x906dde6) = (indx, n, q))";
 static const char __pyx_k_Incompatible_checksums_0x_x_vs_0_5[] = "Incompatible checksums (0x%x vs (0x84e22b5, 0xf8714d1, 0x3db1e9e) = (Qt, Qv))";
+static const char __pyx_k_kitsune_core_AfterImage_extrapol_2[] = "kitsune_core\\AfterImage_extrapolate.pyx";
 /* #### Code section: decls ### */
 static int __pyx_pf_7cpython_5array_5array___getbuffer__(arrayobject *__pyx_v_self, Py_buffer *__pyx_v_info, CYTHON_UNUSED int __pyx_v_flags); /* proto */
 static void __pyx_pf_7cpython_5array_5array_2__releasebuffer__(CYTHON_UNUSED arrayobject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
-static int __pyx_pf_22AfterImage_extrapolate_7incStat___init__(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, double __pyx_v_Lambda, PyObject *__pyx_v_ID, double __pyx_v_init_time, int __pyx_v_isTypeDiff); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_7incStat_2__reduce_cython__(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_7incStat_4__setstate_cython__(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
-static int __pyx_pf_22AfterImage_extrapolate_11incStat_cov___init__(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_incS1, struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_incS2, double __pyx_v_init_time); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_11incStat_cov_2isRelated(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, PyObject *__pyx_v_ID); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_11incStat_cov_4__reduce_cython__(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_11incStat_cov_6__setstate_cython__(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
-static int __pyx_pf_22AfterImage_extrapolate_9incStatDB___init__(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, double __pyx_v_limit, double __pyx_v_default_lambda); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_Lambda, double __pyx_v_init_time, int __pyx_v_isTypeDiff); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_4register_cov(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID1, PyObject *__pyx_v_ID2, double __pyx_v_Lambda, double __pyx_v_init_time, int __pyx_v_isTypeDiff); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_6update(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_t, double __pyx_v_v, double __pyx_v_Lambda, int __pyx_v_isTypeDiff); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_8get_1D_Stats(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_Lambda); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_10get_2D_Stats(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID1, PyObject *__pyx_v_ID2, double __pyx_v_Lambda); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_Lambda); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_IDs, double __pyx_v_Lambda); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_16update_get_1D_Stats(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_t, double __pyx_v_v, double __pyx_v_Lambda, int __pyx_v_isTypeDiff); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_18update_get_2D_Stats(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID1, PyObject *__pyx_v_ID2, double __pyx_v_t1, double __pyx_v_v1, double __pyx_v_Lambda, int __pyx_v_level); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_20update_get_1D2D_Stats(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID1, PyObject *__pyx_v_ID2, double __pyx_v_t1, double __pyx_v_v1, double __pyx_v_Lambda); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_22getHeaders_1D(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_Lambda, PyObject *__pyx_v_ID); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_24getHeaders_2D(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_Lambda, PyObject *__pyx_v_IDs, PyObject *__pyx_v_ver); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_26getHeaders_1D2D(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_Lambda, PyObject *__pyx_v_IDs, PyObject *__pyx_v_ver); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_28getHeaders_nD(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_Lambda, PyObject *__pyx_v_IDs); /* proto */
+static int __pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incStat___init__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, double __pyx_v_Lambda, PyObject *__pyx_v_ID, double __pyx_v_init_time, int __pyx_v_isTypeDiff); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incStat_2__reduce_cython__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incStat_4__setstate_cython__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
+static int __pyx_pf_12kitsune_core_22AfterImage_extrapolate_11incStat_cov___init__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_incS1, struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_incS2, double __pyx_v_init_time); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_2isRelated(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, PyObject *__pyx_v_ID); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_4__reduce_cython__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_6__setstate_cython__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
+static int __pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB___init__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, double __pyx_v_limit, double __pyx_v_default_lambda); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_2register(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_Lambda, double __pyx_v_init_time, int __pyx_v_isTypeDiff); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_4register_cov(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID1, PyObject *__pyx_v_ID2, double __pyx_v_Lambda, double __pyx_v_init_time, int __pyx_v_isTypeDiff); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_6update(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_t, double __pyx_v_v, double __pyx_v_Lambda, int __pyx_v_isTypeDiff); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_8get_1D_Stats(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_Lambda); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_10get_2D_Stats(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID1, PyObject *__pyx_v_ID2, double __pyx_v_Lambda); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_Lambda); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_IDs, double __pyx_v_Lambda); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_16update_get_1D_Stats(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_t, double __pyx_v_v, double __pyx_v_Lambda, int __pyx_v_isTypeDiff); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_18update_get_2D_Stats(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID1, PyObject *__pyx_v_ID2, double __pyx_v_t1, double __pyx_v_v1, double __pyx_v_Lambda, int __pyx_v_level); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_20update_get_1D2D_Stats(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID1, PyObject *__pyx_v_ID2, double __pyx_v_t1, double __pyx_v_v1, double __pyx_v_Lambda); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_22getHeaders_1D(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_Lambda, PyObject *__pyx_v_ID); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_24getHeaders_2D(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_Lambda, PyObject *__pyx_v_IDs, PyObject *__pyx_v_ver); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_26getHeaders_1D2D(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_Lambda, PyObject *__pyx_v_IDs, PyObject *__pyx_v_ver); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_28getHeaders_nD(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_Lambda, PyObject *__pyx_v_IDs); /* proto */
 static PyObject *__pyx_lambda_funcdef_lambda(PyObject *__pyx_self, PyObject *__pyx_v_tup); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecords(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, double __pyx_v_cutoffWeight, double __pyx_v_curTime); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_32__reduce_cython__(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_34__setstate_cython__(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_nbins, PyObject *__pyx_v_Lambda, PyObject *__pyx_v_ubIsAnom, PyObject *__pyx_v_lbIsAnom, PyObject *__pyx_v_lbound, PyObject *__pyx_v_ubound, PyObject *__pyx_v_scaleGrace); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_val, PyObject *__pyx_v_win); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_4processDecay(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_bin, PyObject *__pyx_v_timestamp); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_val, PyObject *__pyx_v_timestamp, PyObject *__pyx_v_penalty); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_8halfsigmoid(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_k); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_val, PyObject *__pyx_v_timestamp, PyObject *__pyx_v_win); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_12getFreq(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_val, PyObject *__pyx_v_timestamp); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_14getHist(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_timestamp); /* proto */
-static int __pyx_pf_22AfterImage_extrapolate_5Queue___init__(struct __pyx_obj_22AfterImage_extrapolate_Queue *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_5Queue_2__reduce_cython__(struct __pyx_obj_22AfterImage_extrapolate_Queue *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_5Queue_4__setstate_cython__(struct __pyx_obj_22AfterImage_extrapolate_Queue *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
-static int __pyx_pf_22AfterImage_extrapolate_12extrapolator___init__(struct __pyx_obj_22AfterImage_extrapolate_extrapolator *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_2insert(struct __pyx_obj_22AfterImage_extrapolate_extrapolator *__pyx_v_self, double __pyx_v_t, double __pyx_v_v); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_4predict(struct __pyx_obj_22AfterImage_extrapolate_extrapolator *__pyx_v_self, double __pyx_v_t); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_6__reduce_cython__(struct __pyx_obj_22AfterImage_extrapolate_extrapolator *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_8__setstate_cython__(struct __pyx_obj_22AfterImage_extrapolate_extrapolator *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate___pyx_unpickle_incStat(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_2__pyx_unpickle_incStat_cov(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_4__pyx_unpickle_incStatDB(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_6__pyx_unpickle_Queue(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_pf_22AfterImage_extrapolate_8__pyx_unpickle_extrapolator(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_tp_new_22AfterImage_extrapolate_incStat(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_22AfterImage_extrapolate_incStat_cov(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_22AfterImage_extrapolate_incStatDB(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_22AfterImage_extrapolate_Queue(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_22AfterImage_extrapolate_extrapolator(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecords(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, double __pyx_v_cutoffWeight, double __pyx_v_curTime); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_32__reduce_cython__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_34__setstate_cython__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_nbins, PyObject *__pyx_v_Lambda, PyObject *__pyx_v_ubIsAnom, PyObject *__pyx_v_lbIsAnom, PyObject *__pyx_v_lbound, PyObject *__pyx_v_ubound, PyObject *__pyx_v_scaleGrace); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_val, PyObject *__pyx_v_win); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_4processDecay(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_bin, PyObject *__pyx_v_timestamp); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_val, PyObject *__pyx_v_timestamp, PyObject *__pyx_v_penalty); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_8halfsigmoid(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_k); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_val, PyObject *__pyx_v_timestamp, PyObject *__pyx_v_win); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_12getFreq(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_val, PyObject *__pyx_v_timestamp); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_14getHist(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_timestamp); /* proto */
+static int __pyx_pf_12kitsune_core_22AfterImage_extrapolate_5Queue___init__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_5Queue_2__reduce_cython__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_5Queue_4__setstate_cython__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
+static int __pyx_pf_12kitsune_core_22AfterImage_extrapolate_12extrapolator___init__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_12extrapolator_2insert(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *__pyx_v_self, double __pyx_v_t, double __pyx_v_v); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_12extrapolator_4predict(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *__pyx_v_self, double __pyx_v_t); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_12extrapolator_6__reduce_cython__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_12extrapolator_8__setstate_cython__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *__pyx_v_self, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_incStat(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_2__pyx_unpickle_incStat_cov(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_4__pyx_unpickle_incStatDB(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_6__pyx_unpickle_Queue(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_8__pyx_unpickle_extrapolator(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_tp_new_12kitsune_core_22AfterImage_extrapolate_incStat(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_12kitsune_core_22AfterImage_extrapolate_incStat_cov(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_12kitsune_core_22AfterImage_extrapolate_incStatDB(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_12kitsune_core_22AfterImage_extrapolate_Queue(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_12kitsune_core_22AfterImage_extrapolate_extrapolator(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static __Pyx_CachedCFunction __pyx_umethod_PyDict_Type_get = {0, 0, 0, 0, 0};
 static __Pyx_CachedCFunction __pyx_umethod_PyDict_Type_items = {0, 0, 0, 0, 0};
 /* #### Code section: late_includes ### */
@@ -3469,26 +3469,25 @@ typedef struct {
   #endif
   PyTypeObject *__pyx_ptype_7cpython_5array_array;
   #if CYTHON_USE_MODULE_STATE
-  PyObject *__pyx_type_22AfterImage_extrapolate_incStat;
-  PyObject *__pyx_type_22AfterImage_extrapolate_incStat_cov;
-  PyObject *__pyx_type_22AfterImage_extrapolate_incStatDB;
-  PyObject *__pyx_type_22AfterImage_extrapolate_Queue;
-  PyObject *__pyx_type_22AfterImage_extrapolate_extrapolator;
-  PyObject *__pyx_type_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords;
+  PyObject *__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat;
+  PyObject *__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat_cov;
+  PyObject *__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStatDB;
+  PyObject *__pyx_type_12kitsune_core_22AfterImage_extrapolate_Queue;
+  PyObject *__pyx_type_12kitsune_core_22AfterImage_extrapolate_extrapolator;
+  PyObject *__pyx_type_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords;
   #endif
-  PyTypeObject *__pyx_ptype_22AfterImage_extrapolate_incStat;
-  PyTypeObject *__pyx_ptype_22AfterImage_extrapolate_incStat_cov;
-  PyTypeObject *__pyx_ptype_22AfterImage_extrapolate_incStatDB;
-  PyTypeObject *__pyx_ptype_22AfterImage_extrapolate_Queue;
-  PyTypeObject *__pyx_ptype_22AfterImage_extrapolate_extrapolator;
-  PyTypeObject *__pyx_ptype_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords;
+  PyTypeObject *__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat;
+  PyTypeObject *__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov;
+  PyTypeObject *__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB;
+  PyTypeObject *__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue;
+  PyTypeObject *__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator;
+  PyTypeObject *__pyx_ptype_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords;
   PyObject *__pyx_kp_s_;
   PyObject *__pyx_n_s_0;
   PyObject *__pyx_kp_s_0_2;
   PyObject *__pyx_n_s_1;
   PyObject *__pyx_kp_s_1_2;
   PyObject *__pyx_kp_s_Adding_Entry;
-  PyObject *__pyx_n_s_AfterImage_extrapolate;
   PyObject *__pyx_n_s_H;
   PyObject *__pyx_n_s_ID;
   PyObject *__pyx_n_s_ID1;
@@ -3500,7 +3499,6 @@ typedef struct {
   PyObject *__pyx_kp_s_Incompatible_checksums_0x_x_vs_0_4;
   PyObject *__pyx_kp_s_Incompatible_checksums_0x_x_vs_0_5;
   PyObject *__pyx_n_s_IndexError;
-  PyObject *__pyx_n_s_Inf;
   PyObject *__pyx_n_s_L;
   PyObject *__pyx_n_s_Lambda;
   PyObject *__pyx_n_s_LookupError;
@@ -3610,6 +3608,7 @@ typedef struct {
   PyObject *__pyx_n_s_incStats;
   PyObject *__pyx_n_s_inc_cov;
   PyObject *__pyx_n_s_indx;
+  PyObject *__pyx_n_s_inf;
   PyObject *__pyx_n_s_init;
   PyObject *__pyx_n_s_init_subclass;
   PyObject *__pyx_n_s_init_time;
@@ -3627,7 +3626,8 @@ typedef struct {
   PyObject *__pyx_n_s_items;
   PyObject *__pyx_n_s_k;
   PyObject *__pyx_n_s_key;
-  PyObject *__pyx_kp_s_kitsune_core_AfterImage_extrapol;
+  PyObject *__pyx_n_s_kitsune_core_AfterImage_extrapol;
+  PyObject *__pyx_kp_s_kitsune_core_AfterImage_extrapol_2;
   PyObject *__pyx_n_s_lT;
   PyObject *__pyx_n_s_lbIsAnom;
   PyObject *__pyx_n_s_lbound;
@@ -3893,25 +3893,24 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_ptype_7cpython_4bool_bool);
   Py_CLEAR(clear_module_state->__pyx_ptype_7cpython_7complex_complex);
   Py_CLEAR(clear_module_state->__pyx_ptype_7cpython_5array_array);
-  Py_CLEAR(clear_module_state->__pyx_ptype_22AfterImage_extrapolate_incStat);
-  Py_CLEAR(clear_module_state->__pyx_type_22AfterImage_extrapolate_incStat);
-  Py_CLEAR(clear_module_state->__pyx_ptype_22AfterImage_extrapolate_incStat_cov);
-  Py_CLEAR(clear_module_state->__pyx_type_22AfterImage_extrapolate_incStat_cov);
-  Py_CLEAR(clear_module_state->__pyx_ptype_22AfterImage_extrapolate_incStatDB);
-  Py_CLEAR(clear_module_state->__pyx_type_22AfterImage_extrapolate_incStatDB);
-  Py_CLEAR(clear_module_state->__pyx_ptype_22AfterImage_extrapolate_Queue);
-  Py_CLEAR(clear_module_state->__pyx_type_22AfterImage_extrapolate_Queue);
-  Py_CLEAR(clear_module_state->__pyx_ptype_22AfterImage_extrapolate_extrapolator);
-  Py_CLEAR(clear_module_state->__pyx_type_22AfterImage_extrapolate_extrapolator);
-  Py_CLEAR(clear_module_state->__pyx_ptype_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords);
-  Py_CLEAR(clear_module_state->__pyx_type_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords);
+  Py_CLEAR(clear_module_state->__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat);
+  Py_CLEAR(clear_module_state->__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat);
+  Py_CLEAR(clear_module_state->__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov);
+  Py_CLEAR(clear_module_state->__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat_cov);
+  Py_CLEAR(clear_module_state->__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB);
+  Py_CLEAR(clear_module_state->__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStatDB);
+  Py_CLEAR(clear_module_state->__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue);
+  Py_CLEAR(clear_module_state->__pyx_type_12kitsune_core_22AfterImage_extrapolate_Queue);
+  Py_CLEAR(clear_module_state->__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator);
+  Py_CLEAR(clear_module_state->__pyx_type_12kitsune_core_22AfterImage_extrapolate_extrapolator);
+  Py_CLEAR(clear_module_state->__pyx_ptype_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords);
+  Py_CLEAR(clear_module_state->__pyx_type_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords);
   Py_CLEAR(clear_module_state->__pyx_kp_s_);
   Py_CLEAR(clear_module_state->__pyx_n_s_0);
   Py_CLEAR(clear_module_state->__pyx_kp_s_0_2);
   Py_CLEAR(clear_module_state->__pyx_n_s_1);
   Py_CLEAR(clear_module_state->__pyx_kp_s_1_2);
   Py_CLEAR(clear_module_state->__pyx_kp_s_Adding_Entry);
-  Py_CLEAR(clear_module_state->__pyx_n_s_AfterImage_extrapolate);
   Py_CLEAR(clear_module_state->__pyx_n_s_H);
   Py_CLEAR(clear_module_state->__pyx_n_s_ID);
   Py_CLEAR(clear_module_state->__pyx_n_s_ID1);
@@ -3923,7 +3922,6 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_kp_s_Incompatible_checksums_0x_x_vs_0_4);
   Py_CLEAR(clear_module_state->__pyx_kp_s_Incompatible_checksums_0x_x_vs_0_5);
   Py_CLEAR(clear_module_state->__pyx_n_s_IndexError);
-  Py_CLEAR(clear_module_state->__pyx_n_s_Inf);
   Py_CLEAR(clear_module_state->__pyx_n_s_L);
   Py_CLEAR(clear_module_state->__pyx_n_s_Lambda);
   Py_CLEAR(clear_module_state->__pyx_n_s_LookupError);
@@ -4033,6 +4031,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_incStats);
   Py_CLEAR(clear_module_state->__pyx_n_s_inc_cov);
   Py_CLEAR(clear_module_state->__pyx_n_s_indx);
+  Py_CLEAR(clear_module_state->__pyx_n_s_inf);
   Py_CLEAR(clear_module_state->__pyx_n_s_init);
   Py_CLEAR(clear_module_state->__pyx_n_s_init_subclass);
   Py_CLEAR(clear_module_state->__pyx_n_s_init_time);
@@ -4050,7 +4049,8 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_items);
   Py_CLEAR(clear_module_state->__pyx_n_s_k);
   Py_CLEAR(clear_module_state->__pyx_n_s_key);
-  Py_CLEAR(clear_module_state->__pyx_kp_s_kitsune_core_AfterImage_extrapol);
+  Py_CLEAR(clear_module_state->__pyx_n_s_kitsune_core_AfterImage_extrapol);
+  Py_CLEAR(clear_module_state->__pyx_kp_s_kitsune_core_AfterImage_extrapol_2);
   Py_CLEAR(clear_module_state->__pyx_n_s_lT);
   Py_CLEAR(clear_module_state->__pyx_n_s_lbIsAnom);
   Py_CLEAR(clear_module_state->__pyx_n_s_lbound);
@@ -4292,25 +4292,24 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_ptype_7cpython_4bool_bool);
   Py_VISIT(traverse_module_state->__pyx_ptype_7cpython_7complex_complex);
   Py_VISIT(traverse_module_state->__pyx_ptype_7cpython_5array_array);
-  Py_VISIT(traverse_module_state->__pyx_ptype_22AfterImage_extrapolate_incStat);
-  Py_VISIT(traverse_module_state->__pyx_type_22AfterImage_extrapolate_incStat);
-  Py_VISIT(traverse_module_state->__pyx_ptype_22AfterImage_extrapolate_incStat_cov);
-  Py_VISIT(traverse_module_state->__pyx_type_22AfterImage_extrapolate_incStat_cov);
-  Py_VISIT(traverse_module_state->__pyx_ptype_22AfterImage_extrapolate_incStatDB);
-  Py_VISIT(traverse_module_state->__pyx_type_22AfterImage_extrapolate_incStatDB);
-  Py_VISIT(traverse_module_state->__pyx_ptype_22AfterImage_extrapolate_Queue);
-  Py_VISIT(traverse_module_state->__pyx_type_22AfterImage_extrapolate_Queue);
-  Py_VISIT(traverse_module_state->__pyx_ptype_22AfterImage_extrapolate_extrapolator);
-  Py_VISIT(traverse_module_state->__pyx_type_22AfterImage_extrapolate_extrapolator);
-  Py_VISIT(traverse_module_state->__pyx_ptype_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords);
-  Py_VISIT(traverse_module_state->__pyx_type_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords);
+  Py_VISIT(traverse_module_state->__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat);
+  Py_VISIT(traverse_module_state->__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat);
+  Py_VISIT(traverse_module_state->__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov);
+  Py_VISIT(traverse_module_state->__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat_cov);
+  Py_VISIT(traverse_module_state->__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB);
+  Py_VISIT(traverse_module_state->__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStatDB);
+  Py_VISIT(traverse_module_state->__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue);
+  Py_VISIT(traverse_module_state->__pyx_type_12kitsune_core_22AfterImage_extrapolate_Queue);
+  Py_VISIT(traverse_module_state->__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator);
+  Py_VISIT(traverse_module_state->__pyx_type_12kitsune_core_22AfterImage_extrapolate_extrapolator);
+  Py_VISIT(traverse_module_state->__pyx_ptype_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords);
+  Py_VISIT(traverse_module_state->__pyx_type_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords);
   Py_VISIT(traverse_module_state->__pyx_kp_s_);
   Py_VISIT(traverse_module_state->__pyx_n_s_0);
   Py_VISIT(traverse_module_state->__pyx_kp_s_0_2);
   Py_VISIT(traverse_module_state->__pyx_n_s_1);
   Py_VISIT(traverse_module_state->__pyx_kp_s_1_2);
   Py_VISIT(traverse_module_state->__pyx_kp_s_Adding_Entry);
-  Py_VISIT(traverse_module_state->__pyx_n_s_AfterImage_extrapolate);
   Py_VISIT(traverse_module_state->__pyx_n_s_H);
   Py_VISIT(traverse_module_state->__pyx_n_s_ID);
   Py_VISIT(traverse_module_state->__pyx_n_s_ID1);
@@ -4322,7 +4321,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_kp_s_Incompatible_checksums_0x_x_vs_0_4);
   Py_VISIT(traverse_module_state->__pyx_kp_s_Incompatible_checksums_0x_x_vs_0_5);
   Py_VISIT(traverse_module_state->__pyx_n_s_IndexError);
-  Py_VISIT(traverse_module_state->__pyx_n_s_Inf);
   Py_VISIT(traverse_module_state->__pyx_n_s_L);
   Py_VISIT(traverse_module_state->__pyx_n_s_Lambda);
   Py_VISIT(traverse_module_state->__pyx_n_s_LookupError);
@@ -4432,6 +4430,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_incStats);
   Py_VISIT(traverse_module_state->__pyx_n_s_inc_cov);
   Py_VISIT(traverse_module_state->__pyx_n_s_indx);
+  Py_VISIT(traverse_module_state->__pyx_n_s_inf);
   Py_VISIT(traverse_module_state->__pyx_n_s_init);
   Py_VISIT(traverse_module_state->__pyx_n_s_init_subclass);
   Py_VISIT(traverse_module_state->__pyx_n_s_init_time);
@@ -4449,7 +4448,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_items);
   Py_VISIT(traverse_module_state->__pyx_n_s_k);
   Py_VISIT(traverse_module_state->__pyx_n_s_key);
-  Py_VISIT(traverse_module_state->__pyx_kp_s_kitsune_core_AfterImage_extrapol);
+  Py_VISIT(traverse_module_state->__pyx_n_s_kitsune_core_AfterImage_extrapol);
+  Py_VISIT(traverse_module_state->__pyx_kp_s_kitsune_core_AfterImage_extrapol_2);
   Py_VISIT(traverse_module_state->__pyx_n_s_lT);
   Py_VISIT(traverse_module_state->__pyx_n_s_lbIsAnom);
   Py_VISIT(traverse_module_state->__pyx_n_s_lbound);
@@ -4790,26 +4790,25 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #endif
 #define __pyx_ptype_7cpython_5array_array __pyx_mstate_global->__pyx_ptype_7cpython_5array_array
 #if CYTHON_USE_MODULE_STATE
-#define __pyx_type_22AfterImage_extrapolate_incStat __pyx_mstate_global->__pyx_type_22AfterImage_extrapolate_incStat
-#define __pyx_type_22AfterImage_extrapolate_incStat_cov __pyx_mstate_global->__pyx_type_22AfterImage_extrapolate_incStat_cov
-#define __pyx_type_22AfterImage_extrapolate_incStatDB __pyx_mstate_global->__pyx_type_22AfterImage_extrapolate_incStatDB
-#define __pyx_type_22AfterImage_extrapolate_Queue __pyx_mstate_global->__pyx_type_22AfterImage_extrapolate_Queue
-#define __pyx_type_22AfterImage_extrapolate_extrapolator __pyx_mstate_global->__pyx_type_22AfterImage_extrapolate_extrapolator
-#define __pyx_type_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords __pyx_mstate_global->__pyx_type_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords
+#define __pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat __pyx_mstate_global->__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat
+#define __pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat_cov __pyx_mstate_global->__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat_cov
+#define __pyx_type_12kitsune_core_22AfterImage_extrapolate_incStatDB __pyx_mstate_global->__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStatDB
+#define __pyx_type_12kitsune_core_22AfterImage_extrapolate_Queue __pyx_mstate_global->__pyx_type_12kitsune_core_22AfterImage_extrapolate_Queue
+#define __pyx_type_12kitsune_core_22AfterImage_extrapolate_extrapolator __pyx_mstate_global->__pyx_type_12kitsune_core_22AfterImage_extrapolate_extrapolator
+#define __pyx_type_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords __pyx_mstate_global->__pyx_type_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords
 #endif
-#define __pyx_ptype_22AfterImage_extrapolate_incStat __pyx_mstate_global->__pyx_ptype_22AfterImage_extrapolate_incStat
-#define __pyx_ptype_22AfterImage_extrapolate_incStat_cov __pyx_mstate_global->__pyx_ptype_22AfterImage_extrapolate_incStat_cov
-#define __pyx_ptype_22AfterImage_extrapolate_incStatDB __pyx_mstate_global->__pyx_ptype_22AfterImage_extrapolate_incStatDB
-#define __pyx_ptype_22AfterImage_extrapolate_Queue __pyx_mstate_global->__pyx_ptype_22AfterImage_extrapolate_Queue
-#define __pyx_ptype_22AfterImage_extrapolate_extrapolator __pyx_mstate_global->__pyx_ptype_22AfterImage_extrapolate_extrapolator
-#define __pyx_ptype_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords __pyx_mstate_global->__pyx_ptype_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords
+#define __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat __pyx_mstate_global->__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat
+#define __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov __pyx_mstate_global->__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov
+#define __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB __pyx_mstate_global->__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB
+#define __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue __pyx_mstate_global->__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue
+#define __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator __pyx_mstate_global->__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator
+#define __pyx_ptype_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords __pyx_mstate_global->__pyx_ptype_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords
 #define __pyx_kp_s_ __pyx_mstate_global->__pyx_kp_s_
 #define __pyx_n_s_0 __pyx_mstate_global->__pyx_n_s_0
 #define __pyx_kp_s_0_2 __pyx_mstate_global->__pyx_kp_s_0_2
 #define __pyx_n_s_1 __pyx_mstate_global->__pyx_n_s_1
 #define __pyx_kp_s_1_2 __pyx_mstate_global->__pyx_kp_s_1_2
 #define __pyx_kp_s_Adding_Entry __pyx_mstate_global->__pyx_kp_s_Adding_Entry
-#define __pyx_n_s_AfterImage_extrapolate __pyx_mstate_global->__pyx_n_s_AfterImage_extrapolate
 #define __pyx_n_s_H __pyx_mstate_global->__pyx_n_s_H
 #define __pyx_n_s_ID __pyx_mstate_global->__pyx_n_s_ID
 #define __pyx_n_s_ID1 __pyx_mstate_global->__pyx_n_s_ID1
@@ -4821,7 +4820,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_kp_s_Incompatible_checksums_0x_x_vs_0_4 __pyx_mstate_global->__pyx_kp_s_Incompatible_checksums_0x_x_vs_0_4
 #define __pyx_kp_s_Incompatible_checksums_0x_x_vs_0_5 __pyx_mstate_global->__pyx_kp_s_Incompatible_checksums_0x_x_vs_0_5
 #define __pyx_n_s_IndexError __pyx_mstate_global->__pyx_n_s_IndexError
-#define __pyx_n_s_Inf __pyx_mstate_global->__pyx_n_s_Inf
 #define __pyx_n_s_L __pyx_mstate_global->__pyx_n_s_L
 #define __pyx_n_s_Lambda __pyx_mstate_global->__pyx_n_s_Lambda
 #define __pyx_n_s_LookupError __pyx_mstate_global->__pyx_n_s_LookupError
@@ -4931,6 +4929,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_incStats __pyx_mstate_global->__pyx_n_s_incStats
 #define __pyx_n_s_inc_cov __pyx_mstate_global->__pyx_n_s_inc_cov
 #define __pyx_n_s_indx __pyx_mstate_global->__pyx_n_s_indx
+#define __pyx_n_s_inf __pyx_mstate_global->__pyx_n_s_inf
 #define __pyx_n_s_init __pyx_mstate_global->__pyx_n_s_init
 #define __pyx_n_s_init_subclass __pyx_mstate_global->__pyx_n_s_init_subclass
 #define __pyx_n_s_init_time __pyx_mstate_global->__pyx_n_s_init_time
@@ -4948,7 +4947,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_items __pyx_mstate_global->__pyx_n_s_items
 #define __pyx_n_s_k __pyx_mstate_global->__pyx_n_s_k
 #define __pyx_n_s_key __pyx_mstate_global->__pyx_n_s_key
-#define __pyx_kp_s_kitsune_core_AfterImage_extrapol __pyx_mstate_global->__pyx_kp_s_kitsune_core_AfterImage_extrapol
+#define __pyx_n_s_kitsune_core_AfterImage_extrapol __pyx_mstate_global->__pyx_n_s_kitsune_core_AfterImage_extrapol
+#define __pyx_kp_s_kitsune_core_AfterImage_extrapol_2 __pyx_mstate_global->__pyx_kp_s_kitsune_core_AfterImage_extrapol_2
 #define __pyx_n_s_lT __pyx_mstate_global->__pyx_n_s_lT
 #define __pyx_n_s_lbIsAnom __pyx_mstate_global->__pyx_n_s_lbIsAnom
 #define __pyx_n_s_lbound __pyx_mstate_global->__pyx_n_s_lbound
@@ -6662,7 +6662,7 @@ static CYTHON_INLINE void __pyx_f_7cpython_5array_zero(arrayobject *__pyx_v_self
   /* function exit code */
 }
 
-/* "AfterImage_extrapolate.pyx":44
+/* "kitsune_core/AfterImage_extrapolate.pyx":44
  *     cdef list covs
  * 
  *     def __init__(self, double Lambda, str ID, double init_time=0, int isTypeDiff=False):  # timestamp is creation time             # <<<<<<<<<<<<<<
@@ -6671,8 +6671,8 @@ static CYTHON_INLINE void __pyx_f_7cpython_5array_zero(arrayobject *__pyx_v_self
  */
 
 /* Python wrapper */
-static int __pyx_pw_22AfterImage_extrapolate_7incStat_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_22AfterImage_extrapolate_7incStat_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incStat_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incStat_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   double __pyx_v_Lambda;
   PyObject *__pyx_v_ID = 0;
   double __pyx_v_init_time;
@@ -6783,12 +6783,12 @@ static int __pyx_pw_22AfterImage_extrapolate_7incStat_1__init__(PyObject *__pyx_
       __Pyx_Arg_XDECREF_VARARGS(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ID), (&PyString_Type), 1, "ID", 1))) __PYX_ERR(0, 44, __pyx_L1_error)
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_7incStat___init__(((struct __pyx_obj_22AfterImage_extrapolate_incStat *)__pyx_v_self), __pyx_v_Lambda, __pyx_v_ID, __pyx_v_init_time, __pyx_v_isTypeDiff);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incStat___init__(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self), __pyx_v_Lambda, __pyx_v_ID, __pyx_v_init_time, __pyx_v_isTypeDiff);
 
   /* function exit code */
   goto __pyx_L0;
@@ -6805,7 +6805,7 @@ static int __pyx_pw_22AfterImage_extrapolate_7incStat_1__init__(PyObject *__pyx_
   return __pyx_r;
 }
 
-static int __pyx_pf_22AfterImage_extrapolate_7incStat___init__(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, double __pyx_v_Lambda, PyObject *__pyx_v_ID, double __pyx_v_init_time, int __pyx_v_isTypeDiff) {
+static int __pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incStat___init__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, double __pyx_v_Lambda, PyObject *__pyx_v_ID, double __pyx_v_init_time, int __pyx_v_isTypeDiff) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -6816,7 +6816,7 @@ static int __pyx_pf_22AfterImage_extrapolate_7incStat___init__(struct __pyx_obj_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 1);
 
-  /* "AfterImage_extrapolate.pyx":45
+  /* "kitsune_core/AfterImage_extrapolate.pyx":45
  * 
  *     def __init__(self, double Lambda, str ID, double init_time=0, int isTypeDiff=False):  # timestamp is creation time
  *         self.ID = ID             # <<<<<<<<<<<<<<
@@ -6829,7 +6829,7 @@ static int __pyx_pf_22AfterImage_extrapolate_7incStat___init__(struct __pyx_obj_
   __Pyx_DECREF(__pyx_v_self->ID);
   __pyx_v_self->ID = __pyx_v_ID;
 
-  /* "AfterImage_extrapolate.pyx":46
+  /* "kitsune_core/AfterImage_extrapolate.pyx":46
  *     def __init__(self, double Lambda, str ID, double init_time=0, int isTypeDiff=False):  # timestamp is creation time
  *         self.ID = ID
  *         self.CF1 = 0  # linear sum             # <<<<<<<<<<<<<<
@@ -6838,7 +6838,7 @@ static int __pyx_pf_22AfterImage_extrapolate_7incStat___init__(struct __pyx_obj_
  */
   __pyx_v_self->CF1 = 0.0;
 
-  /* "AfterImage_extrapolate.pyx":47
+  /* "kitsune_core/AfterImage_extrapolate.pyx":47
  *         self.ID = ID
  *         self.CF1 = 0  # linear sum
  *         self.CF2 = 0  # sum of squares             # <<<<<<<<<<<<<<
@@ -6847,7 +6847,7 @@ static int __pyx_pf_22AfterImage_extrapolate_7incStat___init__(struct __pyx_obj_
  */
   __pyx_v_self->CF2 = 0.0;
 
-  /* "AfterImage_extrapolate.pyx":48
+  /* "kitsune_core/AfterImage_extrapolate.pyx":48
  *         self.CF1 = 0  # linear sum
  *         self.CF2 = 0  # sum of squares
  *         self.w = 1e-20  # weight             # <<<<<<<<<<<<<<
@@ -6856,7 +6856,7 @@ static int __pyx_pf_22AfterImage_extrapolate_7incStat___init__(struct __pyx_obj_
  */
   __pyx_v_self->w = 1e-20;
 
-  /* "AfterImage_extrapolate.pyx":49
+  /* "kitsune_core/AfterImage_extrapolate.pyx":49
  *         self.CF2 = 0  # sum of squares
  *         self.w = 1e-20  # weight
  *         self.isTypeDiff = isTypeDiff             # <<<<<<<<<<<<<<
@@ -6865,7 +6865,7 @@ static int __pyx_pf_22AfterImage_extrapolate_7incStat___init__(struct __pyx_obj_
  */
   __pyx_v_self->isTypeDiff = __pyx_v_isTypeDiff;
 
-  /* "AfterImage_extrapolate.pyx":50
+  /* "kitsune_core/AfterImage_extrapolate.pyx":50
  *         self.w = 1e-20  # weight
  *         self.isTypeDiff = isTypeDiff
  *         self.Lambda = Lambda  # Decay Factor             # <<<<<<<<<<<<<<
@@ -6874,7 +6874,7 @@ static int __pyx_pf_22AfterImage_extrapolate_7incStat___init__(struct __pyx_obj_
  */
   __pyx_v_self->Lambda = __pyx_v_Lambda;
 
-  /* "AfterImage_extrapolate.pyx":51
+  /* "kitsune_core/AfterImage_extrapolate.pyx":51
  *         self.isTypeDiff = isTypeDiff
  *         self.Lambda = Lambda  # Decay Factor
  *         self.lastTimestamp = init_time             # <<<<<<<<<<<<<<
@@ -6883,7 +6883,7 @@ static int __pyx_pf_22AfterImage_extrapolate_7incStat___init__(struct __pyx_obj_
  */
   __pyx_v_self->lastTimestamp = __pyx_v_init_time;
 
-  /* "AfterImage_extrapolate.pyx":52
+  /* "kitsune_core/AfterImage_extrapolate.pyx":52
  *         self.Lambda = Lambda  # Decay Factor
  *         self.lastTimestamp = init_time
  *         self.cur_mean = np.nan             # <<<<<<<<<<<<<<
@@ -6899,7 +6899,7 @@ static int __pyx_pf_22AfterImage_extrapolate_7incStat___init__(struct __pyx_obj_
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_self->cur_mean = __pyx_t_3;
 
-  /* "AfterImage_extrapolate.pyx":53
+  /* "kitsune_core/AfterImage_extrapolate.pyx":53
  *         self.lastTimestamp = init_time
  *         self.cur_mean = np.nan
  *         self.cur_var = np.nan             # <<<<<<<<<<<<<<
@@ -6915,7 +6915,7 @@ static int __pyx_pf_22AfterImage_extrapolate_7incStat___init__(struct __pyx_obj_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_self->cur_var = __pyx_t_3;
 
-  /* "AfterImage_extrapolate.pyx":54
+  /* "kitsune_core/AfterImage_extrapolate.pyx":54
  *         self.cur_mean = np.nan
  *         self.cur_var = np.nan
  *         self.cur_std = np.nan             # <<<<<<<<<<<<<<
@@ -6931,7 +6931,7 @@ static int __pyx_pf_22AfterImage_extrapolate_7incStat___init__(struct __pyx_obj_
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_self->cur_std = __pyx_t_3;
 
-  /* "AfterImage_extrapolate.pyx":55
+  /* "kitsune_core/AfterImage_extrapolate.pyx":55
  *         self.cur_var = np.nan
  *         self.cur_std = np.nan
  *         self.covs = [] # a list of incStat_covs (references) with relate to this incStat             # <<<<<<<<<<<<<<
@@ -6946,7 +6946,7 @@ static int __pyx_pf_22AfterImage_extrapolate_7incStat___init__(struct __pyx_obj_
   __pyx_v_self->covs = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "AfterImage_extrapolate.pyx":44
+  /* "kitsune_core/AfterImage_extrapolate.pyx":44
  *     cdef list covs
  * 
  *     def __init__(self, double Lambda, str ID, double init_time=0, int isTypeDiff=False):  # timestamp is creation time             # <<<<<<<<<<<<<<
@@ -6960,14 +6960,14 @@ static int __pyx_pf_22AfterImage_extrapolate_7incStat___init__(struct __pyx_obj_
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":57
+/* "kitsune_core/AfterImage_extrapolate.pyx":57
  *         self.covs = [] # a list of incStat_covs (references) with relate to this incStat
  * 
  *     cdef insert(self, double v, double t=0):  # v is a scalar, t is v's arrival the timestamp             # <<<<<<<<<<<<<<
@@ -6975,9 +6975,9 @@ static int __pyx_pf_22AfterImage_extrapolate_7incStat___init__(struct __pyx_obj_
  *             if t - self.lastTimestamp > 0:
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, double __pyx_v_v, struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_insert *__pyx_optional_args) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_insert(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, double __pyx_v_v, struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_insert *__pyx_optional_args) {
   double __pyx_v_t = ((double)0.0);
-  struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_cov = 0;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_cov = 0;
   PyObject *__pyx_v_c = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -7000,7 +7000,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_o
     }
   }
 
-  /* "AfterImage_extrapolate.pyx":58
+  /* "kitsune_core/AfterImage_extrapolate.pyx":58
  * 
  *     cdef insert(self, double v, double t=0):  # v is a scalar, t is v's arrival the timestamp
  *         if self.isTypeDiff:             # <<<<<<<<<<<<<<
@@ -7010,7 +7010,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_o
   __pyx_t_1 = (__pyx_v_self->isTypeDiff != 0);
   if (__pyx_t_1) {
 
-    /* "AfterImage_extrapolate.pyx":59
+    /* "kitsune_core/AfterImage_extrapolate.pyx":59
  *     cdef insert(self, double v, double t=0):  # v is a scalar, t is v's arrival the timestamp
  *         if self.isTypeDiff:
  *             if t - self.lastTimestamp > 0:             # <<<<<<<<<<<<<<
@@ -7020,7 +7020,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_o
     __pyx_t_1 = ((__pyx_v_t - __pyx_v_self->lastTimestamp) > 0.0);
     if (__pyx_t_1) {
 
-      /* "AfterImage_extrapolate.pyx":60
+      /* "kitsune_core/AfterImage_extrapolate.pyx":60
  *         if self.isTypeDiff:
  *             if t - self.lastTimestamp > 0:
  *                 v = t - self.lastTimestamp             # <<<<<<<<<<<<<<
@@ -7029,7 +7029,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_o
  */
       __pyx_v_v = (__pyx_v_t - __pyx_v_self->lastTimestamp);
 
-      /* "AfterImage_extrapolate.pyx":59
+      /* "kitsune_core/AfterImage_extrapolate.pyx":59
  *     cdef insert(self, double v, double t=0):  # v is a scalar, t is v's arrival the timestamp
  *         if self.isTypeDiff:
  *             if t - self.lastTimestamp > 0:             # <<<<<<<<<<<<<<
@@ -7039,7 +7039,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_o
       goto __pyx_L4;
     }
 
-    /* "AfterImage_extrapolate.pyx":62
+    /* "kitsune_core/AfterImage_extrapolate.pyx":62
  *                 v = t - self.lastTimestamp
  *             else:
  *                 v = 0             # <<<<<<<<<<<<<<
@@ -7051,7 +7051,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_o
     }
     __pyx_L4:;
 
-    /* "AfterImage_extrapolate.pyx":58
+    /* "kitsune_core/AfterImage_extrapolate.pyx":58
  * 
  *     cdef insert(self, double v, double t=0):  # v is a scalar, t is v's arrival the timestamp
  *         if self.isTypeDiff:             # <<<<<<<<<<<<<<
@@ -7060,18 +7060,18 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_o
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":63
+  /* "kitsune_core/AfterImage_extrapolate.pyx":63
  *             else:
  *                 v = 0
  *         self.processDecay(t)             # <<<<<<<<<<<<<<
  * 
  *         # update with v
  */
-  __pyx_t_2 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->__pyx_vtab)->processDecay(__pyx_v_self, __pyx_v_t); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 63, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->__pyx_vtab)->processDecay(__pyx_v_self, __pyx_v_t); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 63, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "AfterImage_extrapolate.pyx":66
+  /* "kitsune_core/AfterImage_extrapolate.pyx":66
  * 
  *         # update with v
  *         self.CF1 += v             # <<<<<<<<<<<<<<
@@ -7080,7 +7080,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_o
  */
   __pyx_v_self->CF1 = (__pyx_v_self->CF1 + __pyx_v_v);
 
-  /* "AfterImage_extrapolate.pyx":67
+  /* "kitsune_core/AfterImage_extrapolate.pyx":67
  *         # update with v
  *         self.CF1 += v
  *         self.CF2 += math.pow(v, 2)             # <<<<<<<<<<<<<<
@@ -7127,7 +7127,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_o
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_self->CF2 = __pyx_t_8;
 
-  /* "AfterImage_extrapolate.pyx":68
+  /* "kitsune_core/AfterImage_extrapolate.pyx":68
  *         self.CF1 += v
  *         self.CF2 += math.pow(v, 2)
  *         self.w += 1             # <<<<<<<<<<<<<<
@@ -7136,7 +7136,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_o
  */
   __pyx_v_self->w = (__pyx_v_self->w + 1.0);
 
-  /* "AfterImage_extrapolate.pyx":69
+  /* "kitsune_core/AfterImage_extrapolate.pyx":69
  *         self.CF2 += math.pow(v, 2)
  *         self.w += 1
  *         self.cur_mean = np.nan  # force recalculation if called             # <<<<<<<<<<<<<<
@@ -7152,7 +7152,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_o
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_self->cur_mean = __pyx_t_8;
 
-  /* "AfterImage_extrapolate.pyx":70
+  /* "kitsune_core/AfterImage_extrapolate.pyx":70
  *         self.w += 1
  *         self.cur_mean = np.nan  # force recalculation if called
  *         self.cur_var = np.nan             # <<<<<<<<<<<<<<
@@ -7168,7 +7168,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_o
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_self->cur_var = __pyx_t_8;
 
-  /* "AfterImage_extrapolate.pyx":71
+  /* "kitsune_core/AfterImage_extrapolate.pyx":71
  *         self.cur_mean = np.nan  # force recalculation if called
  *         self.cur_var = np.nan
  *         self.cur_std = np.nan             # <<<<<<<<<<<<<<
@@ -7184,7 +7184,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_o
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_self->cur_std = __pyx_t_8;
 
-  /* "AfterImage_extrapolate.pyx":75
+  /* "kitsune_core/AfterImage_extrapolate.pyx":75
  *         # update covs (if any)
  *         cdef incStat_cov cov
  *         for c in self.covs:             # <<<<<<<<<<<<<<
@@ -7214,20 +7214,20 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_o
     __Pyx_XDECREF_SET(__pyx_v_c, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "AfterImage_extrapolate.pyx":76
+    /* "kitsune_core/AfterImage_extrapolate.pyx":76
  *         cdef incStat_cov cov
  *         for c in self.covs:
  *             cov = c             # <<<<<<<<<<<<<<
  *             cov.update_cov(self.ID, v, t)
  * 
  */
-    if (!(likely(((__pyx_v_c) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_c, __pyx_ptype_22AfterImage_extrapolate_incStat_cov))))) __PYX_ERR(0, 76, __pyx_L1_error)
+    if (!(likely(((__pyx_v_c) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_c, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov))))) __PYX_ERR(0, 76, __pyx_L1_error)
     __pyx_t_5 = __pyx_v_c;
     __Pyx_INCREF(__pyx_t_5);
-    __Pyx_XDECREF_SET(__pyx_v_cov, ((struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *)__pyx_t_5));
+    __Pyx_XDECREF_SET(__pyx_v_cov, ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "AfterImage_extrapolate.pyx":77
+    /* "kitsune_core/AfterImage_extrapolate.pyx":77
  *         for c in self.covs:
  *             cov = c
  *             cov.update_cov(self.ID, v, t)             # <<<<<<<<<<<<<<
@@ -7236,12 +7236,12 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_o
  */
     __pyx_t_5 = __pyx_v_self->ID;
     __Pyx_INCREF(__pyx_t_5);
-    __pyx_t_2 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov *)__pyx_v_cov->__pyx_vtab)->update_cov(__pyx_v_cov, ((PyObject*)__pyx_t_5), __pyx_v_v, __pyx_v_t); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 77, __pyx_L1_error)
+    __pyx_t_2 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v_cov->__pyx_vtab)->update_cov(__pyx_v_cov, ((PyObject*)__pyx_t_5), __pyx_v_v, __pyx_v_t); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 77, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "AfterImage_extrapolate.pyx":75
+    /* "kitsune_core/AfterImage_extrapolate.pyx":75
  *         # update covs (if any)
  *         cdef incStat_cov cov
  *         for c in self.covs:             # <<<<<<<<<<<<<<
@@ -7251,7 +7251,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_o
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "AfterImage_extrapolate.pyx":57
+  /* "kitsune_core/AfterImage_extrapolate.pyx":57
  *         self.covs = [] # a list of incStat_covs (references) with relate to this incStat
  * 
  *     cdef insert(self, double v, double t=0):  # v is a scalar, t is v's arrival the timestamp             # <<<<<<<<<<<<<<
@@ -7268,7 +7268,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_o
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat.insert", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat.insert", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_cov);
@@ -7278,7 +7278,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_o
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":79
+/* "kitsune_core/AfterImage_extrapolate.pyx":79
  *             cov.update_cov(self.ID, v, t)
  * 
  *     cdef processDecay(self, double timestamp):             # <<<<<<<<<<<<<<
@@ -7286,7 +7286,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_insert(struct __pyx_o
  *         factor = 1
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_processDecay(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, double __pyx_v_timestamp) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_processDecay(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, double __pyx_v_timestamp) {
   double __pyx_v_factor;
   double __pyx_v_timeDiff;
   PyObject *__pyx_r = NULL;
@@ -7303,7 +7303,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_processDecay(struct _
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("processDecay", 1);
 
-  /* "AfterImage_extrapolate.pyx":81
+  /* "kitsune_core/AfterImage_extrapolate.pyx":81
  *     cdef processDecay(self, double timestamp):
  *         cdef double factor, timeDiff
  *         factor = 1             # <<<<<<<<<<<<<<
@@ -7312,7 +7312,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_processDecay(struct _
  */
   __pyx_v_factor = 1.0;
 
-  /* "AfterImage_extrapolate.pyx":83
+  /* "kitsune_core/AfterImage_extrapolate.pyx":83
  *         factor = 1
  *         # check for decay
  *         timeDiff = timestamp - self.lastTimestamp             # <<<<<<<<<<<<<<
@@ -7321,7 +7321,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_processDecay(struct _
  */
   __pyx_v_timeDiff = (__pyx_v_timestamp - __pyx_v_self->lastTimestamp);
 
-  /* "AfterImage_extrapolate.pyx":84
+  /* "kitsune_core/AfterImage_extrapolate.pyx":84
  *         # check for decay
  *         timeDiff = timestamp - self.lastTimestamp
  *         if timeDiff > 0:             # <<<<<<<<<<<<<<
@@ -7331,7 +7331,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_processDecay(struct _
   __pyx_t_1 = (__pyx_v_timeDiff > 0.0);
   if (__pyx_t_1) {
 
-    /* "AfterImage_extrapolate.pyx":85
+    /* "kitsune_core/AfterImage_extrapolate.pyx":85
  *         timeDiff = timestamp - self.lastTimestamp
  *         if timeDiff > 0:
  *             factor = math.pow(2, (-self.Lambda * timeDiff))             # <<<<<<<<<<<<<<
@@ -7372,7 +7372,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_processDecay(struct _
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_v_factor = __pyx_t_7;
 
-    /* "AfterImage_extrapolate.pyx":86
+    /* "kitsune_core/AfterImage_extrapolate.pyx":86
  *         if timeDiff > 0:
  *             factor = math.pow(2, (-self.Lambda * timeDiff))
  *             self.CF1 = self.CF1 * factor             # <<<<<<<<<<<<<<
@@ -7381,7 +7381,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_processDecay(struct _
  */
     __pyx_v_self->CF1 = (__pyx_v_self->CF1 * __pyx_v_factor);
 
-    /* "AfterImage_extrapolate.pyx":87
+    /* "kitsune_core/AfterImage_extrapolate.pyx":87
  *             factor = math.pow(2, (-self.Lambda * timeDiff))
  *             self.CF1 = self.CF1 * factor
  *             self.CF2 = self.CF2 * factor             # <<<<<<<<<<<<<<
@@ -7390,7 +7390,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_processDecay(struct _
  */
     __pyx_v_self->CF2 = (__pyx_v_self->CF2 * __pyx_v_factor);
 
-    /* "AfterImage_extrapolate.pyx":88
+    /* "kitsune_core/AfterImage_extrapolate.pyx":88
  *             self.CF1 = self.CF1 * factor
  *             self.CF2 = self.CF2 * factor
  *             self.w = self.w * factor             # <<<<<<<<<<<<<<
@@ -7399,7 +7399,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_processDecay(struct _
  */
     __pyx_v_self->w = (__pyx_v_self->w * __pyx_v_factor);
 
-    /* "AfterImage_extrapolate.pyx":89
+    /* "kitsune_core/AfterImage_extrapolate.pyx":89
  *             self.CF2 = self.CF2 * factor
  *             self.w = self.w * factor
  *             self.lastTimestamp = timestamp             # <<<<<<<<<<<<<<
@@ -7408,7 +7408,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_processDecay(struct _
  */
     __pyx_v_self->lastTimestamp = __pyx_v_timestamp;
 
-    /* "AfterImage_extrapolate.pyx":84
+    /* "kitsune_core/AfterImage_extrapolate.pyx":84
  *         # check for decay
  *         timeDiff = timestamp - self.lastTimestamp
  *         if timeDiff > 0:             # <<<<<<<<<<<<<<
@@ -7417,7 +7417,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_processDecay(struct _
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":90
+  /* "kitsune_core/AfterImage_extrapolate.pyx":90
  *             self.w = self.w * factor
  *             self.lastTimestamp = timestamp
  *         return factor             # <<<<<<<<<<<<<<
@@ -7431,7 +7431,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_processDecay(struct _
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":79
+  /* "kitsune_core/AfterImage_extrapolate.pyx":79
  *             cov.update_cov(self.ID, v, t)
  * 
  *     cdef processDecay(self, double timestamp):             # <<<<<<<<<<<<<<
@@ -7445,7 +7445,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_processDecay(struct _
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat.processDecay", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat.processDecay", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7453,7 +7453,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_processDecay(struct _
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":92
+/* "kitsune_core/AfterImage_extrapolate.pyx":92
  *         return factor
  * 
  *     cdef weight(self):             # <<<<<<<<<<<<<<
@@ -7461,7 +7461,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_processDecay(struct _
  * 
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_weight(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_weight(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -7470,7 +7470,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_weight(struct __pyx_o
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("weight", 1);
 
-  /* "AfterImage_extrapolate.pyx":93
+  /* "kitsune_core/AfterImage_extrapolate.pyx":93
  * 
  *     cdef weight(self):
  *         return self.w             # <<<<<<<<<<<<<<
@@ -7484,7 +7484,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_weight(struct __pyx_o
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":92
+  /* "kitsune_core/AfterImage_extrapolate.pyx":92
  *         return factor
  * 
  *     cdef weight(self):             # <<<<<<<<<<<<<<
@@ -7495,7 +7495,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_weight(struct __pyx_o
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat.weight", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat.weight", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7503,7 +7503,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_weight(struct __pyx_o
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":95
+/* "kitsune_core/AfterImage_extrapolate.pyx":95
  *         return self.w
  * 
  *     cdef mean(self):             # <<<<<<<<<<<<<<
@@ -7511,7 +7511,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_weight(struct __pyx_o
  *             self.cur_mean = self.CF1 / self.w
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_mean(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_mean(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -7525,7 +7525,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_mean(struct __pyx_obj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("mean", 1);
 
-  /* "AfterImage_extrapolate.pyx":96
+  /* "kitsune_core/AfterImage_extrapolate.pyx":96
  * 
  *     cdef mean(self):
  *         if math.isnan(self.cur_mean):  # calculate it only once when necessary             # <<<<<<<<<<<<<<
@@ -7566,7 +7566,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_mean(struct __pyx_obj
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_6) {
 
-    /* "AfterImage_extrapolate.pyx":97
+    /* "kitsune_core/AfterImage_extrapolate.pyx":97
  *     cdef mean(self):
  *         if math.isnan(self.cur_mean):  # calculate it only once when necessary
  *             self.cur_mean = self.CF1 / self.w             # <<<<<<<<<<<<<<
@@ -7579,7 +7579,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_mean(struct __pyx_obj
     }
     __pyx_v_self->cur_mean = (__pyx_v_self->CF1 / __pyx_v_self->w);
 
-    /* "AfterImage_extrapolate.pyx":96
+    /* "kitsune_core/AfterImage_extrapolate.pyx":96
  * 
  *     cdef mean(self):
  *         if math.isnan(self.cur_mean):  # calculate it only once when necessary             # <<<<<<<<<<<<<<
@@ -7588,7 +7588,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_mean(struct __pyx_obj
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":98
+  /* "kitsune_core/AfterImage_extrapolate.pyx":98
  *         if math.isnan(self.cur_mean):  # calculate it only once when necessary
  *             self.cur_mean = self.CF1 / self.w
  *         return self.cur_mean             # <<<<<<<<<<<<<<
@@ -7602,7 +7602,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_mean(struct __pyx_obj
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":95
+  /* "kitsune_core/AfterImage_extrapolate.pyx":95
  *         return self.w
  * 
  *     cdef mean(self):             # <<<<<<<<<<<<<<
@@ -7616,7 +7616,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_mean(struct __pyx_obj
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat.mean", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat.mean", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7624,7 +7624,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_mean(struct __pyx_obj
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":100
+/* "kitsune_core/AfterImage_extrapolate.pyx":100
  *         return self.cur_mean
  * 
  *     cdef var(self):             # <<<<<<<<<<<<<<
@@ -7632,7 +7632,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_mean(struct __pyx_obj
  *             self.cur_var = abs(self.CF2 / self.w - math.pow(self.mean(), 2))
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_var(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_var(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -7648,7 +7648,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_var(struct __pyx_obj_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("var", 1);
 
-  /* "AfterImage_extrapolate.pyx":101
+  /* "kitsune_core/AfterImage_extrapolate.pyx":101
  * 
  *     cdef var(self):
  *         if math.isnan(self.cur_var):  # calculate it only once when necessary             # <<<<<<<<<<<<<<
@@ -7689,7 +7689,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_var(struct __pyx_obj_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_6) {
 
-    /* "AfterImage_extrapolate.pyx":102
+    /* "kitsune_core/AfterImage_extrapolate.pyx":102
  *     cdef var(self):
  *         if math.isnan(self.cur_var):  # calculate it only once when necessary
  *             self.cur_var = abs(self.CF2 / self.w - math.pow(self.mean(), 2))             # <<<<<<<<<<<<<<
@@ -7707,7 +7707,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_var(struct __pyx_obj_
     __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_pow); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 102, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->__pyx_vtab)->mean(__pyx_v_self); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 102, __pyx_L1_error)
+    __pyx_t_2 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->__pyx_vtab)->mean(__pyx_v_self); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 102, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_7 = NULL;
     __pyx_t_5 = 0;
@@ -7743,7 +7743,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_var(struct __pyx_obj_
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_v_self->cur_var = __pyx_t_8;
 
-    /* "AfterImage_extrapolate.pyx":101
+    /* "kitsune_core/AfterImage_extrapolate.pyx":101
  * 
  *     cdef var(self):
  *         if math.isnan(self.cur_var):  # calculate it only once when necessary             # <<<<<<<<<<<<<<
@@ -7752,7 +7752,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_var(struct __pyx_obj_
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":103
+  /* "kitsune_core/AfterImage_extrapolate.pyx":103
  *         if math.isnan(self.cur_var):  # calculate it only once when necessary
  *             self.cur_var = abs(self.CF2 / self.w - math.pow(self.mean(), 2))
  *         return self.cur_var             # <<<<<<<<<<<<<<
@@ -7766,7 +7766,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_var(struct __pyx_obj_
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":100
+  /* "kitsune_core/AfterImage_extrapolate.pyx":100
  *         return self.cur_mean
  * 
  *     cdef var(self):             # <<<<<<<<<<<<<<
@@ -7781,7 +7781,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_var(struct __pyx_obj_
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat.var", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat.var", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7789,7 +7789,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_var(struct __pyx_obj_
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":105
+/* "kitsune_core/AfterImage_extrapolate.pyx":105
  *         return self.cur_var
  * 
  *     cdef std(self):             # <<<<<<<<<<<<<<
@@ -7797,7 +7797,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_var(struct __pyx_obj_
  *             self.cur_std = math.sqrt(self.var())
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_std(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_std(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -7812,7 +7812,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_std(struct __pyx_obj_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("std", 1);
 
-  /* "AfterImage_extrapolate.pyx":106
+  /* "kitsune_core/AfterImage_extrapolate.pyx":106
  * 
  *     cdef std(self):
  *         if math.isnan(self.cur_std):  # calculate it only once when necessary             # <<<<<<<<<<<<<<
@@ -7853,7 +7853,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_std(struct __pyx_obj_
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_6) {
 
-    /* "AfterImage_extrapolate.pyx":107
+    /* "kitsune_core/AfterImage_extrapolate.pyx":107
  *     cdef std(self):
  *         if math.isnan(self.cur_std):  # calculate it only once when necessary
  *             self.cur_std = math.sqrt(self.var())             # <<<<<<<<<<<<<<
@@ -7865,7 +7865,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_std(struct __pyx_obj_
     __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_sqrt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 107, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->__pyx_vtab)->var(__pyx_v_self); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 107, __pyx_L1_error)
+    __pyx_t_3 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->__pyx_vtab)->var(__pyx_v_self); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 107, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_4 = NULL;
     __pyx_t_5 = 0;
@@ -7894,7 +7894,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_std(struct __pyx_obj_
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_self->cur_std = __pyx_t_7;
 
-    /* "AfterImage_extrapolate.pyx":106
+    /* "kitsune_core/AfterImage_extrapolate.pyx":106
  * 
  *     cdef std(self):
  *         if math.isnan(self.cur_std):  # calculate it only once when necessary             # <<<<<<<<<<<<<<
@@ -7903,7 +7903,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_std(struct __pyx_obj_
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":108
+  /* "kitsune_core/AfterImage_extrapolate.pyx":108
  *         if math.isnan(self.cur_std):  # calculate it only once when necessary
  *             self.cur_std = math.sqrt(self.var())
  *         return self.cur_std             # <<<<<<<<<<<<<<
@@ -7917,7 +7917,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_std(struct __pyx_obj_
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":105
+  /* "kitsune_core/AfterImage_extrapolate.pyx":105
  *         return self.cur_var
  * 
  *     cdef std(self):             # <<<<<<<<<<<<<<
@@ -7931,7 +7931,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_std(struct __pyx_obj_
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat.std", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat.std", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7939,7 +7939,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_std(struct __pyx_obj_
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":110
+/* "kitsune_core/AfterImage_extrapolate.pyx":110
  *         return self.cur_std
  * 
  *     cdef cov(self,ID2):             # <<<<<<<<<<<<<<
@@ -7947,7 +7947,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_std(struct __pyx_obj_
  *             if cov.isRelated(ID2):
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_ID2) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_cov(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_ID2) {
   PyObject *__pyx_v_cov = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -7963,7 +7963,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov(struct __pyx_obj_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("cov", 1);
 
-  /* "AfterImage_extrapolate.pyx":111
+  /* "kitsune_core/AfterImage_extrapolate.pyx":111
  * 
  *     cdef cov(self,ID2):
  *         for cov in self.covs:             # <<<<<<<<<<<<<<
@@ -7993,7 +7993,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov(struct __pyx_obj_
     __Pyx_XDECREF_SET(__pyx_v_cov, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "AfterImage_extrapolate.pyx":112
+    /* "kitsune_core/AfterImage_extrapolate.pyx":112
  *     cdef cov(self,ID2):
  *         for cov in self.covs:
  *             if cov.isRelated(ID2):             # <<<<<<<<<<<<<<
@@ -8028,7 +8028,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov(struct __pyx_obj_
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_7) {
 
-      /* "AfterImage_extrapolate.pyx":113
+      /* "kitsune_core/AfterImage_extrapolate.pyx":113
  *         for cov in self.covs:
  *             if cov.isRelated(ID2):
  *                 return cov.cov()             # <<<<<<<<<<<<<<
@@ -8065,7 +8065,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov(struct __pyx_obj_
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       goto __pyx_L0;
 
-      /* "AfterImage_extrapolate.pyx":112
+      /* "kitsune_core/AfterImage_extrapolate.pyx":112
  *     cdef cov(self,ID2):
  *         for cov in self.covs:
  *             if cov.isRelated(ID2):             # <<<<<<<<<<<<<<
@@ -8074,7 +8074,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov(struct __pyx_obj_
  */
     }
 
-    /* "AfterImage_extrapolate.pyx":111
+    /* "kitsune_core/AfterImage_extrapolate.pyx":111
  * 
  *     cdef cov(self,ID2):
  *         for cov in self.covs:             # <<<<<<<<<<<<<<
@@ -8084,7 +8084,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov(struct __pyx_obj_
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":114
+  /* "kitsune_core/AfterImage_extrapolate.pyx":114
  *             if cov.isRelated(ID2):
  *                 return cov.cov()
  *         return [np.nan]             # <<<<<<<<<<<<<<
@@ -8106,7 +8106,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov(struct __pyx_obj_
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":110
+  /* "kitsune_core/AfterImage_extrapolate.pyx":110
  *         return self.cur_std
  * 
  *     cdef cov(self,ID2):             # <<<<<<<<<<<<<<
@@ -8120,7 +8120,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov(struct __pyx_obj_
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat.cov", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat.cov", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_cov);
@@ -8129,7 +8129,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov(struct __pyx_obj_
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":116
+/* "kitsune_core/AfterImage_extrapolate.pyx":116
  *         return [np.nan]
  * 
  *     cdef pcc(self,ID2):             # <<<<<<<<<<<<<<
@@ -8137,7 +8137,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov(struct __pyx_obj_
  *             if cov.isRelated(ID2):
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_pcc(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_ID2) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_pcc(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_ID2) {
   PyObject *__pyx_v_cov = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -8153,7 +8153,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_pcc(struct __pyx_obj_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("pcc", 1);
 
-  /* "AfterImage_extrapolate.pyx":117
+  /* "kitsune_core/AfterImage_extrapolate.pyx":117
  * 
  *     cdef pcc(self,ID2):
  *         for cov in self.covs:             # <<<<<<<<<<<<<<
@@ -8183,7 +8183,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_pcc(struct __pyx_obj_
     __Pyx_XDECREF_SET(__pyx_v_cov, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "AfterImage_extrapolate.pyx":118
+    /* "kitsune_core/AfterImage_extrapolate.pyx":118
  *     cdef pcc(self,ID2):
  *         for cov in self.covs:
  *             if cov.isRelated(ID2):             # <<<<<<<<<<<<<<
@@ -8218,7 +8218,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_pcc(struct __pyx_obj_
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_7) {
 
-      /* "AfterImage_extrapolate.pyx":119
+      /* "kitsune_core/AfterImage_extrapolate.pyx":119
  *         for cov in self.covs:
  *             if cov.isRelated(ID2):
  *                 return cov.pcc()             # <<<<<<<<<<<<<<
@@ -8255,7 +8255,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_pcc(struct __pyx_obj_
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       goto __pyx_L0;
 
-      /* "AfterImage_extrapolate.pyx":118
+      /* "kitsune_core/AfterImage_extrapolate.pyx":118
  *     cdef pcc(self,ID2):
  *         for cov in self.covs:
  *             if cov.isRelated(ID2):             # <<<<<<<<<<<<<<
@@ -8264,7 +8264,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_pcc(struct __pyx_obj_
  */
     }
 
-    /* "AfterImage_extrapolate.pyx":117
+    /* "kitsune_core/AfterImage_extrapolate.pyx":117
  * 
  *     cdef pcc(self,ID2):
  *         for cov in self.covs:             # <<<<<<<<<<<<<<
@@ -8274,7 +8274,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_pcc(struct __pyx_obj_
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":120
+  /* "kitsune_core/AfterImage_extrapolate.pyx":120
  *             if cov.isRelated(ID2):
  *                 return cov.pcc()
  *         return [np.nan]             # <<<<<<<<<<<<<<
@@ -8296,7 +8296,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_pcc(struct __pyx_obj_
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":116
+  /* "kitsune_core/AfterImage_extrapolate.pyx":116
  *         return [np.nan]
  * 
  *     cdef pcc(self,ID2):             # <<<<<<<<<<<<<<
@@ -8310,7 +8310,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_pcc(struct __pyx_obj_
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat.pcc", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat.pcc", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_cov);
@@ -8319,7 +8319,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_pcc(struct __pyx_obj_
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":122
+/* "kitsune_core/AfterImage_extrapolate.pyx":122
  *         return [np.nan]
  * 
  *     cdef cov_pcc(self,ID2):             # <<<<<<<<<<<<<<
@@ -8327,8 +8327,8 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_pcc(struct __pyx_obj_
  *         for c in self.covs:
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov_pcc(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_ID2) {
-  struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_cov = 0;
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_cov_pcc(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_ID2) {
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_cov = 0;
   PyObject *__pyx_v_c = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -8344,7 +8344,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov_pcc(struct __pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("cov_pcc", 1);
 
-  /* "AfterImage_extrapolate.pyx":124
+  /* "kitsune_core/AfterImage_extrapolate.pyx":124
  *     cdef cov_pcc(self,ID2):
  *         cdef incStat_cov cov
  *         for c in self.covs:             # <<<<<<<<<<<<<<
@@ -8374,20 +8374,20 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov_pcc(struct __pyx_
     __Pyx_XDECREF_SET(__pyx_v_c, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "AfterImage_extrapolate.pyx":125
+    /* "kitsune_core/AfterImage_extrapolate.pyx":125
  *         cdef incStat_cov cov
  *         for c in self.covs:
  *             cov = c             # <<<<<<<<<<<<<<
  *             if cov.isRelated(ID2):
  *                 return cov.get_stats1()
  */
-    if (!(likely(((__pyx_v_c) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_c, __pyx_ptype_22AfterImage_extrapolate_incStat_cov))))) __PYX_ERR(0, 125, __pyx_L1_error)
+    if (!(likely(((__pyx_v_c) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_c, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov))))) __PYX_ERR(0, 125, __pyx_L1_error)
     __pyx_t_3 = __pyx_v_c;
     __Pyx_INCREF(__pyx_t_3);
-    __Pyx_XDECREF_SET(__pyx_v_cov, ((struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *)__pyx_t_3));
+    __Pyx_XDECREF_SET(__pyx_v_cov, ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "AfterImage_extrapolate.pyx":126
+    /* "kitsune_core/AfterImage_extrapolate.pyx":126
  *         for c in self.covs:
  *             cov = c
  *             if cov.isRelated(ID2):             # <<<<<<<<<<<<<<
@@ -8422,7 +8422,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov_pcc(struct __pyx_
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_7) {
 
-      /* "AfterImage_extrapolate.pyx":127
+      /* "kitsune_core/AfterImage_extrapolate.pyx":127
  *             cov = c
  *             if cov.isRelated(ID2):
  *                 return cov.get_stats1()             # <<<<<<<<<<<<<<
@@ -8430,14 +8430,14 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov_pcc(struct __pyx_
  * 
  */
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov *)__pyx_v_cov->__pyx_vtab)->get_stats1(__pyx_v_cov); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 127, __pyx_L1_error)
+      __pyx_t_3 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v_cov->__pyx_vtab)->get_stats1(__pyx_v_cov); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 127, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_r = __pyx_t_3;
       __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       goto __pyx_L0;
 
-      /* "AfterImage_extrapolate.pyx":126
+      /* "kitsune_core/AfterImage_extrapolate.pyx":126
  *         for c in self.covs:
  *             cov = c
  *             if cov.isRelated(ID2):             # <<<<<<<<<<<<<<
@@ -8446,7 +8446,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov_pcc(struct __pyx_
  */
     }
 
-    /* "AfterImage_extrapolate.pyx":124
+    /* "kitsune_core/AfterImage_extrapolate.pyx":124
  *     cdef cov_pcc(self,ID2):
  *         cdef incStat_cov cov
  *         for c in self.covs:             # <<<<<<<<<<<<<<
@@ -8456,7 +8456,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov_pcc(struct __pyx_
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":128
+  /* "kitsune_core/AfterImage_extrapolate.pyx":128
  *             if cov.isRelated(ID2):
  *                 return cov.get_stats1()
  *         return [np.nan]*2             # <<<<<<<<<<<<<<
@@ -8483,7 +8483,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov_pcc(struct __pyx_
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":122
+  /* "kitsune_core/AfterImage_extrapolate.pyx":122
  *         return [np.nan]
  * 
  *     cdef cov_pcc(self,ID2):             # <<<<<<<<<<<<<<
@@ -8497,7 +8497,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov_pcc(struct __pyx_
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat.cov_pcc", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat.cov_pcc", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_cov);
@@ -8507,7 +8507,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov_pcc(struct __pyx_
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":130
+/* "kitsune_core/AfterImage_extrapolate.pyx":130
  *         return [np.nan]*2
  * 
  *     cdef radius(self, other_incStats):  # the radius of a set of incStats             # <<<<<<<<<<<<<<
@@ -8515,9 +8515,9 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_cov_pcc(struct __pyx_
  *         A = self.var()
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_radius(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_other_incStats) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_radius(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_other_incStats) {
   double __pyx_v_A;
-  struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_incSc = 0;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_incSc = 0;
   PyObject *__pyx_v_incS = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -8534,20 +8534,20 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_radius(struct __pyx_o
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("radius", 1);
 
-  /* "AfterImage_extrapolate.pyx":132
+  /* "kitsune_core/AfterImage_extrapolate.pyx":132
  *     cdef radius(self, other_incStats):  # the radius of a set of incStats
  *         cdef double A
  *         A = self.var()             # <<<<<<<<<<<<<<
  *         cdef incStat incSc
  *         for incS in other_incStats:
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->__pyx_vtab)->var(__pyx_v_self); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 132, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->__pyx_vtab)->var(__pyx_v_self); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 132, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 132, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_A = __pyx_t_2;
 
-  /* "AfterImage_extrapolate.pyx":134
+  /* "kitsune_core/AfterImage_extrapolate.pyx":134
  *         A = self.var()
  *         cdef incStat incSc
  *         for incS in other_incStats:             # <<<<<<<<<<<<<<
@@ -8609,20 +8609,20 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_radius(struct __pyx_o
     __Pyx_XDECREF_SET(__pyx_v_incS, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "AfterImage_extrapolate.pyx":135
+    /* "kitsune_core/AfterImage_extrapolate.pyx":135
  *         cdef incStat incSc
  *         for incS in other_incStats:
  *             incSc = incS             # <<<<<<<<<<<<<<
  *             A += incSc.var()
  *         return math.sqrt(A)
  */
-    if (!(likely(((__pyx_v_incS) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_incS, __pyx_ptype_22AfterImage_extrapolate_incStat))))) __PYX_ERR(0, 135, __pyx_L1_error)
+    if (!(likely(((__pyx_v_incS) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_incS, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat))))) __PYX_ERR(0, 135, __pyx_L1_error)
     __pyx_t_5 = __pyx_v_incS;
     __Pyx_INCREF(__pyx_t_5);
-    __Pyx_XDECREF_SET(__pyx_v_incSc, ((struct __pyx_obj_22AfterImage_extrapolate_incStat *)__pyx_t_5));
+    __Pyx_XDECREF_SET(__pyx_v_incSc, ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "AfterImage_extrapolate.pyx":136
+    /* "kitsune_core/AfterImage_extrapolate.pyx":136
  *         for incS in other_incStats:
  *             incSc = incS
  *             A += incSc.var()             # <<<<<<<<<<<<<<
@@ -8631,7 +8631,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_radius(struct __pyx_o
  */
     __pyx_t_5 = PyFloat_FromDouble(__pyx_v_A); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 136, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_incSc->__pyx_vtab)->var(__pyx_v_incSc); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 136, __pyx_L1_error)
+    __pyx_t_6 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_incSc->__pyx_vtab)->var(__pyx_v_incSc); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 136, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __pyx_t_7 = PyNumber_InPlaceAdd(__pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 136, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
@@ -8641,7 +8641,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_radius(struct __pyx_o
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_v_A = __pyx_t_2;
 
-    /* "AfterImage_extrapolate.pyx":134
+    /* "kitsune_core/AfterImage_extrapolate.pyx":134
  *         A = self.var()
  *         cdef incStat incSc
  *         for incS in other_incStats:             # <<<<<<<<<<<<<<
@@ -8651,7 +8651,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_radius(struct __pyx_o
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":137
+  /* "kitsune_core/AfterImage_extrapolate.pyx":137
  *             incSc = incS
  *             A += incSc.var()
  *         return math.sqrt(A)             # <<<<<<<<<<<<<<
@@ -8693,7 +8693,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_radius(struct __pyx_o
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":130
+  /* "kitsune_core/AfterImage_extrapolate.pyx":130
  *         return [np.nan]*2
  * 
  *     cdef radius(self, other_incStats):  # the radius of a set of incStats             # <<<<<<<<<<<<<<
@@ -8707,7 +8707,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_radius(struct __pyx_o
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat.radius", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat.radius", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_incSc);
@@ -8717,7 +8717,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_radius(struct __pyx_o
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":139
+/* "kitsune_core/AfterImage_extrapolate.pyx":139
  *         return math.sqrt(A)
  * 
  *     cdef magnitude(self, other_incStats):  # the magnitude of a set of incStats             # <<<<<<<<<<<<<<
@@ -8725,9 +8725,9 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_radius(struct __pyx_o
  *         A = math.pow(self.mean(), 2)
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_magnitude(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_other_incStats) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_magnitude(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_other_incStats) {
   double __pyx_v_A;
-  struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_incSc = 0;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_incSc = 0;
   PyObject *__pyx_v_incS = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -8746,7 +8746,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_magnitude(struct __py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("magnitude", 1);
 
-  /* "AfterImage_extrapolate.pyx":141
+  /* "kitsune_core/AfterImage_extrapolate.pyx":141
  *     cdef magnitude(self, other_incStats):  # the magnitude of a set of incStats
  *         cdef double A
  *         A = math.pow(self.mean(), 2)             # <<<<<<<<<<<<<<
@@ -8758,7 +8758,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_magnitude(struct __py
   __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_pow); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->__pyx_vtab)->mean(__pyx_v_self); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 141, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->__pyx_vtab)->mean(__pyx_v_self); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 141, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -8787,7 +8787,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_magnitude(struct __py
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_A = __pyx_t_6;
 
-  /* "AfterImage_extrapolate.pyx":143
+  /* "kitsune_core/AfterImage_extrapolate.pyx":143
  *         A = math.pow(self.mean(), 2)
  *         cdef incStat incSc
  *         for incS in other_incStats:             # <<<<<<<<<<<<<<
@@ -8849,20 +8849,20 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_magnitude(struct __py
     __Pyx_XDECREF_SET(__pyx_v_incS, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "AfterImage_extrapolate.pyx":144
+    /* "kitsune_core/AfterImage_extrapolate.pyx":144
  *         cdef incStat incSc
  *         for incS in other_incStats:
  *             incSc = incS             # <<<<<<<<<<<<<<
  *             A += math.pow(incSc.mean(), 2)
  *         return math.sqrt(A)
  */
-    if (!(likely(((__pyx_v_incS) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_incS, __pyx_ptype_22AfterImage_extrapolate_incStat))))) __PYX_ERR(0, 144, __pyx_L1_error)
+    if (!(likely(((__pyx_v_incS) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_incS, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat))))) __PYX_ERR(0, 144, __pyx_L1_error)
     __pyx_t_3 = __pyx_v_incS;
     __Pyx_INCREF(__pyx_t_3);
-    __Pyx_XDECREF_SET(__pyx_v_incSc, ((struct __pyx_obj_22AfterImage_extrapolate_incStat *)__pyx_t_3));
+    __Pyx_XDECREF_SET(__pyx_v_incSc, ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "AfterImage_extrapolate.pyx":145
+    /* "kitsune_core/AfterImage_extrapolate.pyx":145
  *         for incS in other_incStats:
  *             incSc = incS
  *             A += math.pow(incSc.mean(), 2)             # <<<<<<<<<<<<<<
@@ -8876,7 +8876,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_magnitude(struct __py
     __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_pow); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 145, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_incSc->__pyx_vtab)->mean(__pyx_v_incSc); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 145, __pyx_L1_error)
+    __pyx_t_4 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_incSc->__pyx_vtab)->mean(__pyx_v_incSc); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 145, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_10 = NULL;
     __pyx_t_5 = 0;
@@ -8909,7 +8909,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_magnitude(struct __py
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __pyx_v_A = __pyx_t_6;
 
-    /* "AfterImage_extrapolate.pyx":143
+    /* "kitsune_core/AfterImage_extrapolate.pyx":143
  *         A = math.pow(self.mean(), 2)
  *         cdef incStat incSc
  *         for incS in other_incStats:             # <<<<<<<<<<<<<<
@@ -8919,7 +8919,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_magnitude(struct __py
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":146
+  /* "kitsune_core/AfterImage_extrapolate.pyx":146
  *             incSc = incS
  *             A += math.pow(incSc.mean(), 2)
  *         return math.sqrt(A)             # <<<<<<<<<<<<<<
@@ -8961,7 +8961,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_magnitude(struct __py
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":139
+  /* "kitsune_core/AfterImage_extrapolate.pyx":139
  *         return math.sqrt(A)
  * 
  *     cdef magnitude(self, other_incStats):  # the magnitude of a set of incStats             # <<<<<<<<<<<<<<
@@ -8977,7 +8977,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_magnitude(struct __py
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat.magnitude", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat.magnitude", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_incSc);
@@ -8987,7 +8987,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_magnitude(struct __py
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":149
+/* "kitsune_core/AfterImage_extrapolate.pyx":149
  * 
  *     #calculates and pulls all stats on this stream
  *     cdef allstats_1D(self):             # <<<<<<<<<<<<<<
@@ -8995,7 +8995,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_magnitude(struct __py
  *         self.cur_var = abs(self.CF2 / self.w - math.pow(self.cur_mean, 2))
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_1D(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_allstats_1D(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -9010,7 +9010,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_1D(struct __
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("allstats_1D", 1);
 
-  /* "AfterImage_extrapolate.pyx":150
+  /* "kitsune_core/AfterImage_extrapolate.pyx":150
  *     #calculates and pulls all stats on this stream
  *     cdef allstats_1D(self):
  *         self.cur_mean = self.CF1 / self.w             # <<<<<<<<<<<<<<
@@ -9023,7 +9023,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_1D(struct __
   }
   __pyx_v_self->cur_mean = (__pyx_v_self->CF1 / __pyx_v_self->w);
 
-  /* "AfterImage_extrapolate.pyx":151
+  /* "kitsune_core/AfterImage_extrapolate.pyx":151
  *     cdef allstats_1D(self):
  *         self.cur_mean = self.CF1 / self.w
  *         self.cur_var = abs(self.CF2 / self.w - math.pow(self.cur_mean, 2))             # <<<<<<<<<<<<<<
@@ -9077,7 +9077,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_1D(struct __
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_self->cur_var = __pyx_t_7;
 
-  /* "AfterImage_extrapolate.pyx":152
+  /* "kitsune_core/AfterImage_extrapolate.pyx":152
  *         self.cur_mean = self.CF1 / self.w
  *         self.cur_var = abs(self.CF2 / self.w - math.pow(self.cur_mean, 2))
  *         return [self.w, self.cur_mean, self.cur_var]             # <<<<<<<<<<<<<<
@@ -9106,7 +9106,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_1D(struct __
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":149
+  /* "kitsune_core/AfterImage_extrapolate.pyx":149
  * 
  *     #calculates and pulls all stats on this stream
  *     cdef allstats_1D(self):             # <<<<<<<<<<<<<<
@@ -9121,7 +9121,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_1D(struct __
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat.allstats_1D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat.allstats_1D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -9129,7 +9129,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_1D(struct __
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":155
+/* "kitsune_core/AfterImage_extrapolate.pyx":155
  * 
  *     #calculates and pulls all stats on this stream, and stats shared with the indicated stream
  *     cdef allstats_2D(self, str ID2):             # <<<<<<<<<<<<<<
@@ -9137,10 +9137,10 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_1D(struct __
  *         # Find cov component
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_2D(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_ID2) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_allstats_2D(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_ID2) {
   PyObject *__pyx_v_stats1D = NULL;
   PyObject *__pyx_v_stats2D = NULL;
-  struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_cov = 0;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_cov = 0;
   PyObject *__pyx_v_c = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -9156,19 +9156,19 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_2D(struct __
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("allstats_2D", 1);
 
-  /* "AfterImage_extrapolate.pyx":156
+  /* "kitsune_core/AfterImage_extrapolate.pyx":156
  *     #calculates and pulls all stats on this stream, and stats shared with the indicated stream
  *     cdef allstats_2D(self, str ID2):
  *         stats1D = self.allstats_1D()             # <<<<<<<<<<<<<<
  *         # Find cov component
  *         stats2D = [np.nan] * 4
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->__pyx_vtab)->allstats_1D(__pyx_v_self); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 156, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->__pyx_vtab)->allstats_1D(__pyx_v_self); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 156, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_stats1D = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":158
+  /* "kitsune_core/AfterImage_extrapolate.pyx":158
  *         stats1D = self.allstats_1D()
  *         # Find cov component
  *         stats2D = [np.nan] * 4             # <<<<<<<<<<<<<<
@@ -9193,7 +9193,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_2D(struct __
   __pyx_v_stats2D = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":160
+  /* "kitsune_core/AfterImage_extrapolate.pyx":160
  *         stats2D = [np.nan] * 4
  *         cdef incStat_cov cov
  *         for c in self.covs:             # <<<<<<<<<<<<<<
@@ -9223,20 +9223,20 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_2D(struct __
     __Pyx_XDECREF_SET(__pyx_v_c, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "AfterImage_extrapolate.pyx":161
+    /* "kitsune_core/AfterImage_extrapolate.pyx":161
  *         cdef incStat_cov cov
  *         for c in self.covs:
  *             cov = c             # <<<<<<<<<<<<<<
  *             if cov.isRelated(ID2):
  *                 stats2D = cov.get_stats2()
  */
-    if (!(likely(((__pyx_v_c) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_c, __pyx_ptype_22AfterImage_extrapolate_incStat_cov))))) __PYX_ERR(0, 161, __pyx_L1_error)
+    if (!(likely(((__pyx_v_c) == Py_None) || likely(__Pyx_TypeTest(__pyx_v_c, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov))))) __PYX_ERR(0, 161, __pyx_L1_error)
     __pyx_t_2 = __pyx_v_c;
     __Pyx_INCREF(__pyx_t_2);
-    __Pyx_XDECREF_SET(__pyx_v_cov, ((struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *)__pyx_t_2));
+    __Pyx_XDECREF_SET(__pyx_v_cov, ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "AfterImage_extrapolate.pyx":162
+    /* "kitsune_core/AfterImage_extrapolate.pyx":162
  *         for c in self.covs:
  *             cov = c
  *             if cov.isRelated(ID2):             # <<<<<<<<<<<<<<
@@ -9271,19 +9271,19 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_2D(struct __
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_7) {
 
-      /* "AfterImage_extrapolate.pyx":163
+      /* "kitsune_core/AfterImage_extrapolate.pyx":163
  *             cov = c
  *             if cov.isRelated(ID2):
  *                 stats2D = cov.get_stats2()             # <<<<<<<<<<<<<<
  *                 break
  *         return stats1D + stats2D
  */
-      __pyx_t_2 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov *)__pyx_v_cov->__pyx_vtab)->get_stats2(__pyx_v_cov); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 163, __pyx_L1_error)
+      __pyx_t_2 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v_cov->__pyx_vtab)->get_stats2(__pyx_v_cov); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 163, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF_SET(__pyx_v_stats2D, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "AfterImage_extrapolate.pyx":164
+      /* "kitsune_core/AfterImage_extrapolate.pyx":164
  *             if cov.isRelated(ID2):
  *                 stats2D = cov.get_stats2()
  *                 break             # <<<<<<<<<<<<<<
@@ -9292,7 +9292,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_2D(struct __
  */
       goto __pyx_L4_break;
 
-      /* "AfterImage_extrapolate.pyx":162
+      /* "kitsune_core/AfterImage_extrapolate.pyx":162
  *         for c in self.covs:
  *             cov = c
  *             if cov.isRelated(ID2):             # <<<<<<<<<<<<<<
@@ -9301,7 +9301,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_2D(struct __
  */
     }
 
-    /* "AfterImage_extrapolate.pyx":160
+    /* "kitsune_core/AfterImage_extrapolate.pyx":160
  *         stats2D = [np.nan] * 4
  *         cdef incStat_cov cov
  *         for c in self.covs:             # <<<<<<<<<<<<<<
@@ -9316,7 +9316,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_2D(struct __
   goto __pyx_L6_for_end;
   __pyx_L6_for_end:;
 
-  /* "AfterImage_extrapolate.pyx":165
+  /* "kitsune_core/AfterImage_extrapolate.pyx":165
  *                 stats2D = cov.get_stats2()
  *                 break
  *         return stats1D + stats2D             # <<<<<<<<<<<<<<
@@ -9330,7 +9330,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_2D(struct __
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":155
+  /* "kitsune_core/AfterImage_extrapolate.pyx":155
  * 
  *     #calculates and pulls all stats on this stream, and stats shared with the indicated stream
  *     cdef allstats_2D(self, str ID2):             # <<<<<<<<<<<<<<
@@ -9344,7 +9344,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_2D(struct __
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat.allstats_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat.allstats_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_stats1D);
@@ -9356,7 +9356,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_2D(struct __
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":167
+/* "kitsune_core/AfterImage_extrapolate.pyx":167
  *         return stats1D + stats2D
  * 
  *     cdef getHeaders_1D(self, suffix=True):             # <<<<<<<<<<<<<<
@@ -9364,7 +9364,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_allstats_2D(struct __
  *             s0=""
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_1D(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_getHeaders_1D *__pyx_optional_args) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_getHeaders_1D(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_getHeaders_1D *__pyx_optional_args) {
   PyObject *__pyx_v_suffix = ((PyObject *)Py_True);
   PyObject *__pyx_v_s0 = NULL;
   PyObject *__pyx_v_headers = NULL;
@@ -9385,7 +9385,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_1D(struct 
     }
   }
 
-  /* "AfterImage_extrapolate.pyx":168
+  /* "kitsune_core/AfterImage_extrapolate.pyx":168
  * 
  *     cdef getHeaders_1D(self, suffix=True):
  *         if self.ID is None:             # <<<<<<<<<<<<<<
@@ -9395,7 +9395,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_1D(struct 
   __pyx_t_1 = (__pyx_v_self->ID == ((PyObject*)Py_None));
   if (__pyx_t_1) {
 
-    /* "AfterImage_extrapolate.pyx":169
+    /* "kitsune_core/AfterImage_extrapolate.pyx":169
  *     cdef getHeaders_1D(self, suffix=True):
  *         if self.ID is None:
  *             s0=""             # <<<<<<<<<<<<<<
@@ -9405,7 +9405,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_1D(struct 
     __Pyx_INCREF(__pyx_kp_s_);
     __pyx_v_s0 = __pyx_kp_s_;
 
-    /* "AfterImage_extrapolate.pyx":168
+    /* "kitsune_core/AfterImage_extrapolate.pyx":168
  * 
  *     cdef getHeaders_1D(self, suffix=True):
  *         if self.ID is None:             # <<<<<<<<<<<<<<
@@ -9415,7 +9415,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_1D(struct 
     goto __pyx_L3;
   }
 
-  /* "AfterImage_extrapolate.pyx":171
+  /* "kitsune_core/AfterImage_extrapolate.pyx":171
  *             s0=""
  *         else:
  *             s0 = "_0"             # <<<<<<<<<<<<<<
@@ -9428,7 +9428,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_1D(struct 
   }
   __pyx_L3:;
 
-  /* "AfterImage_extrapolate.pyx":172
+  /* "kitsune_core/AfterImage_extrapolate.pyx":172
  *         else:
  *             s0 = "_0"
  *         if suffix:             # <<<<<<<<<<<<<<
@@ -9438,7 +9438,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_1D(struct 
   __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_suffix); if (unlikely((__pyx_t_1 < 0))) __PYX_ERR(0, 172, __pyx_L1_error)
   if (__pyx_t_1) {
 
-    /* "AfterImage_extrapolate.pyx":173
+    /* "kitsune_core/AfterImage_extrapolate.pyx":173
  *             s0 = "_0"
  *         if suffix:
  *             s0 = "_"+self.ID             # <<<<<<<<<<<<<<
@@ -9450,7 +9450,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_1D(struct 
     __Pyx_DECREF_SET(__pyx_v_s0, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "AfterImage_extrapolate.pyx":172
+    /* "kitsune_core/AfterImage_extrapolate.pyx":172
  *         else:
  *             s0 = "_0"
  *         if suffix:             # <<<<<<<<<<<<<<
@@ -9459,7 +9459,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_1D(struct 
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":174
+  /* "kitsune_core/AfterImage_extrapolate.pyx":174
  *         if suffix:
  *             s0 = "_"+self.ID
  *         headers = ["weight"+s0, "mean"+s0, "std"+s0]             # <<<<<<<<<<<<<<
@@ -9486,7 +9486,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_1D(struct 
   __pyx_v_headers = ((PyObject*)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "AfterImage_extrapolate.pyx":175
+  /* "kitsune_core/AfterImage_extrapolate.pyx":175
  *             s0 = "_"+self.ID
  *         headers = ["weight"+s0, "mean"+s0, "std"+s0]
  *         return headers             # <<<<<<<<<<<<<<
@@ -9498,7 +9498,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_1D(struct 
   __pyx_r = __pyx_v_headers;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":167
+  /* "kitsune_core/AfterImage_extrapolate.pyx":167
  *         return stats1D + stats2D
  * 
  *     cdef getHeaders_1D(self, suffix=True):             # <<<<<<<<<<<<<<
@@ -9512,7 +9512,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_1D(struct 
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat.getHeaders_1D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat.getHeaders_1D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_s0);
@@ -9522,7 +9522,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_1D(struct 
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":177
+/* "kitsune_core/AfterImage_extrapolate.pyx":177
  *         return headers
  * 
  *     cdef getHeaders_2D(self, ID2, suffix=True):             # <<<<<<<<<<<<<<
@@ -9530,7 +9530,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_1D(struct 
  *         if self.ID is None:
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_ID2, struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_getHeaders_2D *__pyx_optional_args) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v_ID2, struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_getHeaders_2D *__pyx_optional_args) {
   PyObject *__pyx_v_suffix = ((PyObject *)Py_True);
   PyObject *__pyx_v_hdrs1D = NULL;
   PyObject *__pyx_v_s0 = NULL;
@@ -9539,7 +9539,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct 
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_getHeaders_1D __pyx_t_2;
+  struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_getHeaders_1D __pyx_t_2;
   int __pyx_t_3;
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
@@ -9555,7 +9555,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct 
     }
   }
 
-  /* "AfterImage_extrapolate.pyx":178
+  /* "kitsune_core/AfterImage_extrapolate.pyx":178
  * 
  *     cdef getHeaders_2D(self, ID2, suffix=True):
  *         hdrs1D = self.getHeaders_1D(suffix)             # <<<<<<<<<<<<<<
@@ -9564,12 +9564,12 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct 
  */
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.suffix = __pyx_v_suffix;
-  __pyx_t_1 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->__pyx_vtab)->getHeaders_1D(__pyx_v_self, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->__pyx_vtab)->getHeaders_1D(__pyx_v_self, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_hdrs1D = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":179
+  /* "kitsune_core/AfterImage_extrapolate.pyx":179
  *     cdef getHeaders_2D(self, ID2, suffix=True):
  *         hdrs1D = self.getHeaders_1D(suffix)
  *         if self.ID is None:             # <<<<<<<<<<<<<<
@@ -9579,7 +9579,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct 
   __pyx_t_3 = (__pyx_v_self->ID == ((PyObject*)Py_None));
   if (__pyx_t_3) {
 
-    /* "AfterImage_extrapolate.pyx":180
+    /* "kitsune_core/AfterImage_extrapolate.pyx":180
  *         hdrs1D = self.getHeaders_1D(suffix)
  *         if self.ID is None:
  *             s0=""             # <<<<<<<<<<<<<<
@@ -9589,7 +9589,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct 
     __Pyx_INCREF(__pyx_kp_s_);
     __pyx_v_s0 = __pyx_kp_s_;
 
-    /* "AfterImage_extrapolate.pyx":181
+    /* "kitsune_core/AfterImage_extrapolate.pyx":181
  *         if self.ID is None:
  *             s0=""
  *             s1=""             # <<<<<<<<<<<<<<
@@ -9599,7 +9599,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct 
     __Pyx_INCREF(__pyx_kp_s_);
     __pyx_v_s1 = __pyx_kp_s_;
 
-    /* "AfterImage_extrapolate.pyx":179
+    /* "kitsune_core/AfterImage_extrapolate.pyx":179
  *     cdef getHeaders_2D(self, ID2, suffix=True):
  *         hdrs1D = self.getHeaders_1D(suffix)
  *         if self.ID is None:             # <<<<<<<<<<<<<<
@@ -9609,7 +9609,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct 
     goto __pyx_L3;
   }
 
-  /* "AfterImage_extrapolate.pyx":183
+  /* "kitsune_core/AfterImage_extrapolate.pyx":183
  *             s1=""
  *         else:
  *             s0 = "_0"             # <<<<<<<<<<<<<<
@@ -9620,7 +9620,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct 
     __Pyx_INCREF(__pyx_n_s_0);
     __pyx_v_s0 = __pyx_n_s_0;
 
-    /* "AfterImage_extrapolate.pyx":184
+    /* "kitsune_core/AfterImage_extrapolate.pyx":184
  *         else:
  *             s0 = "_0"
  *             s1 = "_1"             # <<<<<<<<<<<<<<
@@ -9632,7 +9632,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct 
   }
   __pyx_L3:;
 
-  /* "AfterImage_extrapolate.pyx":185
+  /* "kitsune_core/AfterImage_extrapolate.pyx":185
  *             s0 = "_0"
  *             s1 = "_1"
  *         if suffix:             # <<<<<<<<<<<<<<
@@ -9642,7 +9642,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct 
   __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_v_suffix); if (unlikely((__pyx_t_3 < 0))) __PYX_ERR(0, 185, __pyx_L1_error)
   if (__pyx_t_3) {
 
-    /* "AfterImage_extrapolate.pyx":186
+    /* "kitsune_core/AfterImage_extrapolate.pyx":186
  *             s1 = "_1"
  *         if suffix:
  *             s0 = "_"+self.ID             # <<<<<<<<<<<<<<
@@ -9654,7 +9654,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct 
     __Pyx_DECREF_SET(__pyx_v_s0, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "AfterImage_extrapolate.pyx":187
+    /* "kitsune_core/AfterImage_extrapolate.pyx":187
  *         if suffix:
  *             s0 = "_"+self.ID
  *             s1 = "_" + ID2             # <<<<<<<<<<<<<<
@@ -9666,7 +9666,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct 
     __Pyx_DECREF_SET(__pyx_v_s1, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "AfterImage_extrapolate.pyx":185
+    /* "kitsune_core/AfterImage_extrapolate.pyx":185
  *             s0 = "_0"
  *             s1 = "_1"
  *         if suffix:             # <<<<<<<<<<<<<<
@@ -9675,7 +9675,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct 
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":188
+  /* "kitsune_core/AfterImage_extrapolate.pyx":188
  *             s0 = "_"+self.ID
  *             s1 = "_" + ID2
  *         hdrs2D = ["radius_" + s0 + "_" + s1, "magnitude_" + s0 + "_" + s1, "covariance_" + s0 + "_" + s1,             # <<<<<<<<<<<<<<
@@ -9707,7 +9707,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct 
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-  /* "AfterImage_extrapolate.pyx":189
+  /* "kitsune_core/AfterImage_extrapolate.pyx":189
  *             s1 = "_" + ID2
  *         hdrs2D = ["radius_" + s0 + "_" + s1, "magnitude_" + s0 + "_" + s1, "covariance_" + s0 + "_" + s1,
  *                    "pcc_" + s0 + "_" + s1]             # <<<<<<<<<<<<<<
@@ -9723,7 +9723,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct 
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "AfterImage_extrapolate.pyx":188
+  /* "kitsune_core/AfterImage_extrapolate.pyx":188
  *             s0 = "_"+self.ID
  *             s1 = "_" + ID2
  *         hdrs2D = ["radius_" + s0 + "_" + s1, "magnitude_" + s0 + "_" + s1, "covariance_" + s0 + "_" + s1,             # <<<<<<<<<<<<<<
@@ -9747,7 +9747,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct 
   __pyx_v_hdrs2D = ((PyObject*)__pyx_t_7);
   __pyx_t_7 = 0;
 
-  /* "AfterImage_extrapolate.pyx":190
+  /* "kitsune_core/AfterImage_extrapolate.pyx":190
  *         hdrs2D = ["radius_" + s0 + "_" + s1, "magnitude_" + s0 + "_" + s1, "covariance_" + s0 + "_" + s1,
  *                    "pcc_" + s0 + "_" + s1]
  *         return hdrs1D+hdrs2D             # <<<<<<<<<<<<<<
@@ -9761,7 +9761,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct 
   __pyx_t_7 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":177
+  /* "kitsune_core/AfterImage_extrapolate.pyx":177
  *         return headers
  * 
  *     cdef getHeaders_2D(self, ID2, suffix=True):             # <<<<<<<<<<<<<<
@@ -9776,7 +9776,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct 
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat.getHeaders_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat.getHeaders_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_hdrs1D);
@@ -9795,15 +9795,15 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D(struct 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7incStat_3__reduce_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incStat_3__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_7incStat_3__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_7incStat_3__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7incStat_3__reduce_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7incStat_3__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incStat_3__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incStat_3__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -9828,14 +9828,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   if (unlikely(__pyx_nargs > 0)) {
     __Pyx_RaiseArgtupleInvalid("__reduce_cython__", 1, 0, 0, __pyx_nargs); return NULL;}
   if (unlikely(__pyx_kwds) && __Pyx_NumKwargs_FASTCALL(__pyx_kwds) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "__reduce_cython__", 0))) return NULL;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_7incStat_2__reduce_cython__(((struct __pyx_obj_22AfterImage_extrapolate_incStat *)__pyx_v_self));
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incStat_2__reduce_cython__(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_7incStat_2__reduce_cython__(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incStat_2__reduce_cython__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self) {
   PyObject *__pyx_v_state = 0;
   PyObject *__pyx_v__dict = 0;
   int __pyx_v_use_setstate;
@@ -10108,7 +10108,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incStat_2__reduce_cython__(s
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_state);
@@ -10126,15 +10126,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incStat_2__reduce_cython__(s
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7incStat_5__setstate_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incStat_5__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_7incStat_5__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_7incStat_5__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7incStat_5__setstate_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7incStat_5__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incStat_5__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incStat_5__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -10204,11 +10204,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_7incStat_4__setstate_cython__(((struct __pyx_obj_22AfterImage_extrapolate_incStat *)__pyx_v_self), __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incStat_4__setstate_cython__(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self), __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -10221,7 +10221,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_7incStat_4__setstate_cython__(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incStat_4__setstate_cython__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -10236,7 +10236,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incStat_4__setstate_cython__
  *     __pyx_unpickle_incStat__set_state(self, __pyx_state)             # <<<<<<<<<<<<<<
  */
   if (!(likely(PyTuple_CheckExact(__pyx_v___pyx_state))||((__pyx_v___pyx_state) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_v___pyx_state))) __PYX_ERR(1, 17, __pyx_L1_error)
-  __pyx_t_1 = __pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStat__set_state(__pyx_v_self, ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 17, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_incStat__set_state(__pyx_v_self, ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
@@ -10252,7 +10252,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incStat_4__setstate_cython__
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -10260,7 +10260,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incStat_4__setstate_cython__
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":223
+/* "kitsune_core/AfterImage_extrapolate.pyx":223
  * 
  * 
  *     def __init__(self, incStat incS1,incStat incS2, double init_time = 0):             # <<<<<<<<<<<<<<
@@ -10269,10 +10269,10 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incStat_4__setstate_cython__
  */
 
 /* Python wrapper */
-static int __pyx_pw_22AfterImage_extrapolate_11incStat_cov_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_22AfterImage_extrapolate_11incStat_cov_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_incS1 = 0;
-  struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_incS2 = 0;
+static int __pyx_pw_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_incS1 = 0;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_incS2 = 0;
   double __pyx_v_init_time;
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
@@ -10344,8 +10344,8 @@ static int __pyx_pw_22AfterImage_extrapolate_11incStat_cov_1__init__(PyObject *_
         default: goto __pyx_L5_argtuple_error;
       }
     }
-    __pyx_v_incS1 = ((struct __pyx_obj_22AfterImage_extrapolate_incStat *)values[0]);
-    __pyx_v_incS2 = ((struct __pyx_obj_22AfterImage_extrapolate_incStat *)values[1]);
+    __pyx_v_incS1 = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)values[0]);
+    __pyx_v_incS2 = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)values[1]);
     if (values[2]) {
       __pyx_v_init_time = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_init_time == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 223, __pyx_L3_error)
     } else {
@@ -10364,13 +10364,13 @@ static int __pyx_pw_22AfterImage_extrapolate_11incStat_cov_1__init__(PyObject *_
       __Pyx_Arg_XDECREF_VARARGS(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat_cov.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat_cov.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_incS1), __pyx_ptype_22AfterImage_extrapolate_incStat, 1, "incS1", 0))) __PYX_ERR(0, 223, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_incS2), __pyx_ptype_22AfterImage_extrapolate_incStat, 1, "incS2", 0))) __PYX_ERR(0, 223, __pyx_L1_error)
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_11incStat_cov___init__(((struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self), __pyx_v_incS1, __pyx_v_incS2, __pyx_v_init_time);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_incS1), __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat, 1, "incS1", 0))) __PYX_ERR(0, 223, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_incS2), __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat, 1, "incS2", 0))) __PYX_ERR(0, 223, __pyx_L1_error)
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_11incStat_cov___init__(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self), __pyx_v_incS1, __pyx_v_incS2, __pyx_v_init_time);
 
   /* function exit code */
   goto __pyx_L0;
@@ -10387,7 +10387,7 @@ static int __pyx_pw_22AfterImage_extrapolate_11incStat_cov_1__init__(PyObject *_
   return __pyx_r;
 }
 
-static int __pyx_pf_22AfterImage_extrapolate_11incStat_cov___init__(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_incS1, struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_incS2, double __pyx_v_init_time) {
+static int __pyx_pf_12kitsune_core_22AfterImage_extrapolate_11incStat_cov___init__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_incS1, struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_incS2, double __pyx_v_init_time) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -10396,7 +10396,7 @@ static int __pyx_pf_22AfterImage_extrapolate_11incStat_cov___init__(struct __pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 1);
 
-  /* "AfterImage_extrapolate.pyx":225
+  /* "kitsune_core/AfterImage_extrapolate.pyx":225
  *     def __init__(self, incStat incS1,incStat incS2, double init_time = 0):
  *         # store references tot he streams' incStats
  *         self.incS1 = incS1             # <<<<<<<<<<<<<<
@@ -10409,7 +10409,7 @@ static int __pyx_pf_22AfterImage_extrapolate_11incStat_cov___init__(struct __pyx
   __Pyx_DECREF((PyObject *)__pyx_v_self->incS1);
   __pyx_v_self->incS1 = __pyx_v_incS1;
 
-  /* "AfterImage_extrapolate.pyx":226
+  /* "kitsune_core/AfterImage_extrapolate.pyx":226
  *         # store references tot he streams' incStats
  *         self.incS1 = incS1
  *         self.incS2 = incS2             # <<<<<<<<<<<<<<
@@ -10422,37 +10422,37 @@ static int __pyx_pf_22AfterImage_extrapolate_11incStat_cov___init__(struct __pyx
   __Pyx_DECREF((PyObject *)__pyx_v_self->incS2);
   __pyx_v_self->incS2 = __pyx_v_incS2;
 
-  /* "AfterImage_extrapolate.pyx":229
+  /* "kitsune_core/AfterImage_extrapolate.pyx":229
  * 
  *         # init extrapolators
  *         self.ex1 = extrapolator()             # <<<<<<<<<<<<<<
  *         self.ex2 = extrapolator()
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_CallNoArg(((PyObject *)__pyx_ptype_22AfterImage_extrapolate_extrapolator)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 229, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallNoArg(((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 229, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF((PyObject *)__pyx_v_self->ex1);
   __Pyx_DECREF((PyObject *)__pyx_v_self->ex1);
-  __pyx_v_self->ex1 = ((struct __pyx_obj_22AfterImage_extrapolate_extrapolator *)__pyx_t_1);
+  __pyx_v_self->ex1 = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":230
+  /* "kitsune_core/AfterImage_extrapolate.pyx":230
  *         # init extrapolators
  *         self.ex1 = extrapolator()
  *         self.ex2 = extrapolator()             # <<<<<<<<<<<<<<
  * 
  *         # init sum product residuals
  */
-  __pyx_t_1 = __Pyx_PyObject_CallNoArg(((PyObject *)__pyx_ptype_22AfterImage_extrapolate_extrapolator)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 230, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallNoArg(((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 230, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF((PyObject *)__pyx_v_self->ex2);
   __Pyx_DECREF((PyObject *)__pyx_v_self->ex2);
-  __pyx_v_self->ex2 = ((struct __pyx_obj_22AfterImage_extrapolate_extrapolator *)__pyx_t_1);
+  __pyx_v_self->ex2 = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":233
+  /* "kitsune_core/AfterImage_extrapolate.pyx":233
  * 
  *         # init sum product residuals
  *         self.CF3 = 0 # sum of residule products (A-uA)(B-uB)             # <<<<<<<<<<<<<<
@@ -10461,7 +10461,7 @@ static int __pyx_pf_22AfterImage_extrapolate_11incStat_cov___init__(struct __pyx
  */
   __pyx_v_self->CF3 = 0.0;
 
-  /* "AfterImage_extrapolate.pyx":234
+  /* "kitsune_core/AfterImage_extrapolate.pyx":234
  *         # init sum product residuals
  *         self.CF3 = 0 # sum of residule products (A-uA)(B-uB)
  *         self.w3 = 1e-20             # <<<<<<<<<<<<<<
@@ -10470,7 +10470,7 @@ static int __pyx_pf_22AfterImage_extrapolate_11incStat_cov___init__(struct __pyx
  */
   __pyx_v_self->w3 = 1e-20;
 
-  /* "AfterImage_extrapolate.pyx":235
+  /* "kitsune_core/AfterImage_extrapolate.pyx":235
  *         self.CF3 = 0 # sum of residule products (A-uA)(B-uB)
  *         self.w3 = 1e-20
  *         self.lastTimestamp_cf3 = init_time             # <<<<<<<<<<<<<<
@@ -10479,7 +10479,7 @@ static int __pyx_pf_22AfterImage_extrapolate_11incStat_cov___init__(struct __pyx
  */
   __pyx_v_self->lastTimestamp_cf3 = __pyx_v_init_time;
 
-  /* "AfterImage_extrapolate.pyx":223
+  /* "kitsune_core/AfterImage_extrapolate.pyx":223
  * 
  * 
  *     def __init__(self, incStat incS1,incStat incS2, double init_time = 0):             # <<<<<<<<<<<<<<
@@ -10492,14 +10492,14 @@ static int __pyx_pf_22AfterImage_extrapolate_11incStat_cov___init__(struct __pyx
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat_cov.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat_cov.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":239
+/* "kitsune_core/AfterImage_extrapolate.pyx":239
  *     #other_incS_decay is the decay factor of the other incstat
  *     # ID: the stream ID which produced (v,t)
  *     cdef update_cov(self, str ID, double v, double t):  # it is assumes that incStat "ID" has ALREADY been updated with (t,v) [this si performed automatically in method incStat.insert()]             # <<<<<<<<<<<<<<
@@ -10507,7 +10507,7 @@ static int __pyx_pf_22AfterImage_extrapolate_11incStat_cov___init__(struct __pyx
  *         cdef int inc
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_v, double __pyx_v_t) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_update_cov(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_v, double __pyx_v_t) {
   int __pyx_v_inc;
   double __pyx_v_v_other;
   PyObject *__pyx_r = NULL;
@@ -10525,7 +10525,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("update_cov", 1);
 
-  /* "AfterImage_extrapolate.pyx":242
+  /* "kitsune_core/AfterImage_extrapolate.pyx":242
  *         # find incStat
  *         cdef int inc
  *         if ID == self.incS1.ID:             # <<<<<<<<<<<<<<
@@ -10535,7 +10535,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
   __pyx_t_1 = (__Pyx_PyString_Equals(__pyx_v_ID, __pyx_v_self->incS1->ID, Py_EQ)); if (unlikely((__pyx_t_1 < 0))) __PYX_ERR(0, 242, __pyx_L1_error)
   if (__pyx_t_1) {
 
-    /* "AfterImage_extrapolate.pyx":243
+    /* "kitsune_core/AfterImage_extrapolate.pyx":243
  *         cdef int inc
  *         if ID == self.incS1.ID:
  *             inc = 0             # <<<<<<<<<<<<<<
@@ -10544,7 +10544,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
  */
     __pyx_v_inc = 0;
 
-    /* "AfterImage_extrapolate.pyx":242
+    /* "kitsune_core/AfterImage_extrapolate.pyx":242
  *         # find incStat
  *         cdef int inc
  *         if ID == self.incS1.ID:             # <<<<<<<<<<<<<<
@@ -10554,7 +10554,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
     goto __pyx_L3;
   }
 
-  /* "AfterImage_extrapolate.pyx":245
+  /* "kitsune_core/AfterImage_extrapolate.pyx":245
  *             inc = 0
  *         else:
  *             inc = 1             # <<<<<<<<<<<<<<
@@ -10566,18 +10566,18 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
   }
   __pyx_L3:;
 
-  /* "AfterImage_extrapolate.pyx":248
+  /* "kitsune_core/AfterImage_extrapolate.pyx":248
  * 
  *         # Decay residules
  *         self.processDecay(t)             # <<<<<<<<<<<<<<
  * 
  *         # Update extrapolator for current stream AND
  */
-  __pyx_t_2 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self->__pyx_vtab)->processDecay(__pyx_v_self, __pyx_v_t); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 248, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self->__pyx_vtab)->processDecay(__pyx_v_self, __pyx_v_t); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "AfterImage_extrapolate.pyx":254
+  /* "kitsune_core/AfterImage_extrapolate.pyx":254
  *         # Compute and update residule
  *         cdef double v_other
  *         if inc == 0:             # <<<<<<<<<<<<<<
@@ -10587,7 +10587,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
   __pyx_t_1 = (__pyx_v_inc == 0);
   if (__pyx_t_1) {
 
-    /* "AfterImage_extrapolate.pyx":255
+    /* "kitsune_core/AfterImage_extrapolate.pyx":255
  *         cdef double v_other
  *         if inc == 0:
  *             self.ex1.insert(t,v)             # <<<<<<<<<<<<<<
@@ -10626,7 +10626,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
     }
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "AfterImage_extrapolate.pyx":256
+    /* "kitsune_core/AfterImage_extrapolate.pyx":256
  *         if inc == 0:
  *             self.ex1.insert(t,v)
  *             v_other = self.ex2.predict(t)             # <<<<<<<<<<<<<<
@@ -10664,7 +10664,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_v_v_other = __pyx_t_8;
 
-    /* "AfterImage_extrapolate.pyx":257
+    /* "kitsune_core/AfterImage_extrapolate.pyx":257
  *             self.ex1.insert(t,v)
  *             v_other = self.ex2.predict(t)
  *             self.CF3 += (v - self.incS1.mean()) * (v_other - self.incS2.mean())             # <<<<<<<<<<<<<<
@@ -10675,7 +10675,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_3 = PyFloat_FromDouble(__pyx_v_v); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 257, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->mean(__pyx_v_self->incS1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 257, __pyx_L1_error)
+    __pyx_t_5 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->mean(__pyx_v_self->incS1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 257, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_4 = PyNumber_Subtract(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 257, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
@@ -10683,7 +10683,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_5 = PyFloat_FromDouble(__pyx_v_v_other); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 257, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_3 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS2->__pyx_vtab)->mean(__pyx_v_self->incS2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 257, __pyx_L1_error)
+    __pyx_t_3 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS2->__pyx_vtab)->mean(__pyx_v_self->incS2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 257, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_6 = PyNumber_Subtract(__pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 257, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
@@ -10701,7 +10701,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_v_self->CF3 = __pyx_t_8;
 
-    /* "AfterImage_extrapolate.pyx":254
+    /* "kitsune_core/AfterImage_extrapolate.pyx":254
  *         # Compute and update residule
  *         cdef double v_other
  *         if inc == 0:             # <<<<<<<<<<<<<<
@@ -10711,7 +10711,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
     goto __pyx_L4;
   }
 
-  /* "AfterImage_extrapolate.pyx":259
+  /* "kitsune_core/AfterImage_extrapolate.pyx":259
  *             self.CF3 += (v - self.incS1.mean()) * (v_other - self.incS2.mean())
  *         else:
  *             self.ex2.insert(t,v)             # <<<<<<<<<<<<<<
@@ -10751,7 +10751,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
     }
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "AfterImage_extrapolate.pyx":260
+    /* "kitsune_core/AfterImage_extrapolate.pyx":260
  *         else:
  *             self.ex2.insert(t,v)
  *             v_other = self.ex1.predict(t)             # <<<<<<<<<<<<<<
@@ -10789,7 +10789,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_v_v_other = __pyx_t_8;
 
-    /* "AfterImage_extrapolate.pyx":261
+    /* "kitsune_core/AfterImage_extrapolate.pyx":261
  *             self.ex2.insert(t,v)
  *             v_other = self.ex1.predict(t)
  *             self.CF3 += (v - self.incS2.mean()) * (v_other - self.incS1.mean())             # <<<<<<<<<<<<<<
@@ -10800,7 +10800,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
     __Pyx_GOTREF(__pyx_t_6);
     __pyx_t_3 = PyFloat_FromDouble(__pyx_v_v); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 261, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS2->__pyx_vtab)->mean(__pyx_v_self->incS2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 261, __pyx_L1_error)
+    __pyx_t_4 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS2->__pyx_vtab)->mean(__pyx_v_self->incS2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 261, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_2 = PyNumber_Subtract(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 261, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
@@ -10808,7 +10808,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = PyFloat_FromDouble(__pyx_v_v_other); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 261, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_3 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->mean(__pyx_v_self->incS1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 261, __pyx_L1_error)
+    __pyx_t_3 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->mean(__pyx_v_self->incS1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 261, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_5 = PyNumber_Subtract(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 261, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
@@ -10828,7 +10828,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
   }
   __pyx_L4:;
 
-  /* "AfterImage_extrapolate.pyx":262
+  /* "kitsune_core/AfterImage_extrapolate.pyx":262
  *             v_other = self.ex1.predict(t)
  *             self.CF3 += (v - self.incS2.mean()) * (v_other - self.incS1.mean())
  *         self.w3 += 1             # <<<<<<<<<<<<<<
@@ -10837,7 +10837,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
  */
   __pyx_v_self->w3 = (__pyx_v_self->w3 + 1.0);
 
-  /* "AfterImage_extrapolate.pyx":239
+  /* "kitsune_core/AfterImage_extrapolate.pyx":239
  *     #other_incS_decay is the decay factor of the other incstat
  *     # ID: the stream ID which produced (v,t)
  *     cdef update_cov(self, str ID, double v, double t):  # it is assumes that incStat "ID" has ALREADY been updated with (t,v) [this si performed automatically in method incStat.insert()]             # <<<<<<<<<<<<<<
@@ -10854,7 +10854,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat_cov.update_cov", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat_cov.update_cov", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -10862,7 +10862,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":264
+/* "kitsune_core/AfterImage_extrapolate.pyx":264
  *         self.w3 += 1
  * 
  *     cdef processDecay(self,double t):             # <<<<<<<<<<<<<<
@@ -10870,7 +10870,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov(struc
  *         factor = 1
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_processDecay(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, double __pyx_v_t) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_processDecay(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, double __pyx_v_t) {
   double __pyx_v_factor;
   double __pyx_v_timeDiffs_cf3;
   PyObject *__pyx_r = NULL;
@@ -10887,7 +10887,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_processDecay(str
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("processDecay", 1);
 
-  /* "AfterImage_extrapolate.pyx":266
+  /* "kitsune_core/AfterImage_extrapolate.pyx":266
  *     cdef processDecay(self,double t):
  *         cdef double factor
  *         factor = 1             # <<<<<<<<<<<<<<
@@ -10896,7 +10896,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_processDecay(str
  */
   __pyx_v_factor = 1.0;
 
-  /* "AfterImage_extrapolate.pyx":269
+  /* "kitsune_core/AfterImage_extrapolate.pyx":269
  *         # check for decay cf3
  *         cdef double timeDiffs_cf3
  *         timeDiffs_cf3 = t - self.lastTimestamp_cf3             # <<<<<<<<<<<<<<
@@ -10905,7 +10905,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_processDecay(str
  */
   __pyx_v_timeDiffs_cf3 = (__pyx_v_t - __pyx_v_self->lastTimestamp_cf3);
 
-  /* "AfterImage_extrapolate.pyx":270
+  /* "kitsune_core/AfterImage_extrapolate.pyx":270
  *         cdef double timeDiffs_cf3
  *         timeDiffs_cf3 = t - self.lastTimestamp_cf3
  *         if timeDiffs_cf3 > 0:             # <<<<<<<<<<<<<<
@@ -10915,7 +10915,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_processDecay(str
   __pyx_t_1 = (__pyx_v_timeDiffs_cf3 > 0.0);
   if (__pyx_t_1) {
 
-    /* "AfterImage_extrapolate.pyx":271
+    /* "kitsune_core/AfterImage_extrapolate.pyx":271
  *         timeDiffs_cf3 = t - self.lastTimestamp_cf3
  *         if timeDiffs_cf3 > 0:
  *             factor = math.pow(2, (-(self.incS1.Lambda) * timeDiffs_cf3))             # <<<<<<<<<<<<<<
@@ -10956,7 +10956,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_processDecay(str
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_v_factor = __pyx_t_7;
 
-    /* "AfterImage_extrapolate.pyx":272
+    /* "kitsune_core/AfterImage_extrapolate.pyx":272
  *         if timeDiffs_cf3 > 0:
  *             factor = math.pow(2, (-(self.incS1.Lambda) * timeDiffs_cf3))
  *             self.CF3 *= factor             # <<<<<<<<<<<<<<
@@ -10965,7 +10965,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_processDecay(str
  */
     __pyx_v_self->CF3 = (__pyx_v_self->CF3 * __pyx_v_factor);
 
-    /* "AfterImage_extrapolate.pyx":273
+    /* "kitsune_core/AfterImage_extrapolate.pyx":273
  *             factor = math.pow(2, (-(self.incS1.Lambda) * timeDiffs_cf3))
  *             self.CF3 *= factor
  *             self.w3 *= factor             # <<<<<<<<<<<<<<
@@ -10974,7 +10974,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_processDecay(str
  */
     __pyx_v_self->w3 = (__pyx_v_self->w3 * __pyx_v_factor);
 
-    /* "AfterImage_extrapolate.pyx":274
+    /* "kitsune_core/AfterImage_extrapolate.pyx":274
  *             self.CF3 *= factor
  *             self.w3 *= factor
  *             self.lastTimestamp_cf3 = t             # <<<<<<<<<<<<<<
@@ -10983,7 +10983,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_processDecay(str
  */
     __pyx_v_self->lastTimestamp_cf3 = __pyx_v_t;
 
-    /* "AfterImage_extrapolate.pyx":270
+    /* "kitsune_core/AfterImage_extrapolate.pyx":270
  *         cdef double timeDiffs_cf3
  *         timeDiffs_cf3 = t - self.lastTimestamp_cf3
  *         if timeDiffs_cf3 > 0:             # <<<<<<<<<<<<<<
@@ -10992,7 +10992,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_processDecay(str
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":275
+  /* "kitsune_core/AfterImage_extrapolate.pyx":275
  *             self.w3 *= factor
  *             self.lastTimestamp_cf3 = t
  *         return factor             # <<<<<<<<<<<<<<
@@ -11006,7 +11006,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_processDecay(str
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":264
+  /* "kitsune_core/AfterImage_extrapolate.pyx":264
  *         self.w3 += 1
  * 
  *     cdef processDecay(self,double t):             # <<<<<<<<<<<<<<
@@ -11020,7 +11020,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_processDecay(str
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat_cov.processDecay", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat_cov.processDecay", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -11028,7 +11028,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_processDecay(str
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":280
+/* "kitsune_core/AfterImage_extrapolate.pyx":280
  * 
  *     #covariance approximation
  *     cdef cov(self):             # <<<<<<<<<<<<<<
@@ -11036,7 +11036,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_processDecay(str
  * 
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_cov(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_cov(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -11045,7 +11045,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_cov(struct __pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("cov", 1);
 
-  /* "AfterImage_extrapolate.pyx":281
+  /* "kitsune_core/AfterImage_extrapolate.pyx":281
  *     #covariance approximation
  *     cdef cov(self):
  *         return self.CF3 / self.w3             # <<<<<<<<<<<<<<
@@ -11063,7 +11063,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_cov(struct __pyx
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":280
+  /* "kitsune_core/AfterImage_extrapolate.pyx":280
  * 
  *     #covariance approximation
  *     cdef cov(self):             # <<<<<<<<<<<<<<
@@ -11074,7 +11074,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_cov(struct __pyx
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat_cov.cov", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat_cov.cov", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -11082,7 +11082,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_cov(struct __pyx
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":284
+/* "kitsune_core/AfterImage_extrapolate.pyx":284
  * 
  *     # Pearson corl. coef
  *     cdef pcc(self):             # <<<<<<<<<<<<<<
@@ -11090,7 +11090,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_cov(struct __pyx
  *         ss = self.incS1.std() * self.incS2.std()
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_pcc(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_pcc(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self) {
   double __pyx_v_ss;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -11104,16 +11104,16 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_pcc(struct __pyx
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("pcc", 1);
 
-  /* "AfterImage_extrapolate.pyx":286
+  /* "kitsune_core/AfterImage_extrapolate.pyx":286
  *     cdef pcc(self):
  *         cdef double ss
  *         ss = self.incS1.std() * self.incS2.std()             # <<<<<<<<<<<<<<
  *         if ss != 0:
  *             return self.cov() / ss
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->std(__pyx_v_self->incS1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 286, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->std(__pyx_v_self->incS1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 286, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS2->__pyx_vtab)->std(__pyx_v_self->incS2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 286, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS2->__pyx_vtab)->std(__pyx_v_self->incS2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 286, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = PyNumber_Multiply(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 286, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -11123,7 +11123,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_pcc(struct __pyx
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_ss = __pyx_t_4;
 
-  /* "AfterImage_extrapolate.pyx":287
+  /* "kitsune_core/AfterImage_extrapolate.pyx":287
  *         cdef double ss
  *         ss = self.incS1.std() * self.incS2.std()
  *         if ss != 0:             # <<<<<<<<<<<<<<
@@ -11133,7 +11133,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_pcc(struct __pyx
   __pyx_t_5 = (__pyx_v_ss != 0.0);
   if (__pyx_t_5) {
 
-    /* "AfterImage_extrapolate.pyx":288
+    /* "kitsune_core/AfterImage_extrapolate.pyx":288
  *         ss = self.incS1.std() * self.incS2.std()
  *         if ss != 0:
  *             return self.cov() / ss             # <<<<<<<<<<<<<<
@@ -11141,7 +11141,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_pcc(struct __pyx
  *             return 0
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_3 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self->__pyx_vtab)->cov(__pyx_v_self); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 288, __pyx_L1_error)
+    __pyx_t_3 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self->__pyx_vtab)->cov(__pyx_v_self); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 288, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_2 = PyFloat_FromDouble(__pyx_v_ss); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 288, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
@@ -11153,7 +11153,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_pcc(struct __pyx
     __pyx_t_1 = 0;
     goto __pyx_L0;
 
-    /* "AfterImage_extrapolate.pyx":287
+    /* "kitsune_core/AfterImage_extrapolate.pyx":287
  *         cdef double ss
  *         ss = self.incS1.std() * self.incS2.std()
  *         if ss != 0:             # <<<<<<<<<<<<<<
@@ -11162,7 +11162,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_pcc(struct __pyx
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":290
+  /* "kitsune_core/AfterImage_extrapolate.pyx":290
  *             return self.cov() / ss
  *         else:
  *             return 0             # <<<<<<<<<<<<<<
@@ -11176,7 +11176,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_pcc(struct __pyx
     goto __pyx_L0;
   }
 
-  /* "AfterImage_extrapolate.pyx":284
+  /* "kitsune_core/AfterImage_extrapolate.pyx":284
  * 
  *     # Pearson corl. coef
  *     cdef pcc(self):             # <<<<<<<<<<<<<<
@@ -11189,7 +11189,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_pcc(struct __pyx
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat_cov.pcc", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat_cov.pcc", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -11197,7 +11197,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_pcc(struct __pyx
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":292
+/* "kitsune_core/AfterImage_extrapolate.pyx":292
  *             return 0
  * 
  *     def isRelated(self, str ID):             # <<<<<<<<<<<<<<
@@ -11206,15 +11206,15 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_pcc(struct __pyx
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_11incStat_cov_3isRelated(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_3isRelated(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_11incStat_cov_3isRelated = {"isRelated", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_11incStat_cov_3isRelated, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_11incStat_cov_3isRelated(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_3isRelated = {"isRelated", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_3isRelated, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_3isRelated(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -11284,12 +11284,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat_cov.isRelated", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat_cov.isRelated", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ID), (&PyString_Type), 1, "ID", 1))) __PYX_ERR(0, 292, __pyx_L1_error)
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_11incStat_cov_2isRelated(((struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self), __pyx_v_ID);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_2isRelated(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self), __pyx_v_ID);
 
   /* function exit code */
   goto __pyx_L0;
@@ -11306,7 +11306,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_11incStat_cov_2isRelated(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, PyObject *__pyx_v_ID) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_2isRelated(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, PyObject *__pyx_v_ID) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
@@ -11316,7 +11316,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_11incStat_cov_2isRelated(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("isRelated", 1);
 
-  /* "AfterImage_extrapolate.pyx":293
+  /* "kitsune_core/AfterImage_extrapolate.pyx":293
  * 
  *     def isRelated(self, str ID):
  *         if self.incS1.ID == ID or self.incS2.ID == ID:             # <<<<<<<<<<<<<<
@@ -11334,7 +11334,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_11incStat_cov_2isRelated(stru
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "AfterImage_extrapolate.pyx":294
+    /* "kitsune_core/AfterImage_extrapolate.pyx":294
  *     def isRelated(self, str ID):
  *         if self.incS1.ID == ID or self.incS2.ID == ID:
  *             return True             # <<<<<<<<<<<<<<
@@ -11346,7 +11346,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_11incStat_cov_2isRelated(stru
     __pyx_r = Py_True;
     goto __pyx_L0;
 
-    /* "AfterImage_extrapolate.pyx":293
+    /* "kitsune_core/AfterImage_extrapolate.pyx":293
  * 
  *     def isRelated(self, str ID):
  *         if self.incS1.ID == ID or self.incS2.ID == ID:             # <<<<<<<<<<<<<<
@@ -11355,7 +11355,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_11incStat_cov_2isRelated(stru
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":296
+  /* "kitsune_core/AfterImage_extrapolate.pyx":296
  *             return True
  *         else:
  *             return False             # <<<<<<<<<<<<<<
@@ -11369,7 +11369,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_11incStat_cov_2isRelated(stru
     goto __pyx_L0;
   }
 
-  /* "AfterImage_extrapolate.pyx":292
+  /* "kitsune_core/AfterImage_extrapolate.pyx":292
  *             return 0
  * 
  *     def isRelated(self, str ID):             # <<<<<<<<<<<<<<
@@ -11379,7 +11379,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_11incStat_cov_2isRelated(stru
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat_cov.isRelated", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat_cov.isRelated", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -11387,7 +11387,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_11incStat_cov_2isRelated(stru
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":299
+/* "kitsune_core/AfterImage_extrapolate.pyx":299
  * 
  *     # calculates and pulls all correlative stats
  *     cdef get_stats1(self):             # <<<<<<<<<<<<<<
@@ -11395,7 +11395,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_11incStat_cov_2isRelated(stru
  * 
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats1(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_get_stats1(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -11406,7 +11406,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats1(struc
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_stats1", 1);
 
-  /* "AfterImage_extrapolate.pyx":300
+  /* "kitsune_core/AfterImage_extrapolate.pyx":300
  *     # calculates and pulls all correlative stats
  *     cdef get_stats1(self):
  *         return [self.cov(), self.pcc()]             # <<<<<<<<<<<<<<
@@ -11414,9 +11414,9 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats1(struc
  *     # calculates and pulls all correlative stats AND 2D stats from both streams (incStat)
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self->__pyx_vtab)->cov(__pyx_v_self); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self->__pyx_vtab)->cov(__pyx_v_self); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 300, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self->__pyx_vtab)->pcc(__pyx_v_self); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self->__pyx_vtab)->pcc(__pyx_v_self); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 300, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 300, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -11430,7 +11430,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats1(struc
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":299
+  /* "kitsune_core/AfterImage_extrapolate.pyx":299
  * 
  *     # calculates and pulls all correlative stats
  *     cdef get_stats1(self):             # <<<<<<<<<<<<<<
@@ -11443,7 +11443,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats1(struc
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat_cov.get_stats1", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat_cov.get_stats1", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -11451,7 +11451,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats1(struc
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":303
+/* "kitsune_core/AfterImage_extrapolate.pyx":303
  * 
  *     # calculates and pulls all correlative stats AND 2D stats from both streams (incStat)
  *     cdef get_stats2(self):             # <<<<<<<<<<<<<<
@@ -11459,7 +11459,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats1(struc
  * 
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats2(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_get_stats2(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -11472,7 +11472,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats2(struc
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_stats2", 1);
 
-  /* "AfterImage_extrapolate.pyx":304
+  /* "kitsune_core/AfterImage_extrapolate.pyx":304
  *     # calculates and pulls all correlative stats AND 2D stats from both streams (incStat)
  *     cdef get_stats2(self):
  *         return [self.incS1.radius([self.incS2]),self.incS1.magnitude([self.incS2]),self.cov(), self.pcc()]             # <<<<<<<<<<<<<<
@@ -11485,7 +11485,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats2(struc
   __Pyx_INCREF((PyObject *)__pyx_v_self->incS2);
   __Pyx_GIVEREF((PyObject *)__pyx_v_self->incS2);
   if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, ((PyObject *)__pyx_v_self->incS2))) __PYX_ERR(0, 304, __pyx_L1_error);
-  __pyx_t_2 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->radius(__pyx_v_self->incS1, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->radius(__pyx_v_self->incS1, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 304, __pyx_L1_error)
@@ -11493,12 +11493,12 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats2(struc
   __Pyx_INCREF((PyObject *)__pyx_v_self->incS2);
   __Pyx_GIVEREF((PyObject *)__pyx_v_self->incS2);
   if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, ((PyObject *)__pyx_v_self->incS2))) __PYX_ERR(0, 304, __pyx_L1_error);
-  __pyx_t_3 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->magnitude(__pyx_v_self->incS1, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __pyx_t_3 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->magnitude(__pyx_v_self->incS1, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self->__pyx_vtab)->cov(__pyx_v_self); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self->__pyx_vtab)->cov(__pyx_v_self); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self->__pyx_vtab)->pcc(__pyx_v_self); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __pyx_t_4 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self->__pyx_vtab)->pcc(__pyx_v_self); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = PyList_New(4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
@@ -11518,7 +11518,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats2(struc
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":303
+  /* "kitsune_core/AfterImage_extrapolate.pyx":303
  * 
  *     # calculates and pulls all correlative stats AND 2D stats from both streams (incStat)
  *     cdef get_stats2(self):             # <<<<<<<<<<<<<<
@@ -11533,7 +11533,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats2(struc
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat_cov.get_stats2", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat_cov.get_stats2", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -11541,7 +11541,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats2(struc
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":307
+/* "kitsune_core/AfterImage_extrapolate.pyx":307
  * 
  *     # calculates and pulls all correlative stats AND 2D stats AND the regular stats from both streams (incStat)
  *     cdef get_stats3(self):             # <<<<<<<<<<<<<<
@@ -11549,7 +11549,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats2(struc
  * 
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats3(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_get_stats3(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -11566,7 +11566,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats3(struc
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_stats3", 1);
 
-  /* "AfterImage_extrapolate.pyx":308
+  /* "kitsune_core/AfterImage_extrapolate.pyx":308
  *     # calculates and pulls all correlative stats AND 2D stats AND the regular stats from both streams (incStat)
  *     cdef get_stats3(self):
  *         return [self.incS1.w,self.incS1.mean(),self.incS1.std(),self.incS2.w,self.incS2.mean(),self.incS2.std(),self.cov(), self.pcc()]             # <<<<<<<<<<<<<<
@@ -11576,19 +11576,19 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats3(struc
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->incS1->w); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 308, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->mean(__pyx_v_self->incS1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 308, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->mean(__pyx_v_self->incS1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 308, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->std(__pyx_v_self->incS1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 308, __pyx_L1_error)
+  __pyx_t_3 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->std(__pyx_v_self->incS1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 308, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = PyFloat_FromDouble(__pyx_v_self->incS2->w); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 308, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS2->__pyx_vtab)->mean(__pyx_v_self->incS2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 308, __pyx_L1_error)
+  __pyx_t_5 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS2->__pyx_vtab)->mean(__pyx_v_self->incS2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 308, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS2->__pyx_vtab)->std(__pyx_v_self->incS2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 308, __pyx_L1_error)
+  __pyx_t_6 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS2->__pyx_vtab)->std(__pyx_v_self->incS2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 308, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self->__pyx_vtab)->cov(__pyx_v_self); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 308, __pyx_L1_error)
+  __pyx_t_7 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self->__pyx_vtab)->cov(__pyx_v_self); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 308, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_8 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self->__pyx_vtab)->pcc(__pyx_v_self); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 308, __pyx_L1_error)
+  __pyx_t_8 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self->__pyx_vtab)->pcc(__pyx_v_self); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 308, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __pyx_t_9 = PyList_New(8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 308, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
@@ -11620,7 +11620,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats3(struc
   __pyx_t_9 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":307
+  /* "kitsune_core/AfterImage_extrapolate.pyx":307
  * 
  *     # calculates and pulls all correlative stats AND 2D stats AND the regular stats from both streams (incStat)
  *     cdef get_stats3(self):             # <<<<<<<<<<<<<<
@@ -11639,7 +11639,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats3(struc
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat_cov.get_stats3", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat_cov.get_stats3", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -11647,7 +11647,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats3(struc
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":311
+/* "kitsune_core/AfterImage_extrapolate.pyx":311
  * 
  *     # calculates and pulls all correlative stats AND the regular stats from both incStats AND 2D stats
  *     cdef get_stats4(self):             # <<<<<<<<<<<<<<
@@ -11655,7 +11655,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats3(struc
  * 
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats4(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_get_stats4(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -11674,7 +11674,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats4(struc
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_stats4", 1);
 
-  /* "AfterImage_extrapolate.pyx":312
+  /* "kitsune_core/AfterImage_extrapolate.pyx":312
  *     # calculates and pulls all correlative stats AND the regular stats from both incStats AND 2D stats
  *     cdef get_stats4(self):
  *         return [self.incS1.w,self.incS1.mean(),self.incS1.std(),self.incS2.w,self.incS2.mean(),self.incS2.std(), self.incS1.radius([self.incS2]),self.incS1.magnitude([self.incS2]),self.cov(), self.pcc()]             # <<<<<<<<<<<<<<
@@ -11684,22 +11684,22 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats4(struc
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_1 = PyFloat_FromDouble(__pyx_v_self->incS1->w); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 312, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->mean(__pyx_v_self->incS1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 312, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->mean(__pyx_v_self->incS1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 312, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->std(__pyx_v_self->incS1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 312, __pyx_L1_error)
+  __pyx_t_3 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->std(__pyx_v_self->incS1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 312, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = PyFloat_FromDouble(__pyx_v_self->incS2->w); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 312, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS2->__pyx_vtab)->mean(__pyx_v_self->incS2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 312, __pyx_L1_error)
+  __pyx_t_5 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS2->__pyx_vtab)->mean(__pyx_v_self->incS2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 312, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_6 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS2->__pyx_vtab)->std(__pyx_v_self->incS2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 312, __pyx_L1_error)
+  __pyx_t_6 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS2->__pyx_vtab)->std(__pyx_v_self->incS2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 312, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_t_7 = PyList_New(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 312, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_INCREF((PyObject *)__pyx_v_self->incS2);
   __Pyx_GIVEREF((PyObject *)__pyx_v_self->incS2);
   if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 0, ((PyObject *)__pyx_v_self->incS2))) __PYX_ERR(0, 312, __pyx_L1_error);
-  __pyx_t_8 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->radius(__pyx_v_self->incS1, __pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 312, __pyx_L1_error)
+  __pyx_t_8 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->radius(__pyx_v_self->incS1, __pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 312, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __pyx_t_7 = PyList_New(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 312, __pyx_L1_error)
@@ -11707,12 +11707,12 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats4(struc
   __Pyx_INCREF((PyObject *)__pyx_v_self->incS2);
   __Pyx_GIVEREF((PyObject *)__pyx_v_self->incS2);
   if (__Pyx_PyList_SET_ITEM(__pyx_t_7, 0, ((PyObject *)__pyx_v_self->incS2))) __PYX_ERR(0, 312, __pyx_L1_error);
-  __pyx_t_9 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->magnitude(__pyx_v_self->incS1, __pyx_t_7); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 312, __pyx_L1_error)
+  __pyx_t_9 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_self->incS1->__pyx_vtab)->magnitude(__pyx_v_self->incS1, __pyx_t_7); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 312, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_7 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self->__pyx_vtab)->cov(__pyx_v_self); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 312, __pyx_L1_error)
+  __pyx_t_7 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self->__pyx_vtab)->cov(__pyx_v_self); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 312, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_10 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self->__pyx_vtab)->pcc(__pyx_v_self); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 312, __pyx_L1_error)
+  __pyx_t_10 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self->__pyx_vtab)->pcc(__pyx_v_self); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 312, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
   __pyx_t_11 = PyList_New(10); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 312, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
@@ -11750,7 +11750,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats4(struc
   __pyx_t_11 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":311
+  /* "kitsune_core/AfterImage_extrapolate.pyx":311
  * 
  *     # calculates and pulls all correlative stats AND the regular stats from both incStats AND 2D stats
  *     cdef get_stats4(self):             # <<<<<<<<<<<<<<
@@ -11771,7 +11771,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats4(struc
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_10);
   __Pyx_XDECREF(__pyx_t_11);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat_cov.get_stats4", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat_cov.get_stats4", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -11779,7 +11779,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats4(struc
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":314
+/* "kitsune_core/AfterImage_extrapolate.pyx":314
  *         return [self.incS1.w,self.incS1.mean(),self.incS1.std(),self.incS2.w,self.incS2.mean(),self.incS2.std(), self.incS1.radius([self.incS2]),self.incS1.magnitude([self.incS2]),self.cov(), self.pcc()]
  * 
  *     cdef getHeaders(self,int ver,int suffix=True): #ver = {1,2,3,4}             # <<<<<<<<<<<<<<
@@ -11787,7 +11787,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats4(struc
  *         s0 = "0"
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, int __pyx_v_ver, struct __pyx_opt_args_22AfterImage_extrapolate_11incStat_cov_getHeaders *__pyx_optional_args) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_getHeaders(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, int __pyx_v_ver, struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_getHeaders *__pyx_optional_args) {
   int __pyx_v_suffix = ((int)1);
   PyObject *__pyx_v_headers = NULL;
   PyObject *__pyx_v_s0 = NULL;
@@ -11816,7 +11816,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
     }
   }
 
-  /* "AfterImage_extrapolate.pyx":315
+  /* "kitsune_core/AfterImage_extrapolate.pyx":315
  * 
  *     cdef getHeaders(self,int ver,int suffix=True): #ver = {1,2,3,4}
  *         headers = []             # <<<<<<<<<<<<<<
@@ -11828,7 +11828,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
   __pyx_v_headers = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":316
+  /* "kitsune_core/AfterImage_extrapolate.pyx":316
  *     cdef getHeaders(self,int ver,int suffix=True): #ver = {1,2,3,4}
  *         headers = []
  *         s0 = "0"             # <<<<<<<<<<<<<<
@@ -11838,7 +11838,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
   __Pyx_INCREF(__pyx_kp_s_0_2);
   __pyx_v_s0 = __pyx_kp_s_0_2;
 
-  /* "AfterImage_extrapolate.pyx":317
+  /* "kitsune_core/AfterImage_extrapolate.pyx":317
  *         headers = []
  *         s0 = "0"
  *         s1 = "1"             # <<<<<<<<<<<<<<
@@ -11848,7 +11848,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
   __Pyx_INCREF(__pyx_kp_s_1_2);
   __pyx_v_s1 = __pyx_kp_s_1_2;
 
-  /* "AfterImage_extrapolate.pyx":318
+  /* "kitsune_core/AfterImage_extrapolate.pyx":318
  *         s0 = "0"
  *         s1 = "1"
  *         if suffix:             # <<<<<<<<<<<<<<
@@ -11858,7 +11858,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
   __pyx_t_2 = (__pyx_v_suffix != 0);
   if (__pyx_t_2) {
 
-    /* "AfterImage_extrapolate.pyx":319
+    /* "kitsune_core/AfterImage_extrapolate.pyx":319
  *         s1 = "1"
  *         if suffix:
  *             s0 = self.incS1.ID             # <<<<<<<<<<<<<<
@@ -11870,7 +11870,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
     __Pyx_DECREF_SET(__pyx_v_s0, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "AfterImage_extrapolate.pyx":320
+    /* "kitsune_core/AfterImage_extrapolate.pyx":320
  *         if suffix:
  *             s0 = self.incS1.ID
  *             s1 = self.incS2.ID             # <<<<<<<<<<<<<<
@@ -11882,7 +11882,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
     __Pyx_DECREF_SET(__pyx_v_s1, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "AfterImage_extrapolate.pyx":318
+    /* "kitsune_core/AfterImage_extrapolate.pyx":318
  *         s0 = "0"
  *         s1 = "1"
  *         if suffix:             # <<<<<<<<<<<<<<
@@ -11891,7 +11891,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":322
+  /* "kitsune_core/AfterImage_extrapolate.pyx":322
  *             s1 = self.incS2.ID
  * 
  *         if ver == 1:             # <<<<<<<<<<<<<<
@@ -11901,7 +11901,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
   __pyx_t_2 = (__pyx_v_ver == 1);
   if (__pyx_t_2) {
 
-    /* "AfterImage_extrapolate.pyx":323
+    /* "kitsune_core/AfterImage_extrapolate.pyx":323
  * 
  *         if ver == 1:
  *             headers = ["covariance_"+s0+"_"+s1, "pcc_"+s0+"_"+s1]             # <<<<<<<<<<<<<<
@@ -11935,7 +11935,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
     __Pyx_DECREF_SET(__pyx_v_headers, ((PyObject*)__pyx_t_4));
     __pyx_t_4 = 0;
 
-    /* "AfterImage_extrapolate.pyx":322
+    /* "kitsune_core/AfterImage_extrapolate.pyx":322
  *             s1 = self.incS2.ID
  * 
  *         if ver == 1:             # <<<<<<<<<<<<<<
@@ -11944,7 +11944,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":324
+  /* "kitsune_core/AfterImage_extrapolate.pyx":324
  *         if ver == 1:
  *             headers = ["covariance_"+s0+"_"+s1, "pcc_"+s0+"_"+s1]
  *         if ver == 2:             # <<<<<<<<<<<<<<
@@ -11954,7 +11954,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
   __pyx_t_2 = (__pyx_v_ver == 2);
   if (__pyx_t_2) {
 
-    /* "AfterImage_extrapolate.pyx":325
+    /* "kitsune_core/AfterImage_extrapolate.pyx":325
  *             headers = ["covariance_"+s0+"_"+s1, "pcc_"+s0+"_"+s1]
  *         if ver == 2:
  *             headers = ["radius_"+s0+"_"+s1, "magnitude_"+s0+"_"+s1, "covariance_"+s0+"_"+s1, "pcc_"+s0+"_"+s1]             # <<<<<<<<<<<<<<
@@ -12010,7 +12010,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
     __Pyx_DECREF_SET(__pyx_v_headers, ((PyObject*)__pyx_t_6));
     __pyx_t_6 = 0;
 
-    /* "AfterImage_extrapolate.pyx":324
+    /* "kitsune_core/AfterImage_extrapolate.pyx":324
  *         if ver == 1:
  *             headers = ["covariance_"+s0+"_"+s1, "pcc_"+s0+"_"+s1]
  *         if ver == 2:             # <<<<<<<<<<<<<<
@@ -12019,7 +12019,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":326
+  /* "kitsune_core/AfterImage_extrapolate.pyx":326
  *         if ver == 2:
  *             headers = ["radius_"+s0+"_"+s1, "magnitude_"+s0+"_"+s1, "covariance_"+s0+"_"+s1, "pcc_"+s0+"_"+s1]
  *         if ver == 3:             # <<<<<<<<<<<<<<
@@ -12029,7 +12029,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
   __pyx_t_2 = (__pyx_v_ver == 3);
   if (__pyx_t_2) {
 
-    /* "AfterImage_extrapolate.pyx":327
+    /* "kitsune_core/AfterImage_extrapolate.pyx":327
  *             headers = ["radius_"+s0+"_"+s1, "magnitude_"+s0+"_"+s1, "covariance_"+s0+"_"+s1, "pcc_"+s0+"_"+s1]
  *         if ver == 3:
  *             headers = ["weight_"+s0, "mean_"+s0, "std_"+s0,"weight_"+s1, "mean_"+s1, "std_"+s1, "covariance_"+s0+"_"+s1, "pcc_"+s0+"_"+s1]             # <<<<<<<<<<<<<<
@@ -12093,7 +12093,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
     __Pyx_DECREF_SET(__pyx_v_headers, ((PyObject*)__pyx_t_10));
     __pyx_t_10 = 0;
 
-    /* "AfterImage_extrapolate.pyx":326
+    /* "kitsune_core/AfterImage_extrapolate.pyx":326
  *         if ver == 2:
  *             headers = ["radius_"+s0+"_"+s1, "magnitude_"+s0+"_"+s1, "covariance_"+s0+"_"+s1, "pcc_"+s0+"_"+s1]
  *         if ver == 3:             # <<<<<<<<<<<<<<
@@ -12102,7 +12102,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":328
+  /* "kitsune_core/AfterImage_extrapolate.pyx":328
  *         if ver == 3:
  *             headers = ["weight_"+s0, "mean_"+s0, "std_"+s0,"weight_"+s1, "mean_"+s1, "std_"+s1, "covariance_"+s0+"_"+s1, "pcc_"+s0+"_"+s1]
  *         if ver == 4:             # <<<<<<<<<<<<<<
@@ -12112,7 +12112,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
   __pyx_t_2 = (__pyx_v_ver == 4);
   if (__pyx_t_2) {
 
-    /* "AfterImage_extrapolate.pyx":329
+    /* "kitsune_core/AfterImage_extrapolate.pyx":329
  *             headers = ["weight_"+s0, "mean_"+s0, "std_"+s0,"weight_"+s1, "mean_"+s1, "std_"+s1, "covariance_"+s0+"_"+s1, "pcc_"+s0+"_"+s1]
  *         if ver == 4:
  *             headers = ["weight_" + s0, "mean_" + s0, "std_" + s0, "covariance_" + s0 + "_" + s1, "pcc_" + s0 + "_" + s1]             # <<<<<<<<<<<<<<
@@ -12161,7 +12161,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
     __Pyx_DECREF_SET(__pyx_v_headers, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "AfterImage_extrapolate.pyx":328
+    /* "kitsune_core/AfterImage_extrapolate.pyx":328
  *         if ver == 3:
  *             headers = ["weight_"+s0, "mean_"+s0, "std_"+s0,"weight_"+s1, "mean_"+s1, "std_"+s1, "covariance_"+s0+"_"+s1, "pcc_"+s0+"_"+s1]
  *         if ver == 4:             # <<<<<<<<<<<<<<
@@ -12170,7 +12170,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":330
+  /* "kitsune_core/AfterImage_extrapolate.pyx":330
  *         if ver == 4:
  *             headers = ["weight_" + s0, "mean_" + s0, "std_" + s0, "covariance_" + s0 + "_" + s1, "pcc_" + s0 + "_" + s1]
  *         if ver == 5:             # <<<<<<<<<<<<<<
@@ -12180,7 +12180,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
   __pyx_t_2 = (__pyx_v_ver == 5);
   if (__pyx_t_2) {
 
-    /* "AfterImage_extrapolate.pyx":331
+    /* "kitsune_core/AfterImage_extrapolate.pyx":331
  *             headers = ["weight_" + s0, "mean_" + s0, "std_" + s0, "covariance_" + s0 + "_" + s1, "pcc_" + s0 + "_" + s1]
  *         if ver == 5:
  *             headers = ["weight_"+s0, "mean_"+s0, "std_"+s0,"weight_"+s1, "mean_"+s1, "std_"+s1, "radius_"+s0+"_"+s1, "magnitude_"+s0+"_"+s1, "covariance_"+s0+"_"+s1, "pcc_"+s0+"_"+s1]             # <<<<<<<<<<<<<<
@@ -12266,7 +12266,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
     __Pyx_DECREF_SET(__pyx_v_headers, ((PyObject*)__pyx_t_12));
     __pyx_t_12 = 0;
 
-    /* "AfterImage_extrapolate.pyx":330
+    /* "kitsune_core/AfterImage_extrapolate.pyx":330
  *         if ver == 4:
  *             headers = ["weight_" + s0, "mean_" + s0, "std_" + s0, "covariance_" + s0 + "_" + s1, "pcc_" + s0 + "_" + s1]
  *         if ver == 5:             # <<<<<<<<<<<<<<
@@ -12275,7 +12275,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":332
+  /* "kitsune_core/AfterImage_extrapolate.pyx":332
  *         if ver == 5:
  *             headers = ["weight_"+s0, "mean_"+s0, "std_"+s0,"weight_"+s1, "mean_"+s1, "std_"+s1, "radius_"+s0+"_"+s1, "magnitude_"+s0+"_"+s1, "covariance_"+s0+"_"+s1, "pcc_"+s0+"_"+s1]
  *         return headers             # <<<<<<<<<<<<<<
@@ -12287,7 +12287,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
   __pyx_r = __pyx_v_headers;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":314
+  /* "kitsune_core/AfterImage_extrapolate.pyx":314
  *         return [self.incS1.w,self.incS1.mean(),self.incS1.std(),self.incS2.w,self.incS2.mean(),self.incS2.std(), self.incS1.radius([self.incS2]),self.incS1.magnitude([self.incS2]),self.cov(), self.pcc()]
  * 
  *     cdef getHeaders(self,int ver,int suffix=True): #ver = {1,2,3,4}             # <<<<<<<<<<<<<<
@@ -12308,7 +12308,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
   __Pyx_XDECREF(__pyx_t_10);
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat_cov.getHeaders", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat_cov.getHeaders", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_headers);
@@ -12326,15 +12326,15 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders(struc
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_11incStat_cov_5__reduce_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_5__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_11incStat_cov_5__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_11incStat_cov_5__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_11incStat_cov_5__reduce_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_5__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_5__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_5__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -12359,14 +12359,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   if (unlikely(__pyx_nargs > 0)) {
     __Pyx_RaiseArgtupleInvalid("__reduce_cython__", 1, 0, 0, __pyx_nargs); return NULL;}
   if (unlikely(__pyx_kwds) && __Pyx_NumKwargs_FASTCALL(__pyx_kwds) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "__reduce_cython__", 0))) return NULL;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_11incStat_cov_4__reduce_cython__(((struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self));
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_4__reduce_cython__(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_11incStat_cov_4__reduce_cython__(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_4__reduce_cython__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self) {
   PyObject *__pyx_v_state = 0;
   PyObject *__pyx_v__dict = 0;
   int __pyx_v_use_setstate;
@@ -12615,7 +12615,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_11incStat_cov_4__reduce_cytho
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat_cov.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat_cov.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_state);
@@ -12633,15 +12633,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_11incStat_cov_4__reduce_cytho
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_11incStat_cov_7__setstate_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_7__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_11incStat_cov_7__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_11incStat_cov_7__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_11incStat_cov_7__setstate_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_7__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_7__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_7__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -12711,11 +12711,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat_cov.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat_cov.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_11incStat_cov_6__setstate_cython__(((struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self), __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_6__setstate_cython__(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v_self), __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -12728,7 +12728,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_11incStat_cov_6__setstate_cython__(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_6__setstate_cython__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -12743,7 +12743,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_11incStat_cov_6__setstate_cyt
  *     __pyx_unpickle_incStat_cov__set_state(self, __pyx_state)             # <<<<<<<<<<<<<<
  */
   if (!(likely(PyTuple_CheckExact(__pyx_v___pyx_state))||((__pyx_v___pyx_state) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_v___pyx_state))) __PYX_ERR(1, 17, __pyx_L1_error)
-  __pyx_t_1 = __pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStat_cov__set_state(__pyx_v_self, ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 17, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_incStat_cov__set_state(__pyx_v_self, ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
@@ -12759,7 +12759,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_11incStat_cov_6__setstate_cyt
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStat_cov.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStat_cov.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -12767,17 +12767,17 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_11incStat_cov_6__setstate_cyt
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":341
+/* "kitsune_core/AfterImage_extrapolate.pyx":341
  * 
  *     # default_lambda: use this as the lambda for all streams. If not specified, then you must supply a Lambda with every query.
- *     def __init__(self,double limit=np.Inf,double default_lambda=np.nan):             # <<<<<<<<<<<<<<
+ *     def __init__(self,double limit=np.inf,double default_lambda=np.nan):             # <<<<<<<<<<<<<<
  *         self.HT = dict()
  *         self.limit = limit
  */
 
 /* Python wrapper */
-static int __pyx_pw_22AfterImage_extrapolate_9incStatDB_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_22AfterImage_extrapolate_9incStatDB_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   double __pyx_v_limit;
   double __pyx_v_default_lambda;
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
@@ -12860,11 +12860,11 @@ static int __pyx_pw_22AfterImage_extrapolate_9incStatDB_1__init__(PyObject *__py
       __Pyx_Arg_XDECREF_VARARGS(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_9incStatDB___init__(((struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_limit, __pyx_v_default_lambda);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB___init__(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_limit, __pyx_v_default_lambda);
 
   /* function exit code */
   {
@@ -12877,7 +12877,7 @@ static int __pyx_pw_22AfterImage_extrapolate_9incStatDB_1__init__(PyObject *__py
   return __pyx_r;
 }
 
-static int __pyx_pf_22AfterImage_extrapolate_9incStatDB___init__(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, double __pyx_v_limit, double __pyx_v_default_lambda) {
+static int __pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB___init__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, double __pyx_v_limit, double __pyx_v_default_lambda) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -12886,9 +12886,9 @@ static int __pyx_pf_22AfterImage_extrapolate_9incStatDB___init__(struct __pyx_ob
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 1);
 
-  /* "AfterImage_extrapolate.pyx":342
+  /* "kitsune_core/AfterImage_extrapolate.pyx":342
  *     # default_lambda: use this as the lambda for all streams. If not specified, then you must supply a Lambda with every query.
- *     def __init__(self,double limit=np.Inf,double default_lambda=np.nan):
+ *     def __init__(self,double limit=np.inf,double default_lambda=np.nan):
  *         self.HT = dict()             # <<<<<<<<<<<<<<
  *         self.limit = limit
  *         self.df_lambda = default_lambda
@@ -12901,8 +12901,8 @@ static int __pyx_pf_22AfterImage_extrapolate_9incStatDB___init__(struct __pyx_ob
   __pyx_v_self->HT = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":343
- *     def __init__(self,double limit=np.Inf,double default_lambda=np.nan):
+  /* "kitsune_core/AfterImage_extrapolate.pyx":343
+ *     def __init__(self,double limit=np.inf,double default_lambda=np.nan):
  *         self.HT = dict()
  *         self.limit = limit             # <<<<<<<<<<<<<<
  *         self.df_lambda = default_lambda
@@ -12910,7 +12910,7 @@ static int __pyx_pf_22AfterImage_extrapolate_9incStatDB___init__(struct __pyx_ob
  */
   __pyx_v_self->limit = __pyx_v_limit;
 
-  /* "AfterImage_extrapolate.pyx":344
+  /* "kitsune_core/AfterImage_extrapolate.pyx":344
  *         self.HT = dict()
  *         self.limit = limit
  *         self.df_lambda = default_lambda             # <<<<<<<<<<<<<<
@@ -12919,10 +12919,10 @@ static int __pyx_pf_22AfterImage_extrapolate_9incStatDB___init__(struct __pyx_ob
  */
   __pyx_v_self->df_lambda = __pyx_v_default_lambda;
 
-  /* "AfterImage_extrapolate.pyx":341
+  /* "kitsune_core/AfterImage_extrapolate.pyx":341
  * 
  *     # default_lambda: use this as the lambda for all streams. If not specified, then you must supply a Lambda with every query.
- *     def __init__(self,double limit=np.Inf,double default_lambda=np.nan):             # <<<<<<<<<<<<<<
+ *     def __init__(self,double limit=np.inf,double default_lambda=np.nan):             # <<<<<<<<<<<<<<
  *         self.HT = dict()
  *         self.limit = limit
  */
@@ -12932,14 +12932,14 @@ static int __pyx_pf_22AfterImage_extrapolate_9incStatDB___init__(struct __pyx_ob
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":346
+/* "kitsune_core/AfterImage_extrapolate.pyx":346
  *         self.df_lambda = default_lambda
  * 
  *     cdef get_lambda(self,double Lambda):             # <<<<<<<<<<<<<<
@@ -12947,7 +12947,7 @@ static int __pyx_pf_22AfterImage_extrapolate_9incStatDB___init__(struct __pyx_ob
  *             Lambda = self.df_lambda
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_9incStatDB_get_lambda(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, double __pyx_v_Lambda) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_9incStatDB_get_lambda(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, double __pyx_v_Lambda) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -12963,7 +12963,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_9incStatDB_get_lambda(struct _
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_lambda", 1);
 
-  /* "AfterImage_extrapolate.pyx":347
+  /* "kitsune_core/AfterImage_extrapolate.pyx":347
  * 
  *     cdef get_lambda(self,double Lambda):
  *         if not np.isnan(self.df_lambda):             # <<<<<<<<<<<<<<
@@ -13005,7 +13005,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_9incStatDB_get_lambda(struct _
   __pyx_t_7 = (!__pyx_t_6);
   if (__pyx_t_7) {
 
-    /* "AfterImage_extrapolate.pyx":348
+    /* "kitsune_core/AfterImage_extrapolate.pyx":348
  *     cdef get_lambda(self,double Lambda):
  *         if not np.isnan(self.df_lambda):
  *             Lambda = self.df_lambda             # <<<<<<<<<<<<<<
@@ -13015,7 +13015,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_9incStatDB_get_lambda(struct _
     __pyx_t_8 = __pyx_v_self->df_lambda;
     __pyx_v_Lambda = __pyx_t_8;
 
-    /* "AfterImage_extrapolate.pyx":347
+    /* "kitsune_core/AfterImage_extrapolate.pyx":347
  * 
  *     cdef get_lambda(self,double Lambda):
  *         if not np.isnan(self.df_lambda):             # <<<<<<<<<<<<<<
@@ -13024,7 +13024,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_9incStatDB_get_lambda(struct _
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":349
+  /* "kitsune_core/AfterImage_extrapolate.pyx":349
  *         if not np.isnan(self.df_lambda):
  *             Lambda = self.df_lambda
  *         return Lambda             # <<<<<<<<<<<<<<
@@ -13038,7 +13038,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_9incStatDB_get_lambda(struct _
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":346
+  /* "kitsune_core/AfterImage_extrapolate.pyx":346
  *         self.df_lambda = default_lambda
  * 
  *     cdef get_lambda(self,double Lambda):             # <<<<<<<<<<<<<<
@@ -13052,7 +13052,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_9incStatDB_get_lambda(struct _
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.get_lambda", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.get_lambda", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -13060,7 +13060,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_9incStatDB_get_lambda(struct _
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":352
+/* "kitsune_core/AfterImage_extrapolate.pyx":352
  * 
  *     # Registers a new stream. init_time: init lastTimestamp of the incStat
  *     def register(self,str ID,double Lambda=1,double init_time=0,int isTypeDiff=False):             # <<<<<<<<<<<<<<
@@ -13069,15 +13069,15 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_9incStatDB_get_lambda(struct _
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_3register(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_3register(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_9incStatDB_3register = {"register", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_3register, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_3register(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_3register = {"register", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_3register, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_3register(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -13200,12 +13200,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.register", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.register", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ID), (&PyString_Type), 1, "ID", 1))) __PYX_ERR(0, 352, __pyx_L1_error)
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(((struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_ID, __pyx_v_Lambda, __pyx_v_init_time, __pyx_v_isTypeDiff);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_2register(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_ID, __pyx_v_Lambda, __pyx_v_init_time, __pyx_v_isTypeDiff);
 
   /* function exit code */
   goto __pyx_L0;
@@ -13222,9 +13222,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_Lambda, double __pyx_v_init_time, int __pyx_v_isTypeDiff) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_2register(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_Lambda, double __pyx_v_init_time, int __pyx_v_isTypeDiff) {
   PyObject *__pyx_v_key = 0;
-  struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_incS = 0;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_incS = 0;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -13239,20 +13239,20 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(struct _
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("register", 1);
 
-  /* "AfterImage_extrapolate.pyx":354
+  /* "kitsune_core/AfterImage_extrapolate.pyx":354
  *     def register(self,str ID,double Lambda=1,double init_time=0,int isTypeDiff=False):
  *         #Default Lambda?
  *         Lambda = self.get_lambda(Lambda)             # <<<<<<<<<<<<<<
  * 
  *         #Retrieve incStat
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStatDB *)__pyx_v_self->__pyx_vtab)->get_lambda(__pyx_v_self, __pyx_v_Lambda); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 354, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self->__pyx_vtab)->get_lambda(__pyx_v_self, __pyx_v_Lambda); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 354, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 354, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_Lambda = __pyx_t_2;
 
-  /* "AfterImage_extrapolate.pyx":358
+  /* "kitsune_core/AfterImage_extrapolate.pyx":358
  *         #Retrieve incStat
  *         cdef str key
  *         key = ID+"_"+str(Lambda)             # <<<<<<<<<<<<<<
@@ -13274,7 +13274,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(struct _
   __pyx_v_key = ((PyObject*)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "AfterImage_extrapolate.pyx":361
+  /* "kitsune_core/AfterImage_extrapolate.pyx":361
  * 
  *         cdef incStat incS
  *         incS = self.HT.get(key)             # <<<<<<<<<<<<<<
@@ -13287,11 +13287,11 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(struct _
   }
   __pyx_t_3 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->HT, __pyx_v_key, Py_None); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 361, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_22AfterImage_extrapolate_incStat))))) __PYX_ERR(0, 361, __pyx_L1_error)
-  __pyx_v_incS = ((struct __pyx_obj_22AfterImage_extrapolate_incStat *)__pyx_t_3);
+  if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat))))) __PYX_ERR(0, 361, __pyx_L1_error)
+  __pyx_v_incS = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_t_3);
   __pyx_t_3 = 0;
 
-  /* "AfterImage_extrapolate.pyx":362
+  /* "kitsune_core/AfterImage_extrapolate.pyx":362
  *         cdef incStat incS
  *         incS = self.HT.get(key)
  *         if incS is None: #does not already exist             # <<<<<<<<<<<<<<
@@ -13301,7 +13301,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(struct _
   __pyx_t_5 = (((PyObject *)__pyx_v_incS) == Py_None);
   if (__pyx_t_5) {
 
-    /* "AfterImage_extrapolate.pyx":363
+    /* "kitsune_core/AfterImage_extrapolate.pyx":363
  *         incS = self.HT.get(key)
  *         if incS is None: #does not already exist
  *             if len(self.HT) + 1 > self.limit:             # <<<<<<<<<<<<<<
@@ -13319,7 +13319,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(struct _
     __pyx_t_5 = ((__pyx_t_6 + 1) > __pyx_v_self->limit);
     if (unlikely(__pyx_t_5)) {
 
-      /* "AfterImage_extrapolate.pyx":365
+      /* "kitsune_core/AfterImage_extrapolate.pyx":365
  *             if len(self.HT) + 1 > self.limit:
  *                 raise LookupError(
  *                     'Adding Entry:\n' + key + '\nwould exceed incStatHT 1D limit of ' + str(             # <<<<<<<<<<<<<<
@@ -13332,7 +13332,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(struct _
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "AfterImage_extrapolate.pyx":366
+      /* "kitsune_core/AfterImage_extrapolate.pyx":366
  *                 raise LookupError(
  *                     'Adding Entry:\n' + key + '\nwould exceed incStatHT 1D limit of ' + str(
  *                         self.limit) + '.\nObservation Rejected.')             # <<<<<<<<<<<<<<
@@ -13342,7 +13342,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(struct _
       __pyx_t_3 = PyFloat_FromDouble(__pyx_v_self->limit); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 366, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
 
-      /* "AfterImage_extrapolate.pyx":365
+      /* "kitsune_core/AfterImage_extrapolate.pyx":365
  *             if len(self.HT) + 1 > self.limit:
  *                 raise LookupError(
  *                     'Adding Entry:\n' + key + '\nwould exceed incStatHT 1D limit of ' + str(             # <<<<<<<<<<<<<<
@@ -13357,7 +13357,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(struct _
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "AfterImage_extrapolate.pyx":366
+      /* "kitsune_core/AfterImage_extrapolate.pyx":366
  *                 raise LookupError(
  *                     'Adding Entry:\n' + key + '\nwould exceed incStatHT 1D limit of ' + str(
  *                         self.limit) + '.\nObservation Rejected.')             # <<<<<<<<<<<<<<
@@ -13368,7 +13368,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(struct _
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "AfterImage_extrapolate.pyx":364
+      /* "kitsune_core/AfterImage_extrapolate.pyx":364
  *         if incS is None: #does not already exist
  *             if len(self.HT) + 1 > self.limit:
  *                 raise LookupError(             # <<<<<<<<<<<<<<
@@ -13382,7 +13382,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(struct _
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __PYX_ERR(0, 364, __pyx_L1_error)
 
-      /* "AfterImage_extrapolate.pyx":363
+      /* "kitsune_core/AfterImage_extrapolate.pyx":363
  *         incS = self.HT.get(key)
  *         if incS is None: #does not already exist
  *             if len(self.HT) + 1 > self.limit:             # <<<<<<<<<<<<<<
@@ -13391,7 +13391,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(struct _
  */
     }
 
-    /* "AfterImage_extrapolate.pyx":367
+    /* "kitsune_core/AfterImage_extrapolate.pyx":367
  *                     'Adding Entry:\n' + key + '\nwould exceed incStatHT 1D limit of ' + str(
  *                         self.limit) + '.\nObservation Rejected.')
  *             incS = incStat(Lambda, ID, init_time, isTypeDiff)             # <<<<<<<<<<<<<<
@@ -13418,13 +13418,13 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(struct _
     __pyx_t_3 = 0;
     __pyx_t_1 = 0;
     __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStat), __pyx_t_7, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 367, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat), __pyx_t_7, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 367, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __Pyx_DECREF_SET(__pyx_v_incS, ((struct __pyx_obj_22AfterImage_extrapolate_incStat *)__pyx_t_4));
+    __Pyx_DECREF_SET(__pyx_v_incS, ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_t_4));
     __pyx_t_4 = 0;
 
-    /* "AfterImage_extrapolate.pyx":368
+    /* "kitsune_core/AfterImage_extrapolate.pyx":368
  *                         self.limit) + '.\nObservation Rejected.')
  *             incS = incStat(Lambda, ID, init_time, isTypeDiff)
  *             self.HT[key] = incS #add new entry             # <<<<<<<<<<<<<<
@@ -13437,7 +13437,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(struct _
     }
     if (unlikely((PyDict_SetItem(__pyx_v_self->HT, __pyx_v_key, ((PyObject *)__pyx_v_incS)) < 0))) __PYX_ERR(0, 368, __pyx_L1_error)
 
-    /* "AfterImage_extrapolate.pyx":362
+    /* "kitsune_core/AfterImage_extrapolate.pyx":362
  *         cdef incStat incS
  *         incS = self.HT.get(key)
  *         if incS is None: #does not already exist             # <<<<<<<<<<<<<<
@@ -13446,7 +13446,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(struct _
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":369
+  /* "kitsune_core/AfterImage_extrapolate.pyx":369
  *             incS = incStat(Lambda, ID, init_time, isTypeDiff)
  *             self.HT[key] = incS #add new entry
  *         return incS             # <<<<<<<<<<<<<<
@@ -13458,7 +13458,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(struct _
   __pyx_r = ((PyObject *)__pyx_v_incS);
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":352
+  /* "kitsune_core/AfterImage_extrapolate.pyx":352
  * 
  *     # Registers a new stream. init_time: init lastTimestamp of the incStat
  *     def register(self,str ID,double Lambda=1,double init_time=0,int isTypeDiff=False):             # <<<<<<<<<<<<<<
@@ -13472,7 +13472,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(struct _
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.register", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.register", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_key);
@@ -13482,7 +13482,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(struct _
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":372
+/* "kitsune_core/AfterImage_extrapolate.pyx":372
  * 
  *     # Registers covariance tracking for two streams, registers missing streams
  *     def register_cov(self,str ID1, str ID2, double Lambda=1, double init_time=0, int isTypeDiff=False):             # <<<<<<<<<<<<<<
@@ -13491,15 +13491,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_2register(struct _
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_5register_cov(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_5register_cov(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_9incStatDB_5register_cov = {"register_cov", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_5register_cov, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_5register_cov(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_5register_cov = {"register_cov", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_5register_cov, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_5register_cov(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -13637,13 +13637,13 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.register_cov", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.register_cov", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ID1), (&PyString_Type), 1, "ID1", 1))) __PYX_ERR(0, 372, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ID2), (&PyString_Type), 1, "ID2", 1))) __PYX_ERR(0, 372, __pyx_L1_error)
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_9incStatDB_4register_cov(((struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_ID1, __pyx_v_ID2, __pyx_v_Lambda, __pyx_v_init_time, __pyx_v_isTypeDiff);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_4register_cov(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_ID1, __pyx_v_ID2, __pyx_v_Lambda, __pyx_v_init_time, __pyx_v_isTypeDiff);
 
   /* function exit code */
   goto __pyx_L0;
@@ -13660,11 +13660,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_4register_cov(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID1, PyObject *__pyx_v_ID2, double __pyx_v_Lambda, double __pyx_v_init_time, int __pyx_v_isTypeDiff) {
-  struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_incS1 = 0;
-  struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_incS2 = 0;
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_4register_cov(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID1, PyObject *__pyx_v_ID2, double __pyx_v_Lambda, double __pyx_v_init_time, int __pyx_v_isTypeDiff) {
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_incS1 = 0;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_incS2 = 0;
   PyObject *__pyx_v_cov = NULL;
-  struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_inc_cov = NULL;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_inc_cov = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -13683,20 +13683,20 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_4register_cov(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("register_cov", 1);
 
-  /* "AfterImage_extrapolate.pyx":374
+  /* "kitsune_core/AfterImage_extrapolate.pyx":374
  *     def register_cov(self,str ID1, str ID2, double Lambda=1, double init_time=0, int isTypeDiff=False):
  *         #Default Lambda?
  *         Lambda = self.get_lambda(Lambda)             # <<<<<<<<<<<<<<
  * 
  *         # Lookup both streams
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStatDB *)__pyx_v_self->__pyx_vtab)->get_lambda(__pyx_v_self, __pyx_v_Lambda); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 374, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self->__pyx_vtab)->get_lambda(__pyx_v_self, __pyx_v_Lambda); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 374, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 374, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_Lambda = __pyx_t_2;
 
-  /* "AfterImage_extrapolate.pyx":379
+  /* "kitsune_core/AfterImage_extrapolate.pyx":379
  *         cdef incStat incS1
  *         cdef incStat incS2
  *         incS1 = self.register(ID1,Lambda,init_time,isTypeDiff)             # <<<<<<<<<<<<<<
@@ -13736,11 +13736,11 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_4register_cov(stru
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_22AfterImage_extrapolate_incStat))))) __PYX_ERR(0, 379, __pyx_L1_error)
-  __pyx_v_incS1 = ((struct __pyx_obj_22AfterImage_extrapolate_incStat *)__pyx_t_1);
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat))))) __PYX_ERR(0, 379, __pyx_L1_error)
+  __pyx_v_incS1 = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":380
+  /* "kitsune_core/AfterImage_extrapolate.pyx":380
  *         cdef incStat incS2
  *         incS1 = self.register(ID1,Lambda,init_time,isTypeDiff)
  *         incS2 = self.register(ID2,Lambda,init_time,isTypeDiff)             # <<<<<<<<<<<<<<
@@ -13780,11 +13780,11 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_4register_cov(stru
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_22AfterImage_extrapolate_incStat))))) __PYX_ERR(0, 380, __pyx_L1_error)
-  __pyx_v_incS2 = ((struct __pyx_obj_22AfterImage_extrapolate_incStat *)__pyx_t_1);
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat))))) __PYX_ERR(0, 380, __pyx_L1_error)
+  __pyx_v_incS2 = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":383
+  /* "kitsune_core/AfterImage_extrapolate.pyx":383
  * 
  *         #check for pre-exiting link
  *         for cov in incS1.covs:             # <<<<<<<<<<<<<<
@@ -13814,7 +13814,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_4register_cov(stru
     __Pyx_XDECREF_SET(__pyx_v_cov, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "AfterImage_extrapolate.pyx":384
+    /* "kitsune_core/AfterImage_extrapolate.pyx":384
  *         #check for pre-exiting link
  *         for cov in incS1.covs:
  *             if cov.isRelated(ID2):             # <<<<<<<<<<<<<<
@@ -13849,7 +13849,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_4register_cov(stru
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_10) {
 
-      /* "AfterImage_extrapolate.pyx":385
+      /* "kitsune_core/AfterImage_extrapolate.pyx":385
  *         for cov in incS1.covs:
  *             if cov.isRelated(ID2):
  *                 return cov #there is a pre-exiting link             # <<<<<<<<<<<<<<
@@ -13862,7 +13862,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_4register_cov(stru
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       goto __pyx_L0;
 
-      /* "AfterImage_extrapolate.pyx":384
+      /* "kitsune_core/AfterImage_extrapolate.pyx":384
  *         #check for pre-exiting link
  *         for cov in incS1.covs:
  *             if cov.isRelated(ID2):             # <<<<<<<<<<<<<<
@@ -13871,7 +13871,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_4register_cov(stru
  */
     }
 
-    /* "AfterImage_extrapolate.pyx":383
+    /* "kitsune_core/AfterImage_extrapolate.pyx":383
  * 
  *         #check for pre-exiting link
  *         for cov in incS1.covs:             # <<<<<<<<<<<<<<
@@ -13881,7 +13881,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_4register_cov(stru
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":388
+  /* "kitsune_core/AfterImage_extrapolate.pyx":388
  * 
  *         # Link incStats
  *         inc_cov = incStat_cov(incS1,incS2,init_time)             # <<<<<<<<<<<<<<
@@ -13901,13 +13901,13 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_4register_cov(stru
   __Pyx_GIVEREF(__pyx_t_1);
   if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_t_1)) __PYX_ERR(0, 388, __pyx_L1_error);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStat_cov), __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 388, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov), __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 388, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_v_inc_cov = ((struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *)__pyx_t_1);
+  __pyx_v_inc_cov = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":389
+  /* "kitsune_core/AfterImage_extrapolate.pyx":389
  *         # Link incStats
  *         inc_cov = incStat_cov(incS1,incS2,init_time)
  *         incS1.covs.append(inc_cov)             # <<<<<<<<<<<<<<
@@ -13920,7 +13920,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_4register_cov(stru
   }
   __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_incS1->covs, ((PyObject *)__pyx_v_inc_cov)); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 389, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":390
+  /* "kitsune_core/AfterImage_extrapolate.pyx":390
  *         inc_cov = incStat_cov(incS1,incS2,init_time)
  *         incS1.covs.append(inc_cov)
  *         incS2.covs.append(inc_cov)             # <<<<<<<<<<<<<<
@@ -13933,7 +13933,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_4register_cov(stru
   }
   __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_incS2->covs, ((PyObject *)__pyx_v_inc_cov)); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 390, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":391
+  /* "kitsune_core/AfterImage_extrapolate.pyx":391
  *         incS1.covs.append(inc_cov)
  *         incS2.covs.append(inc_cov)
  *         return inc_cov             # <<<<<<<<<<<<<<
@@ -13945,7 +13945,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_4register_cov(stru
   __pyx_r = ((PyObject *)__pyx_v_inc_cov);
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":372
+  /* "kitsune_core/AfterImage_extrapolate.pyx":372
  * 
  *     # Registers covariance tracking for two streams, registers missing streams
  *     def register_cov(self,str ID1, str ID2, double Lambda=1, double init_time=0, int isTypeDiff=False):             # <<<<<<<<<<<<<<
@@ -13961,7 +13961,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_4register_cov(stru
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.register_cov", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.register_cov", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_incS1);
@@ -13973,7 +13973,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_4register_cov(stru
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":394
+/* "kitsune_core/AfterImage_extrapolate.pyx":394
  * 
  *     # updates/registers stream
  *     def update(self,str ID,double t,double v,double Lambda=1,int isTypeDiff=False):             # <<<<<<<<<<<<<<
@@ -13982,15 +13982,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_4register_cov(stru
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_7update(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_7update(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_9incStatDB_7update = {"update", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_7update, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_7update(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_7update = {"update", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_7update, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_7update(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -14126,12 +14126,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ID), (&PyString_Type), 1, "ID", 1))) __PYX_ERR(0, 394, __pyx_L1_error)
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_9incStatDB_6update(((struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_ID, __pyx_v_t, __pyx_v_v, __pyx_v_Lambda, __pyx_v_isTypeDiff);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_6update(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_ID, __pyx_v_t, __pyx_v_v, __pyx_v_Lambda, __pyx_v_isTypeDiff);
 
   /* function exit code */
   goto __pyx_L0;
@@ -14148,8 +14148,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_6update(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_t, double __pyx_v_v, double __pyx_v_Lambda, int __pyx_v_isTypeDiff) {
-  struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_incS = 0;
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_6update(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_t, double __pyx_v_v, double __pyx_v_Lambda, int __pyx_v_isTypeDiff) {
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_incS = 0;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -14159,13 +14159,13 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_6update(struct __p
   PyObject *__pyx_t_5 = NULL;
   PyObject *__pyx_t_6 = NULL;
   unsigned int __pyx_t_7;
-  struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_insert __pyx_t_8;
+  struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_insert __pyx_t_8;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("update", 1);
 
-  /* "AfterImage_extrapolate.pyx":396
+  /* "kitsune_core/AfterImage_extrapolate.pyx":396
  *     def update(self,str ID,double t,double v,double Lambda=1,int isTypeDiff=False):
  *         cdef incStat incS
  *         incS = self.register(ID,Lambda,t,isTypeDiff)             # <<<<<<<<<<<<<<
@@ -14205,11 +14205,11 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_6update(struct __p
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_22AfterImage_extrapolate_incStat))))) __PYX_ERR(0, 396, __pyx_L1_error)
-  __pyx_v_incS = ((struct __pyx_obj_22AfterImage_extrapolate_incStat *)__pyx_t_1);
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat))))) __PYX_ERR(0, 396, __pyx_L1_error)
+  __pyx_v_incS = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":397
+  /* "kitsune_core/AfterImage_extrapolate.pyx":397
  *         cdef incStat incS
  *         incS = self.register(ID,Lambda,t,isTypeDiff)
  *         incS.insert(v,t)             # <<<<<<<<<<<<<<
@@ -14218,11 +14218,11 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_6update(struct __p
  */
   __pyx_t_8.__pyx_n = 1;
   __pyx_t_8.t = __pyx_v_t;
-  __pyx_t_1 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_incS->__pyx_vtab)->insert(__pyx_v_incS, __pyx_v_v, &__pyx_t_8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_incS->__pyx_vtab)->insert(__pyx_v_incS, __pyx_v_v, &__pyx_t_8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":398
+  /* "kitsune_core/AfterImage_extrapolate.pyx":398
  *         incS = self.register(ID,Lambda,t,isTypeDiff)
  *         incS.insert(v,t)
  *         return incS             # <<<<<<<<<<<<<<
@@ -14234,7 +14234,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_6update(struct __p
   __pyx_r = ((PyObject *)__pyx_v_incS);
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":394
+  /* "kitsune_core/AfterImage_extrapolate.pyx":394
  * 
  *     # updates/registers stream
  *     def update(self,str ID,double t,double v,double Lambda=1,int isTypeDiff=False):             # <<<<<<<<<<<<<<
@@ -14250,7 +14250,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_6update(struct __p
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.update", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_incS);
@@ -14259,7 +14259,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_6update(struct __p
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":401
+/* "kitsune_core/AfterImage_extrapolate.pyx":401
  * 
  *     # Pulls current stats from the given ID
  *     def get_1D_Stats(self,str ID,double Lambda=1): #weight, mean, std             # <<<<<<<<<<<<<<
@@ -14268,15 +14268,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_6update(struct __p
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_9get_1D_Stats(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_9get_1D_Stats(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_9incStatDB_9get_1D_Stats = {"get_1D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_9get_1D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_9get_1D_Stats(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_9get_1D_Stats = {"get_1D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_9get_1D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_9get_1D_Stats(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -14365,12 +14365,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.get_1D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.get_1D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ID), (&PyString_Type), 1, "ID", 1))) __PYX_ERR(0, 401, __pyx_L1_error)
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_9incStatDB_8get_1D_Stats(((struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_ID, __pyx_v_Lambda);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_8get_1D_Stats(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_ID, __pyx_v_Lambda);
 
   /* function exit code */
   goto __pyx_L0;
@@ -14387,8 +14387,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_8get_1D_Stats(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_Lambda) {
-  struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_incS = 0;
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_8get_1D_Stats(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_Lambda) {
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_incS = 0;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -14401,20 +14401,20 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_8get_1D_Stats(stru
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_1D_Stats", 1);
 
-  /* "AfterImage_extrapolate.pyx":403
+  /* "kitsune_core/AfterImage_extrapolate.pyx":403
  *     def get_1D_Stats(self,str ID,double Lambda=1): #weight, mean, std
  *         #Default Lambda?
  *         Lambda = self.get_lambda(Lambda)             # <<<<<<<<<<<<<<
  * 
  *         #Get incStat
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStatDB *)__pyx_v_self->__pyx_vtab)->get_lambda(__pyx_v_self, __pyx_v_Lambda); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 403, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self->__pyx_vtab)->get_lambda(__pyx_v_self, __pyx_v_Lambda); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 403, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 403, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_Lambda = __pyx_t_2;
 
-  /* "AfterImage_extrapolate.pyx":407
+  /* "kitsune_core/AfterImage_extrapolate.pyx":407
  *         #Get incStat
  *         cdef incStat incS
  *         incS = self.HT.get(ID+"_"+str(Lambda))             # <<<<<<<<<<<<<<
@@ -14439,11 +14439,11 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_8get_1D_Stats(stru
   __pyx_t_4 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->HT, __pyx_t_3, Py_None); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 407, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_22AfterImage_extrapolate_incStat))))) __PYX_ERR(0, 407, __pyx_L1_error)
-  __pyx_v_incS = ((struct __pyx_obj_22AfterImage_extrapolate_incStat *)__pyx_t_4);
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat))))) __PYX_ERR(0, 407, __pyx_L1_error)
+  __pyx_v_incS = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "AfterImage_extrapolate.pyx":408
+  /* "kitsune_core/AfterImage_extrapolate.pyx":408
  *         cdef incStat incS
  *         incS = self.HT.get(ID+"_"+str(Lambda))
  *         if incS is None:  # does not already exist             # <<<<<<<<<<<<<<
@@ -14453,7 +14453,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_8get_1D_Stats(stru
   __pyx_t_5 = (((PyObject *)__pyx_v_incS) == Py_None);
   if (__pyx_t_5) {
 
-    /* "AfterImage_extrapolate.pyx":409
+    /* "kitsune_core/AfterImage_extrapolate.pyx":409
  *         incS = self.HT.get(ID+"_"+str(Lambda))
  *         if incS is None:  # does not already exist
  *             return [np.na]*3             # <<<<<<<<<<<<<<
@@ -14480,7 +14480,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_8get_1D_Stats(stru
     __pyx_t_4 = 0;
     goto __pyx_L0;
 
-    /* "AfterImage_extrapolate.pyx":408
+    /* "kitsune_core/AfterImage_extrapolate.pyx":408
  *         cdef incStat incS
  *         incS = self.HT.get(ID+"_"+str(Lambda))
  *         if incS is None:  # does not already exist             # <<<<<<<<<<<<<<
@@ -14489,7 +14489,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_8get_1D_Stats(stru
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":411
+  /* "kitsune_core/AfterImage_extrapolate.pyx":411
  *             return [np.na]*3
  *         else:
  *             return incS.allstats_1D()             # <<<<<<<<<<<<<<
@@ -14498,14 +14498,14 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_8get_1D_Stats(stru
  */
   /*else*/ {
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_4 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_incS->__pyx_vtab)->allstats_1D(__pyx_v_incS); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 411, __pyx_L1_error)
+    __pyx_t_4 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_incS->__pyx_vtab)->allstats_1D(__pyx_v_incS); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 411, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_r = __pyx_t_4;
     __pyx_t_4 = 0;
     goto __pyx_L0;
   }
 
-  /* "AfterImage_extrapolate.pyx":401
+  /* "kitsune_core/AfterImage_extrapolate.pyx":401
  * 
  *     # Pulls current stats from the given ID
  *     def get_1D_Stats(self,str ID,double Lambda=1): #weight, mean, std             # <<<<<<<<<<<<<<
@@ -14518,7 +14518,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_8get_1D_Stats(stru
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.get_1D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.get_1D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_incS);
@@ -14527,7 +14527,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_8get_1D_Stats(stru
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":414
+/* "kitsune_core/AfterImage_extrapolate.pyx":414
  * 
  *     # Pulls current correlational stats from the given IDs
  *     def get_2D_Stats(self, str ID1, str ID2, double Lambda=1): #cov, pcc             # <<<<<<<<<<<<<<
@@ -14536,15 +14536,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_8get_1D_Stats(stru
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_11get_2D_Stats(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_11get_2D_Stats(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_9incStatDB_11get_2D_Stats = {"get_2D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_11get_2D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_11get_2D_Stats(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_11get_2D_Stats = {"get_2D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_11get_2D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_11get_2D_Stats(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -14648,13 +14648,13 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.get_2D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.get_2D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ID1), (&PyString_Type), 1, "ID1", 1))) __PYX_ERR(0, 414, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ID2), (&PyString_Type), 1, "ID2", 1))) __PYX_ERR(0, 414, __pyx_L1_error)
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_9incStatDB_10get_2D_Stats(((struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_ID1, __pyx_v_ID2, __pyx_v_Lambda);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_10get_2D_Stats(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_ID1, __pyx_v_ID2, __pyx_v_Lambda);
 
   /* function exit code */
   goto __pyx_L0;
@@ -14671,8 +14671,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_10get_2D_Stats(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID1, PyObject *__pyx_v_ID2, double __pyx_v_Lambda) {
-  struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_incS = 0;
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_10get_2D_Stats(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID1, PyObject *__pyx_v_ID2, double __pyx_v_Lambda) {
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_incS = 0;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -14685,20 +14685,20 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_10get_2D_Stats(str
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_2D_Stats", 1);
 
-  /* "AfterImage_extrapolate.pyx":416
+  /* "kitsune_core/AfterImage_extrapolate.pyx":416
  *     def get_2D_Stats(self, str ID1, str ID2, double Lambda=1): #cov, pcc
  *         # Default Lambda?
  *         Lambda = self.get_lambda(Lambda)             # <<<<<<<<<<<<<<
  * 
  *         # Get incStat
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStatDB *)__pyx_v_self->__pyx_vtab)->get_lambda(__pyx_v_self, __pyx_v_Lambda); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 416, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self->__pyx_vtab)->get_lambda(__pyx_v_self, __pyx_v_Lambda); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 416, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 416, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_Lambda = __pyx_t_2;
 
-  /* "AfterImage_extrapolate.pyx":420
+  /* "kitsune_core/AfterImage_extrapolate.pyx":420
  *         # Get incStat
  *         cdef incStat incS
  *         incS = self.HT.get(ID1 + "_" + str(Lambda))             # <<<<<<<<<<<<<<
@@ -14723,11 +14723,11 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_10get_2D_Stats(str
   __pyx_t_4 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->HT, __pyx_t_3, Py_None); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 420, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_22AfterImage_extrapolate_incStat))))) __PYX_ERR(0, 420, __pyx_L1_error)
-  __pyx_v_incS = ((struct __pyx_obj_22AfterImage_extrapolate_incStat *)__pyx_t_4);
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat))))) __PYX_ERR(0, 420, __pyx_L1_error)
+  __pyx_v_incS = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "AfterImage_extrapolate.pyx":421
+  /* "kitsune_core/AfterImage_extrapolate.pyx":421
  *         cdef incStat incS
  *         incS = self.HT.get(ID1 + "_" + str(Lambda))
  *         if incS is None:  # does not exist             # <<<<<<<<<<<<<<
@@ -14737,7 +14737,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_10get_2D_Stats(str
   __pyx_t_5 = (((PyObject *)__pyx_v_incS) == Py_None);
   if (__pyx_t_5) {
 
-    /* "AfterImage_extrapolate.pyx":422
+    /* "kitsune_core/AfterImage_extrapolate.pyx":422
  *         incS = self.HT.get(ID1 + "_" + str(Lambda))
  *         if incS is None:  # does not exist
  *             return [np.na]*2             # <<<<<<<<<<<<<<
@@ -14764,7 +14764,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_10get_2D_Stats(str
     __pyx_t_4 = 0;
     goto __pyx_L0;
 
-    /* "AfterImage_extrapolate.pyx":421
+    /* "kitsune_core/AfterImage_extrapolate.pyx":421
  *         cdef incStat incS
  *         incS = self.HT.get(ID1 + "_" + str(Lambda))
  *         if incS is None:  # does not exist             # <<<<<<<<<<<<<<
@@ -14773,7 +14773,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_10get_2D_Stats(str
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":425
+  /* "kitsune_core/AfterImage_extrapolate.pyx":425
  * 
  *         # find relevant cov entry
  *         return incS.cov_pcc(ID2)             # <<<<<<<<<<<<<<
@@ -14781,13 +14781,13 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_10get_2D_Stats(str
  *     # Pulls all correlational stats registered with the given ID
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_4 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_incS->__pyx_vtab)->cov_pcc(__pyx_v_incS, __pyx_v_ID2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 425, __pyx_L1_error)
+  __pyx_t_4 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_incS->__pyx_vtab)->cov_pcc(__pyx_v_incS, __pyx_v_ID2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 425, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_r = __pyx_t_4;
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":414
+  /* "kitsune_core/AfterImage_extrapolate.pyx":414
  * 
  *     # Pulls current correlational stats from the given IDs
  *     def get_2D_Stats(self, str ID1, str ID2, double Lambda=1): #cov, pcc             # <<<<<<<<<<<<<<
@@ -14800,7 +14800,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_10get_2D_Stats(str
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.get_2D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.get_2D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_incS);
@@ -14809,7 +14809,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_10get_2D_Stats(str
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":429
+/* "kitsune_core/AfterImage_extrapolate.pyx":429
  *     # Pulls all correlational stats registered with the given ID
  *     # returns tuple [0]: stats-covs&pccs, [2]: IDs
  *     def get_all_2D_Stats(self, str ID, double Lambda=1):  # cov, pcc             # <<<<<<<<<<<<<<
@@ -14818,15 +14818,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_10get_2D_Stats(str
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_13get_all_2D_Stats(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_13get_all_2D_Stats(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_9incStatDB_13get_all_2D_Stats = {"get_all_2D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_13get_all_2D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_13get_all_2D_Stats(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_13get_all_2D_Stats = {"get_all_2D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_13get_all_2D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_13get_all_2D_Stats(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -14915,12 +14915,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.get_all_2D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.get_all_2D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ID), (&PyString_Type), 1, "ID", 1))) __PYX_ERR(0, 429, __pyx_L1_error)
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats(((struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_ID, __pyx_v_Lambda);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_ID, __pyx_v_Lambda);
 
   /* function exit code */
   goto __pyx_L0;
@@ -14937,8 +14937,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_Lambda) {
-  struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_incS1 = 0;
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_Lambda) {
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_incS1 = 0;
   PyObject *__pyx_v_stats = NULL;
   PyObject *__pyx_v_IDs = NULL;
   PyObject *__pyx_v_cov = NULL;
@@ -14958,20 +14958,20 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_all_2D_Stats", 1);
 
-  /* "AfterImage_extrapolate.pyx":431
+  /* "kitsune_core/AfterImage_extrapolate.pyx":431
  *     def get_all_2D_Stats(self, str ID, double Lambda=1):  # cov, pcc
  *         # Default Lambda?
  *         Lambda = self.get_lambda(Lambda)             # <<<<<<<<<<<<<<
  * 
  *         # Get incStat
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStatDB *)__pyx_v_self->__pyx_vtab)->get_lambda(__pyx_v_self, __pyx_v_Lambda); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 431, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self->__pyx_vtab)->get_lambda(__pyx_v_self, __pyx_v_Lambda); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 431, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 431, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_Lambda = __pyx_t_2;
 
-  /* "AfterImage_extrapolate.pyx":435
+  /* "kitsune_core/AfterImage_extrapolate.pyx":435
  *         # Get incStat
  *         cdef incStat incS1
  *         incS1 = self.HT.get(ID + "_" + str(Lambda))             # <<<<<<<<<<<<<<
@@ -14996,11 +14996,11 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats
   __pyx_t_4 = __Pyx_PyDict_GetItemDefault(__pyx_v_self->HT, __pyx_t_3, Py_None); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 435, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_22AfterImage_extrapolate_incStat))))) __PYX_ERR(0, 435, __pyx_L1_error)
-  __pyx_v_incS1 = ((struct __pyx_obj_22AfterImage_extrapolate_incStat *)__pyx_t_4);
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat))))) __PYX_ERR(0, 435, __pyx_L1_error)
+  __pyx_v_incS1 = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "AfterImage_extrapolate.pyx":436
+  /* "kitsune_core/AfterImage_extrapolate.pyx":436
  *         cdef incStat incS1
  *         incS1 = self.HT.get(ID + "_" + str(Lambda))
  *         if incS1 is None:  # does not exist             # <<<<<<<<<<<<<<
@@ -15010,7 +15010,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats
   __pyx_t_5 = (((PyObject *)__pyx_v_incS1) == Py_None);
   if (__pyx_t_5) {
 
-    /* "AfterImage_extrapolate.pyx":437
+    /* "kitsune_core/AfterImage_extrapolate.pyx":437
  *         incS1 = self.HT.get(ID + "_" + str(Lambda))
  *         if incS1 is None:  # does not exist
  *             return ([],[])             # <<<<<<<<<<<<<<
@@ -15034,7 +15034,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats
     __pyx_t_1 = 0;
     goto __pyx_L0;
 
-    /* "AfterImage_extrapolate.pyx":436
+    /* "kitsune_core/AfterImage_extrapolate.pyx":436
  *         cdef incStat incS1
  *         incS1 = self.HT.get(ID + "_" + str(Lambda))
  *         if incS1 is None:  # does not exist             # <<<<<<<<<<<<<<
@@ -15043,7 +15043,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":440
+  /* "kitsune_core/AfterImage_extrapolate.pyx":440
  * 
  *         # find relevant cov entry
  *         stats = []             # <<<<<<<<<<<<<<
@@ -15055,7 +15055,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats
   __pyx_v_stats = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":441
+  /* "kitsune_core/AfterImage_extrapolate.pyx":441
  *         # find relevant cov entry
  *         stats = []
  *         IDs = []             # <<<<<<<<<<<<<<
@@ -15067,7 +15067,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats
   __pyx_v_IDs = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":442
+  /* "kitsune_core/AfterImage_extrapolate.pyx":442
  *         stats = []
  *         IDs = []
  *         for cov in incS1.covs:             # <<<<<<<<<<<<<<
@@ -15097,7 +15097,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats
     __Pyx_XDECREF_SET(__pyx_v_cov, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "AfterImage_extrapolate.pyx":443
+    /* "kitsune_core/AfterImage_extrapolate.pyx":443
  *         IDs = []
  *         for cov in incS1.covs:
  *             stats.append(cov.get_stats1())             # <<<<<<<<<<<<<<
@@ -15131,7 +15131,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats
     __pyx_t_9 = __Pyx_PyList_Append(__pyx_v_stats, __pyx_t_3); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 443, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "AfterImage_extrapolate.pyx":444
+    /* "kitsune_core/AfterImage_extrapolate.pyx":444
  *         for cov in incS1.covs:
  *             stats.append(cov.get_stats1())
  *             IDs.append([cov.incS1.ID,cov.incS2.ID])             # <<<<<<<<<<<<<<
@@ -15159,7 +15159,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats
     __pyx_t_9 = __Pyx_PyList_Append(__pyx_v_IDs, __pyx_t_3); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 444, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "AfterImage_extrapolate.pyx":442
+    /* "kitsune_core/AfterImage_extrapolate.pyx":442
  *         stats = []
  *         IDs = []
  *         for cov in incS1.covs:             # <<<<<<<<<<<<<<
@@ -15169,7 +15169,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":445
+  /* "kitsune_core/AfterImage_extrapolate.pyx":445
  *             stats.append(cov.get_stats1())
  *             IDs.append([cov.incS1.ID,cov.incS2.ID])
  *         return stats,IDs             # <<<<<<<<<<<<<<
@@ -15189,7 +15189,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":429
+  /* "kitsune_core/AfterImage_extrapolate.pyx":429
  *     # Pulls all correlational stats registered with the given ID
  *     # returns tuple [0]: stats-covs&pccs, [2]: IDs
  *     def get_all_2D_Stats(self, str ID, double Lambda=1):  # cov, pcc             # <<<<<<<<<<<<<<
@@ -15203,7 +15203,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.get_all_2D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.get_all_2D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_incS1);
@@ -15215,7 +15215,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":448
+/* "kitsune_core/AfterImage_extrapolate.pyx":448
  * 
  *     # Pulls current multidimensional stats from the given IDs
  *     def get_nD_Stats(self,IDs,double Lambda=1): #radius, magnitude (IDs is a list)             # <<<<<<<<<<<<<<
@@ -15224,15 +15224,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_12get_all_2D_Stats
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_15get_nD_Stats(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_15get_nD_Stats(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_9incStatDB_15get_nD_Stats = {"get_nD_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_15get_nD_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_15get_nD_Stats(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_15get_nD_Stats = {"get_nD_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_15get_nD_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_15get_nD_Stats(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -15321,11 +15321,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.get_nD_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.get_nD_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(((struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_IDs, __pyx_v_Lambda);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_IDs, __pyx_v_Lambda);
 
   /* function exit code */
   {
@@ -15338,7 +15338,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_IDs, double __pyx_v_Lambda) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_IDs, double __pyx_v_Lambda) {
   PyObject *__pyx_v_incStats = NULL;
   PyObject *__pyx_v_ID = NULL;
   PyObject *__pyx_v_incS = NULL;
@@ -15362,20 +15362,20 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(str
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_nD_Stats", 1);
 
-  /* "AfterImage_extrapolate.pyx":450
+  /* "kitsune_core/AfterImage_extrapolate.pyx":450
  *     def get_nD_Stats(self,IDs,double Lambda=1): #radius, magnitude (IDs is a list)
  *         # Default Lambda?
  *         Lambda = self.get_lambda(Lambda)             # <<<<<<<<<<<<<<
  * 
  *         # Get incStats
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStatDB *)__pyx_v_self->__pyx_vtab)->get_lambda(__pyx_v_self, __pyx_v_Lambda); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 450, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self->__pyx_vtab)->get_lambda(__pyx_v_self, __pyx_v_Lambda); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 450, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 450, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_Lambda = __pyx_t_2;
 
-  /* "AfterImage_extrapolate.pyx":453
+  /* "kitsune_core/AfterImage_extrapolate.pyx":453
  * 
  *         # Get incStats
  *         incStats = []             # <<<<<<<<<<<<<<
@@ -15387,7 +15387,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(str
   __pyx_v_incStats = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":454
+  /* "kitsune_core/AfterImage_extrapolate.pyx":454
  *         # Get incStats
  *         incStats = []
  *         for ID in IDs:             # <<<<<<<<<<<<<<
@@ -15449,7 +15449,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(str
     __Pyx_XDECREF_SET(__pyx_v_ID, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "AfterImage_extrapolate.pyx":455
+    /* "kitsune_core/AfterImage_extrapolate.pyx":455
  *         incStats = []
  *         for ID in IDs:
  *             incS = self.HT.get(ID + "_" + str(Lambda))             # <<<<<<<<<<<<<<
@@ -15477,7 +15477,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(str
     __Pyx_XDECREF_SET(__pyx_v_incS, __pyx_t_7);
     __pyx_t_7 = 0;
 
-    /* "AfterImage_extrapolate.pyx":456
+    /* "kitsune_core/AfterImage_extrapolate.pyx":456
  *         for ID in IDs:
  *             incS = self.HT.get(ID + "_" + str(Lambda))
  *             if incS is not None:  #exists             # <<<<<<<<<<<<<<
@@ -15487,7 +15487,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(str
     __pyx_t_8 = (__pyx_v_incS != Py_None);
     if (__pyx_t_8) {
 
-      /* "AfterImage_extrapolate.pyx":457
+      /* "kitsune_core/AfterImage_extrapolate.pyx":457
  *             incS = self.HT.get(ID + "_" + str(Lambda))
  *             if incS is not None:  #exists
  *                 incStats.append(incS)             # <<<<<<<<<<<<<<
@@ -15496,7 +15496,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(str
  */
       __pyx_t_9 = __Pyx_PyList_Append(__pyx_v_incStats, __pyx_v_incS); if (unlikely(__pyx_t_9 == ((int)-1))) __PYX_ERR(0, 457, __pyx_L1_error)
 
-      /* "AfterImage_extrapolate.pyx":456
+      /* "kitsune_core/AfterImage_extrapolate.pyx":456
  *         for ID in IDs:
  *             incS = self.HT.get(ID + "_" + str(Lambda))
  *             if incS is not None:  #exists             # <<<<<<<<<<<<<<
@@ -15505,7 +15505,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(str
  */
     }
 
-    /* "AfterImage_extrapolate.pyx":454
+    /* "kitsune_core/AfterImage_extrapolate.pyx":454
  *         # Get incStats
  *         incStats = []
  *         for ID in IDs:             # <<<<<<<<<<<<<<
@@ -15515,7 +15515,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(str
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":461
+  /* "kitsune_core/AfterImage_extrapolate.pyx":461
  *         # Compute stats
  *         cdef double rad, mag
  *         rad = 0 #radius             # <<<<<<<<<<<<<<
@@ -15524,7 +15524,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(str
  */
   __pyx_v_rad = 0.0;
 
-  /* "AfterImage_extrapolate.pyx":462
+  /* "kitsune_core/AfterImage_extrapolate.pyx":462
  *         cdef double rad, mag
  *         rad = 0 #radius
  *         mag = 0 #magnitude             # <<<<<<<<<<<<<<
@@ -15533,7 +15533,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(str
  */
   __pyx_v_mag = 0.0;
 
-  /* "AfterImage_extrapolate.pyx":463
+  /* "kitsune_core/AfterImage_extrapolate.pyx":463
  *         rad = 0 #radius
  *         mag = 0 #magnitude
  *         for incS in incStats:             # <<<<<<<<<<<<<<
@@ -15559,7 +15559,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(str
     __Pyx_XDECREF_SET(__pyx_v_incS, __pyx_t_7);
     __pyx_t_7 = 0;
 
-    /* "AfterImage_extrapolate.pyx":464
+    /* "kitsune_core/AfterImage_extrapolate.pyx":464
  *         mag = 0 #magnitude
  *         for incS in incStats:
  *             rad += incS.var()             # <<<<<<<<<<<<<<
@@ -15600,7 +15600,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(str
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_v_rad = __pyx_t_2;
 
-    /* "AfterImage_extrapolate.pyx":465
+    /* "kitsune_core/AfterImage_extrapolate.pyx":465
  *         for incS in incStats:
  *             rad += incS.var()
  *             mag += incS.mean()**2             # <<<<<<<<<<<<<<
@@ -15644,7 +15644,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(str
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_v_mag = __pyx_t_2;
 
-    /* "AfterImage_extrapolate.pyx":463
+    /* "kitsune_core/AfterImage_extrapolate.pyx":463
  *         rad = 0 #radius
  *         mag = 0 #magnitude
  *         for incS in incStats:             # <<<<<<<<<<<<<<
@@ -15654,7 +15654,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(str
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":467
+  /* "kitsune_core/AfterImage_extrapolate.pyx":467
  *             mag += incS.mean()**2
  * 
  *         return [np.sqrt(rad),np.sqrt(mag)]             # <<<<<<<<<<<<<<
@@ -15734,7 +15734,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(str
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":448
+  /* "kitsune_core/AfterImage_extrapolate.pyx":448
  * 
  *     # Pulls current multidimensional stats from the given IDs
  *     def get_nD_Stats(self,IDs,double Lambda=1): #radius, magnitude (IDs is a list)             # <<<<<<<<<<<<<<
@@ -15749,7 +15749,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(str
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.get_nD_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.get_nD_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_incStats);
@@ -15760,7 +15760,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(str
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":470
+/* "kitsune_core/AfterImage_extrapolate.pyx":470
  * 
  *     # Updates and then pulls current 1D stats from the given ID. Automatically registers previously unknown stream IDs
  *     def update_get_1D_Stats(self, str ID,double t, double v, double Lambda=1, int isTypeDiff=False):  # weight, mean, std             # <<<<<<<<<<<<<<
@@ -15769,15 +15769,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_14get_nD_Stats(str
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_17update_get_1D_Stats(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_17update_get_1D_Stats(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_9incStatDB_17update_get_1D_Stats = {"update_get_1D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_17update_get_1D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_17update_get_1D_Stats(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_17update_get_1D_Stats = {"update_get_1D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_17update_get_1D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_17update_get_1D_Stats(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -15913,12 +15913,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.update_get_1D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.update_get_1D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ID), (&PyString_Type), 1, "ID", 1))) __PYX_ERR(0, 470, __pyx_L1_error)
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_9incStatDB_16update_get_1D_Stats(((struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_ID, __pyx_v_t, __pyx_v_v, __pyx_v_Lambda, __pyx_v_isTypeDiff);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_16update_get_1D_Stats(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_ID, __pyx_v_t, __pyx_v_v, __pyx_v_Lambda, __pyx_v_isTypeDiff);
 
   /* function exit code */
   goto __pyx_L0;
@@ -15935,8 +15935,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_16update_get_1D_Stats(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_t, double __pyx_v_v, double __pyx_v_Lambda, int __pyx_v_isTypeDiff) {
-  struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v_incS = 0;
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_16update_get_1D_Stats(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID, double __pyx_v_t, double __pyx_v_v, double __pyx_v_Lambda, int __pyx_v_isTypeDiff) {
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v_incS = 0;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -15952,7 +15952,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_16update_get_1D_St
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("update_get_1D_Stats", 1);
 
-  /* "AfterImage_extrapolate.pyx":472
+  /* "kitsune_core/AfterImage_extrapolate.pyx":472
  *     def update_get_1D_Stats(self, str ID,double t, double v, double Lambda=1, int isTypeDiff=False):  # weight, mean, std
  *         cdef incStat incS
  *         incS = self.update(ID,t,v,Lambda,isTypeDiff)             # <<<<<<<<<<<<<<
@@ -15995,11 +15995,11 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_16update_get_1D_St
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_22AfterImage_extrapolate_incStat))))) __PYX_ERR(0, 472, __pyx_L1_error)
-  __pyx_v_incS = ((struct __pyx_obj_22AfterImage_extrapolate_incStat *)__pyx_t_1);
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat))))) __PYX_ERR(0, 472, __pyx_L1_error)
+  __pyx_v_incS = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":473
+  /* "kitsune_core/AfterImage_extrapolate.pyx":473
  *         cdef incStat incS
  *         incS = self.update(ID,t,v,Lambda,isTypeDiff)
  *         return incS.allstats_1D()             # <<<<<<<<<<<<<<
@@ -16007,13 +16007,13 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_16update_get_1D_St
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)__pyx_v_incS->__pyx_vtab)->allstats_1D(__pyx_v_incS); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 473, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v_incS->__pyx_vtab)->allstats_1D(__pyx_v_incS); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 473, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":470
+  /* "kitsune_core/AfterImage_extrapolate.pyx":470
  * 
  *     # Updates and then pulls current 1D stats from the given ID. Automatically registers previously unknown stream IDs
  *     def update_get_1D_Stats(self, str ID,double t, double v, double Lambda=1, int isTypeDiff=False):  # weight, mean, std             # <<<<<<<<<<<<<<
@@ -16030,7 +16030,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_16update_get_1D_St
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.update_get_1D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.update_get_1D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_incS);
@@ -16039,7 +16039,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_16update_get_1D_St
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":478
+/* "kitsune_core/AfterImage_extrapolate.pyx":478
  *     # Updates and then pulls current correlative stats between the given IDs. Automatically registers previously unknown stream IDs, and cov tracking
  *     #Note: AfterImage does not currently support Diff Type streams for correlational statistics.
  *     def update_get_2D_Stats(self, str ID1, str ID2,double t1,double v1,double Lambda=1, int level=1):  #level=  1:cov,pcc  2:radius,magnitude,cov,pcc             # <<<<<<<<<<<<<<
@@ -16048,15 +16048,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_16update_get_1D_St
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_19update_get_2D_Stats(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_19update_get_2D_Stats(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_9incStatDB_19update_get_2D_Stats = {"update_get_2D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_19update_get_2D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_19update_get_2D_Stats(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_19update_get_2D_Stats = {"update_get_2D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_19update_get_2D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_19update_get_2D_Stats(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -16207,13 +16207,13 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.update_get_2D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.update_get_2D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ID1), (&PyString_Type), 1, "ID1", 1))) __PYX_ERR(0, 478, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ID2), (&PyString_Type), 1, "ID2", 1))) __PYX_ERR(0, 478, __pyx_L1_error)
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_9incStatDB_18update_get_2D_Stats(((struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_ID1, __pyx_v_ID2, __pyx_v_t1, __pyx_v_v1, __pyx_v_Lambda, __pyx_v_level);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_18update_get_2D_Stats(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_ID1, __pyx_v_ID2, __pyx_v_t1, __pyx_v_v1, __pyx_v_Lambda, __pyx_v_level);
 
   /* function exit code */
   goto __pyx_L0;
@@ -16230,8 +16230,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_18update_get_2D_Stats(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID1, PyObject *__pyx_v_ID2, double __pyx_v_t1, double __pyx_v_v1, double __pyx_v_Lambda, int __pyx_v_level) {
-  struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v_inc_cov = 0;
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_18update_get_2D_Stats(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID1, PyObject *__pyx_v_ID2, double __pyx_v_t1, double __pyx_v_v1, double __pyx_v_Lambda, int __pyx_v_level) {
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v_inc_cov = 0;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -16246,7 +16246,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_18update_get_2D_St
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("update_get_2D_Stats", 1);
 
-  /* "AfterImage_extrapolate.pyx":481
+  /* "kitsune_core/AfterImage_extrapolate.pyx":481
  *         #retrieve/add cov tracker
  *         cdef incStat_cov inc_cov
  *         inc_cov = self.register_cov(ID1, ID2, Lambda,  t1)             # <<<<<<<<<<<<<<
@@ -16283,22 +16283,22 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_18update_get_2D_St
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_22AfterImage_extrapolate_incStat_cov))))) __PYX_ERR(0, 481, __pyx_L1_error)
-  __pyx_v_inc_cov = ((struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *)__pyx_t_1);
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov))))) __PYX_ERR(0, 481, __pyx_L1_error)
+  __pyx_v_inc_cov = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":483
+  /* "kitsune_core/AfterImage_extrapolate.pyx":483
  *         inc_cov = self.register_cov(ID1, ID2, Lambda,  t1)
  *         # Update cov tracker
  *         inc_cov.update_cov(ID1,v1,t1)             # <<<<<<<<<<<<<<
  *         if level == 1:
  *             return inc_cov.get_stats1()
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov *)__pyx_v_inc_cov->__pyx_vtab)->update_cov(__pyx_v_inc_cov, __pyx_v_ID1, __pyx_v_v1, __pyx_v_t1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 483, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v_inc_cov->__pyx_vtab)->update_cov(__pyx_v_inc_cov, __pyx_v_ID1, __pyx_v_v1, __pyx_v_t1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 483, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":484
+  /* "kitsune_core/AfterImage_extrapolate.pyx":484
  *         # Update cov tracker
  *         inc_cov.update_cov(ID1,v1,t1)
  *         if level == 1:             # <<<<<<<<<<<<<<
@@ -16308,7 +16308,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_18update_get_2D_St
   __pyx_t_7 = (__pyx_v_level == 1);
   if (__pyx_t_7) {
 
-    /* "AfterImage_extrapolate.pyx":485
+    /* "kitsune_core/AfterImage_extrapolate.pyx":485
  *         inc_cov.update_cov(ID1,v1,t1)
  *         if level == 1:
  *             return inc_cov.get_stats1()             # <<<<<<<<<<<<<<
@@ -16316,13 +16316,13 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_18update_get_2D_St
  *             return inc_cov.get_stats2()
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_1 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov *)__pyx_v_inc_cov->__pyx_vtab)->get_stats1(__pyx_v_inc_cov); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 485, __pyx_L1_error)
+    __pyx_t_1 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v_inc_cov->__pyx_vtab)->get_stats1(__pyx_v_inc_cov); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 485, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_r = __pyx_t_1;
     __pyx_t_1 = 0;
     goto __pyx_L0;
 
-    /* "AfterImage_extrapolate.pyx":484
+    /* "kitsune_core/AfterImage_extrapolate.pyx":484
  *         # Update cov tracker
  *         inc_cov.update_cov(ID1,v1,t1)
  *         if level == 1:             # <<<<<<<<<<<<<<
@@ -16331,7 +16331,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_18update_get_2D_St
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":487
+  /* "kitsune_core/AfterImage_extrapolate.pyx":487
  *             return inc_cov.get_stats1()
  *         else:
  *             return inc_cov.get_stats2()             # <<<<<<<<<<<<<<
@@ -16340,14 +16340,14 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_18update_get_2D_St
  */
   /*else*/ {
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_1 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov *)__pyx_v_inc_cov->__pyx_vtab)->get_stats2(__pyx_v_inc_cov); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 487, __pyx_L1_error)
+    __pyx_t_1 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v_inc_cov->__pyx_vtab)->get_stats2(__pyx_v_inc_cov); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 487, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_r = __pyx_t_1;
     __pyx_t_1 = 0;
     goto __pyx_L0;
   }
 
-  /* "AfterImage_extrapolate.pyx":478
+  /* "kitsune_core/AfterImage_extrapolate.pyx":478
  *     # Updates and then pulls current correlative stats between the given IDs. Automatically registers previously unknown stream IDs, and cov tracking
  *     #Note: AfterImage does not currently support Diff Type streams for correlational statistics.
  *     def update_get_2D_Stats(self, str ID1, str ID2,double t1,double v1,double Lambda=1, int level=1):  #level=  1:cov,pcc  2:radius,magnitude,cov,pcc             # <<<<<<<<<<<<<<
@@ -16362,7 +16362,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_18update_get_2D_St
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.update_get_2D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.update_get_2D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_inc_cov);
@@ -16371,7 +16371,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_18update_get_2D_St
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":490
+/* "kitsune_core/AfterImage_extrapolate.pyx":490
  * 
  *     # Updates and then pulls current 1D and 2D stats from the given IDs. Automatically registers previously unknown stream IDs
  *     def update_get_1D2D_Stats(self, str ID1, str ID2, double t1,double v1,double Lambda=1):  # weight, mean, std             # <<<<<<<<<<<<<<
@@ -16380,15 +16380,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_18update_get_2D_St
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_21update_get_1D2D_Stats(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_21update_get_1D2D_Stats(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_9incStatDB_21update_get_1D2D_Stats = {"update_get_1D2D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_21update_get_1D2D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_21update_get_1D2D_Stats(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_21update_get_1D2D_Stats = {"update_get_1D2D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_21update_get_1D2D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_21update_get_1D2D_Stats(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -16522,13 +16522,13 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.update_get_1D2D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.update_get_1D2D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ID1), (&PyString_Type), 1, "ID1", 1))) __PYX_ERR(0, 490, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ID2), (&PyString_Type), 1, "ID2", 1))) __PYX_ERR(0, 490, __pyx_L1_error)
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_9incStatDB_20update_get_1D2D_Stats(((struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_ID1, __pyx_v_ID2, __pyx_v_t1, __pyx_v_v1, __pyx_v_Lambda);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_20update_get_1D2D_Stats(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_ID1, __pyx_v_ID2, __pyx_v_t1, __pyx_v_v1, __pyx_v_Lambda);
 
   /* function exit code */
   goto __pyx_L0;
@@ -16545,7 +16545,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_20update_get_1D2D_Stats(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID1, PyObject *__pyx_v_ID2, double __pyx_v_t1, double __pyx_v_v1, double __pyx_v_Lambda) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_20update_get_1D2D_Stats(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_ID1, PyObject *__pyx_v_ID2, double __pyx_v_t1, double __pyx_v_v1, double __pyx_v_Lambda) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -16560,7 +16560,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_20update_get_1D2D_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("update_get_1D2D_Stats", 1);
 
-  /* "AfterImage_extrapolate.pyx":491
+  /* "kitsune_core/AfterImage_extrapolate.pyx":491
  *     # Updates and then pulls current 1D and 2D stats from the given IDs. Automatically registers previously unknown stream IDs
  *     def update_get_1D2D_Stats(self, str ID1, str ID2, double t1,double v1,double Lambda=1):  # weight, mean, std
  *         return self.update_get_1D_Stats(ID1,t1,v1,Lambda) + self.update_get_2D_Stats(ID1,ID2,t1,v1,Lambda,level=2)             # <<<<<<<<<<<<<<
@@ -16642,7 +16642,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_20update_get_1D2D_
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":490
+  /* "kitsune_core/AfterImage_extrapolate.pyx":490
  * 
  *     # Updates and then pulls current 1D and 2D stats from the given IDs. Automatically registers previously unknown stream IDs
  *     def update_get_1D2D_Stats(self, str ID1, str ID2, double t1,double v1,double Lambda=1):  # weight, mean, std             # <<<<<<<<<<<<<<
@@ -16658,7 +16658,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_20update_get_1D2D_
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.update_get_1D2D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.update_get_1D2D_Stats", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -16666,7 +16666,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_20update_get_1D2D_
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":493
+/* "kitsune_core/AfterImage_extrapolate.pyx":493
  *         return self.update_get_1D_Stats(ID1,t1,v1,Lambda) + self.update_get_2D_Stats(ID1,ID2,t1,v1,Lambda,level=2)
  * 
  *     def getHeaders_1D(self,Lambda=1,ID=''):             # <<<<<<<<<<<<<<
@@ -16675,15 +16675,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_20update_get_1D2D_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_23getHeaders_1D(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_23getHeaders_1D(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_9incStatDB_23getHeaders_1D = {"getHeaders_1D", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_23getHeaders_1D, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_23getHeaders_1D(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_23getHeaders_1D = {"getHeaders_1D", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_23getHeaders_1D, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_23getHeaders_1D(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -16770,11 +16770,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.getHeaders_1D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.getHeaders_1D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_9incStatDB_22getHeaders_1D(((struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_Lambda, __pyx_v_ID);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_22getHeaders_1D(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_Lambda, __pyx_v_ID);
 
   /* function exit code */
   {
@@ -16787,7 +16787,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_22getHeaders_1D(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_Lambda, PyObject *__pyx_v_ID) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_22getHeaders_1D(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_Lambda, PyObject *__pyx_v_ID) {
   double __pyx_v_L;
   PyObject *__pyx_v_hdrs = NULL;
   PyObject *__pyx_7genexpr__pyx_v_s = NULL;
@@ -16796,7 +16796,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_22getHeaders_1D(st
   double __pyx_t_1;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
-  struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_getHeaders_1D __pyx_t_4;
+  struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_getHeaders_1D __pyx_t_4;
   Py_ssize_t __pyx_t_5;
   PyObject *(*__pyx_t_6)(PyObject *);
   PyObject *__pyx_t_7 = NULL;
@@ -16806,7 +16806,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_22getHeaders_1D(st
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getHeaders_1D", 1);
 
-  /* "AfterImage_extrapolate.pyx":496
+  /* "kitsune_core/AfterImage_extrapolate.pyx":496
  *         # Default Lambda?
  *         cdef double L
  *         L = Lambda             # <<<<<<<<<<<<<<
@@ -16816,20 +16816,20 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_22getHeaders_1D(st
   __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_Lambda); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 496, __pyx_L1_error)
   __pyx_v_L = __pyx_t_1;
 
-  /* "AfterImage_extrapolate.pyx":497
+  /* "kitsune_core/AfterImage_extrapolate.pyx":497
  *         cdef double L
  *         L = Lambda
  *         L = self.get_lambda(L)             # <<<<<<<<<<<<<<
  *         hdrs = incStat(L,ID).getHeaders_1D(suffix=False)
  *         return [str(L)+"_"+s for s in hdrs]
  */
-  __pyx_t_2 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStatDB *)__pyx_v_self->__pyx_vtab)->get_lambda(__pyx_v_self, __pyx_v_L); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 497, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self->__pyx_vtab)->get_lambda(__pyx_v_self, __pyx_v_L); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 497, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 497, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_L = __pyx_t_1;
 
-  /* "AfterImage_extrapolate.pyx":498
+  /* "kitsune_core/AfterImage_extrapolate.pyx":498
  *         L = Lambda
  *         L = self.get_lambda(L)
  *         hdrs = incStat(L,ID).getHeaders_1D(suffix=False)             # <<<<<<<<<<<<<<
@@ -16846,18 +16846,18 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_22getHeaders_1D(st
   __Pyx_GIVEREF(__pyx_v_ID);
   if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_v_ID)) __PYX_ERR(0, 498, __pyx_L1_error);
   __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStat), __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 498, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat), __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 498, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_4.__pyx_n = 1;
   __pyx_t_4.suffix = Py_False;
-  __pyx_t_3 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat *)((struct __pyx_obj_22AfterImage_extrapolate_incStat *)__pyx_t_2)->__pyx_vtab)->getHeaders_1D(((struct __pyx_obj_22AfterImage_extrapolate_incStat *)__pyx_t_2), &__pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 498, __pyx_L1_error)
+  __pyx_t_3 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat *)((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_t_2)->__pyx_vtab)->getHeaders_1D(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_t_2), &__pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 498, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_hdrs = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "AfterImage_extrapolate.pyx":499
+  /* "kitsune_core/AfterImage_extrapolate.pyx":499
  *         L = self.get_lambda(L)
  *         hdrs = incStat(L,ID).getHeaders_1D(suffix=False)
  *         return [str(L)+"_"+s for s in hdrs]             # <<<<<<<<<<<<<<
@@ -16948,7 +16948,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_22getHeaders_1D(st
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":493
+  /* "kitsune_core/AfterImage_extrapolate.pyx":493
  *         return self.update_get_1D_Stats(ID1,t1,v1,Lambda) + self.update_get_2D_Stats(ID1,ID2,t1,v1,Lambda,level=2)
  * 
  *     def getHeaders_1D(self,Lambda=1,ID=''):             # <<<<<<<<<<<<<<
@@ -16962,7 +16962,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_22getHeaders_1D(st
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.getHeaders_1D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.getHeaders_1D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_hdrs);
@@ -16972,7 +16972,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_22getHeaders_1D(st
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":501
+/* "kitsune_core/AfterImage_extrapolate.pyx":501
  *         return [str(L)+"_"+s for s in hdrs]
  * 
  *     def getHeaders_2D(self,Lambda=1,IDs=None, ver=1): #IDs is a 2-element list or tuple             # <<<<<<<<<<<<<<
@@ -16981,15 +16981,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_22getHeaders_1D(st
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_25getHeaders_2D(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_25getHeaders_2D(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_9incStatDB_25getHeaders_2D = {"getHeaders_2D", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_25getHeaders_2D, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_25getHeaders_2D(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_25getHeaders_2D = {"getHeaders_2D", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_25getHeaders_2D, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_25getHeaders_2D(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -17090,11 +17090,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.getHeaders_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.getHeaders_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_9incStatDB_24getHeaders_2D(((struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_Lambda, __pyx_v_IDs, __pyx_v_ver);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_24getHeaders_2D(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_Lambda, __pyx_v_IDs, __pyx_v_ver);
 
   /* function exit code */
   {
@@ -17107,7 +17107,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_24getHeaders_2D(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_Lambda, PyObject *__pyx_v_IDs, PyObject *__pyx_v_ver) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_24getHeaders_2D(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_Lambda, PyObject *__pyx_v_IDs, PyObject *__pyx_v_ver) {
   double __pyx_v_L;
   PyObject *__pyx_v_hdrs = NULL;
   PyObject *__pyx_8genexpr1__pyx_v_s = NULL;
@@ -17120,7 +17120,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_24getHeaders_2D(st
   PyObject *__pyx_t_5 = NULL;
   PyObject *__pyx_t_6 = NULL;
   int __pyx_t_7;
-  struct __pyx_opt_args_22AfterImage_extrapolate_11incStat_cov_getHeaders __pyx_t_8;
+  struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_getHeaders __pyx_t_8;
   Py_ssize_t __pyx_t_9;
   PyObject *(*__pyx_t_10)(PyObject *);
   int __pyx_lineno = 0;
@@ -17129,7 +17129,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_24getHeaders_2D(st
   __Pyx_RefNannySetupContext("getHeaders_2D", 0);
   __Pyx_INCREF(__pyx_v_IDs);
 
-  /* "AfterImage_extrapolate.pyx":504
+  /* "kitsune_core/AfterImage_extrapolate.pyx":504
  *         # Default Lambda?
  *         cdef double L
  *         L = Lambda             # <<<<<<<<<<<<<<
@@ -17139,20 +17139,20 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_24getHeaders_2D(st
   __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_Lambda); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 504, __pyx_L1_error)
   __pyx_v_L = __pyx_t_1;
 
-  /* "AfterImage_extrapolate.pyx":505
+  /* "kitsune_core/AfterImage_extrapolate.pyx":505
  *         cdef double L
  *         L = Lambda
  *         L = self.get_lambda(L)             # <<<<<<<<<<<<<<
  *         if IDs is None:
  *             IDs = ['0','1']
  */
-  __pyx_t_2 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStatDB *)__pyx_v_self->__pyx_vtab)->get_lambda(__pyx_v_self, __pyx_v_L); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 505, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self->__pyx_vtab)->get_lambda(__pyx_v_self, __pyx_v_L); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 505, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 505, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_L = __pyx_t_1;
 
-  /* "AfterImage_extrapolate.pyx":506
+  /* "kitsune_core/AfterImage_extrapolate.pyx":506
  *         L = Lambda
  *         L = self.get_lambda(L)
  *         if IDs is None:             # <<<<<<<<<<<<<<
@@ -17162,7 +17162,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_24getHeaders_2D(st
   __pyx_t_3 = (__pyx_v_IDs == Py_None);
   if (__pyx_t_3) {
 
-    /* "AfterImage_extrapolate.pyx":507
+    /* "kitsune_core/AfterImage_extrapolate.pyx":507
  *         L = self.get_lambda(L)
  *         if IDs is None:
  *             IDs = ['0','1']             # <<<<<<<<<<<<<<
@@ -17180,7 +17180,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_24getHeaders_2D(st
     __Pyx_DECREF_SET(__pyx_v_IDs, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "AfterImage_extrapolate.pyx":506
+    /* "kitsune_core/AfterImage_extrapolate.pyx":506
  *         L = Lambda
  *         L = self.get_lambda(L)
  *         if IDs is None:             # <<<<<<<<<<<<<<
@@ -17189,7 +17189,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_24getHeaders_2D(st
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":508
+  /* "kitsune_core/AfterImage_extrapolate.pyx":508
  *         if IDs is None:
  *             IDs = ['0','1']
  *         hdrs = incStat_cov(incStat(L,IDs[0]),incStat(L,IDs[0]),L).getHeaders(ver,suffix=False)             # <<<<<<<<<<<<<<
@@ -17208,7 +17208,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_24getHeaders_2D(st
   if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_4)) __PYX_ERR(0, 508, __pyx_L1_error);
   __pyx_t_2 = 0;
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStat), __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 508, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat), __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 508, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_5 = PyFloat_FromDouble(__pyx_v_L); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 508, __pyx_L1_error)
@@ -17223,7 +17223,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_24getHeaders_2D(st
   if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_2)) __PYX_ERR(0, 508, __pyx_L1_error);
   __pyx_t_5 = 0;
   __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStat), __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 508, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat), __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 508, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_t_6 = PyFloat_FromDouble(__pyx_v_L); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 508, __pyx_L1_error)
@@ -17239,19 +17239,19 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_24getHeaders_2D(st
   __pyx_t_4 = 0;
   __pyx_t_2 = 0;
   __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStat_cov), __pyx_t_5, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 508, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov), __pyx_t_5, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 508, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_v_ver); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 508, __pyx_L1_error)
   __pyx_t_8.__pyx_n = 1;
   __pyx_t_8.suffix = 0;
-  __pyx_t_5 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov *)((struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *)__pyx_t_6)->__pyx_vtab)->getHeaders(((struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *)__pyx_t_6), __pyx_t_7, &__pyx_t_8); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 508, __pyx_L1_error)
+  __pyx_t_5 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_t_6)->__pyx_vtab)->getHeaders(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_t_6), __pyx_t_7, &__pyx_t_8); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 508, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_v_hdrs = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "AfterImage_extrapolate.pyx":509
+  /* "kitsune_core/AfterImage_extrapolate.pyx":509
  *             IDs = ['0','1']
  *         hdrs = incStat_cov(incStat(L,IDs[0]),incStat(L,IDs[0]),L).getHeaders(ver,suffix=False)
  *         return [str(Lambda)+"_"+s for s in hdrs]             # <<<<<<<<<<<<<<
@@ -17339,7 +17339,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_24getHeaders_2D(st
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":501
+  /* "kitsune_core/AfterImage_extrapolate.pyx":501
  *         return [str(L)+"_"+s for s in hdrs]
  * 
  *     def getHeaders_2D(self,Lambda=1,IDs=None, ver=1): #IDs is a 2-element list or tuple             # <<<<<<<<<<<<<<
@@ -17353,7 +17353,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_24getHeaders_2D(st
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.getHeaders_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.getHeaders_2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_hdrs);
@@ -17364,7 +17364,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_24getHeaders_2D(st
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":511
+/* "kitsune_core/AfterImage_extrapolate.pyx":511
  *         return [str(Lambda)+"_"+s for s in hdrs]
  * 
  *     def getHeaders_1D2D(self,Lambda=1,IDs=None, ver=1):             # <<<<<<<<<<<<<<
@@ -17373,15 +17373,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_24getHeaders_2D(st
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_27getHeaders_1D2D(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_27getHeaders_1D2D(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_9incStatDB_27getHeaders_1D2D = {"getHeaders_1D2D", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_27getHeaders_1D2D, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_27getHeaders_1D2D(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_27getHeaders_1D2D = {"getHeaders_1D2D", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_27getHeaders_1D2D, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_27getHeaders_1D2D(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -17482,11 +17482,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.getHeaders_1D2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.getHeaders_1D2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_9incStatDB_26getHeaders_1D2D(((struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_Lambda, __pyx_v_IDs, __pyx_v_ver);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_26getHeaders_1D2D(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_Lambda, __pyx_v_IDs, __pyx_v_ver);
 
   /* function exit code */
   {
@@ -17499,7 +17499,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_26getHeaders_1D2D(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_Lambda, PyObject *__pyx_v_IDs, PyObject *__pyx_v_ver) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_26getHeaders_1D2D(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_Lambda, PyObject *__pyx_v_IDs, PyObject *__pyx_v_ver) {
   double __pyx_v_L;
   PyObject *__pyx_v_hdrs1D = NULL;
   PyObject *__pyx_v_hdrs2D = NULL;
@@ -17519,7 +17519,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_26getHeaders_1D2D(
   __Pyx_RefNannySetupContext("getHeaders_1D2D", 0);
   __Pyx_INCREF(__pyx_v_IDs);
 
-  /* "AfterImage_extrapolate.pyx":514
+  /* "kitsune_core/AfterImage_extrapolate.pyx":514
  *         # Default Lambda?
  *         cdef double L
  *         L = Lambda             # <<<<<<<<<<<<<<
@@ -17529,20 +17529,20 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_26getHeaders_1D2D(
   __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_Lambda); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 514, __pyx_L1_error)
   __pyx_v_L = __pyx_t_1;
 
-  /* "AfterImage_extrapolate.pyx":515
+  /* "kitsune_core/AfterImage_extrapolate.pyx":515
  *         cdef double L
  *         L = Lambda
  *         L = self.get_lambda(L)             # <<<<<<<<<<<<<<
  *         if IDs is None:
  *             IDs = ['0','1']
  */
-  __pyx_t_2 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStatDB *)__pyx_v_self->__pyx_vtab)->get_lambda(__pyx_v_self, __pyx_v_L); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 515, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self->__pyx_vtab)->get_lambda(__pyx_v_self, __pyx_v_L); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 515, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 515, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_L = __pyx_t_1;
 
-  /* "AfterImage_extrapolate.pyx":516
+  /* "kitsune_core/AfterImage_extrapolate.pyx":516
  *         L = Lambda
  *         L = self.get_lambda(L)
  *         if IDs is None:             # <<<<<<<<<<<<<<
@@ -17552,7 +17552,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_26getHeaders_1D2D(
   __pyx_t_3 = (__pyx_v_IDs == Py_None);
   if (__pyx_t_3) {
 
-    /* "AfterImage_extrapolate.pyx":517
+    /* "kitsune_core/AfterImage_extrapolate.pyx":517
  *         L = self.get_lambda(L)
  *         if IDs is None:
  *             IDs = ['0','1']             # <<<<<<<<<<<<<<
@@ -17570,7 +17570,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_26getHeaders_1D2D(
     __Pyx_DECREF_SET(__pyx_v_IDs, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "AfterImage_extrapolate.pyx":516
+    /* "kitsune_core/AfterImage_extrapolate.pyx":516
  *         L = Lambda
  *         L = self.get_lambda(L)
  *         if IDs is None:             # <<<<<<<<<<<<<<
@@ -17579,7 +17579,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_26getHeaders_1D2D(
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":518
+  /* "kitsune_core/AfterImage_extrapolate.pyx":518
  *         if IDs is None:
  *             IDs = ['0','1']
  *         hdrs1D = self.getHeaders_1D(L,IDs[0])             # <<<<<<<<<<<<<<
@@ -17619,7 +17619,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_26getHeaders_1D2D(
   __pyx_v_hdrs1D = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "AfterImage_extrapolate.pyx":519
+  /* "kitsune_core/AfterImage_extrapolate.pyx":519
  *             IDs = ['0','1']
  *         hdrs1D = self.getHeaders_1D(L,IDs[0])
  *         hdrs2D = self.getHeaders_2D(L,IDs, ver)             # <<<<<<<<<<<<<<
@@ -17656,7 +17656,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_26getHeaders_1D2D(
   __pyx_v_hdrs2D = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "AfterImage_extrapolate.pyx":520
+  /* "kitsune_core/AfterImage_extrapolate.pyx":520
  *         hdrs1D = self.getHeaders_1D(L,IDs[0])
  *         hdrs2D = self.getHeaders_2D(L,IDs, ver)
  *         return hdrs1D + hdrs2D             # <<<<<<<<<<<<<<
@@ -17670,7 +17670,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_26getHeaders_1D2D(
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":511
+  /* "kitsune_core/AfterImage_extrapolate.pyx":511
  *         return [str(Lambda)+"_"+s for s in hdrs]
  * 
  *     def getHeaders_1D2D(self,Lambda=1,IDs=None, ver=1):             # <<<<<<<<<<<<<<
@@ -17685,7 +17685,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_26getHeaders_1D2D(
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.getHeaders_1D2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.getHeaders_1D2D", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_hdrs1D);
@@ -17696,7 +17696,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_26getHeaders_1D2D(
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":522
+/* "kitsune_core/AfterImage_extrapolate.pyx":522
  *         return hdrs1D + hdrs2D
  * 
  *     def getHeaders_nD(self,Lambda=1,IDs=[]): #IDs is a n-element list or tuple             # <<<<<<<<<<<<<<
@@ -17705,15 +17705,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_26getHeaders_1D2D(
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_29getHeaders_nD(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_29getHeaders_nD(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_9incStatDB_29getHeaders_nD = {"getHeaders_nD", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_29getHeaders_nD, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_29getHeaders_nD(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_29getHeaders_nD = {"getHeaders_nD", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_29getHeaders_nD, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_29getHeaders_nD(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -17800,11 +17800,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.getHeaders_nD", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.getHeaders_nD", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_9incStatDB_28getHeaders_nD(((struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_Lambda, __pyx_v_IDs);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_28getHeaders_nD(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_Lambda, __pyx_v_IDs);
 
   /* function exit code */
   {
@@ -17817,7 +17817,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_28getHeaders_nD(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_Lambda, PyObject *__pyx_v_IDs) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_28getHeaders_nD(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v_Lambda, PyObject *__pyx_v_IDs) {
   double __pyx_v_L;
   PyObject *__pyx_v_ID = NULL;
   PyObject *__pyx_v_s = NULL;
@@ -17837,7 +17837,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_28getHeaders_nD(st
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getHeaders_nD", 1);
 
-  /* "AfterImage_extrapolate.pyx":525
+  /* "kitsune_core/AfterImage_extrapolate.pyx":525
  *         # Default Lambda?
  *         cdef double L
  *         L = Lambda             # <<<<<<<<<<<<<<
@@ -17847,7 +17847,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_28getHeaders_nD(st
   __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_v_Lambda); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 525, __pyx_L1_error)
   __pyx_v_L = __pyx_t_1;
 
-  /* "AfterImage_extrapolate.pyx":526
+  /* "kitsune_core/AfterImage_extrapolate.pyx":526
  *         cdef double L
  *         L = Lambda
  *         ID = ":"             # <<<<<<<<<<<<<<
@@ -17857,7 +17857,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_28getHeaders_nD(st
   __Pyx_INCREF(__pyx_kp_s__6);
   __pyx_v_ID = __pyx_kp_s__6;
 
-  /* "AfterImage_extrapolate.pyx":527
+  /* "kitsune_core/AfterImage_extrapolate.pyx":527
  *         L = Lambda
  *         ID = ":"
  *         for s in IDs:             # <<<<<<<<<<<<<<
@@ -17919,7 +17919,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_28getHeaders_nD(st
     __Pyx_XDECREF_SET(__pyx_v_s, __pyx_t_5);
     __pyx_t_5 = 0;
 
-    /* "AfterImage_extrapolate.pyx":528
+    /* "kitsune_core/AfterImage_extrapolate.pyx":528
  *         ID = ":"
  *         for s in IDs:
  *             ID += "_"+s             # <<<<<<<<<<<<<<
@@ -17934,7 +17934,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_28getHeaders_nD(st
     __Pyx_DECREF_SET(__pyx_v_ID, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "AfterImage_extrapolate.pyx":527
+    /* "kitsune_core/AfterImage_extrapolate.pyx":527
  *         L = Lambda
  *         ID = ":"
  *         for s in IDs:             # <<<<<<<<<<<<<<
@@ -17944,20 +17944,20 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_28getHeaders_nD(st
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "AfterImage_extrapolate.pyx":529
+  /* "kitsune_core/AfterImage_extrapolate.pyx":529
  *         for s in IDs:
  *             ID += "_"+s
  *         L = self.get_lambda(L)             # <<<<<<<<<<<<<<
  *         hdrs = ["radius"+ID, "magnitude"+ID]
  *         return [str(L)+"_"+s for s in hdrs]
  */
-  __pyx_t_2 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_incStatDB *)__pyx_v_self->__pyx_vtab)->get_lambda(__pyx_v_self, __pyx_v_L); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 529, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self->__pyx_vtab)->get_lambda(__pyx_v_self, __pyx_v_L); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_1 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_L = __pyx_t_1;
 
-  /* "AfterImage_extrapolate.pyx":530
+  /* "kitsune_core/AfterImage_extrapolate.pyx":530
  *             ID += "_"+s
  *         L = self.get_lambda(L)
  *         hdrs = ["radius"+ID, "magnitude"+ID]             # <<<<<<<<<<<<<<
@@ -17979,7 +17979,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_28getHeaders_nD(st
   __pyx_v_hdrs = ((PyObject*)__pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "AfterImage_extrapolate.pyx":531
+  /* "kitsune_core/AfterImage_extrapolate.pyx":531
  *         L = self.get_lambda(L)
  *         hdrs = ["radius"+ID, "magnitude"+ID]
  *         return [str(L)+"_"+s for s in hdrs]             # <<<<<<<<<<<<<<
@@ -18034,7 +18034,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_28getHeaders_nD(st
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":522
+  /* "kitsune_core/AfterImage_extrapolate.pyx":522
  *         return hdrs1D + hdrs2D
  * 
  *     def getHeaders_nD(self,Lambda=1,IDs=[]): #IDs is a n-element list or tuple             # <<<<<<<<<<<<<<
@@ -18048,7 +18048,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_28getHeaders_nD(st
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.getHeaders_nD", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.getHeaders_nD", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_ID);
@@ -18060,7 +18060,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_28getHeaders_nD(st
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":536
+/* "kitsune_core/AfterImage_extrapolate.pyx":536
  *     #cleans out records that have a weight less than the cutoff.
  *     #returns number or removed records.
  *     def cleanOutOldRecords(self,double cutoffWeight,double curTime):             # <<<<<<<<<<<<<<
@@ -18069,15 +18069,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_28getHeaders_nD(st
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_31cleanOutOldRecords(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_31cleanOutOldRecords(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_9incStatDB_31cleanOutOldRecords = {"cleanOutOldRecords", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_31cleanOutOldRecords, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_31cleanOutOldRecords(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_31cleanOutOldRecords = {"cleanOutOldRecords", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_31cleanOutOldRecords, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_31cleanOutOldRecords(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -18162,11 +18162,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.cleanOutOldRecords", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.cleanOutOldRecords", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecords(((struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_cutoffWeight, __pyx_v_curTime);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecords(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v_cutoffWeight, __pyx_v_curTime);
 
   /* function exit code */
   {
@@ -18179,7 +18179,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":540
+/* "kitsune_core/AfterImage_extrapolate.pyx":540
  *         cdef double W
  *         n = 0
  *         dump = sorted(self.HT.items(), key=lambda tup: tup[1][0].getMaxW(curTime))             # <<<<<<<<<<<<<<
@@ -18188,15 +18188,15 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_18cleanOutOldRecords_lambda(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_18cleanOutOldRecords_lambda(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_9incStatDB_18cleanOutOldRecords_lambda = {"lambda", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_18cleanOutOldRecords_lambda, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_18cleanOutOldRecords_lambda(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_18cleanOutOldRecords_lambda = {"lambda", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_18cleanOutOldRecords_lambda, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_18cleanOutOldRecords_lambda(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -18266,7 +18266,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.cleanOutOldRecords.lambda", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.cleanOutOldRecords.lambda", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
@@ -18284,8 +18284,8 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
 }
 
 static PyObject *__pyx_lambda_funcdef_lambda(PyObject *__pyx_self, PyObject *__pyx_v_tup) {
-  struct __pyx_obj_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords *__pyx_cur_scope;
-  struct __pyx_obj_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords *__pyx_outer_scope;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords *__pyx_cur_scope;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords *__pyx_outer_scope;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -18297,7 +18297,7 @@ static PyObject *__pyx_lambda_funcdef_lambda(PyObject *__pyx_self, PyObject *__p
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("lambda", 1);
-  __pyx_outer_scope = (struct __pyx_obj_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_outer_scope = (struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_tup, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 540, __pyx_L1_error)
@@ -18343,7 +18343,7 @@ static PyObject *__pyx_lambda_funcdef_lambda(PyObject *__pyx_self, PyObject *__p
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.cleanOutOldRecords.lambda", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.cleanOutOldRecords.lambda", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -18351,7 +18351,7 @@ static PyObject *__pyx_lambda_funcdef_lambda(PyObject *__pyx_self, PyObject *__p
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":536
+/* "kitsune_core/AfterImage_extrapolate.pyx":536
  *     #cleans out records that have a weight less than the cutoff.
  *     #returns number or removed records.
  *     def cleanOutOldRecords(self,double cutoffWeight,double curTime):             # <<<<<<<<<<<<<<
@@ -18359,8 +18359,8 @@ static PyObject *__pyx_lambda_funcdef_lambda(PyObject *__pyx_self, PyObject *__p
  *         cdef double W
  */
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecords(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, double __pyx_v_cutoffWeight, double __pyx_v_curTime) {
-  struct __pyx_obj_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords *__pyx_cur_scope;
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecords(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, double __pyx_v_cutoffWeight, double __pyx_v_curTime) {
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords *__pyx_cur_scope;
   int __pyx_v_n;
   double __pyx_v_W;
   PyObject *__pyx_v_dump = NULL;
@@ -18382,9 +18382,9 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("cleanOutOldRecords", 0);
-  __pyx_cur_scope = (struct __pyx_obj_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords *)__pyx_tp_new_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords(__pyx_ptype_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords, __pyx_empty_tuple, NULL);
+  __pyx_cur_scope = (struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords *)__pyx_tp_new_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords, __pyx_empty_tuple, NULL);
   if (unlikely(!__pyx_cur_scope)) {
-    __pyx_cur_scope = ((struct __pyx_obj_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords *)Py_None);
+    __pyx_cur_scope = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords *)Py_None);
     __Pyx_INCREF(Py_None);
     __PYX_ERR(0, 536, __pyx_L1_error)
   } else {
@@ -18392,7 +18392,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
   }
   __pyx_cur_scope->__pyx_v_curTime = __pyx_v_curTime;
 
-  /* "AfterImage_extrapolate.pyx":539
+  /* "kitsune_core/AfterImage_extrapolate.pyx":539
  *         cdef int n
  *         cdef double W
  *         n = 0             # <<<<<<<<<<<<<<
@@ -18401,7 +18401,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
  */
   __pyx_v_n = 0;
 
-  /* "AfterImage_extrapolate.pyx":540
+  /* "kitsune_core/AfterImage_extrapolate.pyx":540
  *         cdef double W
  *         n = 0
  *         dump = sorted(self.HT.items(), key=lambda tup: tup[1][0].getMaxW(curTime))             # <<<<<<<<<<<<<<
@@ -18421,7 +18421,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
   __pyx_t_1 = 0;
   __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_9incStatDB_18cleanOutOldRecords_lambda, 0, __pyx_n_s_cleanOutOldRecords_locals_lambda, ((PyObject*)__pyx_cur_scope), __pyx_n_s_AfterImage_extrapolate, __pyx_d, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 540, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_18cleanOutOldRecords_lambda, 0, __pyx_n_s_cleanOutOldRecords_locals_lambda, ((PyObject*)__pyx_cur_scope), __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_key, __pyx_t_3) < 0) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -18432,7 +18432,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
   __pyx_v_dump = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "AfterImage_extrapolate.pyx":541
+  /* "kitsune_core/AfterImage_extrapolate.pyx":541
  *         n = 0
  *         dump = sorted(self.HT.items(), key=lambda tup: tup[1][0].getMaxW(curTime))
  *         for entry in dump:             # <<<<<<<<<<<<<<
@@ -18494,7 +18494,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
     __Pyx_XDECREF_SET(__pyx_v_entry, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "AfterImage_extrapolate.pyx":542
+    /* "kitsune_core/AfterImage_extrapolate.pyx":542
  *         dump = sorted(self.HT.items(), key=lambda tup: tup[1][0].getMaxW(curTime))
  *         for entry in dump:
  *             entry[1][0].processDecay(curTime)             # <<<<<<<<<<<<<<
@@ -18536,7 +18536,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "AfterImage_extrapolate.pyx":543
+    /* "kitsune_core/AfterImage_extrapolate.pyx":543
  *         for entry in dump:
  *             entry[1][0].processDecay(curTime)
  *             W = entry[1][0].w             # <<<<<<<<<<<<<<
@@ -18555,7 +18555,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_W = __pyx_t_9;
 
-    /* "AfterImage_extrapolate.pyx":544
+    /* "kitsune_core/AfterImage_extrapolate.pyx":544
  *             entry[1][0].processDecay(curTime)
  *             W = entry[1][0].w
  *             if W <= cutoffWeight:             # <<<<<<<<<<<<<<
@@ -18565,7 +18565,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
     __pyx_t_10 = (__pyx_v_W <= __pyx_v_cutoffWeight);
     if (__pyx_t_10) {
 
-      /* "AfterImage_extrapolate.pyx":545
+      /* "kitsune_core/AfterImage_extrapolate.pyx":545
  *             W = entry[1][0].w
  *             if W <= cutoffWeight:
  *                 key = entry[0]             # <<<<<<<<<<<<<<
@@ -18577,7 +18577,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
       __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "AfterImage_extrapolate.pyx":546
+      /* "kitsune_core/AfterImage_extrapolate.pyx":546
  *             if W <= cutoffWeight:
  *                 key = entry[0]
  *                 del entry[1][0]             # <<<<<<<<<<<<<<
@@ -18589,7 +18589,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
       if (unlikely((__Pyx_DelItemInt(__pyx_t_1, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0))) __PYX_ERR(0, 546, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "AfterImage_extrapolate.pyx":547
+      /* "kitsune_core/AfterImage_extrapolate.pyx":547
  *                 key = entry[0]
  *                 del entry[1][0]
  *                 del self.HT[key]             # <<<<<<<<<<<<<<
@@ -18602,7 +18602,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
       }
       if (unlikely((PyDict_DelItem(__pyx_v_self->HT, __pyx_v_key) < 0))) __PYX_ERR(0, 547, __pyx_L1_error)
 
-      /* "AfterImage_extrapolate.pyx":548
+      /* "kitsune_core/AfterImage_extrapolate.pyx":548
  *                 del entry[1][0]
  *                 del self.HT[key]
  *                 n=n+1             # <<<<<<<<<<<<<<
@@ -18611,7 +18611,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
  */
       __pyx_v_n = (__pyx_v_n + 1);
 
-      /* "AfterImage_extrapolate.pyx":544
+      /* "kitsune_core/AfterImage_extrapolate.pyx":544
  *             entry[1][0].processDecay(curTime)
  *             W = entry[1][0].w
  *             if W <= cutoffWeight:             # <<<<<<<<<<<<<<
@@ -18621,7 +18621,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
       goto __pyx_L5;
     }
 
-    /* "AfterImage_extrapolate.pyx":549
+    /* "kitsune_core/AfterImage_extrapolate.pyx":549
  *                 del self.HT[key]
  *                 n=n+1
  *             elif W > cutoffWeight:             # <<<<<<<<<<<<<<
@@ -18631,7 +18631,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
     __pyx_t_10 = (__pyx_v_W > __pyx_v_cutoffWeight);
     if (__pyx_t_10) {
 
-      /* "AfterImage_extrapolate.pyx":550
+      /* "kitsune_core/AfterImage_extrapolate.pyx":550
  *                 n=n+1
  *             elif W > cutoffWeight:
  *                 break             # <<<<<<<<<<<<<<
@@ -18640,7 +18640,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
  */
       goto __pyx_L4_break;
 
-      /* "AfterImage_extrapolate.pyx":549
+      /* "kitsune_core/AfterImage_extrapolate.pyx":549
  *                 del self.HT[key]
  *                 n=n+1
  *             elif W > cutoffWeight:             # <<<<<<<<<<<<<<
@@ -18650,7 +18650,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
     }
     __pyx_L5:;
 
-    /* "AfterImage_extrapolate.pyx":541
+    /* "kitsune_core/AfterImage_extrapolate.pyx":541
  *         n = 0
  *         dump = sorted(self.HT.items(), key=lambda tup: tup[1][0].getMaxW(curTime))
  *         for entry in dump:             # <<<<<<<<<<<<<<
@@ -18665,7 +18665,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
   goto __pyx_L6_for_end;
   __pyx_L6_for_end:;
 
-  /* "AfterImage_extrapolate.pyx":551
+  /* "kitsune_core/AfterImage_extrapolate.pyx":551
  *             elif W > cutoffWeight:
  *                 break
  *         return n             # <<<<<<<<<<<<<<
@@ -18679,7 +18679,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":536
+  /* "kitsune_core/AfterImage_extrapolate.pyx":536
  *     #cleans out records that have a weight less than the cutoff.
  *     #returns number or removed records.
  *     def cleanOutOldRecords(self,double cutoffWeight,double curTime):             # <<<<<<<<<<<<<<
@@ -18694,7 +18694,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.cleanOutOldRecords", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.cleanOutOldRecords", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_dump);
@@ -18713,15 +18713,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_30cleanOutOldRecor
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_33__reduce_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_33__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_9incStatDB_33__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_33__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_33__reduce_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_33__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_33__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_33__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -18746,14 +18746,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   if (unlikely(__pyx_nargs > 0)) {
     __Pyx_RaiseArgtupleInvalid("__reduce_cython__", 1, 0, 0, __pyx_nargs); return NULL;}
   if (unlikely(__pyx_kwds) && __Pyx_NumKwargs_FASTCALL(__pyx_kwds) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "__reduce_cython__", 0))) return NULL;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_9incStatDB_32__reduce_cython__(((struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)__pyx_v_self));
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_32__reduce_cython__(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_32__reduce_cython__(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_32__reduce_cython__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self) {
   PyObject *__pyx_v_state = 0;
   PyObject *__pyx_v__dict = 0;
   int __pyx_v_use_setstate;
@@ -18965,7 +18965,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_32__reduce_cython_
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_state);
@@ -18983,15 +18983,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_32__reduce_cython_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_35__setstate_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_35__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_9incStatDB_35__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_35__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9incStatDB_35__setstate_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_35__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_35__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_35__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -19061,11 +19061,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_9incStatDB_34__setstate_cython__(((struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_34__setstate_cython__(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v_self), __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -19078,7 +19078,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_34__setstate_cython__(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_9incStatDB_34__setstate_cython__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -19093,7 +19093,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_34__setstate_cytho
  *     __pyx_unpickle_incStatDB__set_state(self, __pyx_state)             # <<<<<<<<<<<<<<
  */
   if (!(likely(PyTuple_CheckExact(__pyx_v___pyx_state))||((__pyx_v___pyx_state) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_v___pyx_state))) __PYX_ERR(1, 17, __pyx_L1_error)
-  __pyx_t_1 = __pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStatDB__set_state(__pyx_v_self, ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 17, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_incStatDB__set_state(__pyx_v_self, ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
@@ -19109,7 +19109,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_34__setstate_cytho
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incStatDB.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incStatDB.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -19117,24 +19117,24 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_9incStatDB_34__setstate_cytho
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":559
+/* "kitsune_core/AfterImage_extrapolate.pyx":559
  * class incHist:
- *     #ubIsAnom means that the HBOS score for vals that fall past the upped bound are Inf (not 0)
+ *     #ubIsAnom means that the HBOS score for vals that fall past the upped bound are inf (not 0)
  *     def __init__(self,nbins,Lambda=0,ubIsAnom=True,lbIsAnom=True,lbound=-10,ubound=10,scaleGrace=None):             # <<<<<<<<<<<<<<
  *         self.scaleGrace = scaleGrace #the numbe rof instances to observe until a range it determeined
  *         if scaleGrace is not None:
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7incHist_1__init__(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_1__init__(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_7incHist_1__init__ = {"__init__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_7incHist_1__init__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7incHist_1__init__(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7incHist_1__init__ = {"__init__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_1__init__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_1__init__(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -19305,11 +19305,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incHist.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incHist.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_7incHist___init__(__pyx_self, __pyx_v_self, __pyx_v_nbins, __pyx_v_Lambda, __pyx_v_ubIsAnom, __pyx_v_lbIsAnom, __pyx_v_lbound, __pyx_v_ubound, __pyx_v_scaleGrace);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist___init__(__pyx_self, __pyx_v_self, __pyx_v_nbins, __pyx_v_Lambda, __pyx_v_ubIsAnom, __pyx_v_lbIsAnom, __pyx_v_lbound, __pyx_v_ubound, __pyx_v_scaleGrace);
 
   /* function exit code */
   {
@@ -19322,7 +19322,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_nbins, PyObject *__pyx_v_Lambda, PyObject *__pyx_v_ubIsAnom, PyObject *__pyx_v_lbIsAnom, PyObject *__pyx_v_lbound, PyObject *__pyx_v_ubound, PyObject *__pyx_v_scaleGrace) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_nbins, PyObject *__pyx_v_Lambda, PyObject *__pyx_v_ubIsAnom, PyObject *__pyx_v_lbIsAnom, PyObject *__pyx_v_lbound, PyObject *__pyx_v_ubound, PyObject *__pyx_v_scaleGrace) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
@@ -19335,50 +19335,50 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUS
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 1);
 
-  /* "AfterImage_extrapolate.pyx":560
- *     #ubIsAnom means that the HBOS score for vals that fall past the upped bound are Inf (not 0)
+  /* "kitsune_core/AfterImage_extrapolate.pyx":560
+ *     #ubIsAnom means that the HBOS score for vals that fall past the upped bound are inf (not 0)
  *     def __init__(self,nbins,Lambda=0,ubIsAnom=True,lbIsAnom=True,lbound=-10,ubound=10,scaleGrace=None):
  *         self.scaleGrace = scaleGrace #the numbe rof instances to observe until a range it determeined             # <<<<<<<<<<<<<<
  *         if scaleGrace is not None:
- *             self.lbound = np.Inf
+ *             self.lbound = np.inf
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_scaleGrace, __pyx_v_scaleGrace) < 0) __PYX_ERR(0, 560, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":561
+  /* "kitsune_core/AfterImage_extrapolate.pyx":561
  *     def __init__(self,nbins,Lambda=0,ubIsAnom=True,lbIsAnom=True,lbound=-10,ubound=10,scaleGrace=None):
  *         self.scaleGrace = scaleGrace #the numbe rof instances to observe until a range it determeined
  *         if scaleGrace is not None:             # <<<<<<<<<<<<<<
- *             self.lbound = np.Inf
- *             self.ubound = -np.Inf
+ *             self.lbound = np.inf
+ *             self.ubound = -np.inf
  */
   __pyx_t_1 = (__pyx_v_scaleGrace != Py_None);
   if (__pyx_t_1) {
 
-    /* "AfterImage_extrapolate.pyx":562
+    /* "kitsune_core/AfterImage_extrapolate.pyx":562
  *         self.scaleGrace = scaleGrace #the numbe rof instances to observe until a range it determeined
  *         if scaleGrace is not None:
- *             self.lbound = np.Inf             # <<<<<<<<<<<<<<
- *             self.ubound = -np.Inf
+ *             self.lbound = np.inf             # <<<<<<<<<<<<<<
+ *             self.ubound = -np.inf
  *             self.binSize = None
  */
     __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 562, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Inf); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 562, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_inf); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 562, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_lbound, __pyx_t_3) < 0) __PYX_ERR(0, 562, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "AfterImage_extrapolate.pyx":563
+    /* "kitsune_core/AfterImage_extrapolate.pyx":563
  *         if scaleGrace is not None:
- *             self.lbound = np.Inf
- *             self.ubound = -np.Inf             # <<<<<<<<<<<<<<
+ *             self.lbound = np.inf
+ *             self.ubound = -np.inf             # <<<<<<<<<<<<<<
  *             self.binSize = None
  *             self.isScaling = True
  */
     __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 563, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_Inf); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 563, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_inf); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 563, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = PyNumber_Negative(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 563, __pyx_L1_error)
@@ -19387,17 +19387,17 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUS
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_ubound, __pyx_t_3) < 0) __PYX_ERR(0, 563, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "AfterImage_extrapolate.pyx":564
- *             self.lbound = np.Inf
- *             self.ubound = -np.Inf
+    /* "kitsune_core/AfterImage_extrapolate.pyx":564
+ *             self.lbound = np.inf
+ *             self.ubound = -np.inf
  *             self.binSize = None             # <<<<<<<<<<<<<<
  *             self.isScaling = True
  *         else:
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_binSize, Py_None) < 0) __PYX_ERR(0, 564, __pyx_L1_error)
 
-    /* "AfterImage_extrapolate.pyx":565
- *             self.ubound = -np.Inf
+    /* "kitsune_core/AfterImage_extrapolate.pyx":565
+ *             self.ubound = -np.inf
  *             self.binSize = None
  *             self.isScaling = True             # <<<<<<<<<<<<<<
  *         else:
@@ -19405,17 +19405,17 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUS
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_isScaling, Py_True) < 0) __PYX_ERR(0, 565, __pyx_L1_error)
 
-    /* "AfterImage_extrapolate.pyx":561
+    /* "kitsune_core/AfterImage_extrapolate.pyx":561
  *     def __init__(self,nbins,Lambda=0,ubIsAnom=True,lbIsAnom=True,lbound=-10,ubound=10,scaleGrace=None):
  *         self.scaleGrace = scaleGrace #the numbe rof instances to observe until a range it determeined
  *         if scaleGrace is not None:             # <<<<<<<<<<<<<<
- *             self.lbound = np.Inf
- *             self.ubound = -np.Inf
+ *             self.lbound = np.inf
+ *             self.ubound = -np.inf
  */
     goto __pyx_L3;
   }
 
-  /* "AfterImage_extrapolate.pyx":567
+  /* "kitsune_core/AfterImage_extrapolate.pyx":567
  *             self.isScaling = True
  *         else:
  *             self.lbound = lbound             # <<<<<<<<<<<<<<
@@ -19425,7 +19425,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUS
   /*else*/ {
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_lbound, __pyx_v_lbound) < 0) __PYX_ERR(0, 567, __pyx_L1_error)
 
-    /* "AfterImage_extrapolate.pyx":568
+    /* "kitsune_core/AfterImage_extrapolate.pyx":568
  *         else:
  *             self.lbound = lbound
  *             self.ubound = ubound             # <<<<<<<<<<<<<<
@@ -19434,7 +19434,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUS
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_ubound, __pyx_v_ubound) < 0) __PYX_ERR(0, 568, __pyx_L1_error)
 
-    /* "AfterImage_extrapolate.pyx":569
+    /* "kitsune_core/AfterImage_extrapolate.pyx":569
  *             self.lbound = lbound
  *             self.ubound = ubound
  *             self.binSize = (ubound - lbound)/nbins             # <<<<<<<<<<<<<<
@@ -19449,7 +19449,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUS
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_binSize, __pyx_t_2) < 0) __PYX_ERR(0, 569, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "AfterImage_extrapolate.pyx":570
+    /* "kitsune_core/AfterImage_extrapolate.pyx":570
  *             self.ubound = ubound
  *             self.binSize = (ubound - lbound)/nbins
  *             self.isScaling = False             # <<<<<<<<<<<<<<
@@ -19460,7 +19460,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUS
   }
   __pyx_L3:;
 
-  /* "AfterImage_extrapolate.pyx":571
+  /* "kitsune_core/AfterImage_extrapolate.pyx":571
  *             self.binSize = (ubound - lbound)/nbins
  *             self.isScaling = False
  *         self.nbins = nbins             # <<<<<<<<<<<<<<
@@ -19469,7 +19469,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUS
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_nbins, __pyx_v_nbins) < 0) __PYX_ERR(0, 571, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":572
+  /* "kitsune_core/AfterImage_extrapolate.pyx":572
  *             self.isScaling = False
  *         self.nbins = nbins
  *         self.ubIsAnom = ubIsAnom             # <<<<<<<<<<<<<<
@@ -19478,7 +19478,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUS
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_ubIsAnom, __pyx_v_ubIsAnom) < 0) __PYX_ERR(0, 572, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":573
+  /* "kitsune_core/AfterImage_extrapolate.pyx":573
  *         self.nbins = nbins
  *         self.ubIsAnom = ubIsAnom
  *         self.lbIsAnom = lbIsAnom             # <<<<<<<<<<<<<<
@@ -19487,7 +19487,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUS
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_lbIsAnom, __pyx_v_lbIsAnom) < 0) __PYX_ERR(0, 573, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":574
+  /* "kitsune_core/AfterImage_extrapolate.pyx":574
  *         self.ubIsAnom = ubIsAnom
  *         self.lbIsAnom = lbIsAnom
  *         self.n = 0             # <<<<<<<<<<<<<<
@@ -19496,7 +19496,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUS
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_n, __pyx_int_0) < 0) __PYX_ERR(0, 574, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":576
+  /* "kitsune_core/AfterImage_extrapolate.pyx":576
  *         self.n = 0
  * 
  *         self.Lambda = Lambda             # <<<<<<<<<<<<<<
@@ -19505,7 +19505,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUS
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_Lambda, __pyx_v_Lambda) < 0) __PYX_ERR(0, 576, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":577
+  /* "kitsune_core/AfterImage_extrapolate.pyx":577
  * 
  *         self.Lambda = Lambda
  *         self.W = np.zeros(nbins)             # <<<<<<<<<<<<<<
@@ -19542,7 +19542,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUS
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_W, __pyx_t_2) < 0) __PYX_ERR(0, 577, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "AfterImage_extrapolate.pyx":578
+  /* "kitsune_core/AfterImage_extrapolate.pyx":578
  *         self.Lambda = Lambda
  *         self.W = np.zeros(nbins)
  *         self.lT = np.zeros(nbins) #last timestamp of each respective bin             # <<<<<<<<<<<<<<
@@ -19579,7 +19579,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUS
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_lT, __pyx_t_2) < 0) __PYX_ERR(0, 578, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "AfterImage_extrapolate.pyx":579
+  /* "kitsune_core/AfterImage_extrapolate.pyx":579
  *         self.W = np.zeros(nbins)
  *         self.lT = np.zeros(nbins) #last timestamp of each respective bin
  *         self.tallestBin = 0 #indx to the bin that currently has the largest freq weight (assumed...)             # <<<<<<<<<<<<<<
@@ -19588,9 +19588,9 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUS
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_tallestBin, __pyx_int_0) < 0) __PYX_ERR(0, 579, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":559
+  /* "kitsune_core/AfterImage_extrapolate.pyx":559
  * class incHist:
- *     #ubIsAnom means that the HBOS score for vals that fall past the upped bound are Inf (not 0)
+ *     #ubIsAnom means that the HBOS score for vals that fall past the upped bound are inf (not 0)
  *     def __init__(self,nbins,Lambda=0,ubIsAnom=True,lbIsAnom=True,lbound=-10,ubound=10,scaleGrace=None):             # <<<<<<<<<<<<<<
  *         self.scaleGrace = scaleGrace #the numbe rof instances to observe until a range it determeined
  *         if scaleGrace is not None:
@@ -19603,7 +19603,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUS
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incHist.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incHist.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -19611,7 +19611,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUS
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":582
+/* "kitsune_core/AfterImage_extrapolate.pyx":582
  * 
  *     #assumes even bin width starting from lbound until ubound. beyond bounds are assigned to the closest bin
  *     def getBinIndx(self,val,win=0):             # <<<<<<<<<<<<<<
@@ -19620,15 +19620,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist___init__(CYTHON_UNUS
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7incHist_3getBinIndx(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_3getBinIndx(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_7incHist_3getBinIndx = {"getBinIndx", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_7incHist_3getBinIndx, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7incHist_3getBinIndx(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7incHist_3getBinIndx = {"getBinIndx", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_3getBinIndx, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_3getBinIndx(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -19729,11 +19729,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incHist.getBinIndx", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incHist.getBinIndx", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(__pyx_self, __pyx_v_self, __pyx_v_val, __pyx_v_win);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_2getBinIndx(__pyx_self, __pyx_v_self, __pyx_v_val, __pyx_v_win);
 
   /* function exit code */
   {
@@ -19746,7 +19746,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_val, PyObject *__pyx_v_win) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_val, PyObject *__pyx_v_win) {
   PyObject *__pyx_v_indx = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -19762,7 +19762,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getBinIndx", 1);
 
-  /* "AfterImage_extrapolate.pyx":583
+  /* "kitsune_core/AfterImage_extrapolate.pyx":583
  *     #assumes even bin width starting from lbound until ubound. beyond bounds are assigned to the closest bin
  *     def getBinIndx(self,val,win=0):
  *         indx = int(np.floor((val - self.lbound)/self.binSize))             # <<<<<<<<<<<<<<
@@ -19814,21 +19814,21 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
   __pyx_v_indx = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "AfterImage_extrapolate.pyx":584
+  /* "kitsune_core/AfterImage_extrapolate.pyx":584
  *     def getBinIndx(self,val,win=0):
  *         indx = int(np.floor((val - self.lbound)/self.binSize))
  *         if win == 0:             # <<<<<<<<<<<<<<
  *             if indx < 0:
- *                 return -np.Inf
+ *                 return -np.inf
  */
   __pyx_t_7 = (__Pyx_PyInt_BoolEqObjC(__pyx_v_win, __pyx_int_0, 0, 0)); if (unlikely((__pyx_t_7 < 0))) __PYX_ERR(0, 584, __pyx_L1_error)
   if (__pyx_t_7) {
 
-    /* "AfterImage_extrapolate.pyx":585
+    /* "kitsune_core/AfterImage_extrapolate.pyx":585
  *         indx = int(np.floor((val - self.lbound)/self.binSize))
  *         if win == 0:
  *             if indx < 0:             # <<<<<<<<<<<<<<
- *                 return -np.Inf
+ *                 return -np.inf
  *             if indx > (self.nbins - 1):
  */
     __pyx_t_3 = PyObject_RichCompare(__pyx_v_indx, __pyx_int_0, Py_LT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 585, __pyx_L1_error)
@@ -19836,17 +19836,17 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_7) {
 
-      /* "AfterImage_extrapolate.pyx":586
+      /* "kitsune_core/AfterImage_extrapolate.pyx":586
  *         if win == 0:
  *             if indx < 0:
- *                 return -np.Inf             # <<<<<<<<<<<<<<
+ *                 return -np.inf             # <<<<<<<<<<<<<<
  *             if indx > (self.nbins - 1):
- *                 return np.Inf
+ *                 return np.inf
  */
       __Pyx_XDECREF(__pyx_r);
       __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 586, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_Inf); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 586, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_inf); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 586, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_t_3 = PyNumber_Negative(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 586, __pyx_L1_error)
@@ -19856,20 +19856,20 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
       __pyx_t_3 = 0;
       goto __pyx_L0;
 
-      /* "AfterImage_extrapolate.pyx":585
+      /* "kitsune_core/AfterImage_extrapolate.pyx":585
  *         indx = int(np.floor((val - self.lbound)/self.binSize))
  *         if win == 0:
  *             if indx < 0:             # <<<<<<<<<<<<<<
- *                 return -np.Inf
+ *                 return -np.inf
  *             if indx > (self.nbins - 1):
  */
     }
 
-    /* "AfterImage_extrapolate.pyx":587
+    /* "kitsune_core/AfterImage_extrapolate.pyx":587
  *             if indx < 0:
- *                 return -np.Inf
+ *                 return -np.inf
  *             if indx > (self.nbins - 1):             # <<<<<<<<<<<<<<
- *                 return np.Inf
+ *                 return np.inf
  *             return indx
  */
     __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_nbins); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 587, __pyx_L1_error)
@@ -19883,35 +19883,35 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_7) {
 
-      /* "AfterImage_extrapolate.pyx":588
- *                 return -np.Inf
+      /* "kitsune_core/AfterImage_extrapolate.pyx":588
+ *                 return -np.inf
  *             if indx > (self.nbins - 1):
- *                 return np.Inf             # <<<<<<<<<<<<<<
+ *                 return np.inf             # <<<<<<<<<<<<<<
  *             return indx
  *         else: #windowed Histogram
  */
       __Pyx_XDECREF(__pyx_r);
       __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 588, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_Inf); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 588, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_inf); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 588, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_r = __pyx_t_1;
       __pyx_t_1 = 0;
       goto __pyx_L0;
 
-      /* "AfterImage_extrapolate.pyx":587
+      /* "kitsune_core/AfterImage_extrapolate.pyx":587
  *             if indx < 0:
- *                 return -np.Inf
+ *                 return -np.inf
  *             if indx > (self.nbins - 1):             # <<<<<<<<<<<<<<
- *                 return np.Inf
+ *                 return np.inf
  *             return indx
  */
     }
 
-    /* "AfterImage_extrapolate.pyx":589
+    /* "kitsune_core/AfterImage_extrapolate.pyx":589
  *             if indx > (self.nbins - 1):
- *                 return np.Inf
+ *                 return np.inf
  *             return indx             # <<<<<<<<<<<<<<
  *         else: #windowed Histogram
  *             if indx - win < 0: #does the left of the window stick out of bounds?
@@ -19921,16 +19921,16 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
     __pyx_r = __pyx_v_indx;
     goto __pyx_L0;
 
-    /* "AfterImage_extrapolate.pyx":584
+    /* "kitsune_core/AfterImage_extrapolate.pyx":584
  *     def getBinIndx(self,val,win=0):
  *         indx = int(np.floor((val - self.lbound)/self.binSize))
  *         if win == 0:             # <<<<<<<<<<<<<<
  *             if indx < 0:
- *                 return -np.Inf
+ *                 return -np.inf
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":591
+  /* "kitsune_core/AfterImage_extrapolate.pyx":591
  *             return indx
  *         else: #windowed Histogram
  *             if indx - win < 0: #does the left of the window stick out of bounds?             # <<<<<<<<<<<<<<
@@ -19946,7 +19946,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_7) {
 
-      /* "AfterImage_extrapolate.pyx":592
+      /* "kitsune_core/AfterImage_extrapolate.pyx":592
  *         else: #windowed Histogram
  *             if indx - win < 0: #does the left of the window stick out of bounds?
  *                 if indx + win >= 0: #if yes, then is there some overlap with inbounds?             # <<<<<<<<<<<<<<
@@ -19961,12 +19961,12 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       if (__pyx_t_7) {
 
-        /* "AfterImage_extrapolate.pyx":593
+        /* "kitsune_core/AfterImage_extrapolate.pyx":593
  *             if indx - win < 0: #does the left of the window stick out of bounds?
  *                 if indx + win >= 0: #if yes, then is there some overlap with inbounds?
  *                     return range(0,indx+win+1) #return the inbounds range             # <<<<<<<<<<<<<<
  *                 else: #then the entire window is our of bounds to the left
- *                     return -np.Inf
+ *                     return -np.inf
  */
         __Pyx_XDECREF(__pyx_r);
         __pyx_t_1 = PyNumber_Add(__pyx_v_indx, __pyx_v_win); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 593, __pyx_L1_error)
@@ -19989,7 +19989,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
         __pyx_t_3 = 0;
         goto __pyx_L0;
 
-        /* "AfterImage_extrapolate.pyx":592
+        /* "kitsune_core/AfterImage_extrapolate.pyx":592
  *         else: #windowed Histogram
  *             if indx - win < 0: #does the left of the window stick out of bounds?
  *                 if indx + win >= 0: #if yes, then is there some overlap with inbounds?             # <<<<<<<<<<<<<<
@@ -19998,10 +19998,10 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
  */
       }
 
-      /* "AfterImage_extrapolate.pyx":595
+      /* "kitsune_core/AfterImage_extrapolate.pyx":595
  *                     return range(0,indx+win+1) #return the inbounds range
  *                 else: #then the entire window is our of bounds to the left
- *                     return -np.Inf             # <<<<<<<<<<<<<<
+ *                     return -np.inf             # <<<<<<<<<<<<<<
  *             if indx + win > self.nbins - 1: #does the right of the window stick out of bounds?
  *                 if indx - win < self.nbins: #if yes, then is there some overlap with inbounds?
  */
@@ -20009,7 +20009,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
         __Pyx_XDECREF(__pyx_r);
         __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 595, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_Inf); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 595, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_inf); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 595, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __pyx_t_3 = PyNumber_Negative(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 595, __pyx_L1_error)
@@ -20020,7 +20020,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
         goto __pyx_L0;
       }
 
-      /* "AfterImage_extrapolate.pyx":591
+      /* "kitsune_core/AfterImage_extrapolate.pyx":591
  *             return indx
  *         else: #windowed Histogram
  *             if indx - win < 0: #does the left of the window stick out of bounds?             # <<<<<<<<<<<<<<
@@ -20029,9 +20029,9 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
  */
     }
 
-    /* "AfterImage_extrapolate.pyx":596
+    /* "kitsune_core/AfterImage_extrapolate.pyx":596
  *                 else: #then the entire window is our of bounds to the left
- *                     return -np.Inf
+ *                     return -np.inf
  *             if indx + win > self.nbins - 1: #does the right of the window stick out of bounds?             # <<<<<<<<<<<<<<
  *                 if indx - win < self.nbins: #if yes, then is there some overlap with inbounds?
  *                     return range(indx - win,self.nbins) #return the inbounds range
@@ -20050,8 +20050,8 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_7) {
 
-      /* "AfterImage_extrapolate.pyx":597
- *                     return -np.Inf
+      /* "kitsune_core/AfterImage_extrapolate.pyx":597
+ *                     return -np.inf
  *             if indx + win > self.nbins - 1: #does the right of the window stick out of bounds?
  *                 if indx - win < self.nbins: #if yes, then is there some overlap with inbounds?             # <<<<<<<<<<<<<<
  *                     return range(indx - win,self.nbins) #return the inbounds range
@@ -20068,12 +20068,12 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (__pyx_t_7) {
 
-        /* "AfterImage_extrapolate.pyx":598
+        /* "kitsune_core/AfterImage_extrapolate.pyx":598
  *             if indx + win > self.nbins - 1: #does the right of the window stick out of bounds?
  *                 if indx - win < self.nbins: #if yes, then is there some overlap with inbounds?
  *                     return range(indx - win,self.nbins) #return the inbounds range             # <<<<<<<<<<<<<<
  *                 else: #then the entire window is our of bounds to the right
- *                     return np.Inf
+ *                     return np.inf
  */
         __Pyx_XDECREF(__pyx_r);
         __pyx_t_3 = PyNumber_Subtract(__pyx_v_indx, __pyx_v_win); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 598, __pyx_L1_error)
@@ -20095,8 +20095,8 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
         __pyx_t_5 = 0;
         goto __pyx_L0;
 
-        /* "AfterImage_extrapolate.pyx":597
- *                     return -np.Inf
+        /* "kitsune_core/AfterImage_extrapolate.pyx":597
+ *                     return -np.inf
  *             if indx + win > self.nbins - 1: #does the right of the window stick out of bounds?
  *                 if indx - win < self.nbins: #if yes, then is there some overlap with inbounds?             # <<<<<<<<<<<<<<
  *                     return range(indx - win,self.nbins) #return the inbounds range
@@ -20104,10 +20104,10 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
  */
       }
 
-      /* "AfterImage_extrapolate.pyx":600
+      /* "kitsune_core/AfterImage_extrapolate.pyx":600
  *                     return range(indx - win,self.nbins) #return the inbounds range
  *                 else: #then the entire window is our of bounds to the right
- *                     return np.Inf             # <<<<<<<<<<<<<<
+ *                     return np.inf             # <<<<<<<<<<<<<<
  *             return range(indx-win,indx+win+1)
  * 
  */
@@ -20115,7 +20115,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
         __Pyx_XDECREF(__pyx_r);
         __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 600, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_Inf); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 600, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_inf); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 600, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         __pyx_r = __pyx_t_1;
@@ -20123,18 +20123,18 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
         goto __pyx_L0;
       }
 
-      /* "AfterImage_extrapolate.pyx":596
+      /* "kitsune_core/AfterImage_extrapolate.pyx":596
  *                 else: #then the entire window is our of bounds to the left
- *                     return -np.Inf
+ *                     return -np.inf
  *             if indx + win > self.nbins - 1: #does the right of the window stick out of bounds?             # <<<<<<<<<<<<<<
  *                 if indx - win < self.nbins: #if yes, then is there some overlap with inbounds?
  *                     return range(indx - win,self.nbins) #return the inbounds range
  */
     }
 
-    /* "AfterImage_extrapolate.pyx":601
+    /* "kitsune_core/AfterImage_extrapolate.pyx":601
  *                 else: #then the entire window is our of bounds to the right
- *                     return np.Inf
+ *                     return np.inf
  *             return range(indx-win,indx+win+1)             # <<<<<<<<<<<<<<
  * 
  * 
@@ -20163,7 +20163,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
     goto __pyx_L0;
   }
 
-  /* "AfterImage_extrapolate.pyx":582
+  /* "kitsune_core/AfterImage_extrapolate.pyx":582
  * 
  *     #assumes even bin width starting from lbound until ubound. beyond bounds are assigned to the closest bin
  *     def getBinIndx(self,val,win=0):             # <<<<<<<<<<<<<<
@@ -20178,7 +20178,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incHist.getBinIndx", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incHist.getBinIndx", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_indx);
@@ -20187,7 +20187,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":604
+/* "kitsune_core/AfterImage_extrapolate.pyx":604
  * 
  * 
  *     def processDecay(self, bin, timestamp):             # <<<<<<<<<<<<<<
@@ -20196,15 +20196,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_2getBinIndx(CYTHON_U
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7incHist_5processDecay(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_5processDecay(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_7incHist_5processDecay = {"processDecay", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_7incHist_5processDecay, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7incHist_5processDecay(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7incHist_5processDecay = {"processDecay", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_5processDecay, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_5processDecay(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -20304,11 +20304,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incHist.processDecay", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incHist.processDecay", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_7incHist_4processDecay(__pyx_self, __pyx_v_self, __pyx_v_bin, __pyx_v_timestamp);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_4processDecay(__pyx_self, __pyx_v_self, __pyx_v_bin, __pyx_v_timestamp);
 
   /* function exit code */
   {
@@ -20321,7 +20321,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_4processDecay(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_bin, PyObject *__pyx_v_timestamp) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_4processDecay(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_bin, PyObject *__pyx_v_timestamp) {
   PyObject *__pyx_v_timeDiff = NULL;
   PyObject *__pyx_v_factor = NULL;
   PyObject *__pyx_r = NULL;
@@ -20337,7 +20337,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_4processDecay(CYTHON
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("processDecay", 1);
 
-  /* "AfterImage_extrapolate.pyx":606
+  /* "kitsune_core/AfterImage_extrapolate.pyx":606
  *     def processDecay(self, bin, timestamp):
  *         # check for decay
  *         timeDiff = timestamp - self.lT[bin]             # <<<<<<<<<<<<<<
@@ -20355,7 +20355,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_4processDecay(CYTHON
   __pyx_v_timeDiff = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":607
+  /* "kitsune_core/AfterImage_extrapolate.pyx":607
  *         # check for decay
  *         timeDiff = timestamp - self.lT[bin]
  *         if np.isscalar(timeDiff):             # <<<<<<<<<<<<<<
@@ -20393,7 +20393,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_4processDecay(CYTHON
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_5) {
 
-    /* "AfterImage_extrapolate.pyx":608
+    /* "kitsune_core/AfterImage_extrapolate.pyx":608
  *         timeDiff = timestamp - self.lT[bin]
  *         if np.isscalar(timeDiff):
  *             if timeDiff > 0:             # <<<<<<<<<<<<<<
@@ -20405,7 +20405,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_4processDecay(CYTHON
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_5) {
 
-      /* "AfterImage_extrapolate.pyx":609
+      /* "kitsune_core/AfterImage_extrapolate.pyx":609
  *         if np.isscalar(timeDiff):
  *             if timeDiff > 0:
  *                 factor = math.pow(2, (-self.Lambda * timeDiff))             # <<<<<<<<<<<<<<
@@ -20451,7 +20451,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_4processDecay(CYTHON
       __pyx_v_factor = __pyx_t_1;
       __pyx_t_1 = 0;
 
-      /* "AfterImage_extrapolate.pyx":610
+      /* "kitsune_core/AfterImage_extrapolate.pyx":610
  *             if timeDiff > 0:
  *                 factor = math.pow(2, (-self.Lambda * timeDiff))
  *                 self.W[bin] = self.W[bin] * factor             # <<<<<<<<<<<<<<
@@ -20472,7 +20472,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_4processDecay(CYTHON
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "AfterImage_extrapolate.pyx":611
+      /* "kitsune_core/AfterImage_extrapolate.pyx":611
  *                 factor = math.pow(2, (-self.Lambda * timeDiff))
  *                 self.W[bin] = self.W[bin] * factor
  *                 self.lT[bin] = timestamp             # <<<<<<<<<<<<<<
@@ -20484,7 +20484,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_4processDecay(CYTHON
       if (unlikely((PyObject_SetItem(__pyx_t_1, __pyx_v_bin, __pyx_v_timestamp) < 0))) __PYX_ERR(0, 611, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "AfterImage_extrapolate.pyx":608
+      /* "kitsune_core/AfterImage_extrapolate.pyx":608
  *         timeDiff = timestamp - self.lT[bin]
  *         if np.isscalar(timeDiff):
  *             if timeDiff > 0:             # <<<<<<<<<<<<<<
@@ -20493,7 +20493,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_4processDecay(CYTHON
  */
     }
 
-    /* "AfterImage_extrapolate.pyx":607
+    /* "kitsune_core/AfterImage_extrapolate.pyx":607
  *         # check for decay
  *         timeDiff = timestamp - self.lT[bin]
  *         if np.isscalar(timeDiff):             # <<<<<<<<<<<<<<
@@ -20503,7 +20503,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_4processDecay(CYTHON
     goto __pyx_L3;
   }
 
-  /* "AfterImage_extrapolate.pyx":613
+  /* "kitsune_core/AfterImage_extrapolate.pyx":613
  *                 self.lT[bin] = timestamp
  *         else: #array
  *             timeDiff[timeDiff<0]=0 #don't affect decay of out of order entries             # <<<<<<<<<<<<<<
@@ -20515,7 +20515,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_4processDecay(CYTHON
     if (unlikely((PyObject_SetItem(__pyx_v_timeDiff, __pyx_t_1, __pyx_int_0) < 0))) __PYX_ERR(0, 613, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "AfterImage_extrapolate.pyx":614
+    /* "kitsune_core/AfterImage_extrapolate.pyx":614
  *         else: #array
  *             timeDiff[timeDiff<0]=0 #don't affect decay of out of order entries
  *             factor = np.power(2, (-self.Lambda * timeDiff))             # <<<<<<<<<<<<<<
@@ -20561,7 +20561,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_4processDecay(CYTHON
     __pyx_v_factor = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "AfterImage_extrapolate.pyx":616
+    /* "kitsune_core/AfterImage_extrapolate.pyx":616
  *             factor = np.power(2, (-self.Lambda * timeDiff))
  *             #b4 = self.W[bin]
  *             self.W[bin] = self.W[bin] * factor             # <<<<<<<<<<<<<<
@@ -20582,7 +20582,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_4processDecay(CYTHON
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "AfterImage_extrapolate.pyx":617
+    /* "kitsune_core/AfterImage_extrapolate.pyx":617
  *             #b4 = self.W[bin]
  *             self.W[bin] = self.W[bin] * factor
  *             self.lT[bin] = timestamp             # <<<<<<<<<<<<<<
@@ -20596,7 +20596,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_4processDecay(CYTHON
   }
   __pyx_L3:;
 
-  /* "AfterImage_extrapolate.pyx":604
+  /* "kitsune_core/AfterImage_extrapolate.pyx":604
  * 
  * 
  *     def processDecay(self, bin, timestamp):             # <<<<<<<<<<<<<<
@@ -20612,7 +20612,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_4processDecay(CYTHON
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incHist.processDecay", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incHist.processDecay", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_timeDiff);
@@ -20622,7 +20622,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_4processDecay(CYTHON
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":619
+/* "kitsune_core/AfterImage_extrapolate.pyx":619
  *             self.lT[bin] = timestamp
  * 
  *     def insert(self,val,timestamp,penalty=False):             # <<<<<<<<<<<<<<
@@ -20631,15 +20631,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_4processDecay(CYTHON
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7incHist_7insert(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_7insert(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_7incHist_7insert = {"insert", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_7incHist_7insert, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7incHist_7insert(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7incHist_7insert = {"insert", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_7insert, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_7insert(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -20755,11 +20755,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incHist.insert", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incHist.insert", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_7incHist_6insert(__pyx_self, __pyx_v_self, __pyx_v_val, __pyx_v_timestamp, __pyx_v_penalty);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_6insert(__pyx_self, __pyx_v_self, __pyx_v_val, __pyx_v_timestamp, __pyx_v_penalty);
 
   /* function exit code */
   {
@@ -20772,7 +20772,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_val, PyObject *__pyx_v_timestamp, PyObject *__pyx_v_penalty) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_val, PyObject *__pyx_v_timestamp, PyObject *__pyx_v_penalty) {
   PyObject *__pyx_v_width = NULL;
   PyObject *__pyx_v_bin = NULL;
   PyObject *__pyx_v_tallestW = NULL;
@@ -20793,7 +20793,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("insert", 1);
 
-  /* "AfterImage_extrapolate.pyx":620
+  /* "kitsune_core/AfterImage_extrapolate.pyx":620
  * 
  *     def insert(self,val,timestamp,penalty=False):
  *         self.n = self.n + 1             # <<<<<<<<<<<<<<
@@ -20808,7 +20808,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_n, __pyx_t_2) < 0) __PYX_ERR(0, 620, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "AfterImage_extrapolate.pyx":621
+  /* "kitsune_core/AfterImage_extrapolate.pyx":621
  *     def insert(self,val,timestamp,penalty=False):
  *         self.n = self.n + 1
  *         if self.isScaling:             # <<<<<<<<<<<<<<
@@ -20821,7 +20821,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_3) {
 
-    /* "AfterImage_extrapolate.pyx":622
+    /* "kitsune_core/AfterImage_extrapolate.pyx":622
  *         self.n = self.n + 1
  *         if self.isScaling:
  *             if self.n < self.scaleGrace:             # <<<<<<<<<<<<<<
@@ -20839,7 +20839,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (__pyx_t_3) {
 
-      /* "AfterImage_extrapolate.pyx":623
+      /* "kitsune_core/AfterImage_extrapolate.pyx":623
  *         if self.isScaling:
  *             if self.n < self.scaleGrace:
  *                 if self.lbound > val:             # <<<<<<<<<<<<<<
@@ -20854,7 +20854,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       if (__pyx_t_3) {
 
-        /* "AfterImage_extrapolate.pyx":624
+        /* "kitsune_core/AfterImage_extrapolate.pyx":624
  *             if self.n < self.scaleGrace:
  *                 if self.lbound > val:
  *                     self.lbound = val             # <<<<<<<<<<<<<<
@@ -20863,7 +20863,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
  */
         if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_lbound, __pyx_v_val) < 0) __PYX_ERR(0, 624, __pyx_L1_error)
 
-        /* "AfterImage_extrapolate.pyx":623
+        /* "kitsune_core/AfterImage_extrapolate.pyx":623
  *         if self.isScaling:
  *             if self.n < self.scaleGrace:
  *                 if self.lbound > val:             # <<<<<<<<<<<<<<
@@ -20872,7 +20872,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
  */
       }
 
-      /* "AfterImage_extrapolate.pyx":625
+      /* "kitsune_core/AfterImage_extrapolate.pyx":625
  *                 if self.lbound > val:
  *                     self.lbound = val
  *                 if self.ubound < val:             # <<<<<<<<<<<<<<
@@ -20887,7 +20887,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       if (__pyx_t_3) {
 
-        /* "AfterImage_extrapolate.pyx":626
+        /* "kitsune_core/AfterImage_extrapolate.pyx":626
  *                     self.lbound = val
  *                 if self.ubound < val:
  *                     self.ubound = val             # <<<<<<<<<<<<<<
@@ -20896,7 +20896,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
  */
         if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_ubound, __pyx_v_val) < 0) __PYX_ERR(0, 626, __pyx_L1_error)
 
-        /* "AfterImage_extrapolate.pyx":625
+        /* "kitsune_core/AfterImage_extrapolate.pyx":625
  *                 if self.lbound > val:
  *                     self.lbound = val
  *                 if self.ubound < val:             # <<<<<<<<<<<<<<
@@ -20905,7 +20905,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
  */
       }
 
-      /* "AfterImage_extrapolate.pyx":622
+      /* "kitsune_core/AfterImage_extrapolate.pyx":622
  *         self.n = self.n + 1
  *         if self.isScaling:
  *             if self.n < self.scaleGrace:             # <<<<<<<<<<<<<<
@@ -20914,7 +20914,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
  */
     }
 
-    /* "AfterImage_extrapolate.pyx":627
+    /* "kitsune_core/AfterImage_extrapolate.pyx":627
  *                 if self.ubound < val:
  *                     self.ubound = val
  *             if self.n == self.scaleGrace:             # <<<<<<<<<<<<<<
@@ -20932,7 +20932,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_3) {
 
-      /* "AfterImage_extrapolate.pyx":628
+      /* "kitsune_core/AfterImage_extrapolate.pyx":628
  *                     self.ubound = val
  *             if self.n == self.scaleGrace:
  *                 if self.ubound == self.lbound:             # <<<<<<<<<<<<<<
@@ -20950,7 +20950,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       if (__pyx_t_3) {
 
-        /* "AfterImage_extrapolate.pyx":629
+        /* "kitsune_core/AfterImage_extrapolate.pyx":629
  *             if self.n == self.scaleGrace:
  *                 if self.ubound == self.lbound:
  *                     self.scaleGrace = self.scaleGrace + 1000             # <<<<<<<<<<<<<<
@@ -20965,7 +20965,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
         if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_scaleGrace, __pyx_t_1) < 0) __PYX_ERR(0, 629, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-        /* "AfterImage_extrapolate.pyx":628
+        /* "kitsune_core/AfterImage_extrapolate.pyx":628
  *                     self.ubound = val
  *             if self.n == self.scaleGrace:
  *                 if self.ubound == self.lbound:             # <<<<<<<<<<<<<<
@@ -20975,7 +20975,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
         goto __pyx_L8;
       }
 
-      /* "AfterImage_extrapolate.pyx":631
+      /* "kitsune_core/AfterImage_extrapolate.pyx":631
  *                     self.scaleGrace = self.scaleGrace + 1000
  *                 else:
  *                     width = self.ubound - self.lbound             # <<<<<<<<<<<<<<
@@ -20994,7 +20994,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
         __pyx_v_width = __pyx_t_2;
         __pyx_t_2 = 0;
 
-        /* "AfterImage_extrapolate.pyx":632
+        /* "kitsune_core/AfterImage_extrapolate.pyx":632
  *                 else:
  *                     width = self.ubound - self.lbound
  *                     self.ubound = self.ubound + width             # <<<<<<<<<<<<<<
@@ -21009,7 +21009,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
         if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_ubound, __pyx_t_4) < 0) __PYX_ERR(0, 632, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-        /* "AfterImage_extrapolate.pyx":633
+        /* "kitsune_core/AfterImage_extrapolate.pyx":633
  *                     width = self.ubound - self.lbound
  *                     self.ubound = self.ubound + width
  *                     self.lbound = self.lbound - width             # <<<<<<<<<<<<<<
@@ -21024,7 +21024,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
         if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_lbound, __pyx_t_2) < 0) __PYX_ERR(0, 633, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-        /* "AfterImage_extrapolate.pyx":634
+        /* "kitsune_core/AfterImage_extrapolate.pyx":634
  *                     self.ubound = self.ubound + width
  *                     self.lbound = self.lbound - width
  *                     self.binSize = (self.ubound - self.lbound) / self.nbins             # <<<<<<<<<<<<<<
@@ -21048,7 +21048,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
         if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_binSize, __pyx_t_2) < 0) __PYX_ERR(0, 634, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-        /* "AfterImage_extrapolate.pyx":635
+        /* "kitsune_core/AfterImage_extrapolate.pyx":635
  *                     self.lbound = self.lbound - width
  *                     self.binSize = (self.ubound - self.lbound) / self.nbins
  *                     self.isScaling = False             # <<<<<<<<<<<<<<
@@ -21059,7 +21059,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
       }
       __pyx_L8:;
 
-      /* "AfterImage_extrapolate.pyx":627
+      /* "kitsune_core/AfterImage_extrapolate.pyx":627
  *                 if self.ubound < val:
  *                     self.ubound = val
  *             if self.n == self.scaleGrace:             # <<<<<<<<<<<<<<
@@ -21068,7 +21068,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
  */
     }
 
-    /* "AfterImage_extrapolate.pyx":621
+    /* "kitsune_core/AfterImage_extrapolate.pyx":621
  *     def insert(self,val,timestamp,penalty=False):
  *         self.n = self.n + 1
  *         if self.isScaling:             # <<<<<<<<<<<<<<
@@ -21078,7 +21078,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
     goto __pyx_L3;
   }
 
-  /* "AfterImage_extrapolate.pyx":637
+  /* "kitsune_core/AfterImage_extrapolate.pyx":637
  *                     self.isScaling = False
  *         else:
  *             bin = self.getBinIndx(val)             # <<<<<<<<<<<<<<
@@ -21113,7 +21113,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
     __pyx_v_bin = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "AfterImage_extrapolate.pyx":638
+    /* "kitsune_core/AfterImage_extrapolate.pyx":638
  *         else:
  *             bin = self.getBinIndx(val)
  *             if not np.isinf(bin): #             # <<<<<<<<<<<<<<
@@ -21152,7 +21152,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
     __pyx_t_6 = (!__pyx_t_3);
     if (__pyx_t_6) {
 
-      /* "AfterImage_extrapolate.pyx":639
+      /* "kitsune_core/AfterImage_extrapolate.pyx":639
  *             bin = self.getBinIndx(val)
  *             if not np.isinf(bin): #
  *                 self.processDecay(bin, timestamp)             # <<<<<<<<<<<<<<
@@ -21185,7 +21185,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
       }
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "AfterImage_extrapolate.pyx":640
+      /* "kitsune_core/AfterImage_extrapolate.pyx":640
  *             if not np.isinf(bin): #
  *                 self.processDecay(bin, timestamp)
  *                 if penalty:             # <<<<<<<<<<<<<<
@@ -21195,7 +21195,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
       __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_v_penalty); if (unlikely((__pyx_t_6 < 0))) __PYX_ERR(0, 640, __pyx_L1_error)
       if (__pyx_t_6) {
 
-        /* "AfterImage_extrapolate.pyx":641
+        /* "kitsune_core/AfterImage_extrapolate.pyx":641
  *                 self.processDecay(bin, timestamp)
  *                 if penalty:
  *                     tallestW = self.W[self.tallestBin]             # <<<<<<<<<<<<<<
@@ -21213,7 +21213,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
         __pyx_v_tallestW = __pyx_t_4;
         __pyx_t_4 = 0;
 
-        /* "AfterImage_extrapolate.pyx":642
+        /* "kitsune_core/AfterImage_extrapolate.pyx":642
  *                 if penalty:
  *                     tallestW = self.W[self.tallestBin]
  *                     scale = tallestW if tallestW > 0 else 1             # <<<<<<<<<<<<<<
@@ -21233,7 +21233,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
         __pyx_v_scale = __pyx_t_4;
         __pyx_t_4 = 0;
 
-        /* "AfterImage_extrapolate.pyx":643
+        /* "kitsune_core/AfterImage_extrapolate.pyx":643
  *                     tallestW = self.W[self.tallestBin]
  *                     scale = tallestW if tallestW > 0 else 1
  *                     fn = self.W[bin]/scale             # <<<<<<<<<<<<<<
@@ -21251,7 +21251,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
         __pyx_v_fn = __pyx_t_4;
         __pyx_t_4 = 0;
 
-        /* "AfterImage_extrapolate.pyx":644
+        /* "kitsune_core/AfterImage_extrapolate.pyx":644
  *                     scale = tallestW if tallestW > 0 else 1
  *                     fn = self.W[bin]/scale
  *                     inc = self.halfsigmoid(fn+0.005,-1.03)             # <<<<<<<<<<<<<<
@@ -21288,7 +21288,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
         __pyx_v_inc = __pyx_t_4;
         __pyx_t_4 = 0;
 
-        /* "AfterImage_extrapolate.pyx":640
+        /* "kitsune_core/AfterImage_extrapolate.pyx":640
  *             if not np.isinf(bin): #
  *                 self.processDecay(bin, timestamp)
  *                 if penalty:             # <<<<<<<<<<<<<<
@@ -21298,7 +21298,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
         goto __pyx_L10;
       }
 
-      /* "AfterImage_extrapolate.pyx":646
+      /* "kitsune_core/AfterImage_extrapolate.pyx":646
  *                     inc = self.halfsigmoid(fn+0.005,-1.03)
  *                 else:
  *                     inc = 1             # <<<<<<<<<<<<<<
@@ -21311,7 +21311,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
       }
       __pyx_L10:;
 
-      /* "AfterImage_extrapolate.pyx":647
+      /* "kitsune_core/AfterImage_extrapolate.pyx":647
  *                 else:
  *                     inc = 1
  *                 self.W[bin] = self.W[bin] + inc             # <<<<<<<<<<<<<<
@@ -21332,7 +21332,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "AfterImage_extrapolate.pyx":649
+      /* "kitsune_core/AfterImage_extrapolate.pyx":649
  *                 self.W[bin] = self.W[bin] + inc
  *                 #track who has the tallest bin (for normilization)
  *                 if self.W[bin] > self.W[self.tallestBin]:             # <<<<<<<<<<<<<<
@@ -21359,7 +21359,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       if (__pyx_t_6) {
 
-        /* "AfterImage_extrapolate.pyx":650
+        /* "kitsune_core/AfterImage_extrapolate.pyx":650
  *                 #track who has the tallest bin (for normilization)
  *                 if self.W[bin] > self.W[self.tallestBin]:
  *                     self.tallestBin = bin             # <<<<<<<<<<<<<<
@@ -21368,7 +21368,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
  */
         if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_tallestBin, __pyx_v_bin) < 0) __PYX_ERR(0, 650, __pyx_L1_error)
 
-        /* "AfterImage_extrapolate.pyx":649
+        /* "kitsune_core/AfterImage_extrapolate.pyx":649
  *                 self.W[bin] = self.W[bin] + inc
  *                 #track who has the tallest bin (for normilization)
  *                 if self.W[bin] > self.W[self.tallestBin]:             # <<<<<<<<<<<<<<
@@ -21377,7 +21377,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
  */
       }
 
-      /* "AfterImage_extrapolate.pyx":638
+      /* "kitsune_core/AfterImage_extrapolate.pyx":638
  *         else:
  *             bin = self.getBinIndx(val)
  *             if not np.isinf(bin): #             # <<<<<<<<<<<<<<
@@ -21388,7 +21388,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
   }
   __pyx_L3:;
 
-  /* "AfterImage_extrapolate.pyx":619
+  /* "kitsune_core/AfterImage_extrapolate.pyx":619
  *             self.lT[bin] = timestamp
  * 
  *     def insert(self,val,timestamp,penalty=False):             # <<<<<<<<<<<<<<
@@ -21404,7 +21404,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incHist.insert", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incHist.insert", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_width);
@@ -21418,7 +21418,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":652
+/* "kitsune_core/AfterImage_extrapolate.pyx":652
  *                     self.tallestBin = bin
  * 
  *     def halfsigmoid(self,x,k):             # <<<<<<<<<<<<<<
@@ -21427,15 +21427,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_6insert(CYTHON_UNUSE
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7incHist_9halfsigmoid(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_9halfsigmoid(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_7incHist_9halfsigmoid = {"halfsigmoid", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_7incHist_9halfsigmoid, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7incHist_9halfsigmoid(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7incHist_9halfsigmoid = {"halfsigmoid", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_9halfsigmoid, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_9halfsigmoid(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -21535,11 +21535,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incHist.halfsigmoid", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incHist.halfsigmoid", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_7incHist_8halfsigmoid(__pyx_self, __pyx_v_self, __pyx_v_x, __pyx_v_k);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_8halfsigmoid(__pyx_self, __pyx_v_self, __pyx_v_x, __pyx_v_k);
 
   /* function exit code */
   {
@@ -21552,7 +21552,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_8halfsigmoid(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_k) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_8halfsigmoid(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_x, PyObject *__pyx_v_k) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -21563,7 +21563,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_8halfsigmoid(CYTHON_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("halfsigmoid", 1);
 
-  /* "AfterImage_extrapolate.pyx":653
+  /* "kitsune_core/AfterImage_extrapolate.pyx":653
  * 
  *     def halfsigmoid(self,x,k):
  *         return (k*x)/(k-x+1)             # <<<<<<<<<<<<<<
@@ -21586,7 +21586,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_8halfsigmoid(CYTHON_
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":652
+  /* "kitsune_core/AfterImage_extrapolate.pyx":652
  *                     self.tallestBin = bin
  * 
  *     def halfsigmoid(self,x,k):             # <<<<<<<<<<<<<<
@@ -21599,7 +21599,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_8halfsigmoid(CYTHON_
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incHist.halfsigmoid", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incHist.halfsigmoid", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -21607,7 +21607,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_8halfsigmoid(CYTHON_
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":655
+/* "kitsune_core/AfterImage_extrapolate.pyx":655
  *         return (k*x)/(k-x+1)
  * 
  *     def score(self,val,timestamp=-1,win=0): #HBOS for one dimension             # <<<<<<<<<<<<<<
@@ -21616,15 +21616,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_8halfsigmoid(CYTHON_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7incHist_11score(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_11score(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_7incHist_11score = {"score", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_7incHist_11score, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7incHist_11score(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7incHist_11score = {"score", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_11score, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_11score(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -21739,11 +21739,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incHist.score", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incHist.score", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_7incHist_10score(__pyx_self, __pyx_v_self, __pyx_v_val, __pyx_v_timestamp, __pyx_v_win);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_10score(__pyx_self, __pyx_v_self, __pyx_v_val, __pyx_v_timestamp, __pyx_v_win);
 
   /* function exit code */
   {
@@ -21756,7 +21756,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_val, PyObject *__pyx_v_timestamp, PyObject *__pyx_v_win) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_val, PyObject *__pyx_v_timestamp, PyObject *__pyx_v_win) {
   PyObject *__pyx_v_bin = NULL;
   PyObject *__pyx_v_w = NULL;
   PyObject *__pyx_r = NULL;
@@ -21774,7 +21774,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSE
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("score", 1);
 
-  /* "AfterImage_extrapolate.pyx":656
+  /* "kitsune_core/AfterImage_extrapolate.pyx":656
  * 
  *     def score(self,val,timestamp=-1,win=0): #HBOS for one dimension
  *         if self.isScaling:             # <<<<<<<<<<<<<<
@@ -21787,7 +21787,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSE
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "AfterImage_extrapolate.pyx":657
+    /* "kitsune_core/AfterImage_extrapolate.pyx":657
  *     def score(self,val,timestamp=-1,win=0): #HBOS for one dimension
  *         if self.isScaling:
  *             return 0.0             # <<<<<<<<<<<<<<
@@ -21799,7 +21799,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSE
     __pyx_r = __pyx_float_0_0;
     goto __pyx_L0;
 
-    /* "AfterImage_extrapolate.pyx":656
+    /* "kitsune_core/AfterImage_extrapolate.pyx":656
  * 
  *     def score(self,val,timestamp=-1,win=0): #HBOS for one dimension
  *         if self.isScaling:             # <<<<<<<<<<<<<<
@@ -21808,7 +21808,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSE
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":659
+  /* "kitsune_core/AfterImage_extrapolate.pyx":659
  *             return 0.0
  *         else:
  *             bin = self.getBinIndx(val,win=win)             # <<<<<<<<<<<<<<
@@ -21834,7 +21834,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSE
     __pyx_v_bin = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "AfterImage_extrapolate.pyx":660
+    /* "kitsune_core/AfterImage_extrapolate.pyx":660
  *         else:
  *             bin = self.getBinIndx(val,win=win)
  *             if np.isscalar(bin):             # <<<<<<<<<<<<<<
@@ -21872,12 +21872,12 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSE
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (__pyx_t_2) {
 
-      /* "AfterImage_extrapolate.pyx":661
+      /* "kitsune_core/AfterImage_extrapolate.pyx":661
  *             bin = self.getBinIndx(val,win=win)
  *             if np.isscalar(bin):
  *                 if np.isinf(bin):             # <<<<<<<<<<<<<<
  *                     if self.ubIsAnom and bin > 0:
- *                         return np.Inf #it's an anomaly because it passes the upper bound
+ *                         return np.inf #it's an anomaly because it passes the upper bound
  */
       __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 661, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
@@ -21910,11 +21910,11 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSE
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       if (__pyx_t_2) {
 
-        /* "AfterImage_extrapolate.pyx":662
+        /* "kitsune_core/AfterImage_extrapolate.pyx":662
  *             if np.isscalar(bin):
  *                 if np.isinf(bin):
  *                     if self.ubIsAnom and bin > 0:             # <<<<<<<<<<<<<<
- *                         return np.Inf #it's an anomaly because it passes the upper bound
+ *                         return np.inf #it's an anomaly because it passes the upper bound
  *                     elif self.lbIsAnom and bin < 0:
  */
         __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ubIsAnom); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 662, __pyx_L1_error)
@@ -21933,37 +21933,37 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSE
         __pyx_L7_bool_binop_done:;
         if (__pyx_t_2) {
 
-          /* "AfterImage_extrapolate.pyx":663
+          /* "kitsune_core/AfterImage_extrapolate.pyx":663
  *                 if np.isinf(bin):
  *                     if self.ubIsAnom and bin > 0:
- *                         return np.Inf #it's an anomaly because it passes the upper bound             # <<<<<<<<<<<<<<
+ *                         return np.inf #it's an anomaly because it passes the upper bound             # <<<<<<<<<<<<<<
  *                     elif self.lbIsAnom and bin < 0:
- *                         return np.Inf  # it's an anomaly because it passes the lower bound
+ *                         return np.inf  # it's an anomaly because it passes the lower bound
  */
           __Pyx_XDECREF(__pyx_r);
           __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 663, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_5);
-          __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_Inf); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 663, __pyx_L1_error)
+          __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_inf); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 663, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_4);
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
           __pyx_r = __pyx_t_4;
           __pyx_t_4 = 0;
           goto __pyx_L0;
 
-          /* "AfterImage_extrapolate.pyx":662
+          /* "kitsune_core/AfterImage_extrapolate.pyx":662
  *             if np.isscalar(bin):
  *                 if np.isinf(bin):
  *                     if self.ubIsAnom and bin > 0:             # <<<<<<<<<<<<<<
- *                         return np.Inf #it's an anomaly because it passes the upper bound
+ *                         return np.inf #it's an anomaly because it passes the upper bound
  *                     elif self.lbIsAnom and bin < 0:
  */
         }
 
-        /* "AfterImage_extrapolate.pyx":664
+        /* "kitsune_core/AfterImage_extrapolate.pyx":664
  *                     if self.ubIsAnom and bin > 0:
- *                         return np.Inf #it's an anomaly because it passes the upper bound
+ *                         return np.inf #it's an anomaly because it passes the upper bound
  *                     elif self.lbIsAnom and bin < 0:             # <<<<<<<<<<<<<<
- *                         return np.Inf  # it's an anomaly because it passes the lower bound
+ *                         return np.inf  # it's an anomaly because it passes the lower bound
  *                     else:
  */
         __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_lbIsAnom); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 664, __pyx_L1_error)
@@ -21982,34 +21982,34 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSE
         __pyx_L9_bool_binop_done:;
         if (__pyx_t_2) {
 
-          /* "AfterImage_extrapolate.pyx":665
- *                         return np.Inf #it's an anomaly because it passes the upper bound
+          /* "kitsune_core/AfterImage_extrapolate.pyx":665
+ *                         return np.inf #it's an anomaly because it passes the upper bound
  *                     elif self.lbIsAnom and bin < 0:
- *                         return np.Inf  # it's an anomaly because it passes the lower bound             # <<<<<<<<<<<<<<
+ *                         return np.inf  # it's an anomaly because it passes the lower bound             # <<<<<<<<<<<<<<
  *                     else:
  *                         return 0.0 #it fell outside a bound which is consedered not anomalous
  */
           __Pyx_XDECREF(__pyx_r);
           __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 665, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_4);
-          __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_Inf); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 665, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_inf); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 665, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_5);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           __pyx_r = __pyx_t_5;
           __pyx_t_5 = 0;
           goto __pyx_L0;
 
-          /* "AfterImage_extrapolate.pyx":664
+          /* "kitsune_core/AfterImage_extrapolate.pyx":664
  *                     if self.ubIsAnom and bin > 0:
- *                         return np.Inf #it's an anomaly because it passes the upper bound
+ *                         return np.inf #it's an anomaly because it passes the upper bound
  *                     elif self.lbIsAnom and bin < 0:             # <<<<<<<<<<<<<<
- *                         return np.Inf  # it's an anomaly because it passes the lower bound
+ *                         return np.inf  # it's an anomaly because it passes the lower bound
  *                     else:
  */
         }
 
-        /* "AfterImage_extrapolate.pyx":667
- *                         return np.Inf  # it's an anomaly because it passes the lower bound
+        /* "kitsune_core/AfterImage_extrapolate.pyx":667
+ *                         return np.inf  # it's an anomaly because it passes the lower bound
  *                     else:
  *                         return 0.0 #it fell outside a bound which is consedered not anomalous             # <<<<<<<<<<<<<<
  *             self.processDecay(bin,timestamp) #if timestamp = -1, no decay will be applied
@@ -22022,16 +22022,16 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSE
           goto __pyx_L0;
         }
 
-        /* "AfterImage_extrapolate.pyx":661
+        /* "kitsune_core/AfterImage_extrapolate.pyx":661
  *             bin = self.getBinIndx(val,win=win)
  *             if np.isscalar(bin):
  *                 if np.isinf(bin):             # <<<<<<<<<<<<<<
  *                     if self.ubIsAnom and bin > 0:
- *                         return np.Inf #it's an anomaly because it passes the upper bound
+ *                         return np.inf #it's an anomaly because it passes the upper bound
  */
       }
 
-      /* "AfterImage_extrapolate.pyx":660
+      /* "kitsune_core/AfterImage_extrapolate.pyx":660
  *         else:
  *             bin = self.getBinIndx(val,win=win)
  *             if np.isscalar(bin):             # <<<<<<<<<<<<<<
@@ -22040,7 +22040,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSE
  */
     }
 
-    /* "AfterImage_extrapolate.pyx":668
+    /* "kitsune_core/AfterImage_extrapolate.pyx":668
  *                     else:
  *                         return 0.0 #it fell outside a bound which is consedered not anomalous
  *             self.processDecay(bin,timestamp) #if timestamp = -1, no decay will be applied             # <<<<<<<<<<<<<<
@@ -22073,12 +22073,12 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSE
     }
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "AfterImage_extrapolate.pyx":669
+    /* "kitsune_core/AfterImage_extrapolate.pyx":669
  *                         return 0.0 #it fell outside a bound which is consedered not anomalous
  *             self.processDecay(bin,timestamp) #if timestamp = -1, no decay will be applied
  *             w = np.mean(self.W[bin])             # <<<<<<<<<<<<<<
  *             if w == 0:
- *                 return np.Inf  # no stat history, anomaly!
+ *                 return np.inf  # no stat history, anomaly!
  */
     __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 669, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
@@ -22116,44 +22116,44 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSE
     __pyx_v_w = __pyx_t_5;
     __pyx_t_5 = 0;
 
-    /* "AfterImage_extrapolate.pyx":670
+    /* "kitsune_core/AfterImage_extrapolate.pyx":670
  *             self.processDecay(bin,timestamp) #if timestamp = -1, no decay will be applied
  *             w = np.mean(self.W[bin])
  *             if w == 0:             # <<<<<<<<<<<<<<
- *                 return np.Inf  # no stat history, anomaly!
+ *                 return np.inf  # no stat history, anomaly!
  *             else:
  */
     __pyx_t_2 = (__Pyx_PyInt_BoolEqObjC(__pyx_v_w, __pyx_int_0, 0, 0)); if (unlikely((__pyx_t_2 < 0))) __PYX_ERR(0, 670, __pyx_L1_error)
     if (__pyx_t_2) {
 
-      /* "AfterImage_extrapolate.pyx":671
+      /* "kitsune_core/AfterImage_extrapolate.pyx":671
  *             w = np.mean(self.W[bin])
  *             if w == 0:
- *                 return np.Inf  # no stat history, anomaly!             # <<<<<<<<<<<<<<
+ *                 return np.inf  # no stat history, anomaly!             # <<<<<<<<<<<<<<
  *             else:
  *                 return np.log(self.W[self.tallestBin] / (w))  # log(  1/(  p/p_max  )    )
  */
       __Pyx_XDECREF(__pyx_r);
       __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 671, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_Inf); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 671, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_inf); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 671, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __pyx_r = __pyx_t_3;
       __pyx_t_3 = 0;
       goto __pyx_L0;
 
-      /* "AfterImage_extrapolate.pyx":670
+      /* "kitsune_core/AfterImage_extrapolate.pyx":670
  *             self.processDecay(bin,timestamp) #if timestamp = -1, no decay will be applied
  *             w = np.mean(self.W[bin])
  *             if w == 0:             # <<<<<<<<<<<<<<
- *                 return np.Inf  # no stat history, anomaly!
+ *                 return np.inf  # no stat history, anomaly!
  *             else:
  */
     }
 
-    /* "AfterImage_extrapolate.pyx":673
- *                 return np.Inf  # no stat history, anomaly!
+    /* "kitsune_core/AfterImage_extrapolate.pyx":673
+ *                 return np.inf  # no stat history, anomaly!
  *             else:
  *                 return np.log(self.W[self.tallestBin] / (w))  # log(  1/(  p/p_max  )    )             # <<<<<<<<<<<<<<
  * 
@@ -22206,7 +22206,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSE
     }
   }
 
-  /* "AfterImage_extrapolate.pyx":655
+  /* "kitsune_core/AfterImage_extrapolate.pyx":655
  *         return (k*x)/(k-x+1)
  * 
  *     def score(self,val,timestamp=-1,win=0): #HBOS for one dimension             # <<<<<<<<<<<<<<
@@ -22221,7 +22221,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSE
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incHist.score", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incHist.score", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_bin);
@@ -22231,7 +22231,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSE
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":676
+/* "kitsune_core/AfterImage_extrapolate.pyx":676
  * 
  * 
  *     def getFreq(self,val,timestamp=-1): #HBOS for one dimension             # <<<<<<<<<<<<<<
@@ -22240,15 +22240,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_10score(CYTHON_UNUSE
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7incHist_13getFreq(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_13getFreq(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_7incHist_13getFreq = {"getFreq", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_7incHist_13getFreq, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7incHist_13getFreq(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7incHist_13getFreq = {"getFreq", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_13getFreq, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_13getFreq(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -22349,11 +22349,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incHist.getFreq", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incHist.getFreq", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_7incHist_12getFreq(__pyx_self, __pyx_v_self, __pyx_v_val, __pyx_v_timestamp);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_12getFreq(__pyx_self, __pyx_v_self, __pyx_v_val, __pyx_v_timestamp);
 
   /* function exit code */
   {
@@ -22366,7 +22366,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_12getFreq(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_val, PyObject *__pyx_v_timestamp) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_12getFreq(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_val, PyObject *__pyx_v_timestamp) {
   PyObject *__pyx_v_bin = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -22380,7 +22380,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_12getFreq(CYTHON_UNU
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getFreq", 1);
 
-  /* "AfterImage_extrapolate.pyx":677
+  /* "kitsune_core/AfterImage_extrapolate.pyx":677
  * 
  *     def getFreq(self,val,timestamp=-1): #HBOS for one dimension
  *         bin = self.getBinIndx(val)             # <<<<<<<<<<<<<<
@@ -22414,7 +22414,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_12getFreq(CYTHON_UNU
   __pyx_v_bin = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":678
+  /* "kitsune_core/AfterImage_extrapolate.pyx":678
  *     def getFreq(self,val,timestamp=-1): #HBOS for one dimension
  *         bin = self.getBinIndx(val)
  *         self.processDecay(bin,timestamp) #if timestamp = -1, no decay will be applied             # <<<<<<<<<<<<<<
@@ -22447,7 +22447,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_12getFreq(CYTHON_UNU
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":679
+  /* "kitsune_core/AfterImage_extrapolate.pyx":679
  *         bin = self.getBinIndx(val)
  *         self.processDecay(bin,timestamp) #if timestamp = -1, no decay will be applied
  *         if np.isinf(bin):             # <<<<<<<<<<<<<<
@@ -22485,7 +22485,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_12getFreq(CYTHON_UNU
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_5) {
 
-    /* "AfterImage_extrapolate.pyx":680
+    /* "kitsune_core/AfterImage_extrapolate.pyx":680
  *         self.processDecay(bin,timestamp) #if timestamp = -1, no decay will be applied
  *         if np.isinf(bin):
  *             return np.nan             # <<<<<<<<<<<<<<
@@ -22502,7 +22502,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_12getFreq(CYTHON_UNU
     __pyx_t_3 = 0;
     goto __pyx_L0;
 
-    /* "AfterImage_extrapolate.pyx":679
+    /* "kitsune_core/AfterImage_extrapolate.pyx":679
  *         bin = self.getBinIndx(val)
  *         self.processDecay(bin,timestamp) #if timestamp = -1, no decay will be applied
  *         if np.isinf(bin):             # <<<<<<<<<<<<<<
@@ -22511,7 +22511,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_12getFreq(CYTHON_UNU
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":682
+  /* "kitsune_core/AfterImage_extrapolate.pyx":682
  *             return np.nan
  *         else:
  *             return self.W[bin]             # <<<<<<<<<<<<<<
@@ -22530,7 +22530,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_12getFreq(CYTHON_UNU
     goto __pyx_L0;
   }
 
-  /* "AfterImage_extrapolate.pyx":676
+  /* "kitsune_core/AfterImage_extrapolate.pyx":676
  * 
  * 
  *     def getFreq(self,val,timestamp=-1): #HBOS for one dimension             # <<<<<<<<<<<<<<
@@ -22543,7 +22543,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_12getFreq(CYTHON_UNU
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incHist.getFreq", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incHist.getFreq", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_bin);
@@ -22552,7 +22552,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_12getFreq(CYTHON_UNU
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":684
+/* "kitsune_core/AfterImage_extrapolate.pyx":684
  *             return self.W[bin]
  * 
  *     def getHist(self,timestamp=-1): #HBOS for one dimension             # <<<<<<<<<<<<<<
@@ -22561,15 +22561,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_12getFreq(CYTHON_UNU
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7incHist_15getHist(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_15getHist(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_7incHist_15getHist = {"getHist", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_7incHist_15getHist, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7incHist_15getHist(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7incHist_15getHist = {"getHist", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_15getHist, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incHist_15getHist(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -22655,11 +22655,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.incHist.getHist", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incHist.getHist", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_7incHist_14getHist(__pyx_self, __pyx_v_self, __pyx_v_timestamp);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_14getHist(__pyx_self, __pyx_v_self, __pyx_v_timestamp);
 
   /* function exit code */
   {
@@ -22672,7 +22672,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_14getHist(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_timestamp) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_7incHist_14getHist(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_timestamp) {
   PyObject *__pyx_v_H = NULL;
   Py_ssize_t __pyx_v_i;
   PyObject *__pyx_r = NULL;
@@ -22690,7 +22690,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_14getHist(CYTHON_UNU
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getHist", 1);
 
-  /* "AfterImage_extrapolate.pyx":685
+  /* "kitsune_core/AfterImage_extrapolate.pyx":685
  * 
  *     def getHist(self,timestamp=-1): #HBOS for one dimension
  *         H = np.zeros((len(self.W),1))             # <<<<<<<<<<<<<<
@@ -22742,7 +22742,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_14getHist(CYTHON_UNU
   __pyx_v_H = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":686
+  /* "kitsune_core/AfterImage_extrapolate.pyx":686
  *     def getHist(self,timestamp=-1): #HBOS for one dimension
  *         H = np.zeros((len(self.W),1))
  *         for i in range(0,len(self.W)):             # <<<<<<<<<<<<<<
@@ -22757,7 +22757,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_14getHist(CYTHON_UNU
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
     __pyx_v_i = __pyx_t_8;
 
-    /* "AfterImage_extrapolate.pyx":687
+    /* "kitsune_core/AfterImage_extrapolate.pyx":687
  *         H = np.zeros((len(self.W),1))
  *         for i in range(0,len(self.W)):
  *             self.processDecay(i,timestamp) #if timestamp = -1, no decay will be applied             # <<<<<<<<<<<<<<
@@ -22793,7 +22793,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_14getHist(CYTHON_UNU
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "AfterImage_extrapolate.pyx":688
+    /* "kitsune_core/AfterImage_extrapolate.pyx":688
  *         for i in range(0,len(self.W)):
  *             self.processDecay(i,timestamp) #if timestamp = -1, no decay will be applied
  *             H[i] = self.W[i]             # <<<<<<<<<<<<<<
@@ -22809,7 +22809,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_14getHist(CYTHON_UNU
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
 
-  /* "AfterImage_extrapolate.pyx":689
+  /* "kitsune_core/AfterImage_extrapolate.pyx":689
  *             self.processDecay(i,timestamp) #if timestamp = -1, no decay will be applied
  *             H[i] = self.W[i]
  *         H = H/np.sum(self.W)             # <<<<<<<<<<<<<<
@@ -22852,7 +22852,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_14getHist(CYTHON_UNU
   __Pyx_DECREF_SET(__pyx_v_H, __pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "AfterImage_extrapolate.pyx":690
+  /* "kitsune_core/AfterImage_extrapolate.pyx":690
  *             H[i] = self.W[i]
  *         H = H/np.sum(self.W)
  *         return H             # <<<<<<<<<<<<<<
@@ -22864,7 +22864,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_14getHist(CYTHON_UNU
   __pyx_r = __pyx_v_H;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":684
+  /* "kitsune_core/AfterImage_extrapolate.pyx":684
  *             return self.W[bin]
  * 
  *     def getHist(self,timestamp=-1): #HBOS for one dimension             # <<<<<<<<<<<<<<
@@ -22878,7 +22878,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_14getHist(CYTHON_UNU
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("AfterImage_extrapolate.incHist.getHist", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.incHist.getHist", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_H);
@@ -22887,7 +22887,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_14getHist(CYTHON_UNU
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":707
+/* "kitsune_core/AfterImage_extrapolate.pyx":707
  *     cdef unsigned int n
  * 
  *     def __init__(self):             # <<<<<<<<<<<<<<
@@ -22896,8 +22896,8 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_7incHist_14getHist(CYTHON_UNU
  */
 
 /* Python wrapper */
-static int __pyx_pw_22AfterImage_extrapolate_5Queue_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_22AfterImage_extrapolate_5Queue_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_12kitsune_core_22AfterImage_extrapolate_5Queue_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_12kitsune_core_22AfterImage_extrapolate_5Queue_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   int __pyx_r;
@@ -22912,17 +22912,17 @@ static int __pyx_pw_22AfterImage_extrapolate_5Queue_1__init__(PyObject *__pyx_v_
   if (unlikely(__pyx_nargs > 0)) {
     __Pyx_RaiseArgtupleInvalid("__init__", 1, 0, 0, __pyx_nargs); return -1;}
   if (unlikely(__pyx_kwds) && __Pyx_NumKwargs_VARARGS(__pyx_kwds) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "__init__", 0))) return -1;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_5Queue___init__(((struct __pyx_obj_22AfterImage_extrapolate_Queue *)__pyx_v_self));
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_5Queue___init__(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_22AfterImage_extrapolate_5Queue___init__(struct __pyx_obj_22AfterImage_extrapolate_Queue *__pyx_v_self) {
+static int __pyx_pf_12kitsune_core_22AfterImage_extrapolate_5Queue___init__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *__pyx_v_self) {
   int __pyx_r;
 
-  /* "AfterImage_extrapolate.pyx":708
+  /* "kitsune_core/AfterImage_extrapolate.pyx":708
  * 
  *     def __init__(self):
  *         self.q[0] = self.q[1] = self.q[2] = 0             # <<<<<<<<<<<<<<
@@ -22933,7 +22933,7 @@ static int __pyx_pf_22AfterImage_extrapolate_5Queue___init__(struct __pyx_obj_22
   (__pyx_v_self->q[1]) = 0.0;
   (__pyx_v_self->q[2]) = 0.0;
 
-  /* "AfterImage_extrapolate.pyx":709
+  /* "kitsune_core/AfterImage_extrapolate.pyx":709
  *     def __init__(self):
  *         self.q[0] = self.q[1] = self.q[2] = 0
  *         self.indx = 0             # <<<<<<<<<<<<<<
@@ -22942,7 +22942,7 @@ static int __pyx_pf_22AfterImage_extrapolate_5Queue___init__(struct __pyx_obj_22
  */
   __pyx_v_self->indx = 0;
 
-  /* "AfterImage_extrapolate.pyx":710
+  /* "kitsune_core/AfterImage_extrapolate.pyx":710
  *         self.q[0] = self.q[1] = self.q[2] = 0
  *         self.indx = 0
  *         self.n = 0             # <<<<<<<<<<<<<<
@@ -22951,7 +22951,7 @@ static int __pyx_pf_22AfterImage_extrapolate_5Queue___init__(struct __pyx_obj_22
  */
   __pyx_v_self->n = 0;
 
-  /* "AfterImage_extrapolate.pyx":707
+  /* "kitsune_core/AfterImage_extrapolate.pyx":707
  *     cdef unsigned int n
  * 
  *     def __init__(self):             # <<<<<<<<<<<<<<
@@ -22964,7 +22964,7 @@ static int __pyx_pf_22AfterImage_extrapolate_5Queue___init__(struct __pyx_obj_22
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":712
+/* "kitsune_core/AfterImage_extrapolate.pyx":712
  *         self.n = 0
  * 
  *     cdef insert(self,double v):             # <<<<<<<<<<<<<<
@@ -22972,12 +22972,12 @@ static int __pyx_pf_22AfterImage_extrapolate_5Queue___init__(struct __pyx_obj_22
  *         self.indx = (self.indx + 1) % 3
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_insert(struct __pyx_obj_22AfterImage_extrapolate_Queue *__pyx_v_self, double __pyx_v_v) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_5Queue_insert(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *__pyx_v_self, double __pyx_v_v) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("insert", 1);
 
-  /* "AfterImage_extrapolate.pyx":713
+  /* "kitsune_core/AfterImage_extrapolate.pyx":713
  * 
  *     cdef insert(self,double v):
  *         self.q[self.indx] = v             # <<<<<<<<<<<<<<
@@ -22986,7 +22986,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_insert(struct __pyx_obj
  */
   (__pyx_v_self->q[__pyx_v_self->indx]) = __pyx_v_v;
 
-  /* "AfterImage_extrapolate.pyx":714
+  /* "kitsune_core/AfterImage_extrapolate.pyx":714
  *     cdef insert(self,double v):
  *         self.q[self.indx] = v
  *         self.indx = (self.indx + 1) % 3             # <<<<<<<<<<<<<<
@@ -22995,7 +22995,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_insert(struct __pyx_obj
  */
   __pyx_v_self->indx = __Pyx_mod_long((__pyx_v_self->indx + 1), 3);
 
-  /* "AfterImage_extrapolate.pyx":715
+  /* "kitsune_core/AfterImage_extrapolate.pyx":715
  *         self.q[self.indx] = v
  *         self.indx = (self.indx + 1) % 3
  *         self.n += 1             # <<<<<<<<<<<<<<
@@ -23004,7 +23004,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_insert(struct __pyx_obj
  */
   __pyx_v_self->n = (__pyx_v_self->n + 1);
 
-  /* "AfterImage_extrapolate.pyx":712
+  /* "kitsune_core/AfterImage_extrapolate.pyx":712
  *         self.n = 0
  * 
  *     cdef insert(self,double v):             # <<<<<<<<<<<<<<
@@ -23019,7 +23019,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_insert(struct __pyx_obj
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":717
+/* "kitsune_core/AfterImage_extrapolate.pyx":717
  *         self.n += 1
  * 
  *     cdef unroll(self):             # <<<<<<<<<<<<<<
@@ -23027,7 +23027,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_insert(struct __pyx_obj
  *         cdef double[2] res
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj_22AfterImage_extrapolate_Queue *__pyx_v_self) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *__pyx_v_self) {
   double __pyx_v_res[2];
   double __pyx_v_res3[3];
   PyObject *__pyx_r = NULL;
@@ -23039,7 +23039,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("unroll", 1);
 
-  /* "AfterImage_extrapolate.pyx":720
+  /* "kitsune_core/AfterImage_extrapolate.pyx":720
  * 
  *         cdef double[2] res
  *         if self.n == 2:             # <<<<<<<<<<<<<<
@@ -23049,7 +23049,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
   __pyx_t_1 = (__pyx_v_self->n == 2);
   if (__pyx_t_1) {
 
-    /* "AfterImage_extrapolate.pyx":721
+    /* "kitsune_core/AfterImage_extrapolate.pyx":721
  *         cdef double[2] res
  *         if self.n == 2:
  *             res[0] = self.q[0]             # <<<<<<<<<<<<<<
@@ -23058,7 +23058,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
  */
     (__pyx_v_res[0]) = (__pyx_v_self->q[0]);
 
-    /* "AfterImage_extrapolate.pyx":722
+    /* "kitsune_core/AfterImage_extrapolate.pyx":722
  *         if self.n == 2:
  *             res[0] = self.q[0]
  *             res[1] = self.q[1]             # <<<<<<<<<<<<<<
@@ -23067,7 +23067,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
  */
     (__pyx_v_res[1]) = (__pyx_v_self->q[1]);
 
-    /* "AfterImage_extrapolate.pyx":723
+    /* "kitsune_core/AfterImage_extrapolate.pyx":723
  *             res[0] = self.q[0]
  *             res[1] = self.q[1]
  *             return res             # <<<<<<<<<<<<<<
@@ -23081,7 +23081,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
     __pyx_t_2 = 0;
     goto __pyx_L0;
 
-    /* "AfterImage_extrapolate.pyx":720
+    /* "kitsune_core/AfterImage_extrapolate.pyx":720
  * 
  *         cdef double[2] res
  *         if self.n == 2:             # <<<<<<<<<<<<<<
@@ -23090,7 +23090,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":724
+  /* "kitsune_core/AfterImage_extrapolate.pyx":724
  *             res[1] = self.q[1]
  *             return res
  *         if self.indx == 0:             # <<<<<<<<<<<<<<
@@ -23100,7 +23100,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
   __pyx_t_1 = (__pyx_v_self->indx == 0);
   if (__pyx_t_1) {
 
-    /* "AfterImage_extrapolate.pyx":725
+    /* "kitsune_core/AfterImage_extrapolate.pyx":725
  *             return res
  *         if self.indx == 0:
  *             return self.q             # <<<<<<<<<<<<<<
@@ -23114,7 +23114,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
     __pyx_t_2 = 0;
     goto __pyx_L0;
 
-    /* "AfterImage_extrapolate.pyx":724
+    /* "kitsune_core/AfterImage_extrapolate.pyx":724
  *             res[1] = self.q[1]
  *             return res
  *         if self.indx == 0:             # <<<<<<<<<<<<<<
@@ -23123,7 +23123,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":728
+  /* "kitsune_core/AfterImage_extrapolate.pyx":728
  * 
  *         cdef double[3] res3
  *         if self.indx == 1:             # <<<<<<<<<<<<<<
@@ -23133,7 +23133,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
   __pyx_t_1 = (__pyx_v_self->indx == 1);
   if (__pyx_t_1) {
 
-    /* "AfterImage_extrapolate.pyx":729
+    /* "kitsune_core/AfterImage_extrapolate.pyx":729
  *         cdef double[3] res3
  *         if self.indx == 1:
  *             res3[0] = self.q[1]             # <<<<<<<<<<<<<<
@@ -23142,7 +23142,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
  */
     (__pyx_v_res3[0]) = (__pyx_v_self->q[1]);
 
-    /* "AfterImage_extrapolate.pyx":730
+    /* "kitsune_core/AfterImage_extrapolate.pyx":730
  *         if self.indx == 1:
  *             res3[0] = self.q[1]
  *             res3[1] = self.q[2]             # <<<<<<<<<<<<<<
@@ -23151,7 +23151,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
  */
     (__pyx_v_res3[1]) = (__pyx_v_self->q[2]);
 
-    /* "AfterImage_extrapolate.pyx":731
+    /* "kitsune_core/AfterImage_extrapolate.pyx":731
  *             res3[0] = self.q[1]
  *             res3[1] = self.q[2]
  *             res3[2] = self.q[0]             # <<<<<<<<<<<<<<
@@ -23160,7 +23160,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
  */
     (__pyx_v_res3[2]) = (__pyx_v_self->q[0]);
 
-    /* "AfterImage_extrapolate.pyx":732
+    /* "kitsune_core/AfterImage_extrapolate.pyx":732
  *             res3[1] = self.q[2]
  *             res3[2] = self.q[0]
  *             return res3             # <<<<<<<<<<<<<<
@@ -23174,7 +23174,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
     __pyx_t_2 = 0;
     goto __pyx_L0;
 
-    /* "AfterImage_extrapolate.pyx":728
+    /* "kitsune_core/AfterImage_extrapolate.pyx":728
  * 
  *         cdef double[3] res3
  *         if self.indx == 1:             # <<<<<<<<<<<<<<
@@ -23183,7 +23183,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":734
+  /* "kitsune_core/AfterImage_extrapolate.pyx":734
  *             return res3
  *         else:
  *             res3[0] = self.q[2]             # <<<<<<<<<<<<<<
@@ -23193,7 +23193,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
   /*else*/ {
     (__pyx_v_res3[0]) = (__pyx_v_self->q[2]);
 
-    /* "AfterImage_extrapolate.pyx":735
+    /* "kitsune_core/AfterImage_extrapolate.pyx":735
  *         else:
  *             res3[0] = self.q[2]
  *             res3[1] = self.q[0]             # <<<<<<<<<<<<<<
@@ -23202,7 +23202,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
  */
     (__pyx_v_res3[1]) = (__pyx_v_self->q[0]);
 
-    /* "AfterImage_extrapolate.pyx":736
+    /* "kitsune_core/AfterImage_extrapolate.pyx":736
  *             res3[0] = self.q[2]
  *             res3[1] = self.q[0]
  *             res3[2] = self.q[1]             # <<<<<<<<<<<<<<
@@ -23211,7 +23211,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
  */
     (__pyx_v_res3[2]) = (__pyx_v_self->q[1]);
 
-    /* "AfterImage_extrapolate.pyx":737
+    /* "kitsune_core/AfterImage_extrapolate.pyx":737
  *             res3[1] = self.q[0]
  *             res3[2] = self.q[1]
  *             return res3             # <<<<<<<<<<<<<<
@@ -23226,7 +23226,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
     goto __pyx_L0;
   }
 
-  /* "AfterImage_extrapolate.pyx":717
+  /* "kitsune_core/AfterImage_extrapolate.pyx":717
  *         self.n += 1
  * 
  *     cdef unroll(self):             # <<<<<<<<<<<<<<
@@ -23237,7 +23237,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("AfterImage_extrapolate.Queue.unroll", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.Queue.unroll", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -23245,7 +23245,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":739
+/* "kitsune_core/AfterImage_extrapolate.pyx":739
  *             return res3
  * 
  *     cdef get_last(self):             # <<<<<<<<<<<<<<
@@ -23253,7 +23253,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_unroll(struct __pyx_obj
  * 
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_get_last(struct __pyx_obj_22AfterImage_extrapolate_Queue *__pyx_v_self) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_5Queue_get_last(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -23262,7 +23262,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_get_last(struct __pyx_o
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_last", 1);
 
-  /* "AfterImage_extrapolate.pyx":740
+  /* "kitsune_core/AfterImage_extrapolate.pyx":740
  * 
  *     cdef get_last(self):
  *         return self.q[(self.indx-1)%3]             # <<<<<<<<<<<<<<
@@ -23276,7 +23276,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_get_last(struct __pyx_o
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":739
+  /* "kitsune_core/AfterImage_extrapolate.pyx":739
  *             return res3
  * 
  *     cdef get_last(self):             # <<<<<<<<<<<<<<
@@ -23287,7 +23287,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_get_last(struct __pyx_o
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("AfterImage_extrapolate.Queue.get_last", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.Queue.get_last", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -23295,7 +23295,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_get_last(struct __pyx_o
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":742
+/* "kitsune_core/AfterImage_extrapolate.pyx":742
  *         return self.q[(self.indx-1)%3]
  * 
  *     cdef get_mean_diff(self):             # <<<<<<<<<<<<<<
@@ -23303,7 +23303,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_get_last(struct __pyx_o
  *         dif = 0
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_get_mean_diff(struct __pyx_obj_22AfterImage_extrapolate_Queue *__pyx_v_self) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_5Queue_get_mean_diff(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *__pyx_v_self) {
   double __pyx_v_dif;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -23314,7 +23314,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_get_mean_diff(struct __
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_mean_diff", 1);
 
-  /* "AfterImage_extrapolate.pyx":744
+  /* "kitsune_core/AfterImage_extrapolate.pyx":744
  *     cdef get_mean_diff(self):
  *         cdef double dif
  *         dif = 0             # <<<<<<<<<<<<<<
@@ -23323,7 +23323,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_get_mean_diff(struct __
  */
   __pyx_v_dif = 0.0;
 
-  /* "AfterImage_extrapolate.pyx":745
+  /* "kitsune_core/AfterImage_extrapolate.pyx":745
  *         cdef double dif
  *         dif = 0
  *         if self.n == 2:             # <<<<<<<<<<<<<<
@@ -23333,7 +23333,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_get_mean_diff(struct __
   __pyx_t_1 = (__pyx_v_self->n == 2);
   if (__pyx_t_1) {
 
-    /* "AfterImage_extrapolate.pyx":746
+    /* "kitsune_core/AfterImage_extrapolate.pyx":746
  *         dif = 0
  *         if self.n == 2:
  *             dif=self.q[self.indx%3] - self.q[(self.indx-1)%3]             # <<<<<<<<<<<<<<
@@ -23342,7 +23342,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_get_mean_diff(struct __
  */
     __pyx_v_dif = ((__pyx_v_self->q[__Pyx_mod_long(__pyx_v_self->indx, 3)]) - (__pyx_v_self->q[__Pyx_mod_long((__pyx_v_self->indx - 1), 3)]));
 
-    /* "AfterImage_extrapolate.pyx":747
+    /* "kitsune_core/AfterImage_extrapolate.pyx":747
  *         if self.n == 2:
  *             dif=self.q[self.indx%3] - self.q[(self.indx-1)%3]
  *             return dif             # <<<<<<<<<<<<<<
@@ -23356,7 +23356,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_get_mean_diff(struct __
     __pyx_t_2 = 0;
     goto __pyx_L0;
 
-    /* "AfterImage_extrapolate.pyx":745
+    /* "kitsune_core/AfterImage_extrapolate.pyx":745
  *         cdef double dif
  *         dif = 0
  *         if self.n == 2:             # <<<<<<<<<<<<<<
@@ -23365,7 +23365,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_get_mean_diff(struct __
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":751
+  /* "kitsune_core/AfterImage_extrapolate.pyx":751
  *             # for i in range(2):
  *             #     dif+=self.q[(self.indx+i+1)%3] - self.q[(self.indx+i)%3]
  *             dif= (self.q[self.indx%3] - self.q[(self.indx-1)%3]) + (self.q[(self.indx-1)%3] - self.q[(self.indx-2)%3])             # <<<<<<<<<<<<<<
@@ -23375,7 +23375,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_get_mean_diff(struct __
   /*else*/ {
     __pyx_v_dif = (((__pyx_v_self->q[__Pyx_mod_long(__pyx_v_self->indx, 3)]) - (__pyx_v_self->q[__Pyx_mod_long((__pyx_v_self->indx - 1), 3)])) + ((__pyx_v_self->q[__Pyx_mod_long((__pyx_v_self->indx - 1), 3)]) - (__pyx_v_self->q[__Pyx_mod_long((__pyx_v_self->indx - 2), 3)])));
 
-    /* "AfterImage_extrapolate.pyx":752
+    /* "kitsune_core/AfterImage_extrapolate.pyx":752
  *             #     dif+=self.q[(self.indx+i+1)%3] - self.q[(self.indx+i)%3]
  *             dif= (self.q[self.indx%3] - self.q[(self.indx-1)%3]) + (self.q[(self.indx-1)%3] - self.q[(self.indx-2)%3])
  *             return dif/2             # <<<<<<<<<<<<<<
@@ -23390,7 +23390,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_get_mean_diff(struct __
     goto __pyx_L0;
   }
 
-  /* "AfterImage_extrapolate.pyx":742
+  /* "kitsune_core/AfterImage_extrapolate.pyx":742
  *         return self.q[(self.indx-1)%3]
  * 
  *     cdef get_mean_diff(self):             # <<<<<<<<<<<<<<
@@ -23401,7 +23401,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_get_mean_diff(struct __
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("AfterImage_extrapolate.Queue.get_mean_diff", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.Queue.get_mean_diff", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -23416,15 +23416,15 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_5Queue_get_mean_diff(struct __
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_5Queue_3__reduce_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_5Queue_3__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_5Queue_3__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_5Queue_3__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_5Queue_3__reduce_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_5Queue_3__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_5Queue_3__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_5Queue_3__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -23449,14 +23449,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   if (unlikely(__pyx_nargs > 0)) {
     __Pyx_RaiseArgtupleInvalid("__reduce_cython__", 1, 0, 0, __pyx_nargs); return NULL;}
   if (unlikely(__pyx_kwds) && __Pyx_NumKwargs_FASTCALL(__pyx_kwds) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "__reduce_cython__", 0))) return NULL;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_5Queue_2__reduce_cython__(((struct __pyx_obj_22AfterImage_extrapolate_Queue *)__pyx_v_self));
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_5Queue_2__reduce_cython__(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_5Queue_2__reduce_cython__(struct __pyx_obj_22AfterImage_extrapolate_Queue *__pyx_v_self) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_5Queue_2__reduce_cython__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *__pyx_v_self) {
   PyObject *__pyx_v_state = 0;
   PyObject *__pyx_v__dict = 0;
   int __pyx_v_use_setstate;
@@ -23671,7 +23671,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_5Queue_2__reduce_cython__(str
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("AfterImage_extrapolate.Queue.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.Queue.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_state);
@@ -23689,15 +23689,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_5Queue_2__reduce_cython__(str
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_5Queue_5__setstate_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_5Queue_5__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_5Queue_5__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_5Queue_5__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_5Queue_5__setstate_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_5Queue_5__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_5Queue_5__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_5Queue_5__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -23767,11 +23767,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.Queue.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.Queue.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_5Queue_4__setstate_cython__(((struct __pyx_obj_22AfterImage_extrapolate_Queue *)__pyx_v_self), __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_5Queue_4__setstate_cython__(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *)__pyx_v_self), __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -23784,7 +23784,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_5Queue_4__setstate_cython__(struct __pyx_obj_22AfterImage_extrapolate_Queue *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_5Queue_4__setstate_cython__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -23799,7 +23799,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_5Queue_4__setstate_cython__(s
  *     __pyx_unpickle_Queue__set_state(self, __pyx_state)             # <<<<<<<<<<<<<<
  */
   if (!(likely(PyTuple_CheckExact(__pyx_v___pyx_state))||((__pyx_v___pyx_state) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_v___pyx_state))) __PYX_ERR(1, 17, __pyx_L1_error)
-  __pyx_t_1 = __pyx_f_22AfterImage_extrapolate___pyx_unpickle_Queue__set_state(__pyx_v_self, ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 17, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_Queue__set_state(__pyx_v_self, ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
@@ -23815,7 +23815,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_5Queue_4__setstate_cython__(s
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("AfterImage_extrapolate.Queue.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.Queue.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -23823,7 +23823,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_5Queue_4__setstate_cython__(s
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":759
+/* "kitsune_core/AfterImage_extrapolate.pyx":759
  *     cdef Queue Qv
  * 
  *     def __init__(self):#,int winsize=3):             # <<<<<<<<<<<<<<
@@ -23832,8 +23832,8 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_5Queue_4__setstate_cython__(s
  */
 
 /* Python wrapper */
-static int __pyx_pw_22AfterImage_extrapolate_12extrapolator_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_22AfterImage_extrapolate_12extrapolator_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_12kitsune_core_22AfterImage_extrapolate_12extrapolator_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_12kitsune_core_22AfterImage_extrapolate_12extrapolator_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   int __pyx_r;
@@ -23848,14 +23848,14 @@ static int __pyx_pw_22AfterImage_extrapolate_12extrapolator_1__init__(PyObject *
   if (unlikely(__pyx_nargs > 0)) {
     __Pyx_RaiseArgtupleInvalid("__init__", 1, 0, 0, __pyx_nargs); return -1;}
   if (unlikely(__pyx_kwds) && __Pyx_NumKwargs_VARARGS(__pyx_kwds) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "__init__", 0))) return -1;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_12extrapolator___init__(((struct __pyx_obj_22AfterImage_extrapolate_extrapolator *)__pyx_v_self));
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_12extrapolator___init__(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_22AfterImage_extrapolate_12extrapolator___init__(struct __pyx_obj_22AfterImage_extrapolate_extrapolator *__pyx_v_self) {
+static int __pyx_pf_12kitsune_core_22AfterImage_extrapolate_12extrapolator___init__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *__pyx_v_self) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -23864,37 +23864,37 @@ static int __pyx_pf_22AfterImage_extrapolate_12extrapolator___init__(struct __py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 1);
 
-  /* "AfterImage_extrapolate.pyx":760
+  /* "kitsune_core/AfterImage_extrapolate.pyx":760
  * 
  *     def __init__(self):#,int winsize=3):
  *         self.Qt = Queue() #deque([],winsize) #window of timestamps             # <<<<<<<<<<<<<<
  *         self.Qv = Queue() #deque([],winsize) #window of values
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_CallNoArg(((PyObject *)__pyx_ptype_22AfterImage_extrapolate_Queue)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 760, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallNoArg(((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 760, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF((PyObject *)__pyx_v_self->Qt);
   __Pyx_DECREF((PyObject *)__pyx_v_self->Qt);
-  __pyx_v_self->Qt = ((struct __pyx_obj_22AfterImage_extrapolate_Queue *)__pyx_t_1);
+  __pyx_v_self->Qt = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":761
+  /* "kitsune_core/AfterImage_extrapolate.pyx":761
  *     def __init__(self):#,int winsize=3):
  *         self.Qt = Queue() #deque([],winsize) #window of timestamps
  *         self.Qv = Queue() #deque([],winsize) #window of values             # <<<<<<<<<<<<<<
  * 
  *     def insert(self,double t, double v):
  */
-  __pyx_t_1 = __Pyx_PyObject_CallNoArg(((PyObject *)__pyx_ptype_22AfterImage_extrapolate_Queue)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 761, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_CallNoArg(((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 761, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF((PyObject *)__pyx_v_self->Qv);
   __Pyx_DECREF((PyObject *)__pyx_v_self->Qv);
-  __pyx_v_self->Qv = ((struct __pyx_obj_22AfterImage_extrapolate_Queue *)__pyx_t_1);
+  __pyx_v_self->Qv = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":759
+  /* "kitsune_core/AfterImage_extrapolate.pyx":759
  *     cdef Queue Qv
  * 
  *     def __init__(self):#,int winsize=3):             # <<<<<<<<<<<<<<
@@ -23907,14 +23907,14 @@ static int __pyx_pf_22AfterImage_extrapolate_12extrapolator___init__(struct __py
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("AfterImage_extrapolate.extrapolator.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.extrapolator.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":763
+/* "kitsune_core/AfterImage_extrapolate.pyx":763
  *         self.Qv = Queue() #deque([],winsize) #window of values
  * 
  *     def insert(self,double t, double v):             # <<<<<<<<<<<<<<
@@ -23923,15 +23923,15 @@ static int __pyx_pf_22AfterImage_extrapolate_12extrapolator___init__(struct __py
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_12extrapolator_3insert(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_12extrapolator_3insert(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_12extrapolator_3insert = {"insert", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_12extrapolator_3insert, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_12extrapolator_3insert(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_12extrapolator_3insert = {"insert", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_12extrapolator_3insert, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_12extrapolator_3insert(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -24016,11 +24016,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.extrapolator.insert", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.extrapolator.insert", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_12extrapolator_2insert(((struct __pyx_obj_22AfterImage_extrapolate_extrapolator *)__pyx_v_self), __pyx_v_t, __pyx_v_v);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_12extrapolator_2insert(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *)__pyx_v_self), __pyx_v_t, __pyx_v_v);
 
   /* function exit code */
   {
@@ -24033,7 +24033,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_2insert(struct __pyx_obj_22AfterImage_extrapolate_extrapolator *__pyx_v_self, double __pyx_v_t, double __pyx_v_v) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_12extrapolator_2insert(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *__pyx_v_self, double __pyx_v_t, double __pyx_v_v) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -24042,29 +24042,29 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_2insert(struct
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("insert", 1);
 
-  /* "AfterImage_extrapolate.pyx":764
+  /* "kitsune_core/AfterImage_extrapolate.pyx":764
  * 
  *     def insert(self,double t, double v):
  *         self.Qt.insert(t)             # <<<<<<<<<<<<<<
  *         self.Qv.insert(v)
  * 
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_Queue *)__pyx_v_self->Qt->__pyx_vtab)->insert(__pyx_v_self->Qt, __pyx_v_t); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 764, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_Queue *)__pyx_v_self->Qt->__pyx_vtab)->insert(__pyx_v_self->Qt, __pyx_v_t); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 764, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":765
+  /* "kitsune_core/AfterImage_extrapolate.pyx":765
  *     def insert(self,double t, double v):
  *         self.Qt.insert(t)
  *         self.Qv.insert(v)             # <<<<<<<<<<<<<<
  * 
  *     def predict(self, double t):
  */
-  __pyx_t_1 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_Queue *)__pyx_v_self->Qv->__pyx_vtab)->insert(__pyx_v_self->Qv, __pyx_v_v); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 765, __pyx_L1_error)
+  __pyx_t_1 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_Queue *)__pyx_v_self->Qv->__pyx_vtab)->insert(__pyx_v_self->Qv, __pyx_v_v); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 765, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "AfterImage_extrapolate.pyx":763
+  /* "kitsune_core/AfterImage_extrapolate.pyx":763
  *         self.Qv = Queue() #deque([],winsize) #window of values
  * 
  *     def insert(self,double t, double v):             # <<<<<<<<<<<<<<
@@ -24077,7 +24077,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_2insert(struct
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("AfterImage_extrapolate.extrapolator.insert", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.extrapolator.insert", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -24085,7 +24085,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_2insert(struct
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":767
+/* "kitsune_core/AfterImage_extrapolate.pyx":767
  *         self.Qv.insert(v)
  * 
  *     def predict(self, double t):             # <<<<<<<<<<<<<<
@@ -24094,15 +24094,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_2insert(struct
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_12extrapolator_5predict(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_12extrapolator_5predict(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_12extrapolator_5predict = {"predict", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_12extrapolator_5predict, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_12extrapolator_5predict(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_12extrapolator_5predict = {"predict", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_12extrapolator_5predict, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_12extrapolator_5predict(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -24172,11 +24172,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.extrapolator.predict", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.extrapolator.predict", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_12extrapolator_4predict(((struct __pyx_obj_22AfterImage_extrapolate_extrapolator *)__pyx_v_self), __pyx_v_t);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_12extrapolator_4predict(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *)__pyx_v_self), __pyx_v_t);
 
   /* function exit code */
   {
@@ -24189,7 +24189,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_4predict(struct __pyx_obj_22AfterImage_extrapolate_extrapolator *__pyx_v_self, double __pyx_v_t) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_12extrapolator_4predict(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *__pyx_v_self, double __pyx_v_t) {
   double __pyx_v_yp;
   arrayobject *__pyx_v_tm = 0;
   arrayobject *__pyx_v_vm = 0;
@@ -24205,7 +24205,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_4predict(struc
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("predict", 1);
 
-  /* "AfterImage_extrapolate.pyx":768
+  /* "kitsune_core/AfterImage_extrapolate.pyx":768
  * 
  *     def predict(self, double t):
  *         if self.Qt.n < 2: #not enough points to extrapolate?             # <<<<<<<<<<<<<<
@@ -24215,7 +24215,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_4predict(struc
   __pyx_t_1 = (__pyx_v_self->Qt->n < 2);
   if (__pyx_t_1) {
 
-    /* "AfterImage_extrapolate.pyx":769
+    /* "kitsune_core/AfterImage_extrapolate.pyx":769
  *     def predict(self, double t):
  *         if self.Qt.n < 2: #not enough points to extrapolate?
  *             if self.Qt.n == 1:             # <<<<<<<<<<<<<<
@@ -24225,7 +24225,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_4predict(struc
     __pyx_t_1 = (__pyx_v_self->Qt->n == 1);
     if (__pyx_t_1) {
 
-      /* "AfterImage_extrapolate.pyx":770
+      /* "kitsune_core/AfterImage_extrapolate.pyx":770
  *         if self.Qt.n < 2: #not enough points to extrapolate?
  *             if self.Qt.n == 1:
  *                 return self.Qv.get_last()             # <<<<<<<<<<<<<<
@@ -24233,13 +24233,13 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_4predict(struc
  *                 return 0
  */
       __Pyx_XDECREF(__pyx_r);
-      __pyx_t_2 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_Queue *)__pyx_v_self->Qv->__pyx_vtab)->get_last(__pyx_v_self->Qv); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 770, __pyx_L1_error)
+      __pyx_t_2 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_Queue *)__pyx_v_self->Qv->__pyx_vtab)->get_last(__pyx_v_self->Qv); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 770, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_r = __pyx_t_2;
       __pyx_t_2 = 0;
       goto __pyx_L0;
 
-      /* "AfterImage_extrapolate.pyx":769
+      /* "kitsune_core/AfterImage_extrapolate.pyx":769
  *     def predict(self, double t):
  *         if self.Qt.n < 2: #not enough points to extrapolate?
  *             if self.Qt.n == 1:             # <<<<<<<<<<<<<<
@@ -24248,7 +24248,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_4predict(struc
  */
     }
 
-    /* "AfterImage_extrapolate.pyx":772
+    /* "kitsune_core/AfterImage_extrapolate.pyx":772
  *                 return self.Qv.get_last()
  *             else:
  *                 return 0             # <<<<<<<<<<<<<<
@@ -24262,7 +24262,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_4predict(struc
       goto __pyx_L0;
     }
 
-    /* "AfterImage_extrapolate.pyx":768
+    /* "kitsune_core/AfterImage_extrapolate.pyx":768
  * 
  *     def predict(self, double t):
  *         if self.Qt.n < 2: #not enough points to extrapolate?             # <<<<<<<<<<<<<<
@@ -24271,7 +24271,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_4predict(struc
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":773
+  /* "kitsune_core/AfterImage_extrapolate.pyx":773
  *             else:
  *                 return 0
  *         if (t - self.Qt.get_last())/(self.Qt.get_mean_diff() + 1e-10) > 10: # is the next timestamp 10 time further than the average sample interval?             # <<<<<<<<<<<<<<
@@ -24280,13 +24280,13 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_4predict(struc
  */
   __pyx_t_2 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 773, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_Queue *)__pyx_v_self->Qt->__pyx_vtab)->get_last(__pyx_v_self->Qt); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 773, __pyx_L1_error)
+  __pyx_t_3 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_Queue *)__pyx_v_self->Qt->__pyx_vtab)->get_last(__pyx_v_self->Qt); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 773, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = PyNumber_Subtract(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 773, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_Queue *)__pyx_v_self->Qt->__pyx_vtab)->get_mean_diff(__pyx_v_self->Qt); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 773, __pyx_L1_error)
+  __pyx_t_3 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_Queue *)__pyx_v_self->Qt->__pyx_vtab)->get_mean_diff(__pyx_v_self->Qt); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 773, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_2 = __Pyx_PyFloat_AddObjC(__pyx_t_3, __pyx_float_1eneg_10, 1e-10, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 773, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -24301,7 +24301,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_4predict(struc
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_1) {
 
-    /* "AfterImage_extrapolate.pyx":774
+    /* "kitsune_core/AfterImage_extrapolate.pyx":774
  *                 return 0
  *         if (t - self.Qt.get_last())/(self.Qt.get_mean_diff() + 1e-10) > 10: # is the next timestamp 10 time further than the average sample interval?
  *             return self.Qv.get_last() # prediction too far ahead (very likely that we will be way off)             # <<<<<<<<<<<<<<
@@ -24309,13 +24309,13 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_4predict(struc
  *         cdef array.array tm = array.array('d', self.Qt.unroll())
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_2 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_Queue *)__pyx_v_self->Qv->__pyx_vtab)->get_last(__pyx_v_self->Qv); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 774, __pyx_L1_error)
+    __pyx_t_2 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_Queue *)__pyx_v_self->Qv->__pyx_vtab)->get_last(__pyx_v_self->Qv); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 774, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_r = __pyx_t_2;
     __pyx_t_2 = 0;
     goto __pyx_L0;
 
-    /* "AfterImage_extrapolate.pyx":773
+    /* "kitsune_core/AfterImage_extrapolate.pyx":773
  *             else:
  *                 return 0
  *         if (t - self.Qt.get_last())/(self.Qt.get_mean_diff() + 1e-10) > 10: # is the next timestamp 10 time further than the average sample interval?             # <<<<<<<<<<<<<<
@@ -24324,14 +24324,14 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_4predict(struc
  */
   }
 
-  /* "AfterImage_extrapolate.pyx":776
+  /* "kitsune_core/AfterImage_extrapolate.pyx":776
  *             return self.Qv.get_last() # prediction too far ahead (very likely that we will be way off)
  *         cdef double yp
  *         cdef array.array tm = array.array('d', self.Qt.unroll())             # <<<<<<<<<<<<<<
  *         cdef array.array vm = array.array('d', self.Qv.unroll())
  *         yp = self.interpolate(t,tm,vm)
  */
-  __pyx_t_2 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_Queue *)__pyx_v_self->Qt->__pyx_vtab)->unroll(__pyx_v_self->Qt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 776, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_Queue *)__pyx_v_self->Qt->__pyx_vtab)->unroll(__pyx_v_self->Qt); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 776, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 776, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -24347,14 +24347,14 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_4predict(struc
   __pyx_v_tm = ((arrayobject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "AfterImage_extrapolate.pyx":777
+  /* "kitsune_core/AfterImage_extrapolate.pyx":777
  *         cdef double yp
  *         cdef array.array tm = array.array('d', self.Qt.unroll())
  *         cdef array.array vm = array.array('d', self.Qv.unroll())             # <<<<<<<<<<<<<<
  *         yp = self.interpolate(t,tm,vm)
  *         return yp
  */
-  __pyx_t_2 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_Queue *)__pyx_v_self->Qv->__pyx_vtab)->unroll(__pyx_v_self->Qv); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 777, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_Queue *)__pyx_v_self->Qv->__pyx_vtab)->unroll(__pyx_v_self->Qv); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 777, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 777, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -24370,20 +24370,20 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_4predict(struc
   __pyx_v_vm = ((arrayobject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "AfterImage_extrapolate.pyx":778
+  /* "kitsune_core/AfterImage_extrapolate.pyx":778
  *         cdef array.array tm = array.array('d', self.Qt.unroll())
  *         cdef array.array vm = array.array('d', self.Qv.unroll())
  *         yp = self.interpolate(t,tm,vm)             # <<<<<<<<<<<<<<
  *         return yp
  *     #TODO: try cythonize lagrange
  */
-  __pyx_t_2 = ((struct __pyx_vtabstruct_22AfterImage_extrapolate_extrapolator *)__pyx_v_self->__pyx_vtab)->interpolate(__pyx_v_self, __pyx_v_t, __pyx_v_tm, __pyx_v_vm); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 778, __pyx_L1_error)
+  __pyx_t_2 = ((struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_extrapolator *)__pyx_v_self->__pyx_vtab)->interpolate(__pyx_v_self, __pyx_v_t, __pyx_v_tm, __pyx_v_vm); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 778, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 778, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_yp = __pyx_t_5;
 
-  /* "AfterImage_extrapolate.pyx":779
+  /* "kitsune_core/AfterImage_extrapolate.pyx":779
  *         cdef array.array vm = array.array('d', self.Qv.unroll())
  *         yp = self.interpolate(t,tm,vm)
  *         return yp             # <<<<<<<<<<<<<<
@@ -24397,7 +24397,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_4predict(struc
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":767
+  /* "kitsune_core/AfterImage_extrapolate.pyx":767
  *         self.Qv.insert(v)
  * 
  *     def predict(self, double t):             # <<<<<<<<<<<<<<
@@ -24410,7 +24410,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_4predict(struc
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("AfterImage_extrapolate.extrapolator.predict", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.extrapolator.predict", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF((PyObject *)__pyx_v_tm);
@@ -24420,7 +24420,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_4predict(struc
   return __pyx_r;
 }
 
-/* "AfterImage_extrapolate.pyx":783
+/* "kitsune_core/AfterImage_extrapolate.pyx":783
  * 
  * 
  *     cdef interpolate(self, double tp, array.array tm, array.array ym):             # <<<<<<<<<<<<<<
@@ -24428,7 +24428,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_4predict(struc
  *         n = len(tm) - 1
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate_12extrapolator_interpolate(CYTHON_UNUSED struct __pyx_obj_22AfterImage_extrapolate_extrapolator *__pyx_v_self, double __pyx_v_tp, arrayobject *__pyx_v_tm, arrayobject *__pyx_v_ym) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate_12extrapolator_interpolate(CYTHON_UNUSED struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *__pyx_v_self, double __pyx_v_tp, arrayobject *__pyx_v_tm, arrayobject *__pyx_v_ym) {
   int __pyx_v_n;
   double __pyx_v_y;
   long __pyx_v_i;
@@ -24454,7 +24454,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_12extrapolator_interpolate(CYT
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("interpolate", 1);
 
-  /* "AfterImage_extrapolate.pyx":785
+  /* "kitsune_core/AfterImage_extrapolate.pyx":785
  *     cdef interpolate(self, double tp, array.array tm, array.array ym):
  *         cdef int n
  *         n = len(tm) - 1             # <<<<<<<<<<<<<<
@@ -24468,7 +24468,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_12extrapolator_interpolate(CYT
   __pyx_t_1 = Py_SIZE(((PyObject *)__pyx_v_tm)); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 785, __pyx_L1_error)
   __pyx_v_n = (__pyx_t_1 - 1);
 
-  /* "AfterImage_extrapolate.pyx":789
+  /* "kitsune_core/AfterImage_extrapolate.pyx":789
  * 
  *         cdef double y
  *         for i in range(n +1):             # <<<<<<<<<<<<<<
@@ -24480,7 +24480,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_12extrapolator_interpolate(CYT
   for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_i = __pyx_t_4;
 
-    /* "AfterImage_extrapolate.pyx":794
+    /* "kitsune_core/AfterImage_extrapolate.pyx":794
  *             based on grid data xm
  *             """
  *             y = 1             # <<<<<<<<<<<<<<
@@ -24489,7 +24489,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_12extrapolator_interpolate(CYT
  */
     __pyx_v_y = 1.0;
 
-    /* "AfterImage_extrapolate.pyx":795
+    /* "kitsune_core/AfterImage_extrapolate.pyx":795
  *             """
  *             y = 1
  *             for j in range(n + 1):             # <<<<<<<<<<<<<<
@@ -24501,7 +24501,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_12extrapolator_interpolate(CYT
     for (__pyx_t_7 = 0; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
       __pyx_v_j = __pyx_t_7;
 
-      /* "AfterImage_extrapolate.pyx":796
+      /* "kitsune_core/AfterImage_extrapolate.pyx":796
  *             y = 1
  *             for j in range(n + 1):
  *                 if i != j:             # <<<<<<<<<<<<<<
@@ -24511,7 +24511,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_12extrapolator_interpolate(CYT
       __pyx_t_8 = (__pyx_v_i != __pyx_v_j);
       if (__pyx_t_8) {
 
-        /* "AfterImage_extrapolate.pyx":797
+        /* "kitsune_core/AfterImage_extrapolate.pyx":797
  *             for j in range(n + 1):
  *                 if i != j:
  *                     y *= (tp - tm[j]) / (tm[i] - tm[j] + 1e-20)             # <<<<<<<<<<<<<<
@@ -24551,7 +24551,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_12extrapolator_interpolate(CYT
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
         __pyx_v_y = __pyx_t_14;
 
-        /* "AfterImage_extrapolate.pyx":796
+        /* "kitsune_core/AfterImage_extrapolate.pyx":796
  *             y = 1
  *             for j in range(n + 1):
  *                 if i != j:             # <<<<<<<<<<<<<<
@@ -24561,7 +24561,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_12extrapolator_interpolate(CYT
       }
     }
 
-    /* "AfterImage_extrapolate.pyx":798
+    /* "kitsune_core/AfterImage_extrapolate.pyx":798
  *                 if i != j:
  *                     y *= (tp - tm[j]) / (tm[i] - tm[j] + 1e-20)
  *             ym[i]*=y             # <<<<<<<<<<<<<<
@@ -24581,7 +24581,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_12extrapolator_interpolate(CYT
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   }
 
-  /* "AfterImage_extrapolate.pyx":800
+  /* "kitsune_core/AfterImage_extrapolate.pyx":800
  *             ym[i]*=y
  * 
  *         return sum(ym)             # <<<<<<<<<<<<<<
@@ -24594,7 +24594,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_12extrapolator_interpolate(CYT
   __pyx_t_9 = 0;
   goto __pyx_L0;
 
-  /* "AfterImage_extrapolate.pyx":783
+  /* "kitsune_core/AfterImage_extrapolate.pyx":783
  * 
  * 
  *     cdef interpolate(self, double tp, array.array tm, array.array ym):             # <<<<<<<<<<<<<<
@@ -24609,7 +24609,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_12extrapolator_interpolate(CYT
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_AddTraceback("AfterImage_extrapolate.extrapolator.interpolate", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.extrapolator.interpolate", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -24624,15 +24624,15 @@ static PyObject *__pyx_f_22AfterImage_extrapolate_12extrapolator_interpolate(CYT
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_12extrapolator_7__reduce_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_12extrapolator_7__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_12extrapolator_7__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_12extrapolator_7__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_12extrapolator_7__reduce_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_12extrapolator_7__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_12extrapolator_7__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_12extrapolator_7__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -24657,14 +24657,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   if (unlikely(__pyx_nargs > 0)) {
     __Pyx_RaiseArgtupleInvalid("__reduce_cython__", 1, 0, 0, __pyx_nargs); return NULL;}
   if (unlikely(__pyx_kwds) && __Pyx_NumKwargs_FASTCALL(__pyx_kwds) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "__reduce_cython__", 0))) return NULL;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_12extrapolator_6__reduce_cython__(((struct __pyx_obj_22AfterImage_extrapolate_extrapolator *)__pyx_v_self));
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_12extrapolator_6__reduce_cython__(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_6__reduce_cython__(struct __pyx_obj_22AfterImage_extrapolate_extrapolator *__pyx_v_self) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_12extrapolator_6__reduce_cython__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *__pyx_v_self) {
   PyObject *__pyx_v_state = 0;
   PyObject *__pyx_v__dict = 0;
   int __pyx_v_use_setstate;
@@ -24878,7 +24878,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_6__reduce_cyth
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("AfterImage_extrapolate.extrapolator.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.extrapolator.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_state);
@@ -24896,15 +24896,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_6__reduce_cyth
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_12extrapolator_9__setstate_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_12extrapolator_9__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_12extrapolator_9__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_12extrapolator_9__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_12extrapolator_9__setstate_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_12extrapolator_9__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_12extrapolator_9__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_12extrapolator_9__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -24974,11 +24974,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.extrapolator.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.extrapolator.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_12extrapolator_8__setstate_cython__(((struct __pyx_obj_22AfterImage_extrapolate_extrapolator *)__pyx_v_self), __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_12extrapolator_8__setstate_cython__(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *)__pyx_v_self), __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -24991,7 +24991,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_8__setstate_cython__(struct __pyx_obj_22AfterImage_extrapolate_extrapolator *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_12extrapolator_8__setstate_cython__(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -25006,7 +25006,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_8__setstate_cy
  *     __pyx_unpickle_extrapolator__set_state(self, __pyx_state)             # <<<<<<<<<<<<<<
  */
   if (!(likely(PyTuple_CheckExact(__pyx_v___pyx_state))||((__pyx_v___pyx_state) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_v___pyx_state))) __PYX_ERR(1, 17, __pyx_L1_error)
-  __pyx_t_1 = __pyx_f_22AfterImage_extrapolate___pyx_unpickle_extrapolator__set_state(__pyx_v_self, ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 17, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_extrapolator__set_state(__pyx_v_self, ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
@@ -25022,7 +25022,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_8__setstate_cy
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("AfterImage_extrapolate.extrapolator.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.extrapolator.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -25037,15 +25037,15 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_12extrapolator_8__setstate_cy
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_1__pyx_unpickle_incStat(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_1__pyx_unpickle_incStat(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_1__pyx_unpickle_incStat = {"__pyx_unpickle_incStat", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_1__pyx_unpickle_incStat, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_1__pyx_unpickle_incStat(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_1__pyx_unpickle_incStat = {"__pyx_unpickle_incStat", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_1__pyx_unpickle_incStat, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_1__pyx_unpickle_incStat(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -25145,11 +25145,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.__pyx_unpickle_incStat", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.__pyx_unpickle_incStat", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate___pyx_unpickle_incStat(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_incStat(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -25162,7 +25162,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate___pyx_unpickle_incStat(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_incStat(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_v___pyx_PickleError = 0;
   PyObject *__pyx_v___pyx_result = 0;
   PyObject *__pyx_r = NULL;
@@ -25244,7 +25244,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate___pyx_unpickle_incStat(CYTHON
  *     if __pyx_state is not None:
  *         __pyx_unpickle_incStat__set_state(<incStat> __pyx_result, __pyx_state)
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStat), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 7, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -25289,7 +25289,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate___pyx_unpickle_incStat(CYTHON
  * cdef __pyx_unpickle_incStat__set_state(incStat __pyx_result, tuple __pyx_state):
  */
     if (!(likely(PyTuple_CheckExact(__pyx_v___pyx_state))||((__pyx_v___pyx_state) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_v___pyx_state))) __PYX_ERR(1, 9, __pyx_L1_error)
-    __pyx_t_1 = __pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStat__set_state(((struct __pyx_obj_22AfterImage_extrapolate_incStat *)__pyx_v___pyx_result), ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 9, __pyx_L1_error)
+    __pyx_t_1 = __pyx_f_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_incStat__set_state(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_v___pyx_result), ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 9, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
@@ -25325,7 +25325,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate___pyx_unpickle_incStat(CYTHON
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("AfterImage_extrapolate.__pyx_unpickle_incStat", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.__pyx_unpickle_incStat", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v___pyx_PickleError);
@@ -25343,7 +25343,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate___pyx_unpickle_incStat(CYTHON
  *     if len(__pyx_state) > 11 and hasattr(__pyx_result, '__dict__'):
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStat__set_state(struct __pyx_obj_22AfterImage_extrapolate_incStat *__pyx_v___pyx_result, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_incStat__set_state(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *__pyx_v___pyx_result, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -25561,7 +25561,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStat__set_st
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("AfterImage_extrapolate.__pyx_unpickle_incStat__set_state", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.__pyx_unpickle_incStat__set_state", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -25576,15 +25576,15 @@ static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStat__set_st
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_3__pyx_unpickle_incStat_cov(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_3__pyx_unpickle_incStat_cov(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_3__pyx_unpickle_incStat_cov = {"__pyx_unpickle_incStat_cov", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_3__pyx_unpickle_incStat_cov, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_3__pyx_unpickle_incStat_cov(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_3__pyx_unpickle_incStat_cov = {"__pyx_unpickle_incStat_cov", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_3__pyx_unpickle_incStat_cov, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_3__pyx_unpickle_incStat_cov(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -25684,11 +25684,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.__pyx_unpickle_incStat_cov", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.__pyx_unpickle_incStat_cov", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_2__pyx_unpickle_incStat_cov(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_2__pyx_unpickle_incStat_cov(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -25701,7 +25701,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_2__pyx_unpickle_incStat_cov(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_2__pyx_unpickle_incStat_cov(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_v___pyx_PickleError = 0;
   PyObject *__pyx_v___pyx_result = 0;
   PyObject *__pyx_r = NULL;
@@ -25783,7 +25783,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_2__pyx_unpickle_incStat_cov(C
  *     if __pyx_state is not None:
  *         __pyx_unpickle_incStat_cov__set_state(<incStat_cov> __pyx_result, __pyx_state)
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStat_cov), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 7, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -25828,7 +25828,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_2__pyx_unpickle_incStat_cov(C
  * cdef __pyx_unpickle_incStat_cov__set_state(incStat_cov __pyx_result, tuple __pyx_state):
  */
     if (!(likely(PyTuple_CheckExact(__pyx_v___pyx_state))||((__pyx_v___pyx_state) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_v___pyx_state))) __PYX_ERR(1, 9, __pyx_L1_error)
-    __pyx_t_1 = __pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStat_cov__set_state(((struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *)__pyx_v___pyx_result), ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 9, __pyx_L1_error)
+    __pyx_t_1 = __pyx_f_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_incStat_cov__set_state(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)__pyx_v___pyx_result), ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 9, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
@@ -25864,7 +25864,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_2__pyx_unpickle_incStat_cov(C
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("AfterImage_extrapolate.__pyx_unpickle_incStat_cov", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.__pyx_unpickle_incStat_cov", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v___pyx_PickleError);
@@ -25882,7 +25882,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_2__pyx_unpickle_incStat_cov(C
  *     if len(__pyx_state) > 7 and hasattr(__pyx_result, '__dict__'):
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStat_cov__set_state(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *__pyx_v___pyx_result, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_incStat_cov__set_state(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *__pyx_v___pyx_result, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -25921,11 +25921,11 @@ static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStat_cov__se
   }
   __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_22AfterImage_extrapolate_extrapolator))))) __PYX_ERR(1, 12, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator))))) __PYX_ERR(1, 12, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF((PyObject *)__pyx_v___pyx_result->ex1);
   __Pyx_DECREF((PyObject *)__pyx_v___pyx_result->ex1);
-  __pyx_v___pyx_result->ex1 = ((struct __pyx_obj_22AfterImage_extrapolate_extrapolator *)__pyx_t_1);
+  __pyx_v___pyx_result->ex1 = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *)__pyx_t_1);
   __pyx_t_1 = 0;
   if (unlikely(__pyx_v___pyx_state == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -25933,11 +25933,11 @@ static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStat_cov__se
   }
   __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_22AfterImage_extrapolate_extrapolator))))) __PYX_ERR(1, 12, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator))))) __PYX_ERR(1, 12, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF((PyObject *)__pyx_v___pyx_result->ex2);
   __Pyx_DECREF((PyObject *)__pyx_v___pyx_result->ex2);
-  __pyx_v___pyx_result->ex2 = ((struct __pyx_obj_22AfterImage_extrapolate_extrapolator *)__pyx_t_1);
+  __pyx_v___pyx_result->ex2 = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *)__pyx_t_1);
   __pyx_t_1 = 0;
   if (unlikely(__pyx_v___pyx_state == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -25945,11 +25945,11 @@ static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStat_cov__se
   }
   __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_22AfterImage_extrapolate_incStat))))) __PYX_ERR(1, 12, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat))))) __PYX_ERR(1, 12, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF((PyObject *)__pyx_v___pyx_result->incS1);
   __Pyx_DECREF((PyObject *)__pyx_v___pyx_result->incS1);
-  __pyx_v___pyx_result->incS1 = ((struct __pyx_obj_22AfterImage_extrapolate_incStat *)__pyx_t_1);
+  __pyx_v___pyx_result->incS1 = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_t_1);
   __pyx_t_1 = 0;
   if (unlikely(__pyx_v___pyx_state == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -25957,11 +25957,11 @@ static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStat_cov__se
   }
   __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 4, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_22AfterImage_extrapolate_incStat))))) __PYX_ERR(1, 12, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat))))) __PYX_ERR(1, 12, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF((PyObject *)__pyx_v___pyx_result->incS2);
   __Pyx_DECREF((PyObject *)__pyx_v___pyx_result->incS2);
-  __pyx_v___pyx_result->incS2 = ((struct __pyx_obj_22AfterImage_extrapolate_incStat *)__pyx_t_1);
+  __pyx_v___pyx_result->incS2 = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)__pyx_t_1);
   __pyx_t_1 = 0;
   if (unlikely(__pyx_v___pyx_state == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -26069,7 +26069,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStat_cov__se
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("AfterImage_extrapolate.__pyx_unpickle_incStat_cov__set_state", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.__pyx_unpickle_incStat_cov__set_state", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -26084,15 +26084,15 @@ static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStat_cov__se
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_5__pyx_unpickle_incStatDB(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_5__pyx_unpickle_incStatDB(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_5__pyx_unpickle_incStatDB = {"__pyx_unpickle_incStatDB", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_5__pyx_unpickle_incStatDB, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_5__pyx_unpickle_incStatDB(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_5__pyx_unpickle_incStatDB = {"__pyx_unpickle_incStatDB", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_5__pyx_unpickle_incStatDB, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_5__pyx_unpickle_incStatDB(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -26192,11 +26192,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.__pyx_unpickle_incStatDB", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.__pyx_unpickle_incStatDB", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_4__pyx_unpickle_incStatDB(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_4__pyx_unpickle_incStatDB(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -26209,7 +26209,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_4__pyx_unpickle_incStatDB(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_4__pyx_unpickle_incStatDB(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_v___pyx_PickleError = 0;
   PyObject *__pyx_v___pyx_result = 0;
   PyObject *__pyx_r = NULL;
@@ -26291,7 +26291,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_4__pyx_unpickle_incStatDB(CYT
  *     if __pyx_state is not None:
  *         __pyx_unpickle_incStatDB__set_state(<incStatDB> __pyx_result, __pyx_state)
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStatDB), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 7, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -26336,7 +26336,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_4__pyx_unpickle_incStatDB(CYT
  * cdef __pyx_unpickle_incStatDB__set_state(incStatDB __pyx_result, tuple __pyx_state):
  */
     if (!(likely(PyTuple_CheckExact(__pyx_v___pyx_state))||((__pyx_v___pyx_state) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_v___pyx_state))) __PYX_ERR(1, 9, __pyx_L1_error)
-    __pyx_t_1 = __pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStatDB__set_state(((struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)__pyx_v___pyx_result), ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 9, __pyx_L1_error)
+    __pyx_t_1 = __pyx_f_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_incStatDB__set_state(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)__pyx_v___pyx_result), ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 9, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
@@ -26372,7 +26372,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_4__pyx_unpickle_incStatDB(CYT
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("AfterImage_extrapolate.__pyx_unpickle_incStatDB", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.__pyx_unpickle_incStatDB", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v___pyx_PickleError);
@@ -26390,7 +26390,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_4__pyx_unpickle_incStatDB(CYT
  *     if len(__pyx_state) > 3 and hasattr(__pyx_result, '__dict__'):
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStatDB__set_state(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *__pyx_v___pyx_result, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_incStatDB__set_state(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *__pyx_v___pyx_result, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -26532,7 +26532,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStatDB__set_
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("AfterImage_extrapolate.__pyx_unpickle_incStatDB__set_state", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.__pyx_unpickle_incStatDB__set_state", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -26547,15 +26547,15 @@ static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_incStatDB__set_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7__pyx_unpickle_Queue(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7__pyx_unpickle_Queue(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_7__pyx_unpickle_Queue = {"__pyx_unpickle_Queue", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_7__pyx_unpickle_Queue, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_7__pyx_unpickle_Queue(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7__pyx_unpickle_Queue = {"__pyx_unpickle_Queue", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7__pyx_unpickle_Queue, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7__pyx_unpickle_Queue(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -26655,11 +26655,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.__pyx_unpickle_Queue", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.__pyx_unpickle_Queue", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_6__pyx_unpickle_Queue(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_6__pyx_unpickle_Queue(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -26672,7 +26672,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_6__pyx_unpickle_Queue(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_6__pyx_unpickle_Queue(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_v___pyx_PickleError = 0;
   PyObject *__pyx_v___pyx_result = 0;
   PyObject *__pyx_r = NULL;
@@ -26754,7 +26754,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_6__pyx_unpickle_Queue(CYTHON_
  *     if __pyx_state is not None:
  *         __pyx_unpickle_Queue__set_state(<Queue> __pyx_result, __pyx_state)
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_22AfterImage_extrapolate_Queue), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 7, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -26799,7 +26799,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_6__pyx_unpickle_Queue(CYTHON_
  * cdef __pyx_unpickle_Queue__set_state(Queue __pyx_result, tuple __pyx_state):
  */
     if (!(likely(PyTuple_CheckExact(__pyx_v___pyx_state))||((__pyx_v___pyx_state) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_v___pyx_state))) __PYX_ERR(1, 9, __pyx_L1_error)
-    __pyx_t_1 = __pyx_f_22AfterImage_extrapolate___pyx_unpickle_Queue__set_state(((struct __pyx_obj_22AfterImage_extrapolate_Queue *)__pyx_v___pyx_result), ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 9, __pyx_L1_error)
+    __pyx_t_1 = __pyx_f_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_Queue__set_state(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *)__pyx_v___pyx_result), ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 9, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
@@ -26835,7 +26835,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_6__pyx_unpickle_Queue(CYTHON_
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("AfterImage_extrapolate.__pyx_unpickle_Queue", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.__pyx_unpickle_Queue", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v___pyx_PickleError);
@@ -26853,7 +26853,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_6__pyx_unpickle_Queue(CYTHON_
  *     if len(__pyx_state) > 3 and hasattr(__pyx_result, '__dict__'):
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_Queue__set_state(struct __pyx_obj_22AfterImage_extrapolate_Queue *__pyx_v___pyx_result, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_Queue__set_state(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *__pyx_v___pyx_result, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -26993,7 +26993,7 @@ static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_Queue__set_stat
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("AfterImage_extrapolate.__pyx_unpickle_Queue__set_state", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.__pyx_unpickle_Queue__set_state", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -27008,15 +27008,15 @@ static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_Queue__set_stat
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9__pyx_unpickle_extrapolator(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9__pyx_unpickle_extrapolator(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_22AfterImage_extrapolate_9__pyx_unpickle_extrapolator = {"__pyx_unpickle_extrapolator", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9__pyx_unpickle_extrapolator, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_22AfterImage_extrapolate_9__pyx_unpickle_extrapolator(PyObject *__pyx_self, 
+static PyMethodDef __pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9__pyx_unpickle_extrapolator = {"__pyx_unpickle_extrapolator", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9__pyx_unpickle_extrapolator, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9__pyx_unpickle_extrapolator(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -27116,11 +27116,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("AfterImage_extrapolate.__pyx_unpickle_extrapolator", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.__pyx_unpickle_extrapolator", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_22AfterImage_extrapolate_8__pyx_unpickle_extrapolator(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_12kitsune_core_22AfterImage_extrapolate_8__pyx_unpickle_extrapolator(__pyx_self, __pyx_v___pyx_type, __pyx_v___pyx_checksum, __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -27133,7 +27133,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_22AfterImage_extrapolate_8__pyx_unpickle_extrapolator(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_12kitsune_core_22AfterImage_extrapolate_8__pyx_unpickle_extrapolator(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_v___pyx_PickleError = 0;
   PyObject *__pyx_v___pyx_result = 0;
   PyObject *__pyx_r = NULL;
@@ -27215,7 +27215,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_8__pyx_unpickle_extrapolator(
  *     if __pyx_state is not None:
  *         __pyx_unpickle_extrapolator__set_state(<extrapolator> __pyx_result, __pyx_state)
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_22AfterImage_extrapolate_extrapolator), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 7, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator), __pyx_n_s_new); if (unlikely(!__pyx_t_3)) __PYX_ERR(1, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   __pyx_t_5 = 0;
@@ -27260,7 +27260,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_8__pyx_unpickle_extrapolator(
  * cdef __pyx_unpickle_extrapolator__set_state(extrapolator __pyx_result, tuple __pyx_state):
  */
     if (!(likely(PyTuple_CheckExact(__pyx_v___pyx_state))||((__pyx_v___pyx_state) == Py_None) || __Pyx_RaiseUnexpectedTypeError("tuple", __pyx_v___pyx_state))) __PYX_ERR(1, 9, __pyx_L1_error)
-    __pyx_t_1 = __pyx_f_22AfterImage_extrapolate___pyx_unpickle_extrapolator__set_state(((struct __pyx_obj_22AfterImage_extrapolate_extrapolator *)__pyx_v___pyx_result), ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 9, __pyx_L1_error)
+    __pyx_t_1 = __pyx_f_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_extrapolator__set_state(((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *)__pyx_v___pyx_result), ((PyObject*)__pyx_v___pyx_state)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 9, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
@@ -27296,7 +27296,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_8__pyx_unpickle_extrapolator(
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("AfterImage_extrapolate.__pyx_unpickle_extrapolator", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.__pyx_unpickle_extrapolator", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v___pyx_PickleError);
@@ -27314,7 +27314,7 @@ static PyObject *__pyx_pf_22AfterImage_extrapolate_8__pyx_unpickle_extrapolator(
  *     if len(__pyx_state) > 2 and hasattr(__pyx_result, '__dict__'):
  */
 
-static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_extrapolator__set_state(struct __pyx_obj_22AfterImage_extrapolate_extrapolator *__pyx_v___pyx_result, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_f_12kitsune_core_22AfterImage_extrapolate___pyx_unpickle_extrapolator__set_state(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *__pyx_v___pyx_result, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -27343,11 +27343,11 @@ static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_extrapolator__s
   }
   __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_22AfterImage_extrapolate_Queue))))) __PYX_ERR(1, 12, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue))))) __PYX_ERR(1, 12, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF((PyObject *)__pyx_v___pyx_result->Qt);
   __Pyx_DECREF((PyObject *)__pyx_v___pyx_result->Qt);
-  __pyx_v___pyx_result->Qt = ((struct __pyx_obj_22AfterImage_extrapolate_Queue *)__pyx_t_1);
+  __pyx_v___pyx_result->Qt = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *)__pyx_t_1);
   __pyx_t_1 = 0;
   if (unlikely(__pyx_v___pyx_state == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -27355,11 +27355,11 @@ static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_extrapolator__s
   }
   __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v___pyx_state, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_22AfterImage_extrapolate_Queue))))) __PYX_ERR(1, 12, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue))))) __PYX_ERR(1, 12, __pyx_L1_error)
   __Pyx_GIVEREF(__pyx_t_1);
   __Pyx_GOTREF((PyObject *)__pyx_v___pyx_result->Qv);
   __Pyx_DECREF((PyObject *)__pyx_v___pyx_result->Qv);
-  __pyx_v___pyx_result->Qv = ((struct __pyx_obj_22AfterImage_extrapolate_Queue *)__pyx_t_1);
+  __pyx_v___pyx_result->Qv = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *)__pyx_t_1);
   __pyx_t_1 = 0;
 
   /* "(tree fragment)":13
@@ -27449,17 +27449,17 @@ static PyObject *__pyx_f_22AfterImage_extrapolate___pyx_unpickle_extrapolator__s
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_AddTraceback("AfterImage_extrapolate.__pyx_unpickle_extrapolator__set_state", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("kitsune_core.AfterImage_extrapolate.__pyx_unpickle_extrapolator__set_state", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
-static struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat __pyx_vtable_22AfterImage_extrapolate_incStat;
+static struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat;
 
-static PyObject *__pyx_tp_new_22AfterImage_extrapolate_incStat(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
-  struct __pyx_obj_22AfterImage_extrapolate_incStat *p;
+static PyObject *__pyx_tp_new_12kitsune_core_22AfterImage_extrapolate_incStat(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *p;
   PyObject *o;
   #if CYTHON_COMPILING_IN_LIMITED_API
   allocfunc alloc_func = (allocfunc)PyType_GetSlot(t, Py_tp_alloc);
@@ -27472,18 +27472,18 @@ static PyObject *__pyx_tp_new_22AfterImage_extrapolate_incStat(PyTypeObject *t, 
   }
   if (unlikely(!o)) return 0;
   #endif
-  p = ((struct __pyx_obj_22AfterImage_extrapolate_incStat *)o);
-  p->__pyx_vtab = __pyx_vtabptr_22AfterImage_extrapolate_incStat;
+  p = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)o);
+  p->__pyx_vtab = __pyx_vtabptr_12kitsune_core_22AfterImage_extrapolate_incStat;
   p->ID = ((PyObject*)Py_None); Py_INCREF(Py_None);
   p->covs = ((PyObject*)Py_None); Py_INCREF(Py_None);
   return o;
 }
 
-static void __pyx_tp_dealloc_22AfterImage_extrapolate_incStat(PyObject *o) {
-  struct __pyx_obj_22AfterImage_extrapolate_incStat *p = (struct __pyx_obj_22AfterImage_extrapolate_incStat *)o;
+static void __pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate_incStat(PyObject *o) {
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *p = (struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)o;
   #if CYTHON_USE_TP_FINALIZE
   if (unlikely((PY_VERSION_HEX >= 0x03080000 || __Pyx_PyType_HasFeature(Py_TYPE(o), Py_TPFLAGS_HAVE_FINALIZE)) && __Pyx_PyObject_GetSlot(o, tp_finalize, destructor)) && !__Pyx_PyObject_GC_IsFinalized(o)) {
-    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_22AfterImage_extrapolate_incStat) {
+    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate_incStat) {
       if (PyObject_CallFinalizerFromDealloc(o)) return;
     }
   }
@@ -27501,54 +27501,54 @@ static void __pyx_tp_dealloc_22AfterImage_extrapolate_incStat(PyObject *o) {
   #endif
 }
 
-static int __pyx_tp_traverse_22AfterImage_extrapolate_incStat(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_12kitsune_core_22AfterImage_extrapolate_incStat(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_22AfterImage_extrapolate_incStat *p = (struct __pyx_obj_22AfterImage_extrapolate_incStat *)o;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *p = (struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)o;
   if (p->covs) {
     e = (*v)(p->covs, a); if (e) return e;
   }
   return 0;
 }
 
-static int __pyx_tp_clear_22AfterImage_extrapolate_incStat(PyObject *o) {
+static int __pyx_tp_clear_12kitsune_core_22AfterImage_extrapolate_incStat(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_22AfterImage_extrapolate_incStat *p = (struct __pyx_obj_22AfterImage_extrapolate_incStat *)o;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *p = (struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)o;
   tmp = ((PyObject*)p->covs);
   p->covs = ((PyObject*)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   return 0;
 }
 
-static PyMethodDef __pyx_methods_22AfterImage_extrapolate_incStat[] = {
-  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_7incStat_3__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_7incStat_5__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+static PyMethodDef __pyx_methods_12kitsune_core_22AfterImage_extrapolate_incStat[] = {
+  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incStat_3__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incStat_5__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
   {0, 0, 0, 0}
 };
 #if CYTHON_USE_TYPE_SPECS
-static PyType_Slot __pyx_type_22AfterImage_extrapolate_incStat_slots[] = {
-  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_22AfterImage_extrapolate_incStat},
-  {Py_tp_traverse, (void *)__pyx_tp_traverse_22AfterImage_extrapolate_incStat},
-  {Py_tp_clear, (void *)__pyx_tp_clear_22AfterImage_extrapolate_incStat},
-  {Py_tp_methods, (void *)__pyx_methods_22AfterImage_extrapolate_incStat},
-  {Py_tp_init, (void *)__pyx_pw_22AfterImage_extrapolate_7incStat_1__init__},
-  {Py_tp_new, (void *)__pyx_tp_new_22AfterImage_extrapolate_incStat},
+static PyType_Slot __pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat_slots[] = {
+  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate_incStat},
+  {Py_tp_traverse, (void *)__pyx_tp_traverse_12kitsune_core_22AfterImage_extrapolate_incStat},
+  {Py_tp_clear, (void *)__pyx_tp_clear_12kitsune_core_22AfterImage_extrapolate_incStat},
+  {Py_tp_methods, (void *)__pyx_methods_12kitsune_core_22AfterImage_extrapolate_incStat},
+  {Py_tp_init, (void *)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incStat_1__init__},
+  {Py_tp_new, (void *)__pyx_tp_new_12kitsune_core_22AfterImage_extrapolate_incStat},
   {0, 0},
 };
-static PyType_Spec __pyx_type_22AfterImage_extrapolate_incStat_spec = {
-  "AfterImage_extrapolate.incStat",
-  sizeof(struct __pyx_obj_22AfterImage_extrapolate_incStat),
+static PyType_Spec __pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat_spec = {
+  "kitsune_core.AfterImage_extrapolate.incStat",
+  sizeof(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,
-  __pyx_type_22AfterImage_extrapolate_incStat_slots,
+  __pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat_slots,
 };
 #else
 
-static PyTypeObject __pyx_type_22AfterImage_extrapolate_incStat = {
+static PyTypeObject __pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat = {
   PyVarObject_HEAD_INIT(0, 0)
-  "AfterImage_extrapolate.""incStat", /*tp_name*/
-  sizeof(struct __pyx_obj_22AfterImage_extrapolate_incStat), /*tp_basicsize*/
+  "kitsune_core.AfterImage_extrapolate.""incStat", /*tp_name*/
+  sizeof(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_22AfterImage_extrapolate_incStat, /*tp_dealloc*/
+  __pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate_incStat, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -27575,13 +27575,13 @@ static PyTypeObject __pyx_type_22AfterImage_extrapolate_incStat = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_22AfterImage_extrapolate_incStat, /*tp_traverse*/
-  __pyx_tp_clear_22AfterImage_extrapolate_incStat, /*tp_clear*/
+  __pyx_tp_traverse_12kitsune_core_22AfterImage_extrapolate_incStat, /*tp_traverse*/
+  __pyx_tp_clear_12kitsune_core_22AfterImage_extrapolate_incStat, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_22AfterImage_extrapolate_incStat, /*tp_methods*/
+  __pyx_methods_12kitsune_core_22AfterImage_extrapolate_incStat, /*tp_methods*/
   0, /*tp_members*/
   0, /*tp_getset*/
   0, /*tp_base*/
@@ -27591,9 +27591,9 @@ static PyTypeObject __pyx_type_22AfterImage_extrapolate_incStat = {
   #if !CYTHON_USE_TYPE_SPECS
   0, /*tp_dictoffset*/
   #endif
-  __pyx_pw_22AfterImage_extrapolate_7incStat_1__init__, /*tp_init*/
+  __pyx_pw_12kitsune_core_22AfterImage_extrapolate_7incStat_1__init__, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_22AfterImage_extrapolate_incStat, /*tp_new*/
+  __pyx_tp_new_12kitsune_core_22AfterImage_extrapolate_incStat, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -27627,10 +27627,10 @@ static PyTypeObject __pyx_type_22AfterImage_extrapolate_incStat = {
   #endif
 };
 #endif
-static struct __pyx_vtabstruct_22AfterImage_extrapolate_incStat_cov __pyx_vtable_22AfterImage_extrapolate_incStat_cov;
+static struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStat_cov __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat_cov;
 
-static PyObject *__pyx_tp_new_22AfterImage_extrapolate_incStat_cov(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
-  struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *p;
+static PyObject *__pyx_tp_new_12kitsune_core_22AfterImage_extrapolate_incStat_cov(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *p;
   PyObject *o;
   #if CYTHON_COMPILING_IN_LIMITED_API
   allocfunc alloc_func = (allocfunc)PyType_GetSlot(t, Py_tp_alloc);
@@ -27643,20 +27643,20 @@ static PyObject *__pyx_tp_new_22AfterImage_extrapolate_incStat_cov(PyTypeObject 
   }
   if (unlikely(!o)) return 0;
   #endif
-  p = ((struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *)o);
-  p->__pyx_vtab = __pyx_vtabptr_22AfterImage_extrapolate_incStat_cov;
-  p->incS1 = ((struct __pyx_obj_22AfterImage_extrapolate_incStat *)Py_None); Py_INCREF(Py_None);
-  p->incS2 = ((struct __pyx_obj_22AfterImage_extrapolate_incStat *)Py_None); Py_INCREF(Py_None);
-  p->ex1 = ((struct __pyx_obj_22AfterImage_extrapolate_extrapolator *)Py_None); Py_INCREF(Py_None);
-  p->ex2 = ((struct __pyx_obj_22AfterImage_extrapolate_extrapolator *)Py_None); Py_INCREF(Py_None);
+  p = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)o);
+  p->__pyx_vtab = __pyx_vtabptr_12kitsune_core_22AfterImage_extrapolate_incStat_cov;
+  p->incS1 = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)Py_None); Py_INCREF(Py_None);
+  p->incS2 = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)Py_None); Py_INCREF(Py_None);
+  p->ex1 = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *)Py_None); Py_INCREF(Py_None);
+  p->ex2 = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *)Py_None); Py_INCREF(Py_None);
   return o;
 }
 
-static void __pyx_tp_dealloc_22AfterImage_extrapolate_incStat_cov(PyObject *o) {
-  struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *p = (struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *)o;
+static void __pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate_incStat_cov(PyObject *o) {
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *p = (struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)o;
   #if CYTHON_USE_TP_FINALIZE
   if (unlikely((PY_VERSION_HEX >= 0x03080000 || __Pyx_PyType_HasFeature(Py_TYPE(o), Py_TPFLAGS_HAVE_FINALIZE)) && __Pyx_PyObject_GetSlot(o, tp_finalize, destructor)) && !__Pyx_PyObject_GC_IsFinalized(o)) {
-    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_22AfterImage_extrapolate_incStat_cov) {
+    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate_incStat_cov) {
       if (PyObject_CallFinalizerFromDealloc(o)) return;
     }
   }
@@ -27676,9 +27676,9 @@ static void __pyx_tp_dealloc_22AfterImage_extrapolate_incStat_cov(PyObject *o) {
   #endif
 }
 
-static int __pyx_tp_traverse_22AfterImage_extrapolate_incStat_cov(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_12kitsune_core_22AfterImage_extrapolate_incStat_cov(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *p = (struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *)o;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *p = (struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)o;
   if (p->incS1) {
     e = (*v)(((PyObject *)p->incS1), a); if (e) return e;
   }
@@ -27694,55 +27694,55 @@ static int __pyx_tp_traverse_22AfterImage_extrapolate_incStat_cov(PyObject *o, v
   return 0;
 }
 
-static int __pyx_tp_clear_22AfterImage_extrapolate_incStat_cov(PyObject *o) {
+static int __pyx_tp_clear_12kitsune_core_22AfterImage_extrapolate_incStat_cov(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *p = (struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *)o;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *p = (struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *)o;
   tmp = ((PyObject*)p->incS1);
-  p->incS1 = ((struct __pyx_obj_22AfterImage_extrapolate_incStat *)Py_None); Py_INCREF(Py_None);
+  p->incS1 = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   tmp = ((PyObject*)p->incS2);
-  p->incS2 = ((struct __pyx_obj_22AfterImage_extrapolate_incStat *)Py_None); Py_INCREF(Py_None);
+  p->incS2 = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   tmp = ((PyObject*)p->ex1);
-  p->ex1 = ((struct __pyx_obj_22AfterImage_extrapolate_extrapolator *)Py_None); Py_INCREF(Py_None);
+  p->ex1 = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   tmp = ((PyObject*)p->ex2);
-  p->ex2 = ((struct __pyx_obj_22AfterImage_extrapolate_extrapolator *)Py_None); Py_INCREF(Py_None);
+  p->ex2 = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   return 0;
 }
 
-static PyMethodDef __pyx_methods_22AfterImage_extrapolate_incStat_cov[] = {
-  {"isRelated", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_11incStat_cov_3isRelated, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_11incStat_cov_5__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_11incStat_cov_7__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+static PyMethodDef __pyx_methods_12kitsune_core_22AfterImage_extrapolate_incStat_cov[] = {
+  {"isRelated", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_3isRelated, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_5__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_7__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
   {0, 0, 0, 0}
 };
 #if CYTHON_USE_TYPE_SPECS
-static PyType_Slot __pyx_type_22AfterImage_extrapolate_incStat_cov_slots[] = {
-  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_22AfterImage_extrapolate_incStat_cov},
-  {Py_tp_traverse, (void *)__pyx_tp_traverse_22AfterImage_extrapolate_incStat_cov},
-  {Py_tp_clear, (void *)__pyx_tp_clear_22AfterImage_extrapolate_incStat_cov},
-  {Py_tp_methods, (void *)__pyx_methods_22AfterImage_extrapolate_incStat_cov},
-  {Py_tp_init, (void *)__pyx_pw_22AfterImage_extrapolate_11incStat_cov_1__init__},
-  {Py_tp_new, (void *)__pyx_tp_new_22AfterImage_extrapolate_incStat_cov},
+static PyType_Slot __pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat_cov_slots[] = {
+  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate_incStat_cov},
+  {Py_tp_traverse, (void *)__pyx_tp_traverse_12kitsune_core_22AfterImage_extrapolate_incStat_cov},
+  {Py_tp_clear, (void *)__pyx_tp_clear_12kitsune_core_22AfterImage_extrapolate_incStat_cov},
+  {Py_tp_methods, (void *)__pyx_methods_12kitsune_core_22AfterImage_extrapolate_incStat_cov},
+  {Py_tp_init, (void *)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_1__init__},
+  {Py_tp_new, (void *)__pyx_tp_new_12kitsune_core_22AfterImage_extrapolate_incStat_cov},
   {0, 0},
 };
-static PyType_Spec __pyx_type_22AfterImage_extrapolate_incStat_cov_spec = {
-  "AfterImage_extrapolate.incStat_cov",
-  sizeof(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov),
+static PyType_Spec __pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat_cov_spec = {
+  "kitsune_core.AfterImage_extrapolate.incStat_cov",
+  sizeof(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,
-  __pyx_type_22AfterImage_extrapolate_incStat_cov_slots,
+  __pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat_cov_slots,
 };
 #else
 
-static PyTypeObject __pyx_type_22AfterImage_extrapolate_incStat_cov = {
+static PyTypeObject __pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat_cov = {
   PyVarObject_HEAD_INIT(0, 0)
-  "AfterImage_extrapolate.""incStat_cov", /*tp_name*/
-  sizeof(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov), /*tp_basicsize*/
+  "kitsune_core.AfterImage_extrapolate.""incStat_cov", /*tp_name*/
+  sizeof(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_22AfterImage_extrapolate_incStat_cov, /*tp_dealloc*/
+  __pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate_incStat_cov, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -27769,13 +27769,13 @@ static PyTypeObject __pyx_type_22AfterImage_extrapolate_incStat_cov = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_22AfterImage_extrapolate_incStat_cov, /*tp_traverse*/
-  __pyx_tp_clear_22AfterImage_extrapolate_incStat_cov, /*tp_clear*/
+  __pyx_tp_traverse_12kitsune_core_22AfterImage_extrapolate_incStat_cov, /*tp_traverse*/
+  __pyx_tp_clear_12kitsune_core_22AfterImage_extrapolate_incStat_cov, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_22AfterImage_extrapolate_incStat_cov, /*tp_methods*/
+  __pyx_methods_12kitsune_core_22AfterImage_extrapolate_incStat_cov, /*tp_methods*/
   0, /*tp_members*/
   0, /*tp_getset*/
   0, /*tp_base*/
@@ -27785,9 +27785,9 @@ static PyTypeObject __pyx_type_22AfterImage_extrapolate_incStat_cov = {
   #if !CYTHON_USE_TYPE_SPECS
   0, /*tp_dictoffset*/
   #endif
-  __pyx_pw_22AfterImage_extrapolate_11incStat_cov_1__init__, /*tp_init*/
+  __pyx_pw_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_1__init__, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_22AfterImage_extrapolate_incStat_cov, /*tp_new*/
+  __pyx_tp_new_12kitsune_core_22AfterImage_extrapolate_incStat_cov, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -27821,10 +27821,10 @@ static PyTypeObject __pyx_type_22AfterImage_extrapolate_incStat_cov = {
   #endif
 };
 #endif
-static struct __pyx_vtabstruct_22AfterImage_extrapolate_incStatDB __pyx_vtable_22AfterImage_extrapolate_incStatDB;
+static struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_incStatDB __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStatDB;
 
-static PyObject *__pyx_tp_new_22AfterImage_extrapolate_incStatDB(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
-  struct __pyx_obj_22AfterImage_extrapolate_incStatDB *p;
+static PyObject *__pyx_tp_new_12kitsune_core_22AfterImage_extrapolate_incStatDB(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *p;
   PyObject *o;
   #if CYTHON_COMPILING_IN_LIMITED_API
   allocfunc alloc_func = (allocfunc)PyType_GetSlot(t, Py_tp_alloc);
@@ -27837,17 +27837,17 @@ static PyObject *__pyx_tp_new_22AfterImage_extrapolate_incStatDB(PyTypeObject *t
   }
   if (unlikely(!o)) return 0;
   #endif
-  p = ((struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)o);
-  p->__pyx_vtab = __pyx_vtabptr_22AfterImage_extrapolate_incStatDB;
+  p = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)o);
+  p->__pyx_vtab = __pyx_vtabptr_12kitsune_core_22AfterImage_extrapolate_incStatDB;
   p->HT = ((PyObject*)Py_None); Py_INCREF(Py_None);
   return o;
 }
 
-static void __pyx_tp_dealloc_22AfterImage_extrapolate_incStatDB(PyObject *o) {
-  struct __pyx_obj_22AfterImage_extrapolate_incStatDB *p = (struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)o;
+static void __pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate_incStatDB(PyObject *o) {
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *p = (struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)o;
   #if CYTHON_USE_TP_FINALIZE
   if (unlikely((PY_VERSION_HEX >= 0x03080000 || __Pyx_PyType_HasFeature(Py_TYPE(o), Py_TPFLAGS_HAVE_FINALIZE)) && __Pyx_PyObject_GetSlot(o, tp_finalize, destructor)) && !__Pyx_PyObject_GC_IsFinalized(o)) {
-    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_22AfterImage_extrapolate_incStatDB) {
+    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate_incStatDB) {
       if (PyObject_CallFinalizerFromDealloc(o)) return;
     }
   }
@@ -27864,69 +27864,69 @@ static void __pyx_tp_dealloc_22AfterImage_extrapolate_incStatDB(PyObject *o) {
   #endif
 }
 
-static int __pyx_tp_traverse_22AfterImage_extrapolate_incStatDB(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_12kitsune_core_22AfterImage_extrapolate_incStatDB(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_22AfterImage_extrapolate_incStatDB *p = (struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)o;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *p = (struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)o;
   if (p->HT) {
     e = (*v)(p->HT, a); if (e) return e;
   }
   return 0;
 }
 
-static int __pyx_tp_clear_22AfterImage_extrapolate_incStatDB(PyObject *o) {
+static int __pyx_tp_clear_12kitsune_core_22AfterImage_extrapolate_incStatDB(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_22AfterImage_extrapolate_incStatDB *p = (struct __pyx_obj_22AfterImage_extrapolate_incStatDB *)o;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *p = (struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *)o;
   tmp = ((PyObject*)p->HT);
   p->HT = ((PyObject*)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   return 0;
 }
 
-static PyMethodDef __pyx_methods_22AfterImage_extrapolate_incStatDB[] = {
-  {"register", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_3register, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"register_cov", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_5register_cov, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"update", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_7update, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"get_1D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_9get_1D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"get_2D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_11get_2D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"get_all_2D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_13get_all_2D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"get_nD_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_15get_nD_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"update_get_1D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_17update_get_1D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"update_get_2D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_19update_get_2D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"update_get_1D2D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_21update_get_1D2D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"getHeaders_1D", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_23getHeaders_1D, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"getHeaders_2D", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_25getHeaders_2D, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"getHeaders_1D2D", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_27getHeaders_1D2D, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"getHeaders_nD", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_29getHeaders_nD, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"cleanOutOldRecords", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_31cleanOutOldRecords, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_33__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_9incStatDB_35__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+static PyMethodDef __pyx_methods_12kitsune_core_22AfterImage_extrapolate_incStatDB[] = {
+  {"register", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_3register, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"register_cov", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_5register_cov, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"update", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_7update, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"get_1D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_9get_1D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"get_2D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_11get_2D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"get_all_2D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_13get_all_2D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"get_nD_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_15get_nD_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"update_get_1D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_17update_get_1D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"update_get_2D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_19update_get_2D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"update_get_1D2D_Stats", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_21update_get_1D2D_Stats, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"getHeaders_1D", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_23getHeaders_1D, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"getHeaders_2D", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_25getHeaders_2D, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"getHeaders_1D2D", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_27getHeaders_1D2D, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"getHeaders_nD", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_29getHeaders_nD, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"cleanOutOldRecords", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_31cleanOutOldRecords, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_33__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_35__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
   {0, 0, 0, 0}
 };
 #if CYTHON_USE_TYPE_SPECS
-static PyType_Slot __pyx_type_22AfterImage_extrapolate_incStatDB_slots[] = {
-  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_22AfterImage_extrapolate_incStatDB},
-  {Py_tp_traverse, (void *)__pyx_tp_traverse_22AfterImage_extrapolate_incStatDB},
-  {Py_tp_clear, (void *)__pyx_tp_clear_22AfterImage_extrapolate_incStatDB},
-  {Py_tp_methods, (void *)__pyx_methods_22AfterImage_extrapolate_incStatDB},
-  {Py_tp_init, (void *)__pyx_pw_22AfterImage_extrapolate_9incStatDB_1__init__},
-  {Py_tp_new, (void *)__pyx_tp_new_22AfterImage_extrapolate_incStatDB},
+static PyType_Slot __pyx_type_12kitsune_core_22AfterImage_extrapolate_incStatDB_slots[] = {
+  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate_incStatDB},
+  {Py_tp_traverse, (void *)__pyx_tp_traverse_12kitsune_core_22AfterImage_extrapolate_incStatDB},
+  {Py_tp_clear, (void *)__pyx_tp_clear_12kitsune_core_22AfterImage_extrapolate_incStatDB},
+  {Py_tp_methods, (void *)__pyx_methods_12kitsune_core_22AfterImage_extrapolate_incStatDB},
+  {Py_tp_init, (void *)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_1__init__},
+  {Py_tp_new, (void *)__pyx_tp_new_12kitsune_core_22AfterImage_extrapolate_incStatDB},
   {0, 0},
 };
-static PyType_Spec __pyx_type_22AfterImage_extrapolate_incStatDB_spec = {
-  "AfterImage_extrapolate.incStatDB",
-  sizeof(struct __pyx_obj_22AfterImage_extrapolate_incStatDB),
+static PyType_Spec __pyx_type_12kitsune_core_22AfterImage_extrapolate_incStatDB_spec = {
+  "kitsune_core.AfterImage_extrapolate.incStatDB",
+  sizeof(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,
-  __pyx_type_22AfterImage_extrapolate_incStatDB_slots,
+  __pyx_type_12kitsune_core_22AfterImage_extrapolate_incStatDB_slots,
 };
 #else
 
-static PyTypeObject __pyx_type_22AfterImage_extrapolate_incStatDB = {
+static PyTypeObject __pyx_type_12kitsune_core_22AfterImage_extrapolate_incStatDB = {
   PyVarObject_HEAD_INIT(0, 0)
-  "AfterImage_extrapolate.""incStatDB", /*tp_name*/
-  sizeof(struct __pyx_obj_22AfterImage_extrapolate_incStatDB), /*tp_basicsize*/
+  "kitsune_core.AfterImage_extrapolate.""incStatDB", /*tp_name*/
+  sizeof(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_22AfterImage_extrapolate_incStatDB, /*tp_dealloc*/
+  __pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate_incStatDB, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -27953,13 +27953,13 @@ static PyTypeObject __pyx_type_22AfterImage_extrapolate_incStatDB = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_22AfterImage_extrapolate_incStatDB, /*tp_traverse*/
-  __pyx_tp_clear_22AfterImage_extrapolate_incStatDB, /*tp_clear*/
+  __pyx_tp_traverse_12kitsune_core_22AfterImage_extrapolate_incStatDB, /*tp_traverse*/
+  __pyx_tp_clear_12kitsune_core_22AfterImage_extrapolate_incStatDB, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_22AfterImage_extrapolate_incStatDB, /*tp_methods*/
+  __pyx_methods_12kitsune_core_22AfterImage_extrapolate_incStatDB, /*tp_methods*/
   0, /*tp_members*/
   0, /*tp_getset*/
   0, /*tp_base*/
@@ -27969,9 +27969,9 @@ static PyTypeObject __pyx_type_22AfterImage_extrapolate_incStatDB = {
   #if !CYTHON_USE_TYPE_SPECS
   0, /*tp_dictoffset*/
   #endif
-  __pyx_pw_22AfterImage_extrapolate_9incStatDB_1__init__, /*tp_init*/
+  __pyx_pw_12kitsune_core_22AfterImage_extrapolate_9incStatDB_1__init__, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_22AfterImage_extrapolate_incStatDB, /*tp_new*/
+  __pyx_tp_new_12kitsune_core_22AfterImage_extrapolate_incStatDB, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -28005,10 +28005,10 @@ static PyTypeObject __pyx_type_22AfterImage_extrapolate_incStatDB = {
   #endif
 };
 #endif
-static struct __pyx_vtabstruct_22AfterImage_extrapolate_Queue __pyx_vtable_22AfterImage_extrapolate_Queue;
+static struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_Queue __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_Queue;
 
-static PyObject *__pyx_tp_new_22AfterImage_extrapolate_Queue(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
-  struct __pyx_obj_22AfterImage_extrapolate_Queue *p;
+static PyObject *__pyx_tp_new_12kitsune_core_22AfterImage_extrapolate_Queue(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *p;
   PyObject *o;
   #if CYTHON_COMPILING_IN_LIMITED_API
   allocfunc alloc_func = (allocfunc)PyType_GetSlot(t, Py_tp_alloc);
@@ -28021,15 +28021,15 @@ static PyObject *__pyx_tp_new_22AfterImage_extrapolate_Queue(PyTypeObject *t, CY
   }
   if (unlikely(!o)) return 0;
   #endif
-  p = ((struct __pyx_obj_22AfterImage_extrapolate_Queue *)o);
-  p->__pyx_vtab = __pyx_vtabptr_22AfterImage_extrapolate_Queue;
+  p = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *)o);
+  p->__pyx_vtab = __pyx_vtabptr_12kitsune_core_22AfterImage_extrapolate_Queue;
   return o;
 }
 
-static void __pyx_tp_dealloc_22AfterImage_extrapolate_Queue(PyObject *o) {
+static void __pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate_Queue(PyObject *o) {
   #if CYTHON_USE_TP_FINALIZE
   if (unlikely((PY_VERSION_HEX >= 0x03080000 || __Pyx_PyType_HasFeature(Py_TYPE(o), Py_TPFLAGS_HAVE_FINALIZE)) && __Pyx_PyObject_GetSlot(o, tp_finalize, destructor)) && (!PyType_IS_GC(Py_TYPE(o)) || !__Pyx_PyObject_GC_IsFinalized(o))) {
-    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_22AfterImage_extrapolate_Queue) {
+    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate_Queue) {
       if (PyObject_CallFinalizerFromDealloc(o)) return;
     }
   }
@@ -28044,34 +28044,34 @@ static void __pyx_tp_dealloc_22AfterImage_extrapolate_Queue(PyObject *o) {
   #endif
 }
 
-static PyMethodDef __pyx_methods_22AfterImage_extrapolate_Queue[] = {
-  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_5Queue_3__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_5Queue_5__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+static PyMethodDef __pyx_methods_12kitsune_core_22AfterImage_extrapolate_Queue[] = {
+  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_5Queue_3__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_5Queue_5__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
   {0, 0, 0, 0}
 };
 #if CYTHON_USE_TYPE_SPECS
-static PyType_Slot __pyx_type_22AfterImage_extrapolate_Queue_slots[] = {
-  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_22AfterImage_extrapolate_Queue},
-  {Py_tp_methods, (void *)__pyx_methods_22AfterImage_extrapolate_Queue},
-  {Py_tp_init, (void *)__pyx_pw_22AfterImage_extrapolate_5Queue_1__init__},
-  {Py_tp_new, (void *)__pyx_tp_new_22AfterImage_extrapolate_Queue},
+static PyType_Slot __pyx_type_12kitsune_core_22AfterImage_extrapolate_Queue_slots[] = {
+  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate_Queue},
+  {Py_tp_methods, (void *)__pyx_methods_12kitsune_core_22AfterImage_extrapolate_Queue},
+  {Py_tp_init, (void *)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_5Queue_1__init__},
+  {Py_tp_new, (void *)__pyx_tp_new_12kitsune_core_22AfterImage_extrapolate_Queue},
   {0, 0},
 };
-static PyType_Spec __pyx_type_22AfterImage_extrapolate_Queue_spec = {
-  "AfterImage_extrapolate.Queue",
-  sizeof(struct __pyx_obj_22AfterImage_extrapolate_Queue),
+static PyType_Spec __pyx_type_12kitsune_core_22AfterImage_extrapolate_Queue_spec = {
+  "kitsune_core.AfterImage_extrapolate.Queue",
+  sizeof(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE,
-  __pyx_type_22AfterImage_extrapolate_Queue_slots,
+  __pyx_type_12kitsune_core_22AfterImage_extrapolate_Queue_slots,
 };
 #else
 
-static PyTypeObject __pyx_type_22AfterImage_extrapolate_Queue = {
+static PyTypeObject __pyx_type_12kitsune_core_22AfterImage_extrapolate_Queue = {
   PyVarObject_HEAD_INIT(0, 0)
-  "AfterImage_extrapolate.""Queue", /*tp_name*/
-  sizeof(struct __pyx_obj_22AfterImage_extrapolate_Queue), /*tp_basicsize*/
+  "kitsune_core.AfterImage_extrapolate.""Queue", /*tp_name*/
+  sizeof(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_22AfterImage_extrapolate_Queue, /*tp_dealloc*/
+  __pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate_Queue, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -28104,7 +28104,7 @@ static PyTypeObject __pyx_type_22AfterImage_extrapolate_Queue = {
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_22AfterImage_extrapolate_Queue, /*tp_methods*/
+  __pyx_methods_12kitsune_core_22AfterImage_extrapolate_Queue, /*tp_methods*/
   0, /*tp_members*/
   0, /*tp_getset*/
   0, /*tp_base*/
@@ -28114,9 +28114,9 @@ static PyTypeObject __pyx_type_22AfterImage_extrapolate_Queue = {
   #if !CYTHON_USE_TYPE_SPECS
   0, /*tp_dictoffset*/
   #endif
-  __pyx_pw_22AfterImage_extrapolate_5Queue_1__init__, /*tp_init*/
+  __pyx_pw_12kitsune_core_22AfterImage_extrapolate_5Queue_1__init__, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_22AfterImage_extrapolate_Queue, /*tp_new*/
+  __pyx_tp_new_12kitsune_core_22AfterImage_extrapolate_Queue, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -28150,10 +28150,10 @@ static PyTypeObject __pyx_type_22AfterImage_extrapolate_Queue = {
   #endif
 };
 #endif
-static struct __pyx_vtabstruct_22AfterImage_extrapolate_extrapolator __pyx_vtable_22AfterImage_extrapolate_extrapolator;
+static struct __pyx_vtabstruct_12kitsune_core_22AfterImage_extrapolate_extrapolator __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_extrapolator;
 
-static PyObject *__pyx_tp_new_22AfterImage_extrapolate_extrapolator(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
-  struct __pyx_obj_22AfterImage_extrapolate_extrapolator *p;
+static PyObject *__pyx_tp_new_12kitsune_core_22AfterImage_extrapolate_extrapolator(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *p;
   PyObject *o;
   #if CYTHON_COMPILING_IN_LIMITED_API
   allocfunc alloc_func = (allocfunc)PyType_GetSlot(t, Py_tp_alloc);
@@ -28166,18 +28166,18 @@ static PyObject *__pyx_tp_new_22AfterImage_extrapolate_extrapolator(PyTypeObject
   }
   if (unlikely(!o)) return 0;
   #endif
-  p = ((struct __pyx_obj_22AfterImage_extrapolate_extrapolator *)o);
-  p->__pyx_vtab = __pyx_vtabptr_22AfterImage_extrapolate_extrapolator;
-  p->Qt = ((struct __pyx_obj_22AfterImage_extrapolate_Queue *)Py_None); Py_INCREF(Py_None);
-  p->Qv = ((struct __pyx_obj_22AfterImage_extrapolate_Queue *)Py_None); Py_INCREF(Py_None);
+  p = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *)o);
+  p->__pyx_vtab = __pyx_vtabptr_12kitsune_core_22AfterImage_extrapolate_extrapolator;
+  p->Qt = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *)Py_None); Py_INCREF(Py_None);
+  p->Qv = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *)Py_None); Py_INCREF(Py_None);
   return o;
 }
 
-static void __pyx_tp_dealloc_22AfterImage_extrapolate_extrapolator(PyObject *o) {
-  struct __pyx_obj_22AfterImage_extrapolate_extrapolator *p = (struct __pyx_obj_22AfterImage_extrapolate_extrapolator *)o;
+static void __pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate_extrapolator(PyObject *o) {
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *p = (struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *)o;
   #if CYTHON_USE_TP_FINALIZE
   if (unlikely((PY_VERSION_HEX >= 0x03080000 || __Pyx_PyType_HasFeature(Py_TYPE(o), Py_TPFLAGS_HAVE_FINALIZE)) && __Pyx_PyObject_GetSlot(o, tp_finalize, destructor)) && !__Pyx_PyObject_GC_IsFinalized(o)) {
-    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_22AfterImage_extrapolate_extrapolator) {
+    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate_extrapolator) {
       if (PyObject_CallFinalizerFromDealloc(o)) return;
     }
   }
@@ -28195,9 +28195,9 @@ static void __pyx_tp_dealloc_22AfterImage_extrapolate_extrapolator(PyObject *o) 
   #endif
 }
 
-static int __pyx_tp_traverse_22AfterImage_extrapolate_extrapolator(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_12kitsune_core_22AfterImage_extrapolate_extrapolator(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_22AfterImage_extrapolate_extrapolator *p = (struct __pyx_obj_22AfterImage_extrapolate_extrapolator *)o;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *p = (struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *)o;
   if (p->Qt) {
     e = (*v)(((PyObject *)p->Qt), a); if (e) return e;
   }
@@ -28207,50 +28207,50 @@ static int __pyx_tp_traverse_22AfterImage_extrapolate_extrapolator(PyObject *o, 
   return 0;
 }
 
-static int __pyx_tp_clear_22AfterImage_extrapolate_extrapolator(PyObject *o) {
+static int __pyx_tp_clear_12kitsune_core_22AfterImage_extrapolate_extrapolator(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_22AfterImage_extrapolate_extrapolator *p = (struct __pyx_obj_22AfterImage_extrapolate_extrapolator *)o;
+  struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *p = (struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *)o;
   tmp = ((PyObject*)p->Qt);
-  p->Qt = ((struct __pyx_obj_22AfterImage_extrapolate_Queue *)Py_None); Py_INCREF(Py_None);
+  p->Qt = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   tmp = ((PyObject*)p->Qv);
-  p->Qv = ((struct __pyx_obj_22AfterImage_extrapolate_Queue *)Py_None); Py_INCREF(Py_None);
+  p->Qv = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *)Py_None); Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   return 0;
 }
 
-static PyMethodDef __pyx_methods_22AfterImage_extrapolate_extrapolator[] = {
-  {"insert", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_12extrapolator_3insert, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"predict", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_12extrapolator_5predict, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_12extrapolator_7__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_22AfterImage_extrapolate_12extrapolator_9__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+static PyMethodDef __pyx_methods_12kitsune_core_22AfterImage_extrapolate_extrapolator[] = {
+  {"insert", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_12extrapolator_3insert, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"predict", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_12extrapolator_5predict, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_12extrapolator_7__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_12extrapolator_9__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
   {0, 0, 0, 0}
 };
 #if CYTHON_USE_TYPE_SPECS
-static PyType_Slot __pyx_type_22AfterImage_extrapolate_extrapolator_slots[] = {
-  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_22AfterImage_extrapolate_extrapolator},
-  {Py_tp_traverse, (void *)__pyx_tp_traverse_22AfterImage_extrapolate_extrapolator},
-  {Py_tp_clear, (void *)__pyx_tp_clear_22AfterImage_extrapolate_extrapolator},
-  {Py_tp_methods, (void *)__pyx_methods_22AfterImage_extrapolate_extrapolator},
-  {Py_tp_init, (void *)__pyx_pw_22AfterImage_extrapolate_12extrapolator_1__init__},
-  {Py_tp_new, (void *)__pyx_tp_new_22AfterImage_extrapolate_extrapolator},
+static PyType_Slot __pyx_type_12kitsune_core_22AfterImage_extrapolate_extrapolator_slots[] = {
+  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate_extrapolator},
+  {Py_tp_traverse, (void *)__pyx_tp_traverse_12kitsune_core_22AfterImage_extrapolate_extrapolator},
+  {Py_tp_clear, (void *)__pyx_tp_clear_12kitsune_core_22AfterImage_extrapolate_extrapolator},
+  {Py_tp_methods, (void *)__pyx_methods_12kitsune_core_22AfterImage_extrapolate_extrapolator},
+  {Py_tp_init, (void *)__pyx_pw_12kitsune_core_22AfterImage_extrapolate_12extrapolator_1__init__},
+  {Py_tp_new, (void *)__pyx_tp_new_12kitsune_core_22AfterImage_extrapolate_extrapolator},
   {0, 0},
 };
-static PyType_Spec __pyx_type_22AfterImage_extrapolate_extrapolator_spec = {
-  "AfterImage_extrapolate.extrapolator",
-  sizeof(struct __pyx_obj_22AfterImage_extrapolate_extrapolator),
+static PyType_Spec __pyx_type_12kitsune_core_22AfterImage_extrapolate_extrapolator_spec = {
+  "kitsune_core.AfterImage_extrapolate.extrapolator",
+  sizeof(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,
-  __pyx_type_22AfterImage_extrapolate_extrapolator_slots,
+  __pyx_type_12kitsune_core_22AfterImage_extrapolate_extrapolator_slots,
 };
 #else
 
-static PyTypeObject __pyx_type_22AfterImage_extrapolate_extrapolator = {
+static PyTypeObject __pyx_type_12kitsune_core_22AfterImage_extrapolate_extrapolator = {
   PyVarObject_HEAD_INIT(0, 0)
-  "AfterImage_extrapolate.""extrapolator", /*tp_name*/
-  sizeof(struct __pyx_obj_22AfterImage_extrapolate_extrapolator), /*tp_basicsize*/
+  "kitsune_core.AfterImage_extrapolate.""extrapolator", /*tp_name*/
+  sizeof(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_22AfterImage_extrapolate_extrapolator, /*tp_dealloc*/
+  __pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate_extrapolator, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -28277,13 +28277,13 @@ static PyTypeObject __pyx_type_22AfterImage_extrapolate_extrapolator = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_22AfterImage_extrapolate_extrapolator, /*tp_traverse*/
-  __pyx_tp_clear_22AfterImage_extrapolate_extrapolator, /*tp_clear*/
+  __pyx_tp_traverse_12kitsune_core_22AfterImage_extrapolate_extrapolator, /*tp_traverse*/
+  __pyx_tp_clear_12kitsune_core_22AfterImage_extrapolate_extrapolator, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_22AfterImage_extrapolate_extrapolator, /*tp_methods*/
+  __pyx_methods_12kitsune_core_22AfterImage_extrapolate_extrapolator, /*tp_methods*/
   0, /*tp_members*/
   0, /*tp_getset*/
   0, /*tp_base*/
@@ -28293,9 +28293,9 @@ static PyTypeObject __pyx_type_22AfterImage_extrapolate_extrapolator = {
   #if !CYTHON_USE_TYPE_SPECS
   0, /*tp_dictoffset*/
   #endif
-  __pyx_pw_22AfterImage_extrapolate_12extrapolator_1__init__, /*tp_init*/
+  __pyx_pw_12kitsune_core_22AfterImage_extrapolate_12extrapolator_1__init__, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_22AfterImage_extrapolate_extrapolator, /*tp_new*/
+  __pyx_tp_new_12kitsune_core_22AfterImage_extrapolate_extrapolator, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -28331,20 +28331,20 @@ static PyTypeObject __pyx_type_22AfterImage_extrapolate_extrapolator = {
 #endif
 
 #if CYTHON_USE_FREELISTS
-static struct __pyx_obj_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords *__pyx_freelist_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords[8];
-static int __pyx_freecount_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords = 0;
+static struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords *__pyx_freelist_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords[8];
+static int __pyx_freecount_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords = 0;
 #endif
 
-static PyObject *__pyx_tp_new_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+static PyObject *__pyx_tp_new_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
   PyObject *o;
   #if CYTHON_COMPILING_IN_LIMITED_API
   allocfunc alloc_func = (allocfunc)PyType_GetSlot(t, Py_tp_alloc);
   o = alloc_func(t, 0);
   #else
   #if CYTHON_USE_FREELISTS
-  if (likely((int)(__pyx_freecount_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords > 0) & (int)(t->tp_basicsize == sizeof(struct __pyx_obj_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords)))) {
-    o = (PyObject*)__pyx_freelist_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords[--__pyx_freecount_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords];
-    memset(o, 0, sizeof(struct __pyx_obj_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords));
+  if (likely((int)(__pyx_freecount_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords > 0) & (int)(t->tp_basicsize == sizeof(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords)))) {
+    o = (PyObject*)__pyx_freelist_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords[--__pyx_freecount_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords];
+    memset(o, 0, sizeof(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords));
     (void) PyObject_INIT(o, t);
   } else
   #endif
@@ -28356,17 +28356,17 @@ static PyObject *__pyx_tp_new_22AfterImage_extrapolate___pyx_scope_struct__clean
   return o;
 }
 
-static void __pyx_tp_dealloc_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords(PyObject *o) {
+static void __pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords(PyObject *o) {
   #if CYTHON_USE_TP_FINALIZE
   if (unlikely((PY_VERSION_HEX >= 0x03080000 || __Pyx_PyType_HasFeature(Py_TYPE(o), Py_TPFLAGS_HAVE_FINALIZE)) && __Pyx_PyObject_GetSlot(o, tp_finalize, destructor)) && (!PyType_IS_GC(Py_TYPE(o)) || !__Pyx_PyObject_GC_IsFinalized(o))) {
-    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords) {
+    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords) {
       if (PyObject_CallFinalizerFromDealloc(o)) return;
     }
   }
   #endif
   #if CYTHON_USE_FREELISTS
-  if (((int)(__pyx_freecount_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords < 8) & (int)(Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords)))) {
-    __pyx_freelist_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords[__pyx_freecount_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords++] = ((struct __pyx_obj_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords *)o);
+  if (((int)(__pyx_freecount_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords < 8) & (int)(Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords)))) {
+    __pyx_freelist_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords[__pyx_freecount_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords++] = ((struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords *)o);
   } else
   #endif
   {
@@ -28381,26 +28381,26 @@ static void __pyx_tp_dealloc_22AfterImage_extrapolate___pyx_scope_struct__cleanO
   }
 }
 #if CYTHON_USE_TYPE_SPECS
-static PyType_Slot __pyx_type_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords_slots[] = {
-  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords},
-  {Py_tp_new, (void *)__pyx_tp_new_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords},
+static PyType_Slot __pyx_type_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords_slots[] = {
+  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords},
+  {Py_tp_new, (void *)__pyx_tp_new_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords},
   {0, 0},
 };
-static PyType_Spec __pyx_type_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords_spec = {
-  "AfterImage_extrapolate.__pyx_scope_struct__cleanOutOldRecords",
-  sizeof(struct __pyx_obj_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords),
+static PyType_Spec __pyx_type_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords_spec = {
+  "kitsune_core.AfterImage_extrapolate.__pyx_scope_struct__cleanOutOldRecords",
+  sizeof(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_FINALIZE,
-  __pyx_type_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords_slots,
+  __pyx_type_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords_slots,
 };
 #else
 
-static PyTypeObject __pyx_type_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords = {
+static PyTypeObject __pyx_type_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords = {
   PyVarObject_HEAD_INIT(0, 0)
-  "AfterImage_extrapolate.""__pyx_scope_struct__cleanOutOldRecords", /*tp_name*/
-  sizeof(struct __pyx_obj_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords), /*tp_basicsize*/
+  "kitsune_core.AfterImage_extrapolate.""__pyx_scope_struct__cleanOutOldRecords", /*tp_name*/
+  sizeof(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords, /*tp_dealloc*/
+  __pyx_tp_dealloc_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -28445,7 +28445,7 @@ static PyTypeObject __pyx_type_22AfterImage_extrapolate___pyx_scope_struct__clea
   #endif
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords, /*tp_new*/
+  __pyx_tp_new_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -28502,7 +28502,6 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_1, __pyx_k_1, sizeof(__pyx_k_1), 0, 0, 1, 1},
     {&__pyx_kp_s_1_2, __pyx_k_1_2, sizeof(__pyx_k_1_2), 0, 0, 1, 0},
     {&__pyx_kp_s_Adding_Entry, __pyx_k_Adding_Entry, sizeof(__pyx_k_Adding_Entry), 0, 0, 1, 0},
-    {&__pyx_n_s_AfterImage_extrapolate, __pyx_k_AfterImage_extrapolate, sizeof(__pyx_k_AfterImage_extrapolate), 0, 0, 1, 1},
     {&__pyx_n_s_H, __pyx_k_H, sizeof(__pyx_k_H), 0, 0, 1, 1},
     {&__pyx_n_s_ID, __pyx_k_ID, sizeof(__pyx_k_ID), 0, 0, 1, 1},
     {&__pyx_n_s_ID1, __pyx_k_ID1, sizeof(__pyx_k_ID1), 0, 0, 1, 1},
@@ -28514,7 +28513,6 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_kp_s_Incompatible_checksums_0x_x_vs_0_4, __pyx_k_Incompatible_checksums_0x_x_vs_0_4, sizeof(__pyx_k_Incompatible_checksums_0x_x_vs_0_4), 0, 0, 1, 0},
     {&__pyx_kp_s_Incompatible_checksums_0x_x_vs_0_5, __pyx_k_Incompatible_checksums_0x_x_vs_0_5, sizeof(__pyx_k_Incompatible_checksums_0x_x_vs_0_5), 0, 0, 1, 0},
     {&__pyx_n_s_IndexError, __pyx_k_IndexError, sizeof(__pyx_k_IndexError), 0, 0, 1, 1},
-    {&__pyx_n_s_Inf, __pyx_k_Inf, sizeof(__pyx_k_Inf), 0, 0, 1, 1},
     {&__pyx_n_s_L, __pyx_k_L, sizeof(__pyx_k_L), 0, 0, 1, 1},
     {&__pyx_n_s_Lambda, __pyx_k_Lambda, sizeof(__pyx_k_Lambda), 0, 0, 1, 1},
     {&__pyx_n_s_LookupError, __pyx_k_LookupError, sizeof(__pyx_k_LookupError), 0, 0, 1, 1},
@@ -28624,6 +28622,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_incStats, __pyx_k_incStats, sizeof(__pyx_k_incStats), 0, 0, 1, 1},
     {&__pyx_n_s_inc_cov, __pyx_k_inc_cov, sizeof(__pyx_k_inc_cov), 0, 0, 1, 1},
     {&__pyx_n_s_indx, __pyx_k_indx, sizeof(__pyx_k_indx), 0, 0, 1, 1},
+    {&__pyx_n_s_inf, __pyx_k_inf, sizeof(__pyx_k_inf), 0, 0, 1, 1},
     {&__pyx_n_s_init, __pyx_k_init, sizeof(__pyx_k_init), 0, 0, 1, 1},
     {&__pyx_n_s_init_subclass, __pyx_k_init_subclass, sizeof(__pyx_k_init_subclass), 0, 0, 1, 1},
     {&__pyx_n_s_init_time, __pyx_k_init_time, sizeof(__pyx_k_init_time), 0, 0, 1, 1},
@@ -28641,7 +28640,8 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_items, __pyx_k_items, sizeof(__pyx_k_items), 0, 0, 1, 1},
     {&__pyx_n_s_k, __pyx_k_k, sizeof(__pyx_k_k), 0, 0, 1, 1},
     {&__pyx_n_s_key, __pyx_k_key, sizeof(__pyx_k_key), 0, 0, 1, 1},
-    {&__pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_k_kitsune_core_AfterImage_extrapol, sizeof(__pyx_k_kitsune_core_AfterImage_extrapol), 0, 0, 1, 0},
+    {&__pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_k_kitsune_core_AfterImage_extrapol, sizeof(__pyx_k_kitsune_core_AfterImage_extrapol), 0, 0, 1, 1},
+    {&__pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_k_kitsune_core_AfterImage_extrapol_2, sizeof(__pyx_k_kitsune_core_AfterImage_extrapol_2), 0, 0, 1, 0},
     {&__pyx_n_s_lT, __pyx_k_lT, sizeof(__pyx_k_lT), 0, 0, 1, 1},
     {&__pyx_n_s_lbIsAnom, __pyx_k_lbIsAnom, sizeof(__pyx_k_lbIsAnom), 0, 0, 1, 1},
     {&__pyx_n_s_lbound, __pyx_k_lbound, sizeof(__pyx_k_lbound), 0, 0, 1, 1},
@@ -28814,7 +28814,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__16);
   __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_setstate_cython, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) __PYX_ERR(1, 16, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":292
+  /* "kitsune_core/AfterImage_extrapolate.pyx":292
  *             return 0
  * 
  *     def isRelated(self, str ID):             # <<<<<<<<<<<<<<
@@ -28824,7 +28824,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__18 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_ID); if (unlikely(!__pyx_tuple__18)) __PYX_ERR(0, 292, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__18);
   __Pyx_GIVEREF(__pyx_tuple__18);
-  __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_isRelated, 292, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_isRelated, 292, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) __PYX_ERR(0, 292, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
@@ -28841,7 +28841,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  */
   __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_setstate_cython, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(1, 16, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":352
+  /* "kitsune_core/AfterImage_extrapolate.pyx":352
  * 
  *     # Registers a new stream. init_time: init lastTimestamp of the incStat
  *     def register(self,str ID,double Lambda=1,double init_time=0,int isTypeDiff=False):             # <<<<<<<<<<<<<<
@@ -28851,12 +28851,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__22 = PyTuple_Pack(7, __pyx_n_s_self, __pyx_n_s_ID, __pyx_n_s_Lambda, __pyx_n_s_init_time, __pyx_n_s_isTypeDiff, __pyx_n_s_key, __pyx_n_s_incS); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__22);
   __Pyx_GIVEREF(__pyx_tuple__22);
-  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_register, 352, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 352, __pyx_L1_error)
+  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_register, 352, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 352, __pyx_L1_error)
   __pyx_tuple__24 = PyTuple_Pack(3, __pyx_float_1_0, __pyx_float_0_0, Py_False); if (unlikely(!__pyx_tuple__24)) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__24);
   __Pyx_GIVEREF(__pyx_tuple__24);
 
-  /* "AfterImage_extrapolate.pyx":372
+  /* "kitsune_core/AfterImage_extrapolate.pyx":372
  * 
  *     # Registers covariance tracking for two streams, registers missing streams
  *     def register_cov(self,str ID1, str ID2, double Lambda=1, double init_time=0, int isTypeDiff=False):             # <<<<<<<<<<<<<<
@@ -28866,9 +28866,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__25 = PyTuple_Pack(10, __pyx_n_s_self, __pyx_n_s_ID1, __pyx_n_s_ID2, __pyx_n_s_Lambda, __pyx_n_s_init_time, __pyx_n_s_isTypeDiff, __pyx_n_s_incS1, __pyx_n_s_incS2, __pyx_n_s_cov, __pyx_n_s_inc_cov); if (unlikely(!__pyx_tuple__25)) __PYX_ERR(0, 372, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__25);
   __Pyx_GIVEREF(__pyx_tuple__25);
-  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(6, 0, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_register_cov, 372, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 372, __pyx_L1_error)
+  __pyx_codeobj__26 = (PyObject*)__Pyx_PyCode_New(6, 0, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__25, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_register_cov, 372, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__26)) __PYX_ERR(0, 372, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":394
+  /* "kitsune_core/AfterImage_extrapolate.pyx":394
  * 
  *     # updates/registers stream
  *     def update(self,str ID,double t,double v,double Lambda=1,int isTypeDiff=False):             # <<<<<<<<<<<<<<
@@ -28878,12 +28878,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__27 = PyTuple_Pack(7, __pyx_n_s_self, __pyx_n_s_ID, __pyx_n_s_t, __pyx_n_s_v, __pyx_n_s_Lambda, __pyx_n_s_isTypeDiff, __pyx_n_s_incS); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 394, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__27);
   __Pyx_GIVEREF(__pyx_tuple__27);
-  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(6, 0, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_update, 394, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 394, __pyx_L1_error)
+  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(6, 0, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_update, 394, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 394, __pyx_L1_error)
   __pyx_tuple__29 = PyTuple_Pack(2, __pyx_float_1_0, Py_False); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 394, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__29);
   __Pyx_GIVEREF(__pyx_tuple__29);
 
-  /* "AfterImage_extrapolate.pyx":401
+  /* "kitsune_core/AfterImage_extrapolate.pyx":401
  * 
  *     # Pulls current stats from the given ID
  *     def get_1D_Stats(self,str ID,double Lambda=1): #weight, mean, std             # <<<<<<<<<<<<<<
@@ -28893,12 +28893,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__30 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_ID, __pyx_n_s_Lambda, __pyx_n_s_incS); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 401, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__30);
   __Pyx_GIVEREF(__pyx_tuple__30);
-  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_get_1D_Stats, 401, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 401, __pyx_L1_error)
+  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_get_1D_Stats, 401, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 401, __pyx_L1_error)
   __pyx_tuple__32 = PyTuple_Pack(1, __pyx_float_1_0); if (unlikely(!__pyx_tuple__32)) __PYX_ERR(0, 401, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__32);
   __Pyx_GIVEREF(__pyx_tuple__32);
 
-  /* "AfterImage_extrapolate.pyx":414
+  /* "kitsune_core/AfterImage_extrapolate.pyx":414
  * 
  *     # Pulls current correlational stats from the given IDs
  *     def get_2D_Stats(self, str ID1, str ID2, double Lambda=1): #cov, pcc             # <<<<<<<<<<<<<<
@@ -28908,9 +28908,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__33 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_ID1, __pyx_n_s_ID2, __pyx_n_s_Lambda, __pyx_n_s_incS); if (unlikely(!__pyx_tuple__33)) __PYX_ERR(0, 414, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__33);
   __Pyx_GIVEREF(__pyx_tuple__33);
-  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_get_2D_Stats, 414, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 414, __pyx_L1_error)
+  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_get_2D_Stats, 414, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 414, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":429
+  /* "kitsune_core/AfterImage_extrapolate.pyx":429
  *     # Pulls all correlational stats registered with the given ID
  *     # returns tuple [0]: stats-covs&pccs, [2]: IDs
  *     def get_all_2D_Stats(self, str ID, double Lambda=1):  # cov, pcc             # <<<<<<<<<<<<<<
@@ -28920,9 +28920,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__35 = PyTuple_Pack(7, __pyx_n_s_self, __pyx_n_s_ID, __pyx_n_s_Lambda, __pyx_n_s_incS1, __pyx_n_s_stats, __pyx_n_s_IDs, __pyx_n_s_cov); if (unlikely(!__pyx_tuple__35)) __PYX_ERR(0, 429, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__35);
   __Pyx_GIVEREF(__pyx_tuple__35);
-  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_get_all_2D_Stats, 429, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 429, __pyx_L1_error)
+  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_get_all_2D_Stats, 429, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 429, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":448
+  /* "kitsune_core/AfterImage_extrapolate.pyx":448
  * 
  *     # Pulls current multidimensional stats from the given IDs
  *     def get_nD_Stats(self,IDs,double Lambda=1): #radius, magnitude (IDs is a list)             # <<<<<<<<<<<<<<
@@ -28932,18 +28932,18 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__37 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_IDs, __pyx_n_s_Lambda, __pyx_n_s_incStats, __pyx_n_s_ID, __pyx_n_s_incS, __pyx_n_s_rad, __pyx_n_s_mag); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 448, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__37);
   __Pyx_GIVEREF(__pyx_tuple__37);
-  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_get_nD_Stats, 448, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 448, __pyx_L1_error)
+  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_get_nD_Stats, 448, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 448, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":470
+  /* "kitsune_core/AfterImage_extrapolate.pyx":470
  * 
  *     # Updates and then pulls current 1D stats from the given ID. Automatically registers previously unknown stream IDs
  *     def update_get_1D_Stats(self, str ID,double t, double v, double Lambda=1, int isTypeDiff=False):  # weight, mean, std             # <<<<<<<<<<<<<<
  *         cdef incStat incS
  *         incS = self.update(ID,t,v,Lambda,isTypeDiff)
  */
-  __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(6, 0, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_update_get_1D_Stats, 470, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 470, __pyx_L1_error)
+  __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(6, 0, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_update_get_1D_Stats, 470, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 470, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":478
+  /* "kitsune_core/AfterImage_extrapolate.pyx":478
  *     # Updates and then pulls current correlative stats between the given IDs. Automatically registers previously unknown stream IDs, and cov tracking
  *     #Note: AfterImage does not currently support Diff Type streams for correlational statistics.
  *     def update_get_2D_Stats(self, str ID1, str ID2,double t1,double v1,double Lambda=1, int level=1):  #level=  1:cov,pcc  2:radius,magnitude,cov,pcc             # <<<<<<<<<<<<<<
@@ -28953,12 +28953,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__40 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_ID1, __pyx_n_s_ID2, __pyx_n_s_t1, __pyx_n_s_v1, __pyx_n_s_Lambda, __pyx_n_s_level, __pyx_n_s_inc_cov); if (unlikely(!__pyx_tuple__40)) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__40);
   __Pyx_GIVEREF(__pyx_tuple__40);
-  __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(7, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_update_get_2D_Stats, 478, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 478, __pyx_L1_error)
+  __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(7, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_update_get_2D_Stats, 478, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 478, __pyx_L1_error)
   __pyx_tuple__42 = PyTuple_Pack(2, __pyx_float_1_0, __pyx_int_1); if (unlikely(!__pyx_tuple__42)) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__42);
   __Pyx_GIVEREF(__pyx_tuple__42);
 
-  /* "AfterImage_extrapolate.pyx":490
+  /* "kitsune_core/AfterImage_extrapolate.pyx":490
  * 
  *     # Updates and then pulls current 1D and 2D stats from the given IDs. Automatically registers previously unknown stream IDs
  *     def update_get_1D2D_Stats(self, str ID1, str ID2, double t1,double v1,double Lambda=1):  # weight, mean, std             # <<<<<<<<<<<<<<
@@ -28968,9 +28968,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__43 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_ID1, __pyx_n_s_ID2, __pyx_n_s_t1, __pyx_n_s_v1, __pyx_n_s_Lambda); if (unlikely(!__pyx_tuple__43)) __PYX_ERR(0, 490, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__43);
   __Pyx_GIVEREF(__pyx_tuple__43);
-  __pyx_codeobj__44 = (PyObject*)__Pyx_PyCode_New(6, 0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__43, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_update_get_1D2D_Stats, 490, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__44)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __pyx_codeobj__44 = (PyObject*)__Pyx_PyCode_New(6, 0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__43, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_update_get_1D2D_Stats, 490, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__44)) __PYX_ERR(0, 490, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":493
+  /* "kitsune_core/AfterImage_extrapolate.pyx":493
  *         return self.update_get_1D_Stats(ID1,t1,v1,Lambda) + self.update_get_2D_Stats(ID1,ID2,t1,v1,Lambda,level=2)
  * 
  *     def getHeaders_1D(self,Lambda=1,ID=''):             # <<<<<<<<<<<<<<
@@ -28980,12 +28980,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__45 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_Lambda, __pyx_n_s_ID, __pyx_n_s_L, __pyx_n_s_hdrs, __pyx_n_s_s); if (unlikely(!__pyx_tuple__45)) __PYX_ERR(0, 493, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__45);
   __Pyx_GIVEREF(__pyx_tuple__45);
-  __pyx_codeobj__46 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__45, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_getHeaders_1D, 493, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__46)) __PYX_ERR(0, 493, __pyx_L1_error)
+  __pyx_codeobj__46 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__45, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_getHeaders_1D, 493, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__46)) __PYX_ERR(0, 493, __pyx_L1_error)
   __pyx_tuple__47 = PyTuple_Pack(2, __pyx_int_1, __pyx_kp_s_); if (unlikely(!__pyx_tuple__47)) __PYX_ERR(0, 493, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__47);
   __Pyx_GIVEREF(__pyx_tuple__47);
 
-  /* "AfterImage_extrapolate.pyx":501
+  /* "kitsune_core/AfterImage_extrapolate.pyx":501
  *         return [str(L)+"_"+s for s in hdrs]
  * 
  *     def getHeaders_2D(self,Lambda=1,IDs=None, ver=1): #IDs is a 2-element list or tuple             # <<<<<<<<<<<<<<
@@ -28995,12 +28995,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__48 = PyTuple_Pack(7, __pyx_n_s_self, __pyx_n_s_Lambda, __pyx_n_s_IDs, __pyx_n_s_ver, __pyx_n_s_L, __pyx_n_s_hdrs, __pyx_n_s_s); if (unlikely(!__pyx_tuple__48)) __PYX_ERR(0, 501, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__48);
   __Pyx_GIVEREF(__pyx_tuple__48);
-  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__48, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_getHeaders_2D, 501, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 501, __pyx_L1_error)
+  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__48, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_getHeaders_2D, 501, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 501, __pyx_L1_error)
   __pyx_tuple__50 = PyTuple_Pack(3, __pyx_int_1, Py_None, __pyx_int_1); if (unlikely(!__pyx_tuple__50)) __PYX_ERR(0, 501, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__50);
   __Pyx_GIVEREF(__pyx_tuple__50);
 
-  /* "AfterImage_extrapolate.pyx":511
+  /* "kitsune_core/AfterImage_extrapolate.pyx":511
  *         return [str(Lambda)+"_"+s for s in hdrs]
  * 
  *     def getHeaders_1D2D(self,Lambda=1,IDs=None, ver=1):             # <<<<<<<<<<<<<<
@@ -29010,9 +29010,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__51 = PyTuple_Pack(7, __pyx_n_s_self, __pyx_n_s_Lambda, __pyx_n_s_IDs, __pyx_n_s_ver, __pyx_n_s_L, __pyx_n_s_hdrs1D, __pyx_n_s_hdrs2D); if (unlikely(!__pyx_tuple__51)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__51);
   __Pyx_GIVEREF(__pyx_tuple__51);
-  __pyx_codeobj__52 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__51, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_getHeaders_1D2D, 511, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__52)) __PYX_ERR(0, 511, __pyx_L1_error)
+  __pyx_codeobj__52 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__51, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_getHeaders_1D2D, 511, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__52)) __PYX_ERR(0, 511, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":522
+  /* "kitsune_core/AfterImage_extrapolate.pyx":522
  *         return hdrs1D + hdrs2D
  * 
  *     def getHeaders_nD(self,Lambda=1,IDs=[]): #IDs is a n-element list or tuple             # <<<<<<<<<<<<<<
@@ -29022,9 +29022,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__53 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_Lambda, __pyx_n_s_IDs, __pyx_n_s_L, __pyx_n_s_ID, __pyx_n_s_s, __pyx_n_s_hdrs, __pyx_n_s_s); if (unlikely(!__pyx_tuple__53)) __PYX_ERR(0, 522, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__53);
   __Pyx_GIVEREF(__pyx_tuple__53);
-  __pyx_codeobj__54 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__53, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_getHeaders_nD, 522, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__54)) __PYX_ERR(0, 522, __pyx_L1_error)
+  __pyx_codeobj__54 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__53, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_getHeaders_nD, 522, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__54)) __PYX_ERR(0, 522, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":536
+  /* "kitsune_core/AfterImage_extrapolate.pyx":536
  *     #cleans out records that have a weight less than the cutoff.
  *     #returns number or removed records.
  *     def cleanOutOldRecords(self,double cutoffWeight,double curTime):             # <<<<<<<<<<<<<<
@@ -29034,7 +29034,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__55 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_cutoffWeight, __pyx_n_s_curTime, __pyx_n_s_n, __pyx_n_s_W, __pyx_n_s_dump, __pyx_n_s_entry, __pyx_n_s_key); if (unlikely(!__pyx_tuple__55)) __PYX_ERR(0, 536, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__55);
   __Pyx_GIVEREF(__pyx_tuple__55);
-  __pyx_codeobj__56 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__55, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_cleanOutOldRecords, 536, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__56)) __PYX_ERR(0, 536, __pyx_L1_error)
+  __pyx_codeobj__56 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__55, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_cleanOutOldRecords, 536, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__56)) __PYX_ERR(0, 536, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
@@ -29051,9 +29051,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  */
   __pyx_codeobj__58 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_setstate_cython, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__58)) __PYX_ERR(1, 16, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":559
+  /* "kitsune_core/AfterImage_extrapolate.pyx":559
  * class incHist:
- *     #ubIsAnom means that the HBOS score for vals that fall past the upped bound are Inf (not 0)
+ *     #ubIsAnom means that the HBOS score for vals that fall past the upped bound are inf (not 0)
  *     def __init__(self,nbins,Lambda=0,ubIsAnom=True,lbIsAnom=True,lbound=-10,ubound=10,scaleGrace=None):             # <<<<<<<<<<<<<<
  *         self.scaleGrace = scaleGrace #the numbe rof instances to observe until a range it determeined
  *         if scaleGrace is not None:
@@ -29061,12 +29061,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__59 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_nbins, __pyx_n_s_Lambda, __pyx_n_s_ubIsAnom, __pyx_n_s_lbIsAnom, __pyx_n_s_lbound, __pyx_n_s_ubound, __pyx_n_s_scaleGrace); if (unlikely(!__pyx_tuple__59)) __PYX_ERR(0, 559, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__59);
   __Pyx_GIVEREF(__pyx_tuple__59);
-  __pyx_codeobj__60 = (PyObject*)__Pyx_PyCode_New(8, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__59, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_init, 559, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__60)) __PYX_ERR(0, 559, __pyx_L1_error)
+  __pyx_codeobj__60 = (PyObject*)__Pyx_PyCode_New(8, 0, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__59, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_init, 559, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__60)) __PYX_ERR(0, 559, __pyx_L1_error)
   __pyx_tuple__61 = PyTuple_Pack(6, ((PyObject *)__pyx_int_0), ((PyObject *)Py_True), ((PyObject *)Py_True), ((PyObject *)__pyx_int_neg_10), ((PyObject *)__pyx_int_10), Py_None); if (unlikely(!__pyx_tuple__61)) __PYX_ERR(0, 559, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__61);
   __Pyx_GIVEREF(__pyx_tuple__61);
 
-  /* "AfterImage_extrapolate.pyx":582
+  /* "kitsune_core/AfterImage_extrapolate.pyx":582
  * 
  *     #assumes even bin width starting from lbound until ubound. beyond bounds are assigned to the closest bin
  *     def getBinIndx(self,val,win=0):             # <<<<<<<<<<<<<<
@@ -29076,12 +29076,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__62 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_val, __pyx_n_s_win, __pyx_n_s_indx); if (unlikely(!__pyx_tuple__62)) __PYX_ERR(0, 582, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__62);
   __Pyx_GIVEREF(__pyx_tuple__62);
-  __pyx_codeobj__63 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__62, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_getBinIndx, 582, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__63)) __PYX_ERR(0, 582, __pyx_L1_error)
+  __pyx_codeobj__63 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__62, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_getBinIndx, 582, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__63)) __PYX_ERR(0, 582, __pyx_L1_error)
   __pyx_tuple__64 = PyTuple_Pack(1, ((PyObject *)__pyx_int_0)); if (unlikely(!__pyx_tuple__64)) __PYX_ERR(0, 582, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__64);
   __Pyx_GIVEREF(__pyx_tuple__64);
 
-  /* "AfterImage_extrapolate.pyx":604
+  /* "kitsune_core/AfterImage_extrapolate.pyx":604
  * 
  * 
  *     def processDecay(self, bin, timestamp):             # <<<<<<<<<<<<<<
@@ -29091,9 +29091,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__65 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_bin, __pyx_n_s_timestamp, __pyx_n_s_timeDiff, __pyx_n_s_factor); if (unlikely(!__pyx_tuple__65)) __PYX_ERR(0, 604, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__65);
   __Pyx_GIVEREF(__pyx_tuple__65);
-  __pyx_codeobj__66 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__65, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_processDecay, 604, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__66)) __PYX_ERR(0, 604, __pyx_L1_error)
+  __pyx_codeobj__66 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__65, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_processDecay, 604, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__66)) __PYX_ERR(0, 604, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":619
+  /* "kitsune_core/AfterImage_extrapolate.pyx":619
  *             self.lT[bin] = timestamp
  * 
  *     def insert(self,val,timestamp,penalty=False):             # <<<<<<<<<<<<<<
@@ -29103,12 +29103,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__67 = PyTuple_Pack(10, __pyx_n_s_self, __pyx_n_s_val, __pyx_n_s_timestamp, __pyx_n_s_penalty, __pyx_n_s_width, __pyx_n_s_bin, __pyx_n_s_tallestW, __pyx_n_s_scale, __pyx_n_s_fn, __pyx_n_s_inc); if (unlikely(!__pyx_tuple__67)) __PYX_ERR(0, 619, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__67);
   __Pyx_GIVEREF(__pyx_tuple__67);
-  __pyx_codeobj__68 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__67, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_insert, 619, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__68)) __PYX_ERR(0, 619, __pyx_L1_error)
+  __pyx_codeobj__68 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__67, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_insert, 619, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__68)) __PYX_ERR(0, 619, __pyx_L1_error)
   __pyx_tuple__69 = PyTuple_Pack(1, ((PyObject *)Py_False)); if (unlikely(!__pyx_tuple__69)) __PYX_ERR(0, 619, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__69);
   __Pyx_GIVEREF(__pyx_tuple__69);
 
-  /* "AfterImage_extrapolate.pyx":652
+  /* "kitsune_core/AfterImage_extrapolate.pyx":652
  *                     self.tallestBin = bin
  * 
  *     def halfsigmoid(self,x,k):             # <<<<<<<<<<<<<<
@@ -29118,9 +29118,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__70 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_x, __pyx_n_s_k); if (unlikely(!__pyx_tuple__70)) __PYX_ERR(0, 652, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__70);
   __Pyx_GIVEREF(__pyx_tuple__70);
-  __pyx_codeobj__71 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__70, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_halfsigmoid, 652, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__71)) __PYX_ERR(0, 652, __pyx_L1_error)
+  __pyx_codeobj__71 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__70, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_halfsigmoid, 652, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__71)) __PYX_ERR(0, 652, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":655
+  /* "kitsune_core/AfterImage_extrapolate.pyx":655
  *         return (k*x)/(k-x+1)
  * 
  *     def score(self,val,timestamp=-1,win=0): #HBOS for one dimension             # <<<<<<<<<<<<<<
@@ -29130,12 +29130,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__72 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_val, __pyx_n_s_timestamp, __pyx_n_s_win, __pyx_n_s_bin, __pyx_n_s_w); if (unlikely(!__pyx_tuple__72)) __PYX_ERR(0, 655, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__72);
   __Pyx_GIVEREF(__pyx_tuple__72);
-  __pyx_codeobj__73 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__72, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_score, 655, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__73)) __PYX_ERR(0, 655, __pyx_L1_error)
+  __pyx_codeobj__73 = (PyObject*)__Pyx_PyCode_New(4, 0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__72, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_score, 655, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__73)) __PYX_ERR(0, 655, __pyx_L1_error)
   __pyx_tuple__74 = PyTuple_Pack(2, ((PyObject *)__pyx_int_neg_1), ((PyObject *)__pyx_int_0)); if (unlikely(!__pyx_tuple__74)) __PYX_ERR(0, 655, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__74);
   __Pyx_GIVEREF(__pyx_tuple__74);
 
-  /* "AfterImage_extrapolate.pyx":676
+  /* "kitsune_core/AfterImage_extrapolate.pyx":676
  * 
  * 
  *     def getFreq(self,val,timestamp=-1): #HBOS for one dimension             # <<<<<<<<<<<<<<
@@ -29145,12 +29145,12 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__75 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_val, __pyx_n_s_timestamp, __pyx_n_s_bin); if (unlikely(!__pyx_tuple__75)) __PYX_ERR(0, 676, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__75);
   __Pyx_GIVEREF(__pyx_tuple__75);
-  __pyx_codeobj__76 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__75, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_getFreq, 676, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__76)) __PYX_ERR(0, 676, __pyx_L1_error)
+  __pyx_codeobj__76 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__75, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_getFreq, 676, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__76)) __PYX_ERR(0, 676, __pyx_L1_error)
   __pyx_tuple__77 = PyTuple_Pack(1, ((PyObject *)__pyx_int_neg_1)); if (unlikely(!__pyx_tuple__77)) __PYX_ERR(0, 676, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__77);
   __Pyx_GIVEREF(__pyx_tuple__77);
 
-  /* "AfterImage_extrapolate.pyx":684
+  /* "kitsune_core/AfterImage_extrapolate.pyx":684
  *             return self.W[bin]
  * 
  *     def getHist(self,timestamp=-1): #HBOS for one dimension             # <<<<<<<<<<<<<<
@@ -29160,7 +29160,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__78 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_timestamp, __pyx_n_s_H, __pyx_n_s_i); if (unlikely(!__pyx_tuple__78)) __PYX_ERR(0, 684, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__78);
   __Pyx_GIVEREF(__pyx_tuple__78);
-  __pyx_codeobj__79 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__78, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_getHist, 684, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__79)) __PYX_ERR(0, 684, __pyx_L1_error)
+  __pyx_codeobj__79 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__78, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_getHist, 684, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__79)) __PYX_ERR(0, 684, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
@@ -29177,7 +29177,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  */
   __pyx_codeobj__81 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_stringsource, __pyx_n_s_setstate_cython, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__81)) __PYX_ERR(1, 16, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":763
+  /* "kitsune_core/AfterImage_extrapolate.pyx":763
  *         self.Qv = Queue() #deque([],winsize) #window of values
  * 
  *     def insert(self,double t, double v):             # <<<<<<<<<<<<<<
@@ -29187,9 +29187,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__82 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_t, __pyx_n_s_v); if (unlikely(!__pyx_tuple__82)) __PYX_ERR(0, 763, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__82);
   __Pyx_GIVEREF(__pyx_tuple__82);
-  __pyx_codeobj__83 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__82, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_insert, 763, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__83)) __PYX_ERR(0, 763, __pyx_L1_error)
+  __pyx_codeobj__83 = (PyObject*)__Pyx_PyCode_New(3, 0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__82, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_insert, 763, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__83)) __PYX_ERR(0, 763, __pyx_L1_error)
 
-  /* "AfterImage_extrapolate.pyx":767
+  /* "kitsune_core/AfterImage_extrapolate.pyx":767
  *         self.Qv.insert(v)
  * 
  *     def predict(self, double t):             # <<<<<<<<<<<<<<
@@ -29199,7 +29199,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__84 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_t, __pyx_n_s_yp, __pyx_n_s_tm, __pyx_n_s_vm); if (unlikely(!__pyx_tuple__84)) __PYX_ERR(0, 767, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__84);
   __Pyx_GIVEREF(__pyx_tuple__84);
-  __pyx_codeobj__85 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__84, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol, __pyx_n_s_predict, 767, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__85)) __PYX_ERR(0, 767, __pyx_L1_error)
+  __pyx_codeobj__85 = (PyObject*)__Pyx_PyCode_New(2, 0, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__84, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_kitsune_core_AfterImage_extrapol_2, __pyx_n_s_predict, 767, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__85)) __PYX_ERR(0, 767, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
@@ -29321,193 +29321,193 @@ static int __Pyx_modinit_type_init_code(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
-  __pyx_vtabptr_22AfterImage_extrapolate_incStat = &__pyx_vtable_22AfterImage_extrapolate_incStat;
-  __pyx_vtable_22AfterImage_extrapolate_incStat.insert = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat *, double, struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_insert *__pyx_optional_args))__pyx_f_22AfterImage_extrapolate_7incStat_insert;
-  __pyx_vtable_22AfterImage_extrapolate_incStat.processDecay = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat *, double))__pyx_f_22AfterImage_extrapolate_7incStat_processDecay;
-  __pyx_vtable_22AfterImage_extrapolate_incStat.weight = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat *))__pyx_f_22AfterImage_extrapolate_7incStat_weight;
-  __pyx_vtable_22AfterImage_extrapolate_incStat.mean = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat *))__pyx_f_22AfterImage_extrapolate_7incStat_mean;
-  __pyx_vtable_22AfterImage_extrapolate_incStat.var = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat *))__pyx_f_22AfterImage_extrapolate_7incStat_var;
-  __pyx_vtable_22AfterImage_extrapolate_incStat.std = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat *))__pyx_f_22AfterImage_extrapolate_7incStat_std;
-  __pyx_vtable_22AfterImage_extrapolate_incStat.cov = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat *, PyObject *))__pyx_f_22AfterImage_extrapolate_7incStat_cov;
-  __pyx_vtable_22AfterImage_extrapolate_incStat.pcc = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat *, PyObject *))__pyx_f_22AfterImage_extrapolate_7incStat_pcc;
-  __pyx_vtable_22AfterImage_extrapolate_incStat.cov_pcc = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat *, PyObject *))__pyx_f_22AfterImage_extrapolate_7incStat_cov_pcc;
-  __pyx_vtable_22AfterImage_extrapolate_incStat.radius = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat *, PyObject *))__pyx_f_22AfterImage_extrapolate_7incStat_radius;
-  __pyx_vtable_22AfterImage_extrapolate_incStat.magnitude = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat *, PyObject *))__pyx_f_22AfterImage_extrapolate_7incStat_magnitude;
-  __pyx_vtable_22AfterImage_extrapolate_incStat.allstats_1D = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat *))__pyx_f_22AfterImage_extrapolate_7incStat_allstats_1D;
-  __pyx_vtable_22AfterImage_extrapolate_incStat.allstats_2D = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat *, PyObject *))__pyx_f_22AfterImage_extrapolate_7incStat_allstats_2D;
-  __pyx_vtable_22AfterImage_extrapolate_incStat.getHeaders_1D = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat *, struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_getHeaders_1D *__pyx_optional_args))__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_1D;
-  __pyx_vtable_22AfterImage_extrapolate_incStat.getHeaders_2D = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat *, PyObject *, struct __pyx_opt_args_22AfterImage_extrapolate_7incStat_getHeaders_2D *__pyx_optional_args))__pyx_f_22AfterImage_extrapolate_7incStat_getHeaders_2D;
+  __pyx_vtabptr_12kitsune_core_22AfterImage_extrapolate_incStat = &__pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat.insert = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, double, struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_insert *__pyx_optional_args))__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_insert;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat.processDecay = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, double))__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_processDecay;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat.weight = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_weight;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat.mean = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_mean;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat.var = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_var;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat.std = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_std;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat.cov = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, PyObject *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_cov;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat.pcc = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, PyObject *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_pcc;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat.cov_pcc = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, PyObject *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_cov_pcc;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat.radius = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, PyObject *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_radius;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat.magnitude = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, PyObject *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_magnitude;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat.allstats_1D = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_allstats_1D;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat.allstats_2D = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, PyObject *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_allstats_2D;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat.getHeaders_1D = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_getHeaders_1D *__pyx_optional_args))__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_getHeaders_1D;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat.getHeaders_2D = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat *, PyObject *, struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_7incStat_getHeaders_2D *__pyx_optional_args))__pyx_f_12kitsune_core_22AfterImage_extrapolate_7incStat_getHeaders_2D;
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_ptype_22AfterImage_extrapolate_incStat = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_22AfterImage_extrapolate_incStat_spec, NULL); if (unlikely(!__pyx_ptype_22AfterImage_extrapolate_incStat)) __PYX_ERR(0, 31, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_22AfterImage_extrapolate_incStat_spec, __pyx_ptype_22AfterImage_extrapolate_incStat) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
+  __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat_spec, NULL); if (unlikely(!__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat)) __PYX_ERR(0, 31, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat_spec, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
   #else
-  __pyx_ptype_22AfterImage_extrapolate_incStat = &__pyx_type_22AfterImage_extrapolate_incStat;
+  __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat = &__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_22AfterImage_extrapolate_incStat) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
-  __pyx_ptype_22AfterImage_extrapolate_incStat->tp_print = 0;
+  __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat->tp_print = 0;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_22AfterImage_extrapolate_incStat->tp_dictoffset && __pyx_ptype_22AfterImage_extrapolate_incStat->tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_ptype_22AfterImage_extrapolate_incStat->tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat->tp_dictoffset && __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat->tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat->tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_ptype_22AfterImage_extrapolate_incStat, __pyx_vtabptr_22AfterImage_extrapolate_incStat) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat, __pyx_vtabptr_12kitsune_core_22AfterImage_extrapolate_incStat) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_MergeVtables(__pyx_ptype_22AfterImage_extrapolate_incStat) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
+  if (__Pyx_MergeVtables(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
   #endif
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_incStat, (PyObject *) __pyx_ptype_22AfterImage_extrapolate_incStat) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_incStat, (PyObject *) __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_22AfterImage_extrapolate_incStat) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
   #endif
-  __pyx_vtabptr_22AfterImage_extrapolate_incStat_cov = &__pyx_vtable_22AfterImage_extrapolate_incStat_cov;
-  __pyx_vtable_22AfterImage_extrapolate_incStat_cov.update_cov = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *, PyObject *, double, double))__pyx_f_22AfterImage_extrapolate_11incStat_cov_update_cov;
-  __pyx_vtable_22AfterImage_extrapolate_incStat_cov.processDecay = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *, double))__pyx_f_22AfterImage_extrapolate_11incStat_cov_processDecay;
-  __pyx_vtable_22AfterImage_extrapolate_incStat_cov.cov = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *))__pyx_f_22AfterImage_extrapolate_11incStat_cov_cov;
-  __pyx_vtable_22AfterImage_extrapolate_incStat_cov.pcc = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *))__pyx_f_22AfterImage_extrapolate_11incStat_cov_pcc;
-  __pyx_vtable_22AfterImage_extrapolate_incStat_cov.get_stats1 = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *))__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats1;
-  __pyx_vtable_22AfterImage_extrapolate_incStat_cov.get_stats2 = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *))__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats2;
-  __pyx_vtable_22AfterImage_extrapolate_incStat_cov.get_stats3 = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *))__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats3;
-  __pyx_vtable_22AfterImage_extrapolate_incStat_cov.get_stats4 = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *))__pyx_f_22AfterImage_extrapolate_11incStat_cov_get_stats4;
-  __pyx_vtable_22AfterImage_extrapolate_incStat_cov.getHeaders = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStat_cov *, int, struct __pyx_opt_args_22AfterImage_extrapolate_11incStat_cov_getHeaders *__pyx_optional_args))__pyx_f_22AfterImage_extrapolate_11incStat_cov_getHeaders;
+  __pyx_vtabptr_12kitsune_core_22AfterImage_extrapolate_incStat_cov = &__pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat_cov;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat_cov.update_cov = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *, PyObject *, double, double))__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_update_cov;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat_cov.processDecay = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *, double))__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_processDecay;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat_cov.cov = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_cov;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat_cov.pcc = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_pcc;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat_cov.get_stats1 = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_get_stats1;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat_cov.get_stats2 = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_get_stats2;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat_cov.get_stats3 = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_get_stats3;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat_cov.get_stats4 = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_get_stats4;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStat_cov.getHeaders = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStat_cov *, int, struct __pyx_opt_args_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_getHeaders *__pyx_optional_args))__pyx_f_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_getHeaders;
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_ptype_22AfterImage_extrapolate_incStat_cov = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_22AfterImage_extrapolate_incStat_cov_spec, NULL); if (unlikely(!__pyx_ptype_22AfterImage_extrapolate_incStat_cov)) __PYX_ERR(0, 213, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_22AfterImage_extrapolate_incStat_cov_spec, __pyx_ptype_22AfterImage_extrapolate_incStat_cov) < 0) __PYX_ERR(0, 213, __pyx_L1_error)
+  __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat_cov_spec, NULL); if (unlikely(!__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov)) __PYX_ERR(0, 213, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat_cov_spec, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov) < 0) __PYX_ERR(0, 213, __pyx_L1_error)
   #else
-  __pyx_ptype_22AfterImage_extrapolate_incStat_cov = &__pyx_type_22AfterImage_extrapolate_incStat_cov;
+  __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov = &__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStat_cov;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_22AfterImage_extrapolate_incStat_cov) < 0) __PYX_ERR(0, 213, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov) < 0) __PYX_ERR(0, 213, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
-  __pyx_ptype_22AfterImage_extrapolate_incStat_cov->tp_print = 0;
+  __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov->tp_print = 0;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_22AfterImage_extrapolate_incStat_cov->tp_dictoffset && __pyx_ptype_22AfterImage_extrapolate_incStat_cov->tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_ptype_22AfterImage_extrapolate_incStat_cov->tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov->tp_dictoffset && __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov->tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov->tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_ptype_22AfterImage_extrapolate_incStat_cov, __pyx_vtabptr_22AfterImage_extrapolate_incStat_cov) < 0) __PYX_ERR(0, 213, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov, __pyx_vtabptr_12kitsune_core_22AfterImage_extrapolate_incStat_cov) < 0) __PYX_ERR(0, 213, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_MergeVtables(__pyx_ptype_22AfterImage_extrapolate_incStat_cov) < 0) __PYX_ERR(0, 213, __pyx_L1_error)
+  if (__Pyx_MergeVtables(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov) < 0) __PYX_ERR(0, 213, __pyx_L1_error)
   #endif
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_incStat_cov, (PyObject *) __pyx_ptype_22AfterImage_extrapolate_incStat_cov) < 0) __PYX_ERR(0, 213, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_incStat_cov, (PyObject *) __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov) < 0) __PYX_ERR(0, 213, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_22AfterImage_extrapolate_incStat_cov) < 0) __PYX_ERR(0, 213, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov) < 0) __PYX_ERR(0, 213, __pyx_L1_error)
   #endif
-  __pyx_vtabptr_22AfterImage_extrapolate_incStatDB = &__pyx_vtable_22AfterImage_extrapolate_incStatDB;
-  __pyx_vtable_22AfterImage_extrapolate_incStatDB.get_lambda = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_incStatDB *, double))__pyx_f_22AfterImage_extrapolate_9incStatDB_get_lambda;
+  __pyx_vtabptr_12kitsune_core_22AfterImage_extrapolate_incStatDB = &__pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStatDB;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_incStatDB.get_lambda = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_incStatDB *, double))__pyx_f_12kitsune_core_22AfterImage_extrapolate_9incStatDB_get_lambda;
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_ptype_22AfterImage_extrapolate_incStatDB = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_22AfterImage_extrapolate_incStatDB_spec, NULL); if (unlikely(!__pyx_ptype_22AfterImage_extrapolate_incStatDB)) __PYX_ERR(0, 335, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_22AfterImage_extrapolate_incStatDB_spec, __pyx_ptype_22AfterImage_extrapolate_incStatDB) < 0) __PYX_ERR(0, 335, __pyx_L1_error)
+  __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStatDB_spec, NULL); if (unlikely(!__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB)) __PYX_ERR(0, 335, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStatDB_spec, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB) < 0) __PYX_ERR(0, 335, __pyx_L1_error)
   #else
-  __pyx_ptype_22AfterImage_extrapolate_incStatDB = &__pyx_type_22AfterImage_extrapolate_incStatDB;
+  __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB = &__pyx_type_12kitsune_core_22AfterImage_extrapolate_incStatDB;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_22AfterImage_extrapolate_incStatDB) < 0) __PYX_ERR(0, 335, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB) < 0) __PYX_ERR(0, 335, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
-  __pyx_ptype_22AfterImage_extrapolate_incStatDB->tp_print = 0;
+  __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB->tp_print = 0;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_22AfterImage_extrapolate_incStatDB->tp_dictoffset && __pyx_ptype_22AfterImage_extrapolate_incStatDB->tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_ptype_22AfterImage_extrapolate_incStatDB->tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB->tp_dictoffset && __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB->tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB->tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_ptype_22AfterImage_extrapolate_incStatDB, __pyx_vtabptr_22AfterImage_extrapolate_incStatDB) < 0) __PYX_ERR(0, 335, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB, __pyx_vtabptr_12kitsune_core_22AfterImage_extrapolate_incStatDB) < 0) __PYX_ERR(0, 335, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_MergeVtables(__pyx_ptype_22AfterImage_extrapolate_incStatDB) < 0) __PYX_ERR(0, 335, __pyx_L1_error)
+  if (__Pyx_MergeVtables(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB) < 0) __PYX_ERR(0, 335, __pyx_L1_error)
   #endif
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_incStatDB, (PyObject *) __pyx_ptype_22AfterImage_extrapolate_incStatDB) < 0) __PYX_ERR(0, 335, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_incStatDB, (PyObject *) __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB) < 0) __PYX_ERR(0, 335, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_22AfterImage_extrapolate_incStatDB) < 0) __PYX_ERR(0, 335, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB) < 0) __PYX_ERR(0, 335, __pyx_L1_error)
   #endif
-  __pyx_vtabptr_22AfterImage_extrapolate_Queue = &__pyx_vtable_22AfterImage_extrapolate_Queue;
-  __pyx_vtable_22AfterImage_extrapolate_Queue.insert = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_Queue *, double))__pyx_f_22AfterImage_extrapolate_5Queue_insert;
-  __pyx_vtable_22AfterImage_extrapolate_Queue.unroll = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_Queue *))__pyx_f_22AfterImage_extrapolate_5Queue_unroll;
-  __pyx_vtable_22AfterImage_extrapolate_Queue.get_last = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_Queue *))__pyx_f_22AfterImage_extrapolate_5Queue_get_last;
-  __pyx_vtable_22AfterImage_extrapolate_Queue.get_mean_diff = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_Queue *))__pyx_f_22AfterImage_extrapolate_5Queue_get_mean_diff;
+  __pyx_vtabptr_12kitsune_core_22AfterImage_extrapolate_Queue = &__pyx_vtable_12kitsune_core_22AfterImage_extrapolate_Queue;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_Queue.insert = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *, double))__pyx_f_12kitsune_core_22AfterImage_extrapolate_5Queue_insert;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_Queue.unroll = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_5Queue_unroll;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_Queue.get_last = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_5Queue_get_last;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_Queue.get_mean_diff = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_Queue *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_5Queue_get_mean_diff;
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_ptype_22AfterImage_extrapolate_Queue = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_22AfterImage_extrapolate_Queue_spec, NULL); if (unlikely(!__pyx_ptype_22AfterImage_extrapolate_Queue)) __PYX_ERR(0, 701, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_22AfterImage_extrapolate_Queue_spec, __pyx_ptype_22AfterImage_extrapolate_Queue) < 0) __PYX_ERR(0, 701, __pyx_L1_error)
+  __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_12kitsune_core_22AfterImage_extrapolate_Queue_spec, NULL); if (unlikely(!__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue)) __PYX_ERR(0, 701, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_12kitsune_core_22AfterImage_extrapolate_Queue_spec, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue) < 0) __PYX_ERR(0, 701, __pyx_L1_error)
   #else
-  __pyx_ptype_22AfterImage_extrapolate_Queue = &__pyx_type_22AfterImage_extrapolate_Queue;
+  __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue = &__pyx_type_12kitsune_core_22AfterImage_extrapolate_Queue;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_22AfterImage_extrapolate_Queue) < 0) __PYX_ERR(0, 701, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue) < 0) __PYX_ERR(0, 701, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
-  __pyx_ptype_22AfterImage_extrapolate_Queue->tp_print = 0;
+  __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue->tp_print = 0;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_22AfterImage_extrapolate_Queue->tp_dictoffset && __pyx_ptype_22AfterImage_extrapolate_Queue->tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_ptype_22AfterImage_extrapolate_Queue->tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue->tp_dictoffset && __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue->tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue->tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_ptype_22AfterImage_extrapolate_Queue, __pyx_vtabptr_22AfterImage_extrapolate_Queue) < 0) __PYX_ERR(0, 701, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue, __pyx_vtabptr_12kitsune_core_22AfterImage_extrapolate_Queue) < 0) __PYX_ERR(0, 701, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_MergeVtables(__pyx_ptype_22AfterImage_extrapolate_Queue) < 0) __PYX_ERR(0, 701, __pyx_L1_error)
+  if (__Pyx_MergeVtables(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue) < 0) __PYX_ERR(0, 701, __pyx_L1_error)
   #endif
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_Queue, (PyObject *) __pyx_ptype_22AfterImage_extrapolate_Queue) < 0) __PYX_ERR(0, 701, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_Queue, (PyObject *) __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue) < 0) __PYX_ERR(0, 701, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_22AfterImage_extrapolate_Queue) < 0) __PYX_ERR(0, 701, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue) < 0) __PYX_ERR(0, 701, __pyx_L1_error)
   #endif
-  __pyx_vtabptr_22AfterImage_extrapolate_extrapolator = &__pyx_vtable_22AfterImage_extrapolate_extrapolator;
-  __pyx_vtable_22AfterImage_extrapolate_extrapolator.interpolate = (PyObject *(*)(struct __pyx_obj_22AfterImage_extrapolate_extrapolator *, double, arrayobject *, arrayobject *))__pyx_f_22AfterImage_extrapolate_12extrapolator_interpolate;
+  __pyx_vtabptr_12kitsune_core_22AfterImage_extrapolate_extrapolator = &__pyx_vtable_12kitsune_core_22AfterImage_extrapolate_extrapolator;
+  __pyx_vtable_12kitsune_core_22AfterImage_extrapolate_extrapolator.interpolate = (PyObject *(*)(struct __pyx_obj_12kitsune_core_22AfterImage_extrapolate_extrapolator *, double, arrayobject *, arrayobject *))__pyx_f_12kitsune_core_22AfterImage_extrapolate_12extrapolator_interpolate;
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_ptype_22AfterImage_extrapolate_extrapolator = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_22AfterImage_extrapolate_extrapolator_spec, NULL); if (unlikely(!__pyx_ptype_22AfterImage_extrapolate_extrapolator)) __PYX_ERR(0, 754, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_22AfterImage_extrapolate_extrapolator_spec, __pyx_ptype_22AfterImage_extrapolate_extrapolator) < 0) __PYX_ERR(0, 754, __pyx_L1_error)
+  __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_12kitsune_core_22AfterImage_extrapolate_extrapolator_spec, NULL); if (unlikely(!__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator)) __PYX_ERR(0, 754, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_12kitsune_core_22AfterImage_extrapolate_extrapolator_spec, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator) < 0) __PYX_ERR(0, 754, __pyx_L1_error)
   #else
-  __pyx_ptype_22AfterImage_extrapolate_extrapolator = &__pyx_type_22AfterImage_extrapolate_extrapolator;
+  __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator = &__pyx_type_12kitsune_core_22AfterImage_extrapolate_extrapolator;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_22AfterImage_extrapolate_extrapolator) < 0) __PYX_ERR(0, 754, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator) < 0) __PYX_ERR(0, 754, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
-  __pyx_ptype_22AfterImage_extrapolate_extrapolator->tp_print = 0;
+  __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator->tp_print = 0;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_22AfterImage_extrapolate_extrapolator->tp_dictoffset && __pyx_ptype_22AfterImage_extrapolate_extrapolator->tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_ptype_22AfterImage_extrapolate_extrapolator->tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator->tp_dictoffset && __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator->tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator->tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
   #endif
-  if (__Pyx_SetVtable(__pyx_ptype_22AfterImage_extrapolate_extrapolator, __pyx_vtabptr_22AfterImage_extrapolate_extrapolator) < 0) __PYX_ERR(0, 754, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator, __pyx_vtabptr_12kitsune_core_22AfterImage_extrapolate_extrapolator) < 0) __PYX_ERR(0, 754, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_MergeVtables(__pyx_ptype_22AfterImage_extrapolate_extrapolator) < 0) __PYX_ERR(0, 754, __pyx_L1_error)
+  if (__Pyx_MergeVtables(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator) < 0) __PYX_ERR(0, 754, __pyx_L1_error)
   #endif
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_extrapolator, (PyObject *) __pyx_ptype_22AfterImage_extrapolate_extrapolator) < 0) __PYX_ERR(0, 754, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_extrapolator, (PyObject *) __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator) < 0) __PYX_ERR(0, 754, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_22AfterImage_extrapolate_extrapolator) < 0) __PYX_ERR(0, 754, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator) < 0) __PYX_ERR(0, 754, __pyx_L1_error)
   #endif
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_ptype_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords_spec, NULL); if (unlikely(!__pyx_ptype_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords)) __PYX_ERR(0, 536, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords_spec, __pyx_ptype_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords) < 0) __PYX_ERR(0, 536, __pyx_L1_error)
+  __pyx_ptype_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords_spec, NULL); if (unlikely(!__pyx_ptype_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords)) __PYX_ERR(0, 536, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords_spec, __pyx_ptype_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords) < 0) __PYX_ERR(0, 536, __pyx_L1_error)
   #else
-  __pyx_ptype_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords = &__pyx_type_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords;
+  __pyx_ptype_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords = &__pyx_type_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords) < 0) __PYX_ERR(0, 536, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords) < 0) __PYX_ERR(0, 536, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
-  __pyx_ptype_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords->tp_print = 0;
+  __pyx_ptype_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords->tp_print = 0;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords->tp_dictoffset && __pyx_ptype_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords->tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_ptype_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords->tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords->tp_dictoffset && __pyx_ptype_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords->tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_ptype_12kitsune_core_22AfterImage_extrapolate___pyx_scope_struct__cleanOutOldRecords->tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   #endif
   __Pyx_RefNannyFinishContext();
@@ -29825,14 +29825,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_AfterImage_extrapolate) {
+  if (__pyx_module_is_main_kitsune_core__AfterImage_extrapolate) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "AfterImage_extrapolate")) {
-      if (unlikely((PyDict_SetItemString(modules, "AfterImage_extrapolate", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "kitsune_core.AfterImage_extrapolate")) {
+      if (unlikely((PyDict_SetItemString(modules, "kitsune_core.AfterImage_extrapolate", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -29853,7 +29853,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "AfterImage_extrapolate.pyx":1
+  /* "kitsune_core/AfterImage_extrapolate.pyx":1
  * import math             # <<<<<<<<<<<<<<
  * import numpy as np
  * 
@@ -29863,7 +29863,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_math, __pyx_t_2) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "AfterImage_extrapolate.pyx":2
+  /* "kitsune_core/AfterImage_extrapolate.pyx":2
  * import math
  * import numpy as np             # <<<<<<<<<<<<<<
  * 
@@ -29874,7 +29874,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_2) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "AfterImage_extrapolate.pyx":29
+  /* "kitsune_core/AfterImage_extrapolate.pyx":29
  * #compile with:   python setup.py build_ext --inplace
  * 
  * import pyximport; pyximport.install()             # <<<<<<<<<<<<<<
@@ -29900,11 +29900,11 @@ if (!__Pyx_RefNanny) {
  *     cdef tuple state
  *     cdef object _dict
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_7incStat_3__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStat___reduce_cython, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__15)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7incStat_3__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStat___reduce_cython, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__15)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStat, __pyx_n_s_reduce_cython, __pyx_t_2) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat, __pyx_n_s_reduce_cython, __pyx_t_2) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStat);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat);
 
   /* "(tree fragment)":16
  *     else:
@@ -29912,35 +29912,35 @@ if (!__Pyx_RefNanny) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     __pyx_unpickle_incStat__set_state(self, __pyx_state)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_7incStat_5__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStat___setstate_cython, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__17)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 16, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7incStat_5__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStat___setstate_cython, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__17)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStat, __pyx_n_s_setstate_cython, __pyx_t_2) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat, __pyx_n_s_setstate_cython, __pyx_t_2) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStat);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat);
 
-  /* "AfterImage_extrapolate.pyx":292
+  /* "kitsune_core/AfterImage_extrapolate.pyx":292
  *             return 0
  * 
  *     def isRelated(self, str ID):             # <<<<<<<<<<<<<<
  *         if self.incS1.ID == ID or self.incS2.ID == ID:
  *             return True
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_11incStat_cov_3isRelated, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStat_cov_isRelated, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__19)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_3isRelated, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStat_cov_isRelated, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__19)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 292, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStat_cov, __pyx_n_s_isRelated, __pyx_t_2) < 0) __PYX_ERR(0, 292, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov, __pyx_n_s_isRelated, __pyx_t_2) < 0) __PYX_ERR(0, 292, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStat_cov);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov);
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
  *     cdef tuple state
  *     cdef object _dict
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_11incStat_cov_5__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStat_cov___reduce_cython, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__20)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_5__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStat_cov___reduce_cython, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__20)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStat_cov, __pyx_n_s_reduce_cython, __pyx_t_2) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov, __pyx_n_s_reduce_cython, __pyx_t_2) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStat_cov);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov);
 
   /* "(tree fragment)":16
  *     else:
@@ -29948,22 +29948,22 @@ if (!__Pyx_RefNanny) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     __pyx_unpickle_incStat_cov__set_state(self, __pyx_state)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_11incStat_cov_7__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStat_cov___setstate_cython, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__21)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 16, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_11incStat_cov_7__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStat_cov___setstate_cython, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__21)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStat_cov, __pyx_n_s_setstate_cython, __pyx_t_2) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov, __pyx_n_s_setstate_cython, __pyx_t_2) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStat_cov);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStat_cov);
 
-  /* "AfterImage_extrapolate.pyx":341
+  /* "kitsune_core/AfterImage_extrapolate.pyx":341
  * 
  *     # default_lambda: use this as the lambda for all streams. If not specified, then you must supply a Lambda with every query.
- *     def __init__(self,double limit=np.Inf,double default_lambda=np.nan):             # <<<<<<<<<<<<<<
+ *     def __init__(self,double limit=np.inf,double default_lambda=np.nan):             # <<<<<<<<<<<<<<
  *         self.HT = dict()
  *         self.limit = limit
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 341, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Inf); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_inf); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 341, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_4 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_4 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 341, __pyx_L1_error)
@@ -29978,189 +29978,189 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_k__4 = __pyx_t_4;
 
-  /* "AfterImage_extrapolate.pyx":352
+  /* "kitsune_core/AfterImage_extrapolate.pyx":352
  * 
  *     # Registers a new stream. init_time: init lastTimestamp of the incStat
  *     def register(self,str ID,double Lambda=1,double init_time=0,int isTypeDiff=False):             # <<<<<<<<<<<<<<
  *         #Default Lambda?
  *         Lambda = self.get_lambda(Lambda)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_9incStatDB_3register, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_register, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__23)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 352, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_3register, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_register, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__23)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__24);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStatDB, __pyx_n_s_register, __pyx_t_2) < 0) __PYX_ERR(0, 352, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB, __pyx_n_s_register, __pyx_t_2) < 0) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStatDB);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB);
 
-  /* "AfterImage_extrapolate.pyx":372
+  /* "kitsune_core/AfterImage_extrapolate.pyx":372
  * 
  *     # Registers covariance tracking for two streams, registers missing streams
  *     def register_cov(self,str ID1, str ID2, double Lambda=1, double init_time=0, int isTypeDiff=False):             # <<<<<<<<<<<<<<
  *         #Default Lambda?
  *         Lambda = self.get_lambda(Lambda)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_9incStatDB_5register_cov, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_register_cov, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 372, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_5register_cov, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_register_cov, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 372, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__24);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStatDB, __pyx_n_s_register_cov, __pyx_t_2) < 0) __PYX_ERR(0, 372, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB, __pyx_n_s_register_cov, __pyx_t_2) < 0) __PYX_ERR(0, 372, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStatDB);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB);
 
-  /* "AfterImage_extrapolate.pyx":394
+  /* "kitsune_core/AfterImage_extrapolate.pyx":394
  * 
  *     # updates/registers stream
  *     def update(self,str ID,double t,double v,double Lambda=1,int isTypeDiff=False):             # <<<<<<<<<<<<<<
  *         cdef incStat incS
  *         incS = self.register(ID,Lambda,t,isTypeDiff)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_9incStatDB_7update, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_update, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 394, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_7update, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_update, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 394, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__29);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStatDB, __pyx_n_s_update, __pyx_t_2) < 0) __PYX_ERR(0, 394, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB, __pyx_n_s_update, __pyx_t_2) < 0) __PYX_ERR(0, 394, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStatDB);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB);
 
-  /* "AfterImage_extrapolate.pyx":401
+  /* "kitsune_core/AfterImage_extrapolate.pyx":401
  * 
  *     # Pulls current stats from the given ID
  *     def get_1D_Stats(self,str ID,double Lambda=1): #weight, mean, std             # <<<<<<<<<<<<<<
  *         #Default Lambda?
  *         Lambda = self.get_lambda(Lambda)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_9incStatDB_9get_1D_Stats, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_get_1D_Stats, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__31)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 401, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_9get_1D_Stats, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_get_1D_Stats, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__31)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 401, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__32);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStatDB, __pyx_n_s_get_1D_Stats, __pyx_t_2) < 0) __PYX_ERR(0, 401, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB, __pyx_n_s_get_1D_Stats, __pyx_t_2) < 0) __PYX_ERR(0, 401, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStatDB);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB);
 
-  /* "AfterImage_extrapolate.pyx":414
+  /* "kitsune_core/AfterImage_extrapolate.pyx":414
  * 
  *     # Pulls current correlational stats from the given IDs
  *     def get_2D_Stats(self, str ID1, str ID2, double Lambda=1): #cov, pcc             # <<<<<<<<<<<<<<
  *         # Default Lambda?
  *         Lambda = self.get_lambda(Lambda)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_9incStatDB_11get_2D_Stats, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_get_2D_Stats, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__34)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 414, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_11get_2D_Stats, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_get_2D_Stats, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__34)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 414, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__32);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStatDB, __pyx_n_s_get_2D_Stats, __pyx_t_2) < 0) __PYX_ERR(0, 414, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB, __pyx_n_s_get_2D_Stats, __pyx_t_2) < 0) __PYX_ERR(0, 414, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStatDB);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB);
 
-  /* "AfterImage_extrapolate.pyx":429
+  /* "kitsune_core/AfterImage_extrapolate.pyx":429
  *     # Pulls all correlational stats registered with the given ID
  *     # returns tuple [0]: stats-covs&pccs, [2]: IDs
  *     def get_all_2D_Stats(self, str ID, double Lambda=1):  # cov, pcc             # <<<<<<<<<<<<<<
  *         # Default Lambda?
  *         Lambda = self.get_lambda(Lambda)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_9incStatDB_13get_all_2D_Stats, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_get_all_2D_Stats, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__36)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 429, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_13get_all_2D_Stats, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_get_all_2D_Stats, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__36)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 429, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__32);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStatDB, __pyx_n_s_get_all_2D_Stats, __pyx_t_2) < 0) __PYX_ERR(0, 429, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB, __pyx_n_s_get_all_2D_Stats, __pyx_t_2) < 0) __PYX_ERR(0, 429, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStatDB);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB);
 
-  /* "AfterImage_extrapolate.pyx":448
+  /* "kitsune_core/AfterImage_extrapolate.pyx":448
  * 
  *     # Pulls current multidimensional stats from the given IDs
  *     def get_nD_Stats(self,IDs,double Lambda=1): #radius, magnitude (IDs is a list)             # <<<<<<<<<<<<<<
  *         # Default Lambda?
  *         Lambda = self.get_lambda(Lambda)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_9incStatDB_15get_nD_Stats, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_get_nD_Stats, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 448, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_15get_nD_Stats, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_get_nD_Stats, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 448, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__32);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStatDB, __pyx_n_s_get_nD_Stats, __pyx_t_2) < 0) __PYX_ERR(0, 448, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB, __pyx_n_s_get_nD_Stats, __pyx_t_2) < 0) __PYX_ERR(0, 448, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStatDB);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB);
 
-  /* "AfterImage_extrapolate.pyx":470
+  /* "kitsune_core/AfterImage_extrapolate.pyx":470
  * 
  *     # Updates and then pulls current 1D stats from the given ID. Automatically registers previously unknown stream IDs
  *     def update_get_1D_Stats(self, str ID,double t, double v, double Lambda=1, int isTypeDiff=False):  # weight, mean, std             # <<<<<<<<<<<<<<
  *         cdef incStat incS
  *         incS = self.update(ID,t,v,Lambda,isTypeDiff)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_9incStatDB_17update_get_1D_Stats, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_update_get_1D_Stats, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__39)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 470, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_17update_get_1D_Stats, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_update_get_1D_Stats, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__39)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 470, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__29);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStatDB, __pyx_n_s_update_get_1D_Stats, __pyx_t_2) < 0) __PYX_ERR(0, 470, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB, __pyx_n_s_update_get_1D_Stats, __pyx_t_2) < 0) __PYX_ERR(0, 470, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStatDB);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB);
 
-  /* "AfterImage_extrapolate.pyx":478
+  /* "kitsune_core/AfterImage_extrapolate.pyx":478
  *     # Updates and then pulls current correlative stats between the given IDs. Automatically registers previously unknown stream IDs, and cov tracking
  *     #Note: AfterImage does not currently support Diff Type streams for correlational statistics.
  *     def update_get_2D_Stats(self, str ID1, str ID2,double t1,double v1,double Lambda=1, int level=1):  #level=  1:cov,pcc  2:radius,magnitude,cov,pcc             # <<<<<<<<<<<<<<
  *         #retrieve/add cov tracker
  *         cdef incStat_cov inc_cov
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_9incStatDB_19update_get_2D_Stats, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_update_get_2D_Stats, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__41)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 478, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_19update_get_2D_Stats, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_update_get_2D_Stats, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__41)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__42);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStatDB, __pyx_n_s_update_get_2D_Stats, __pyx_t_2) < 0) __PYX_ERR(0, 478, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB, __pyx_n_s_update_get_2D_Stats, __pyx_t_2) < 0) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStatDB);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB);
 
-  /* "AfterImage_extrapolate.pyx":490
+  /* "kitsune_core/AfterImage_extrapolate.pyx":490
  * 
  *     # Updates and then pulls current 1D and 2D stats from the given IDs. Automatically registers previously unknown stream IDs
  *     def update_get_1D2D_Stats(self, str ID1, str ID2, double t1,double v1,double Lambda=1):  # weight, mean, std             # <<<<<<<<<<<<<<
  *         return self.update_get_1D_Stats(ID1,t1,v1,Lambda) + self.update_get_2D_Stats(ID1,ID2,t1,v1,Lambda,level=2)
  * 
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_9incStatDB_21update_get_1D2D_Stats, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_update_get_1D2D_Stats, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__44)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_21update_get_1D2D_Stats, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_update_get_1D2D_Stats, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__44)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 490, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__32);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStatDB, __pyx_n_s_update_get_1D2D_Stats, __pyx_t_2) < 0) __PYX_ERR(0, 490, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB, __pyx_n_s_update_get_1D2D_Stats, __pyx_t_2) < 0) __PYX_ERR(0, 490, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStatDB);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB);
 
-  /* "AfterImage_extrapolate.pyx":493
+  /* "kitsune_core/AfterImage_extrapolate.pyx":493
  *         return self.update_get_1D_Stats(ID1,t1,v1,Lambda) + self.update_get_2D_Stats(ID1,ID2,t1,v1,Lambda,level=2)
  * 
  *     def getHeaders_1D(self,Lambda=1,ID=''):             # <<<<<<<<<<<<<<
  *         # Default Lambda?
  *         cdef double L
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_9incStatDB_23getHeaders_1D, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_getHeaders_1D, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__46)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 493, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_23getHeaders_1D, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_getHeaders_1D, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__46)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 493, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__47);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStatDB, __pyx_n_s_getHeaders_1D, __pyx_t_2) < 0) __PYX_ERR(0, 493, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB, __pyx_n_s_getHeaders_1D, __pyx_t_2) < 0) __PYX_ERR(0, 493, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStatDB);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB);
 
-  /* "AfterImage_extrapolate.pyx":501
+  /* "kitsune_core/AfterImage_extrapolate.pyx":501
  *         return [str(L)+"_"+s for s in hdrs]
  * 
  *     def getHeaders_2D(self,Lambda=1,IDs=None, ver=1): #IDs is a 2-element list or tuple             # <<<<<<<<<<<<<<
  *         # Default Lambda?
  *         cdef double L
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_9incStatDB_25getHeaders_2D, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_getHeaders_2D, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__49)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 501, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_25getHeaders_2D, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_getHeaders_2D, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__49)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 501, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__50);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStatDB, __pyx_n_s_getHeaders_2D, __pyx_t_2) < 0) __PYX_ERR(0, 501, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB, __pyx_n_s_getHeaders_2D, __pyx_t_2) < 0) __PYX_ERR(0, 501, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStatDB);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB);
 
-  /* "AfterImage_extrapolate.pyx":511
+  /* "kitsune_core/AfterImage_extrapolate.pyx":511
  *         return [str(Lambda)+"_"+s for s in hdrs]
  * 
  *     def getHeaders_1D2D(self,Lambda=1,IDs=None, ver=1):             # <<<<<<<<<<<<<<
  *         # Default Lambda?
  *         cdef double L
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_9incStatDB_27getHeaders_1D2D, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_getHeaders_1D2D, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__52)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 511, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_27getHeaders_1D2D, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_getHeaders_1D2D, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__52)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__50);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStatDB, __pyx_n_s_getHeaders_1D2D, __pyx_t_2) < 0) __PYX_ERR(0, 511, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB, __pyx_n_s_getHeaders_1D2D, __pyx_t_2) < 0) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStatDB);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB);
 
-  /* "AfterImage_extrapolate.pyx":522
+  /* "kitsune_core/AfterImage_extrapolate.pyx":522
  *         return hdrs1D + hdrs2D
  * 
  *     def getHeaders_nD(self,Lambda=1,IDs=[]): #IDs is a n-element list or tuple             # <<<<<<<<<<<<<<
@@ -30182,37 +30182,37 @@ if (!__Pyx_RefNanny) {
   __Pyx_GIVEREF(__pyx_t_2);
   if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_2)) __PYX_ERR(0, 522, __pyx_L1_error);
   __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_9incStatDB_29getHeaders_nD, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_getHeaders_nD, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__54)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 522, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_29getHeaders_nD, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_getHeaders_nD, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__54)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 522, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStatDB, __pyx_n_s_getHeaders_nD, __pyx_t_2) < 0) __PYX_ERR(0, 522, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB, __pyx_n_s_getHeaders_nD, __pyx_t_2) < 0) __PYX_ERR(0, 522, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStatDB);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB);
 
-  /* "AfterImage_extrapolate.pyx":536
+  /* "kitsune_core/AfterImage_extrapolate.pyx":536
  *     #cleans out records that have a weight less than the cutoff.
  *     #returns number or removed records.
  *     def cleanOutOldRecords(self,double cutoffWeight,double curTime):             # <<<<<<<<<<<<<<
  *         cdef int n
  *         cdef double W
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_9incStatDB_31cleanOutOldRecords, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_cleanOutOldRecords, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__56)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 536, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_31cleanOutOldRecords, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB_cleanOutOldRecords, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__56)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 536, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStatDB, __pyx_n_s_cleanOutOldRecords, __pyx_t_2) < 0) __PYX_ERR(0, 536, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB, __pyx_n_s_cleanOutOldRecords, __pyx_t_2) < 0) __PYX_ERR(0, 536, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStatDB);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB);
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
  *     cdef tuple state
  *     cdef object _dict
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_9incStatDB_33__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB___reduce_cython, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__57)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_33__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB___reduce_cython, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__57)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStatDB, __pyx_n_s_reduce_cython, __pyx_t_2) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB, __pyx_n_s_reduce_cython, __pyx_t_2) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStatDB);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB);
 
   /* "(tree fragment)":16
  *     else:
@@ -30220,129 +30220,129 @@ if (!__Pyx_RefNanny) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     __pyx_unpickle_incStatDB__set_state(self, __pyx_state)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_9incStatDB_35__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB___setstate_cython, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__58)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 16, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9incStatDB_35__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_incStatDB___setstate_cython, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__58)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_incStatDB, __pyx_n_s_setstate_cython, __pyx_t_2) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB, __pyx_n_s_setstate_cython, __pyx_t_2) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_incStatDB);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_incStatDB);
 
-  /* "AfterImage_extrapolate.pyx":557
+  /* "kitsune_core/AfterImage_extrapolate.pyx":557
  * 
  * 
  * class incHist:             # <<<<<<<<<<<<<<
- *     #ubIsAnom means that the HBOS score for vals that fall past the upped bound are Inf (not 0)
+ *     #ubIsAnom means that the HBOS score for vals that fall past the upped bound are inf (not 0)
  *     def __init__(self,nbins,Lambda=0,ubIsAnom=True,lbIsAnom=True,lbound=-10,ubound=10,scaleGrace=None):
  */
-  __pyx_t_2 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_empty_tuple, __pyx_n_s_incHist, __pyx_n_s_incHist, (PyObject *) NULL, __pyx_n_s_AfterImage_extrapolate, (PyObject *) NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 557, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_empty_tuple, __pyx_n_s_incHist, __pyx_n_s_incHist, (PyObject *) NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, (PyObject *) NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 557, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "AfterImage_extrapolate.pyx":559
+  /* "kitsune_core/AfterImage_extrapolate.pyx":559
  * class incHist:
- *     #ubIsAnom means that the HBOS score for vals that fall past the upped bound are Inf (not 0)
+ *     #ubIsAnom means that the HBOS score for vals that fall past the upped bound are inf (not 0)
  *     def __init__(self,nbins,Lambda=0,ubIsAnom=True,lbIsAnom=True,lbound=-10,ubound=10,scaleGrace=None):             # <<<<<<<<<<<<<<
  *         self.scaleGrace = scaleGrace #the numbe rof instances to observe until a range it determeined
  *         if scaleGrace is not None:
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_7incHist_1__init__, 0, __pyx_n_s_incHist___init, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__60)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 559, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7incHist_1__init__, 0, __pyx_n_s_incHist___init, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__60)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 559, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_tuple__61);
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_init, __pyx_t_3) < 0) __PYX_ERR(0, 559, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "AfterImage_extrapolate.pyx":582
+  /* "kitsune_core/AfterImage_extrapolate.pyx":582
  * 
  *     #assumes even bin width starting from lbound until ubound. beyond bounds are assigned to the closest bin
  *     def getBinIndx(self,val,win=0):             # <<<<<<<<<<<<<<
  *         indx = int(np.floor((val - self.lbound)/self.binSize))
  *         if win == 0:
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_7incHist_3getBinIndx, 0, __pyx_n_s_incHist_getBinIndx, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__63)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 582, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7incHist_3getBinIndx, 0, __pyx_n_s_incHist_getBinIndx, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__63)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 582, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_tuple__64);
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_getBinIndx, __pyx_t_3) < 0) __PYX_ERR(0, 582, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "AfterImage_extrapolate.pyx":604
+  /* "kitsune_core/AfterImage_extrapolate.pyx":604
  * 
  * 
  *     def processDecay(self, bin, timestamp):             # <<<<<<<<<<<<<<
  *         # check for decay
  *         timeDiff = timestamp - self.lT[bin]
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_7incHist_5processDecay, 0, __pyx_n_s_incHist_processDecay, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__66)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 604, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7incHist_5processDecay, 0, __pyx_n_s_incHist_processDecay, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__66)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 604, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_processDecay, __pyx_t_3) < 0) __PYX_ERR(0, 604, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "AfterImage_extrapolate.pyx":619
+  /* "kitsune_core/AfterImage_extrapolate.pyx":619
  *             self.lT[bin] = timestamp
  * 
  *     def insert(self,val,timestamp,penalty=False):             # <<<<<<<<<<<<<<
  *         self.n = self.n + 1
  *         if self.isScaling:
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_7incHist_7insert, 0, __pyx_n_s_incHist_insert, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__68)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 619, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7incHist_7insert, 0, __pyx_n_s_incHist_insert, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__68)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 619, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_tuple__69);
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_insert, __pyx_t_3) < 0) __PYX_ERR(0, 619, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "AfterImage_extrapolate.pyx":652
+  /* "kitsune_core/AfterImage_extrapolate.pyx":652
  *                     self.tallestBin = bin
  * 
  *     def halfsigmoid(self,x,k):             # <<<<<<<<<<<<<<
  *         return (k*x)/(k-x+1)
  * 
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_7incHist_9halfsigmoid, 0, __pyx_n_s_incHist_halfsigmoid, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__71)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 652, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7incHist_9halfsigmoid, 0, __pyx_n_s_incHist_halfsigmoid, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__71)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 652, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_halfsigmoid, __pyx_t_3) < 0) __PYX_ERR(0, 652, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "AfterImage_extrapolate.pyx":655
+  /* "kitsune_core/AfterImage_extrapolate.pyx":655
  *         return (k*x)/(k-x+1)
  * 
  *     def score(self,val,timestamp=-1,win=0): #HBOS for one dimension             # <<<<<<<<<<<<<<
  *         if self.isScaling:
  *             return 0.0
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_7incHist_11score, 0, __pyx_n_s_incHist_score, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__73)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 655, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7incHist_11score, 0, __pyx_n_s_incHist_score, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__73)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 655, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_tuple__74);
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_score, __pyx_t_3) < 0) __PYX_ERR(0, 655, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "AfterImage_extrapolate.pyx":676
+  /* "kitsune_core/AfterImage_extrapolate.pyx":676
  * 
  * 
  *     def getFreq(self,val,timestamp=-1): #HBOS for one dimension             # <<<<<<<<<<<<<<
  *         bin = self.getBinIndx(val)
  *         self.processDecay(bin,timestamp) #if timestamp = -1, no decay will be applied
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_7incHist_13getFreq, 0, __pyx_n_s_incHist_getFreq, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__76)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 676, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7incHist_13getFreq, 0, __pyx_n_s_incHist_getFreq, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__76)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 676, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_tuple__77);
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_getFreq, __pyx_t_3) < 0) __PYX_ERR(0, 676, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "AfterImage_extrapolate.pyx":684
+  /* "kitsune_core/AfterImage_extrapolate.pyx":684
  *             return self.W[bin]
  * 
  *     def getHist(self,timestamp=-1): #HBOS for one dimension             # <<<<<<<<<<<<<<
  *         H = np.zeros((len(self.W),1))
  *         for i in range(0,len(self.W)):
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_7incHist_15getHist, 0, __pyx_n_s_incHist_getHist, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__79)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 684, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7incHist_15getHist, 0, __pyx_n_s_incHist_getHist, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__79)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 684, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_tuple__77);
   if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_getHist, __pyx_t_3) < 0) __PYX_ERR(0, 684, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "AfterImage_extrapolate.pyx":557
+  /* "kitsune_core/AfterImage_extrapolate.pyx":557
  * 
  * 
  * class incHist:             # <<<<<<<<<<<<<<
- *     #ubIsAnom means that the HBOS score for vals that fall past the upped bound are Inf (not 0)
+ *     #ubIsAnom means that the HBOS score for vals that fall past the upped bound are inf (not 0)
  *     def __init__(self,nbins,Lambda=0,ubIsAnom=True,lbIsAnom=True,lbound=-10,ubound=10,scaleGrace=None):
  */
   __pyx_t_3 = __Pyx_Py3ClassCreate(((PyObject*)&PyType_Type), __pyx_n_s_incHist, __pyx_empty_tuple, __pyx_t_2, NULL, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 557, __pyx_L1_error)
@@ -30356,11 +30356,11 @@ if (!__Pyx_RefNanny) {
  *     cdef tuple state
  *     cdef object _dict
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_5Queue_3__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_Queue___reduce_cython, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__80)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_5Queue_3__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_Queue___reduce_cython, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__80)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_Queue, __pyx_n_s_reduce_cython, __pyx_t_2) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue, __pyx_n_s_reduce_cython, __pyx_t_2) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_Queue);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue);
 
   /* "(tree fragment)":16
  *     else:
@@ -30368,48 +30368,48 @@ if (!__Pyx_RefNanny) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     __pyx_unpickle_Queue__set_state(self, __pyx_state)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_5Queue_5__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_Queue___setstate_cython, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__81)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 16, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_5Queue_5__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_Queue___setstate_cython, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__81)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_Queue, __pyx_n_s_setstate_cython, __pyx_t_2) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue, __pyx_n_s_setstate_cython, __pyx_t_2) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_Queue);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_Queue);
 
-  /* "AfterImage_extrapolate.pyx":763
+  /* "kitsune_core/AfterImage_extrapolate.pyx":763
  *         self.Qv = Queue() #deque([],winsize) #window of values
  * 
  *     def insert(self,double t, double v):             # <<<<<<<<<<<<<<
  *         self.Qt.insert(t)
  *         self.Qv.insert(v)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_12extrapolator_3insert, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_extrapolator_insert, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__83)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 763, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_12extrapolator_3insert, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_extrapolator_insert, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__83)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 763, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_extrapolator, __pyx_n_s_insert, __pyx_t_2) < 0) __PYX_ERR(0, 763, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator, __pyx_n_s_insert, __pyx_t_2) < 0) __PYX_ERR(0, 763, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_extrapolator);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator);
 
-  /* "AfterImage_extrapolate.pyx":767
+  /* "kitsune_core/AfterImage_extrapolate.pyx":767
  *         self.Qv.insert(v)
  * 
  *     def predict(self, double t):             # <<<<<<<<<<<<<<
  *         if self.Qt.n < 2: #not enough points to extrapolate?
  *             if self.Qt.n == 1:
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_12extrapolator_5predict, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_extrapolator_predict, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__85)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 767, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_12extrapolator_5predict, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_extrapolator_predict, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__85)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 767, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_extrapolator, __pyx_n_s_predict, __pyx_t_2) < 0) __PYX_ERR(0, 767, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator, __pyx_n_s_predict, __pyx_t_2) < 0) __PYX_ERR(0, 767, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_extrapolator);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator);
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
  *     cdef tuple state
  *     cdef object _dict
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_12extrapolator_7__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_extrapolator___reduce_cython, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__86)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_12extrapolator_7__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_extrapolator___reduce_cython, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__86)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_extrapolator, __pyx_n_s_reduce_cython, __pyx_t_2) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator, __pyx_n_s_reduce_cython, __pyx_t_2) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_extrapolator);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator);
 
   /* "(tree fragment)":16
  *     else:
@@ -30417,18 +30417,18 @@ if (!__Pyx_RefNanny) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     __pyx_unpickle_extrapolator__set_state(self, __pyx_state)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_12extrapolator_9__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_extrapolator___setstate_cython, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__87)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 16, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_12extrapolator_9__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_extrapolator___setstate_cython, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__87)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_22AfterImage_extrapolate_extrapolator, __pyx_n_s_setstate_cython, __pyx_t_2) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator, __pyx_n_s_setstate_cython, __pyx_t_2) < 0) __PYX_ERR(1, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_22AfterImage_extrapolate_extrapolator);
+  PyType_Modified(__pyx_ptype_12kitsune_core_22AfterImage_extrapolate_extrapolator);
 
   /* "(tree fragment)":1
  * def __pyx_unpickle_incStat(__pyx_type, long __pyx_checksum, __pyx_state):             # <<<<<<<<<<<<<<
  *     cdef object __pyx_PickleError
  *     cdef object __pyx_result
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_1__pyx_unpickle_incStat, 0, __pyx_n_s_pyx_unpickle_incStat, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__89)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_1__pyx_unpickle_incStat, 0, __pyx_n_s_pyx_unpickle_incStat, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__89)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_incStat, __pyx_t_2) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -30440,7 +30440,7 @@ if (!__Pyx_RefNanny) {
  *     __pyx_result.CF1 = __pyx_state[0]; __pyx_result.CF2 = __pyx_state[1]; __pyx_result.ID = __pyx_state[2]; __pyx_result.Lambda = __pyx_state[3]; __pyx_result.covs = __pyx_state[4]; __pyx_result.cur_mean = __pyx_state[5]; __pyx_result.cur_std = __pyx_state[6]; __pyx_result.cur_var = __pyx_state[7]; __pyx_result.isTypeDiff = __pyx_state[8]; __pyx_result.lastTimestamp = __pyx_state[9]; __pyx_result.w = __pyx_state[10]
  *     if len(__pyx_state) > 11 and hasattr(__pyx_result, '__dict__'):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_3__pyx_unpickle_incStat_cov, 0, __pyx_n_s_pyx_unpickle_incStat_cov, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__90)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_3__pyx_unpickle_incStat_cov, 0, __pyx_n_s_pyx_unpickle_incStat_cov, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__90)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_incStat_cov, __pyx_t_2) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -30450,7 +30450,7 @@ if (!__Pyx_RefNanny) {
  *     cdef object __pyx_PickleError
  *     cdef object __pyx_result
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_5__pyx_unpickle_incStatDB, 0, __pyx_n_s_pyx_unpickle_incStatDB, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__91)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_5__pyx_unpickle_incStatDB, 0, __pyx_n_s_pyx_unpickle_incStatDB, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__91)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_incStatDB, __pyx_t_2) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -30462,7 +30462,7 @@ if (!__Pyx_RefNanny) {
  *     __pyx_result.HT = __pyx_state[0]; __pyx_result.df_lambda = __pyx_state[1]; __pyx_result.limit = __pyx_state[2]
  *     if len(__pyx_state) > 3 and hasattr(__pyx_result, '__dict__'):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_7__pyx_unpickle_Queue, 0, __pyx_n_s_pyx_unpickle_Queue, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__92)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_7__pyx_unpickle_Queue, 0, __pyx_n_s_pyx_unpickle_Queue, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__92)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_Queue, __pyx_t_2) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -30472,12 +30472,12 @@ if (!__Pyx_RefNanny) {
  *     cdef object __pyx_PickleError
  *     cdef object __pyx_result
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_22AfterImage_extrapolate_9__pyx_unpickle_extrapolator, 0, __pyx_n_s_pyx_unpickle_extrapolator, NULL, __pyx_n_s_AfterImage_extrapolate, __pyx_d, ((PyObject *)__pyx_codeobj__93)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12kitsune_core_22AfterImage_extrapolate_9__pyx_unpickle_extrapolator, 0, __pyx_n_s_pyx_unpickle_extrapolator, NULL, __pyx_n_s_kitsune_core_AfterImage_extrapol, __pyx_d, ((PyObject *)__pyx_codeobj__93)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyx_unpickle_extrapolator, __pyx_t_2) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "AfterImage_extrapolate.pyx":1
+  /* "kitsune_core/AfterImage_extrapolate.pyx":1
  * import math             # <<<<<<<<<<<<<<
  * import numpy as np
  * 
@@ -30495,7 +30495,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_3);
   if (__pyx_m) {
     if (__pyx_d && stringtab_initialized) {
-      __Pyx_AddTraceback("init AfterImage_extrapolate", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init kitsune_core.AfterImage_extrapolate", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     #if !CYTHON_USE_MODULE_STATE
     Py_CLEAR(__pyx_m);
@@ -30509,7 +30509,7 @@ if (!__Pyx_RefNanny) {
     }
     #endif
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init AfterImage_extrapolate");
+    PyErr_SetString(PyExc_ImportError, "init kitsune_core.AfterImage_extrapolate");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
