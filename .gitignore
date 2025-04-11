@@ -1,1 +1,57 @@
+# Ignore data & models
 kitsune_datasets/
+*.h5
+*.pcapng
+
+# Ignore logs
+logs/
+
+# Ignore generated charts (keep logo)
+web_dashboard/static/*.png
+!web_dashboard/static/NotTodayBotLogo.png
+
+# Python & cache stuff
+__pycache__/
+*.pyc
+*.py[cod]
+
+# Cython artifacts
+*.c
+*.cpp
+*.pyd
+*.so
+build/
+
+#tshark 
+*.tsv
+*.tmp
+
+# Ignore all generated 115-feature CSVs
+*_all1500.csv
+
+# Ignore .tsv packet dumps (used with tshark)
+*.tsv
+
+# Ignore PCAP files
+*.pcap
+*.pcapng
+
+# Ignore generated logs
+*.log
+
+# Ignore any training artifacts
+*.pkl
+
+# Ignore any generated simulation logs
+simulated_logs/
+*.json
+
+# Ignore VSCode workspace configs
+.vscode/
+
+# Ignore datasets folder (if not needed in repo)
+pcap_files/
+
+# Ignore intermediate Python build artifacts
+*.egg-info/
+dist/

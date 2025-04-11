@@ -2,6 +2,8 @@ from kitsune_core import netStat as ns
 from kitsune_core import AfterImage_extrapolate as afterimage
 import numpy as np
 from scapy.all import IP, IPv6, TCP, UDP, ARP, ICMP
+LAMBDA_VALUES = [5, 3, 1, 0.1, 0.01] 
+
 
 class LiveFeatureExtractor:
     def __init__(self, max_hosts=1000000, max_sessions=1000000, lambda_val=np.nan):
@@ -41,25 +43,23 @@ class LiveFeatureExtractor:
                 srcproto = dstproto = 'icmp'
                 IPtype = 0
 
-            # Get base netStat features
+            # Get 100 base features
             base_features = self.nstat.updateGetStats(
                 IPtype, srcMAC, dstMAC, srcIP, srcproto,
                 dstIP, dstproto, int(framelen), float(timestamp)
             )
 
-            # Use AfterImage (incStatDB) to get correlation-based features
+            # Calculate 3 stats per feature (weight, mean, std) for all base features (300) over 5 lambdas (1500)
             afterimage_features = []
             for i, val in enumerate(base_features):
                 feature_id = str(i)
-                stats = self.afterimage.update_get_1D_Stats(
-                    feature_id, timestamp, val
-                )
-                afterimage_features.extend(stats)
+                for lam in LAMBDA_VALUES:
+                    stats = self.afterimage.update_get_1D_Stats(
+                        feature_id, timestamp, val, lam
+                    )
+                    afterimage_features.extend(stats)
+            return np.concatenate((base_features, afterimage_features))
 
-            print("Base features:", len(base_features))
-            print("AfterImage features:", len(afterimage_features))
-
-            return base_features + afterimage_features
 
         except Exception as e:
             print("Feature extraction error:", e)

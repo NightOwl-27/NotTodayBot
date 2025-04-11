@@ -11,6 +11,7 @@ from tensorflow.keras.optimizers import Adam
 from collections import Counter
 import os
 import warnings
+import joblib
 warnings.filterwarnings("ignore")
 
 # 🧠 Attack types (Mirai Botnet removed due to formatting issues)
@@ -70,6 +71,8 @@ for attack in attack_types:
 
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
+    scaler_path = f"models/scaler_{attack.replace(' ', '_').lower()}.pkl"
+    joblib.dump(scaler, scaler_path)
 
     min_class_count = min(Counter(y).values())
     if min_class_count < 2:

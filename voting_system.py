@@ -1,57 +1,51 @@
 import os
 import numpy as np
+import joblib
 from tensorflow.keras.models import load_model
 from sklearn.preprocessing import StandardScaler
 import logging
+from model_features import feature_map  
 
-# 🔇 Suppress TensorFlow logging
+# Suppress TensorFlow logging
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import tensorflow as tf
-
 tf.get_logger().setLevel('ERROR')
 
-# ✅ Load all models
+# Load all models
 model_dir = "models"
 model_files = [f for f in os.listdir(model_dir) if f.endswith(".h5")]
 models = [load_model(os.path.join(model_dir, mf)) for mf in model_files]
+scalers = {
+    f: joblib.load(os.path.join(MODEL_DIR, f"scaler_{f.replace('model_', '').replace('.h5', '')}.pkl"))
+    for f in model_files
+}
 model_names = [mf.replace("model_", "").replace(".h5", "") for mf in model_files]
 print(f"\033[97m✅ Loaded models: {model_names}\033[0m")
 
-# 📦 Feature extraction (placeholder)
+# Feature extraction (placeholder for live use)
 def extract_features_from_packet(packet):
-    return np.random.rand(115)
+    return np.random.rand(1500)  # Simulate full feature vector
 
-# 🗳️ Voting system
+# Voting system with correct feature selection per model
 def is_packet_malicious(features):
     features = np.array(features).reshape(1, -1)
-    features = StandardScaler().fit_transform(features)
-    votes = [int(model.predict(features, verbose=0)[0][0] > 0.5) for model in models]
-    return not all(v == 0 for v in votes)
+    votes = []
 
-# Optional standalone test simulation
-if __name__ == "__main__":
-    # ✅ Setup logger
-    os.makedirs("logs", exist_ok=True)
-    with open("logs/malicious_packets.log", "w"):
-        pass
+    for model_file, model in zip(model_files, models):
+        attack_key = model_file.replace("model_", "").replace(".h5", "")
+        indices = feature_map.get(attack_key, [])
+        selected_indices = list(range(100)) + [100 + i for i in indices]
 
-    logger = logging.getLogger("NotTodayBot")
-    logger.setLevel(logging.INFO)
-    logger.propagate = False
+        scaler = scalers[model_file]
+        scaled_features = scaler.transform(features)
+        selected_features = scaled_features[:, selected_indices]
 
-    file_handler = logging.FileHandler("logs/malicious_packets.log")
-    file_handler.setFormatter(logging.Formatter("%(asctime)s - INFO - %(message)s"))
-    logger.addHandler(file_handler)
+        vote_prob = model.predict(selected_features, verbose=0)[0][0]
+        print(f"   ➤ {attack_key} Probability: {vote_prob:.4f}")
+        votes.append(vote_prob)
 
-    console_handler = logging.StreamHandler()
-    console_handler.setFormatter(logging.Formatter("\033[97m%(message)s\033[0m"))
-    logger.addHandler(console_handler)
+    # Apply hybrid voting rule
+    high_confidence = any(v >= 0.90 for v in votes)
+    majority_vote = sum(v >= 0.5 for v in votes) >= int(len(votes) * 0.7)
 
-    # 🔁 Simulate 50 packets
-    for i in range(50):
-        features = extract_features_from_packet(None)
-        if is_packet_malicious(features):
-            msg = f"Malicious packet detected [Simulated ID: {i}]"
-            logger.info(msg)
-
-    print("\033[97m📄 Malicious packets logged to logs/malicious_packets.log\033[0m")
+    return high_confidence or majority_vote
