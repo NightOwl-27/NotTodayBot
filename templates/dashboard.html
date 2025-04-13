@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NotTodayBot Dashboard</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #111; color: #ccc; }
+        header { background-color: #000; display: flex; align-items: center; padding: 1rem 2rem; }
+        header img { height: 60px; margin-right: 1rem; }
+        header h1 { color: white; margin: 0; font-size: 1.8rem; }
+        .tabs { display: flex; background: #222; }
+        .tab { padding: 1rem 2rem; cursor: pointer; color: #ccc; font-weight: bold; }
+        .tab:hover { background-color: #333; }
+        .active { background-color: #444; color: #fff; }
+        .tab-content { padding: 2rem; }
+        pre { background-color: #1e1e1e; color: #fff; padding: 1rem; border-radius: 8px; max-height: 500px; overflow-y: auto; }
+        img { max-width: 100%; border-radius: 8px; margin-bottom: 1.5rem; }
+
+        .calendar-wrapper { display: flex; flex-direction: column; align-items: center; }
+        .calendar-controls { display: flex; justify-content: space-between; width: 100%; max-width: 500px; margin: 1rem 0; }
+        .calendar-nav-btn {
+            background-color: #333; color: #ccc; border: none; padding: 0.5rem 1rem;
+            border-radius: 4px; cursor: pointer;
+        }
+        .calendar-nav-btn:hover { background-color: #555; }
+        .month-label { font-size: 1.2rem; font-weight: bold; text-align: center; }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .day-name, .day-cell {
+            text-align: center;
+            padding: 0.5rem;
+            border-radius: 6px;
+        }
+
+        .day-name { font-weight: bold; background: #222; }
+        .day-cell {
+            cursor: pointer;
+            background: #222;
+            color: #ccc;
+        }
+        .day-cell:hover { background: #333; }
+        .day-cell.selected { background: #0066cc; color: #fff; }
+        .day-cell.inactive { color: #555; cursor: default; }
+
+        .calendar-submit {
+            margin-top: 1.5rem;
+        }
+
+        .calendar-submit button {
+            background-color: #3c8dbc;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 0.5rem;
+        }
+
+        #log-output {
+            background: #1e1e1e;
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            white-space: pre-wrap;
+        }
+    </style>
+    <script>
+        let selectedDates = new Set();
+        let currentYear = new Date().getFullYear();
+        let currentMonth = new Date().getMonth();
+
+        function showTab(tab) {
+            const tabs = document.querySelectorAll(".tab");
+            const contents = document.querySelectorAll(".tab-content > div");
+            tabs.forEach(t => t.classList.remove("active"));
+            contents.forEach(c => c.style.display = "none");
+            document.getElementById(tab).style.display = "block";
+            document.getElementById(tab + "-tab").classList.add("active");
+        }
+
+        function generateCalendar(year, month) {
+            const calendar = document.getElementById("calendar");
+            const monthLabel = document.getElementById("monthLabel");
+            calendar.innerHTML = "";
+
+            const date = new Date(year, month, 1);
+            const firstDay = date.getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+            const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+            for (let d of dayNames) {
+                const div = document.createElement("div");
+                div.classList.add("day-name");
+                div.textContent = d;
+                calendar.appendChild(div);
+            }
+
+            for (let i = 0; i < firstDay; i++) {
+                const blank = document.createElement("div");
+                blank.classList.add("day-cell", "inactive");
+                calendar.appendChild(blank);
+            }
+
+            for (let d = 1; d <= daysInMonth; d++) {
+                const cell = document.createElement("div");
+                cell.classList.add("day-cell");
+                const iso = `${year}-${String(month + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+                cell.dataset.date = iso;
+                cell.textContent = d;
+                if (selectedDates.has(iso)) cell.classList.add("selected");
+                cell.onclick = () => {
+                    if (selectedDates.has(iso)) {
+                        selectedDates.delete(iso);
+                        cell.classList.remove("selected");
+                    } else {
+                        selectedDates.add(iso);
+                        cell.classList.add("selected");
+                    }
+                };
+                calendar.appendChild(cell);
+            }
+
+            monthLabel.textContent = new Date(year, month).toLocaleString('default', { month: 'long', year: 'numeric' });
+        }
+
+        function prevMonth() {
+            if (--currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            }
+            generateCalendar(currentYear, currentMonth);
+        }
+
+        function nextMonth() {
+            if (++currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            generateCalendar(currentYear, currentMonth);
+        }
+
+        function submitSelectedDates() {
+            fetch('/history', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ dates: Array.from(selectedDates) })
+            })
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("log-output").innerText = data;
+            });
+        }
+
+        function downloadSelectedLogs() {
+            fetch('/download-logs', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ dates: Array.from(selectedDates) })
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.blob();
+                } else {
+                    return response.text().then(text => { throw new Error(text); });
+                }
+            })
+            .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'malicious_logs_selected.txt';
+                a.click();
+                window.URL.revokeObjectURL(url);
+            })
+            .catch(error => {
+                alert("Error downloading logs: " + error.message);
+            });
+        }
+
+        window.onload = () => {
+            const activeTab = "{{ active_tab or 'live' }}";
+            showTab(activeTab);
+            generateCalendar(currentYear, currentMonth);
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='NotTodayBotLogo.png') }}" alt="NotTodayBot Logo">
+        <h1>NotTodayBot Dashboard</h1>
+    </header>
+
+    <div class="tabs">
+        <div id="live-tab" class="tab" onclick="showTab('live')">Live Detection</div>
+        <div id="eda-tab" class="tab" onclick="showTab('eda')">EDA</div>
+        <div id="history-tab" class="tab" onclick="showTab('history')">History</div>
+    </div>
+
+    <div class="tab-content">
+        <div id="live">
+            <h2>Malicious Packet Log</h2>
+            <pre>{{ logs }}</pre>
+        </div>
+        <div id="eda" style="display:none;">
+            <h2>Exploratory Data Analysis</h2>
+            <img src="{{ url_for('static', filename='eda_malicious_chart.png') }}" alt="EDA Line Chart">
+            <img src="{{ url_for('static', filename='eda_pie_total.png') }}" alt="Pie Chart - Packet Split">
+            <img src="{{ url_for('static', filename='eda_pie_attacks.png') }}" alt="Pie Chart - Attack Types">
+        </div>
+        <div id="history" style="display:none;">
+            <h2>Detection History</h2>
+            <div class="calendar-wrapper">
+                <div class="calendar-controls">
+                    <button class="calendar-nav-btn" onclick="prevMonth()">◀ Prev</button>
+                    <div id="monthLabel" class="month-label"></div>
+                    <button class="calendar-nav-btn" onclick="nextMonth()">Next ▶</button>
+                </div>
+                <div id="calendar" class="calendar-grid"></div>
+                <div class="calendar-submit">
+                    <button onclick="submitSelectedDates()">View Logs</button>
+                    <button onclick="downloadSelectedLogs()">Download Logs</button>
+                </div>
+                <pre id="log-output">{{ history_logs }}</pre>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

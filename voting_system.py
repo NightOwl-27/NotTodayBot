@@ -16,7 +16,7 @@ model_dir = "models"
 model_files = [f for f in os.listdir(model_dir) if f.endswith(".h5")]
 models = [load_model(os.path.join(model_dir, mf)) for mf in model_files]
 scalers = {
-    f: joblib.load(os.path.join(MODEL_DIR, f"scaler_{f.replace('model_', '').replace('.h5', '')}.pkl"))
+    f: joblib.load(os.path.join(model_dir, f"scaler_{f.replace('model_', '').replace('.h5', '')}.pkl"))
     for f in model_files
 }
 model_names = [mf.replace("model_", "").replace(".h5", "") for mf in model_files]
@@ -27,7 +27,7 @@ def extract_features_from_packet(packet):
     return np.random.rand(1500)  # Simulate full feature vector
 
 # Voting system with correct feature selection per model
-def is_packet_malicious(features):
+def is_packet_malicious(features, verbose=True):
     features = np.array(features).reshape(1, -1)
     votes = []
 
@@ -36,15 +36,15 @@ def is_packet_malicious(features):
         indices = feature_map.get(attack_key, [])
         selected_indices = list(range(100)) + [100 + i for i in indices]
 
+        selected_features = features[:, selected_indices]
         scaler = scalers[model_file]
-        scaled_features = scaler.transform(features)
-        selected_features = scaled_features[:, selected_indices]
+        scaled_features = scaler.transform(selected_features)
 
         vote_prob = model.predict(selected_features, verbose=0)[0][0]
-        print(f"   ➤ {attack_key} Probability: {vote_prob:.4f}")
+        if verbose:
+            print(f"   ➤ {attack_key} Probability: {vote_prob:.4f}")
         votes.append(vote_prob)
 
-    # Apply hybrid voting rule
     high_confidence = any(v >= 0.90 for v in votes)
     majority_vote = sum(v >= 0.5 for v in votes) >= int(len(votes) * 0.7)
 

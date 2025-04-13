@@ -1,55 +1,65 @@
-from flask import Flask, render_template_string, send_from_directory, url_for
+from flask import Flask, request, render_template, send_from_directory, url_for, jsonify, send_file
 import os
 import matplotlib
-matplotlib.use('Agg')  # Use a non-interactive backend for matplotlib in web server environments
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from datetime import datetime
 from collections import Counter
+import io
 
-app = Flask(__name__)
+template_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'templates'))
+app = Flask(__name__, template_folder=template_dir)
 
-# Load malicious packet logs from file
-def load_logs():
+# Load malicious packet logs grouped by day
+def load_logs_by_day():
     log_file = os.path.join("logs", "malicious_packets.log")
     if not os.path.exists(log_file):
-        return ["No logs yet."], [], [], 0
+        return {}
 
     with open(log_file, "r") as f:
         lines = f.readlines()
 
-    log_entries = []
-    attack_types_set = set()
-
+    log_by_day = {}
     for line in lines:
         try:
             timestamp_str = line.split(" - ")[0].strip()
             timestamp = datetime.strptime(timestamp_str, "%Y-%m-%d %H:%M:%S,%f")
-            tag = line.split("[")[1].split("]")[0] if "[" in line and "]" in line else "Unknown"
-            log_entries.append((timestamp, tag, line))
-            attack_types_set.add(tag)
+            date_key = timestamp.strftime("%Y-%m-%d")
+            log_by_day.setdefault(date_key, []).append(line)
         except Exception:
             continue
 
-    # Sort by timestamp
-    log_entries.sort(key=lambda x: x[0])
+    return dict(sorted(log_by_day.items(), reverse=True))
 
-    # Reconstruct output
-    sorted_lines = [entry[2] for entry in log_entries]
-    timestamps = [entry[0] for entry in log_entries]
-    attack_types = [entry[1] for entry in log_entries]
+# Load logs and extract metadata
+def load_logs(selected_date=None):
+    logs_by_day = load_logs_by_day()
+    if selected_date:
+        logs = logs_by_day.get(selected_date, ["No logs for this date."])
+    else:
+        logs = [entry for daily_logs in logs_by_day.values() for entry in daily_logs]
 
-    # Estimate total packets processed: 20,000 per attack type
-    total_processed = len(attack_types_set) * 20_000
+    timestamps = []
+    attack_types = []
 
-    return sorted_lines, timestamps, attack_types, total_processed
+    for line in logs:
+        try:
+            timestamp_str = line.split(" - ")[0].strip()
+            timestamp = datetime.strptime(timestamp_str, "%Y-%m-%d %H:%M:%S,%f")
+            tag = line.split("[")[1].split("]")[0] if "[" in line and "]" in line else "Unknown"
+            timestamps.append(timestamp)
+            attack_types.append(tag)
+        except:
+            continue
 
+    total_processed = len(set(attack_types)) * 20000
+    return logs, timestamps, attack_types, total_processed
 
 # Generate EDA charts
 def generate_eda_charts(timestamps, attack_types, total_packets):
     static_dir = "web_dashboard/static"
     os.makedirs(static_dir, exist_ok=True)
 
-    # Remove old charts if they exist
     for filename in ["eda_malicious_chart.png", "eda_pie_total.png", "eda_pie_attacks.png"]:
         try:
             os.remove(os.path.join(static_dir, filename))
@@ -59,7 +69,6 @@ def generate_eda_charts(timestamps, attack_types, total_packets):
     if not timestamps:
         return
 
-    # Line Chart - Malicious Detections Over Time
     day_counts = Counter(ts.strftime("%Y-%m-%d") for ts in timestamps)
     sorted_items = sorted(day_counts.items())
     days, counts = zip(*sorted_items)
@@ -74,7 +83,6 @@ def generate_eda_charts(timestamps, attack_types, total_packets):
     plt.savefig("web_dashboard/static/eda_malicious_chart.png")
     plt.close()
 
-    # Pie Chart - Total Packet Breakdown
     malicious_count = len(timestamps)
     benign_count = total_packets - malicious_count
     labels = ['Malicious', 'Benign']
@@ -87,7 +95,6 @@ def generate_eda_charts(timestamps, attack_types, total_packets):
     plt.savefig("web_dashboard/static/eda_pie_total.png")
     plt.close()
 
-    # Pie Chart - Detection Type Breakdown
     if attack_types:
         attack_counts = Counter(attack_types)
         plt.figure(figsize=(6, 6))
@@ -97,128 +104,52 @@ def generate_eda_charts(timestamps, attack_types, total_packets):
         plt.savefig("web_dashboard/static/eda_pie_attacks.png")
         plt.close()
 
-# HTML template with tabs and integrated chart
-        return ["No logs yet."]
-    with open(log_file, "r") as f:
-        return f.readlines()
-
-# HTML template as a multi-line string
-template = """
-<!DOCTYPE html>
-<html>
-<head>
-    <title>NotTodayBot Dashboard</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            background-color: #111;
-            color: #ccc;
-        }
-        header {
-            background-color: #000;
-            display: flex;
-            align-items: center;
-            padding: 1rem 2rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-        }
-        header img {
-            height: 60px;
-            margin-right: 1rem;
-        }
-        header h1 {
-            color: white;
-            margin: 0;
-            font-size: 1.8rem;
-        }
-        .tabs {
-            display: flex;
-            background: #222;
-        }
-        .tab {
-            padding: 1rem 2rem;
-            cursor: pointer;
-            color: #ccc;
-            font-weight: bold;
-        }
-        .tab:hover {
-            background-color: #333;
-        }
-        .active {
-            background-color: #444;
-            color: #fff;
-        }
-        .tab-content {
-            padding: 2rem;
-        }
-        pre {
-            background-color: #1e1e1e;
-            color: #ffffff;
-            padding: 1rem;
-            border-radius: 8px;
-            max-height: 500px;
-            overflow-y: auto;
-        }
-        img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-        }
-    </style>
-    <script>
-        function showTab(tab) {
-            const tabs = document.querySelectorAll(".tab");
-            const contents = document.querySelectorAll(".tab-content > div");
-            tabs.forEach(t => t.classList.remove("active"));
-            contents.forEach(c => c.style.display = "none");
-            document.getElementById(tab).style.display = "block";
-            document.getElementById(tab + "-tab").classList.add("active");
-        }
-        window.onload = () => showTab('live');
-    </script>
-</head>
-<body>
-    <header>
-        <img src="{{ url_for('static', filename='NotTodayBotLogo.png') }}" alt="NotTodayBot Logo">
-        <h1>NotTodayBot Dashboard</h1>
-    </header>
-
-    <div class="tabs">
-        <div id="live-tab" class="tab" onclick="showTab('live')">Live Detection</div>
-        <div id="eda-tab" class="tab" onclick="showTab('eda')">EDA</div>
-        <div id="history-tab" class="tab" onclick="showTab('history')">History</div>
-    </div>
-
-    <div class="tab-content">
-        <div id="live">
-            <h2>Malicious Packet Log</h2>
-            <pre>{{ logs }}</pre>
-        </div>
-        <div id="eda" style="display:none;">
-            <h2>Exploratory Data Analysis</h2>
-            <img src="{{ url_for('static', filename='eda_malicious_chart.png') }}" alt="EDA Line Chart">
-            <img src="{{ url_for('static', filename='eda_pie_total.png') }}" alt="Pie Chart - Packet Split">
-            <img src="{{ url_for('static', filename='eda_pie_attacks.png') }}" alt="Pie Chart - Attack Types">
-        </div>
-        <div id="history" style="display:none;">
-            <h2>Detection History</h2>
-            <p>Historical detection data goes here.</p>
-        </div>
-    </div>
-</body>
-</html>
-"""
 
 @app.route("/")
 def home():
     logs, timestamps, attack_types, total_packets = load_logs()
     generate_eda_charts(timestamps, attack_types, total_packets)
-    return render_template_string(template, logs="".join(logs))
+    return render_template("dashboard.html",
+                           logs="".join(logs),
+                           history_logs="",
+                           active_tab="live")
 
+@app.route("/history", methods=["POST"])
+def history():
+    data = request.get_json()
+    selected_dates = data.get("dates", [])
+    logs_by_day = load_logs_by_day()
+    combined_logs = []
+
+    for date in selected_dates:
+        combined_logs.extend(logs_by_day.get(date, [f"No logs for {date}."]))
+
+    return "\n".join(combined_logs)
 
 @app.route("/static/<path:filename>")
 def static_files(filename):
-    return send_from_directory("web_dashboard", filename)
+    return send_from_directory("web_dashboard/static", filename)
+
+@app.route("/download-logs", methods=["POST"])
+def download_logs():
+    data = request.get_json()
+    selected_dates = data.get("dates", [])
+    logs_by_day = load_logs_by_day()
+
+    filtered_logs = []
+    for d in selected_dates:
+        filtered_logs.extend(logs_by_day.get(d, []))
+
+    if not filtered_logs:
+        return "No logs available for selected dates.", 400
+
+    log_content = "".join(filtered_logs)
+    return send_file(
+        io.BytesIO(log_content.encode("utf-8")),
+        mimetype='text/plain',
+        as_attachment=True,
+        download_name="malicious_logs_selected.txt"
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)
