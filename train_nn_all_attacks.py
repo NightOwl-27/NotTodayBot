@@ -1,5 +1,3 @@
-import kagglehub
-from kagglehub import KaggleDatasetAdapter
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import StratifiedKFold
@@ -9,12 +7,26 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.optimizers import Adam
 from collections import Counter
+from kitsune_core.AfterImage import incStatDB
+from tqdm import tqdm
 import os
 import warnings
 import joblib
+import pickle
+
 warnings.filterwarnings("ignore")
 
-# 🧠 Attack types (Mirai Botnet removed due to formatting issues)
+# Load top features per attack
+feature_map = {}
+with open("top15features.csv", "r") as f:
+    for line in f:
+        parts = line.strip().split(',')
+        attack = parts[0].replace('_', ' ').lower()
+        indices = list(map(int, parts[1:]))
+        feature_map[attack] = indices
+
+LAMBDA_VALUES = [0.001, 0.005, 0.01, 0.05, 0.1]
+
 attack_types = [
     "Active Wiretap",
     "ARP MitM",
@@ -26,35 +38,46 @@ attack_types = [
     "Video Injection"
 ]
 
-print("🧠 Starting training on all attack types...\n")
+print("\U0001f9e0 Starting training on all attack types...\n")
 
 results = []
 os.makedirs("models", exist_ok=True)
+os.makedirs("cached", exist_ok=True)
+
+def extract_afterimage_stats(df, indices, cache_path):
+    print(f"📊 Computing AfterImage stats...")
+    stats_matrix = []
+    dbs = {lam: incStatDB(default_lambda=lam) for lam in LAMBDA_VALUES}
+
+    for i in tqdm(range(len(df)), desc="⏳ Extracting", unit="pkt"):
+        row_stats = []
+        for fid in indices:
+            val = df.iloc[i, fid]
+            for lam in LAMBDA_VALUES:
+                db = dbs[lam]
+                db.update(str(fid), i, val)
+                row_stats.extend(db.get_1D_Stats(str(fid)))  # [weight, mean, std]
+        stats_matrix.append(row_stats)
+
+    stats_array = np.array(stats_matrix, dtype=np.float32)
+    with open(cache_path, 'wb') as f:
+        pickle.dump(stats_array, f)
+    return stats_array
 
 for attack in attack_types:
-    print(f"\nTraining on {attack}")
+    print(f"\n=== 🛡️ Training on {attack} ===")
 
-    dataset_path = f"{attack}/{attack.replace(' ', '_')}_dataset.csv"
-    labels_path = f"{attack}/{attack.replace(' ', '_')}_labels.csv"
-    pandas_kwargs = {"header": None}
-    label_kwargs = {"header": None}
+    cache_path = f"cached/{attack.replace(' ', '_')}_afterimage.pkl"
+    if os.path.exists(cache_path):
+        print(f"⏩ Skipping {attack} — already cached.")
+        continue
+
+    dataset_path = f"kitsune_datasets/{attack}.csv"
+    labels_path = f"kitsune_datasets/{attack.replace(' ', '_')}_labels.csv"
 
     try:
-        df = kagglehub.load_dataset(
-            KaggleDatasetAdapter.PANDAS,
-            "ymirsky/network-attack-dataset-kitsune",
-            dataset_path,
-            pandas_kwargs=pandas_kwargs
-        )
-
-        labels = kagglehub.load_dataset(
-            KaggleDatasetAdapter.PANDAS,
-            "ymirsky/network-attack-dataset-kitsune",
-            labels_path,
-            pandas_kwargs=label_kwargs
-        )
-
-        # Extract label column (column 1 is the label)
+        df = pd.read_csv(dataset_path, header=None)
+        labels = pd.read_csv(labels_path, header=None)
         y = pd.to_numeric(labels.iloc[:, 1], errors='coerce').fillna(0).astype(int)
         df["label"] = y
 
@@ -66,8 +89,19 @@ for attack in attack_types:
         print(f"Skipping {attack} — only one class present.")
         continue
 
-    X = df.drop("label", axis=1).values
+    attack_key = attack.lower()
+    indices = feature_map.get(attack_key, [])
+    if not indices:
+        print(f"⚠️  No feature indices found for {attack_key}, skipping.")
+        continue
+
+    print(f"🔢 Extracting AfterImage stats for {attack_key}...")
+    cache_path = f"cached/{attack.replace(' ', '_')}_afterimage.pkl"
+    afterimage_features = extract_afterimage_stats(df.iloc[:, :100], indices, cache_path)
+    X = afterimage_features
     y = df["label"].values
+
+    print(f"📐 Feature shape: {X.shape}")
 
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
@@ -112,7 +146,6 @@ for attack in attack_types:
     avg_acc = np.mean(fold_accuracies)
     print(f"📊 {attack} Avg Accuracy: {avg_acc:.4f}")
 
-    # Save model
     model_filename = f"models/model_{attack.replace(' ', '_').lower()}.h5"
     model.save(model_filename)
     print(f"💾 Saved model to {model_filename}")
@@ -122,8 +155,7 @@ for attack in attack_types:
         "accuracy": avg_acc
     })
 
-# Final Summary
 print("\nAll Results:")
 df_results = pd.DataFrame(results)
 print(df_results.sort_values(by="accuracy", ascending=False).reset_index(drop=True))
-print("\nTraining complete!")
+print("\n✅ Training complete!")

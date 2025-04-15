@@ -14,7 +14,9 @@
         .tab-content { padding: 2rem; }
         pre { background-color: #1e1e1e; color: #fff; padding: 1rem; border-radius: 8px; max-height: 500px; overflow-y: auto; }
         img { max-width: 100%; border-radius: 8px; margin-bottom: 1.5rem; }
-
+        .eda-section { display: flex; flex-direction: column; gap: 2rem; margin-bottom: 3rem; }
+        .eda-graph { background: #1c1c1c; padding: 1rem; border-radius: 8px; }
+        .eda-graph h3 { margin-bottom: 0.5rem; color: #fff; }
         .calendar-wrapper { display: flex; flex-direction: column; align-items: center; }
         .calendar-controls { display: flex; justify-content: space-between; width: 100%; max-width: 500px; margin: 1rem 0; }
         .calendar-nav-btn {
@@ -23,7 +25,6 @@
         }
         .calendar-nav-btn:hover { background-color: #555; }
         .month-label { font-size: 1.2rem; font-weight: bold; text-align: center; }
-
         .calendar-grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
@@ -31,13 +32,11 @@
             width: 100%;
             max-width: 500px;
         }
-
         .day-name, .day-cell {
             text-align: center;
             padding: 0.5rem;
             border-radius: 6px;
         }
-
         .day-name { font-weight: bold; background: #222; }
         .day-cell {
             cursor: pointer;
@@ -47,11 +46,9 @@
         .day-cell:hover { background: #333; }
         .day-cell.selected { background: #0066cc; color: #fff; }
         .day-cell.inactive { color: #555; cursor: default; }
-
         .calendar-submit {
             margin-top: 1.5rem;
         }
-
         .calendar-submit button {
             background-color: #3c8dbc;
             color: white;
@@ -62,13 +59,27 @@
             cursor: pointer;
             margin: 0.5rem;
         }
-
         #log-output {
             background: #1e1e1e;
             margin-top: 1rem;
             padding: 1rem;
             border-radius: 8px;
             white-space: pre-wrap;
+        }
+        .sniffer-toggle {
+            margin: 1rem 0;
+        }
+        .sniffer-toggle button {
+            background-color: #444;
+            color: #fff;
+            padding: 0.5rem 1.2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .sniffer-toggle button:hover {
+            background-color: #666;
         }
     </style>
     <script>
@@ -83,6 +94,15 @@
             contents.forEach(c => c.style.display = "none");
             document.getElementById(tab).style.display = "block";
             document.getElementById(tab + "-tab").classList.add("active");
+        }
+
+        function toggleSniffer() {
+            fetch('/toggle-sniffer')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById("snifferStatus").innerText = data.running ? "Running" : "Stopped";
+                    document.getElementById("snifferButton").innerText = data.running ? "Stop Live Sniffer" : "Start Live Sniffer";
+                });
         }
 
         function generateCalendar(year, month) {
@@ -184,10 +204,28 @@
             });
         }
 
+        function updateSnifferFeed() {
+            fetch('/sniffer-status')
+                .then(res => res.json())
+                .then(data => {
+                    const feed = document.getElementById("sniffer-feed");
+                    if (data.running) {
+                        feed.innerHTML = '<strong>Live Packet Feed:</strong><br><br>' +
+                            data.last_packets.map(p => `(${p.timestamp}) - INFO - ${p.label}`).join('<br>');
+                    } else {
+                        feed.innerHTML = '<strong>Status:</strong> Stopped';
+                    }
+                });
+        }
+        setInterval(updateSnifferFeed, 2000);
+
+
         window.onload = () => {
+            updateSnifferFeed();
             const activeTab = "{{ active_tab or 'live' }}";
             showTab(activeTab);
             generateCalendar(currentYear, currentMonth);
+            toggleSniffer(); // Refresh sniffer state on load
         };
     </script>
 </head>
@@ -206,13 +244,37 @@
     <div class="tab-content">
         <div id="live">
             <h2>Malicious Packet Log</h2>
+            <div class="sniffer-toggle">
+                <button id="snifferButton" onclick="toggleSniffer()">Toggle Live Sniffer</button>
+                <span>Status: <strong id="snifferStatus">Loading...</strong></span>
+            </div>
             <pre>{{ logs }}</pre>
+            <div id="sniffer-feed">Loading live feed...</div>
         </div>
         <div id="eda" style="display:none;">
             <h2>Exploratory Data Analysis</h2>
-            <img src="{{ url_for('static', filename='eda_malicious_chart.png') }}" alt="EDA Line Chart">
-            <img src="{{ url_for('static', filename='eda_pie_total.png') }}" alt="Pie Chart - Packet Split">
-            <img src="{{ url_for('static', filename='eda_pie_attacks.png') }}" alt="Pie Chart - Attack Types">
+            <div class="eda-section">
+                <div class="eda-graph">
+                    <h3>Malicious Packet Detections Over Time (by Day)</h3>
+                    <img src="{{ url_for('static', filename='eda_malicious_chart.png') }}" alt="EDA Line Chart">
+                </div>
+                <div class="eda-graph">
+                    <h3>Malicious vs Benign Packets</h3>
+                    <img src="{{ url_for('static', filename='eda_pie_total.png') }}" alt="Pie Chart - Packet Split">
+                </div>
+                <div class="eda-graph">
+                    <h3>Detected Attack Types</h3>
+                    <img src="{{ url_for('static', filename='eda_pie_attacks.png') }}" alt="Pie Chart - Attack Types">
+                </div>
+                <div class="eda-graph">
+                    <h3>Attack Type by Day</h3>
+                    <img src="{{ url_for('static', filename='eda_attack_per_day.png') }}" alt="Line Chart - Attack Type by Day">
+                </div>
+                <div class="eda-graph">
+                    <h3>Detections by Hour of Day</h3>
+                    <img src="{{ url_for('static', filename='eda_hourly_distribution.png') }}" alt="Bar Chart - Detections by Hour">
+                </div>
+            </div>
         </div>
         <div id="history" style="display:none;">
             <h2>Detection History</h2>

@@ -1,104 +1,66 @@
-import sys
-import logging
 import os
-sys.path.append(os.path.dirname(__file__))
-import numpy as np
-import joblib
+import csv
+import logging
 from time import time
-from scapy.all import sniff, IP, TCP, UDP, Raw
-from tensorflow.keras.models import load_model
-from sklearn.preprocessing import StandardScaler
+from scapy.all import sniff, IP, TCP, UDP
 from my_feature_extractor import LiveFeatureExtractor
-from model_features import feature_map
-
-
-
+from voting_system import is_packet_malicious
+import sys
+import signal
+from scapy.utils import PcapWriter
 
 # --- CONFIGURATION ---
-MODEL_DIR = "models"
-LOG_PATH = "logs/malicious_packets.log"
-FEATURE_DIM = 115
+LOG_DIR = "logs"
+LOG_TXT_FILE = os.path.join(LOG_DIR, "malicious_packets.log")
+LOG_CSV_FILE = os.path.join(LOG_DIR, "malicious_packets_data.csv")
+FILTER = "tcp port 80 or tcp port 443 or port 22 or port 53 or port 3389 or udp port 1900 or udp port 47808"
 
-# Suppress TensorFlow warnings
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-import tensorflow as tf
-tf.get_logger().setLevel('ERROR')
-
-# --- LOGGING SETUP ---
-os.makedirs("logs", exist_ok=True)
+# --- SETUP ---
+os.makedirs(LOG_DIR, exist_ok=True)
 logging.basicConfig(
-    filename=LOG_PATH,
+    filename=LOG_TXT_FILE,
     level=logging.INFO,
     format='%(asctime)s - INFO - Malicious packet detected [Live]'
 )
 
-# --- LOAD MODELS ---
-model_files = [f for f in os.listdir(MODEL_DIR) if f.endswith(".h5")]
-models = [load_model(os.path.join(MODEL_DIR, f)) for f in model_files]
-scalers = {
-    f: joblib.load(os.path.join(MODEL_DIR, f"scaler_{f.replace('model_', '').replace('.h5', '')}.pkl"))
-    for f in model_files
-}
-print(f"Loaded models: {model_files}")
+# --- INIT ---
+extractor = LiveFeatureExtractor()
 
-# --- FEATURE EXTRACTOR SETUP ---
-feature_extractor = LiveFeatureExtractor()
+# --- Ensure CSV Header ---
+if not os.path.exists(LOG_CSV_FILE):
+    with open(LOG_CSV_FILE, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(["timestamp", "src_ip", "dst_ip", "protocol", "attack_type"])
 
-# --- FEATURE EXTRACTION ---
-def extract_features(packet):
-    try:
-        features = feature_extractor.extract_from_packet(packet)
-        print("Feature vector length:", len(features))
-        return features
-    except Exception as e:
-        print("Feature extraction error:", e)
-        return None
-
-# --- VOTING SYSTEM ---
-def is_packet_malicious(features):
-    features = np.array(features).reshape(1, -1)
-
-    # Extract only the features used by each model
-    votes = []
-    for model_file, model in zip(model_files, models):
-        attack_key = model_file.replace("model_", "").replace(".h5", "")
-        selected_indices = list(range(100)) + [100 + i for i in feature_map.get(attack_key, [])]
-        print(f"→ {attack_key}: Selecting {len(selected_indices)} features")
-
-        scaler = scalers[model_file]  # Use the correct scaler
-        selected_features = features[:, selected_indices]
-        selected_features = scaler.transform(selected_features)  # Apply scaler
-
-        vote_prob = model.predict(selected_features, verbose=0)[0][0]
-        print(f"   ➤ Probability: {vote_prob:.4f}")
-        vote = int(vote_prob > 0.5)
-        votes.append(vote)
-
-    return not all(v == 0 for v in votes)
-
-# --- PACKET CALLBACK ---F
-def process_packet(packet):
+# --- Packet Callback ---
+def process_packet(pkt):
     try:
         ts = time()
-        features = feature_extractor.process_packet(packet, ts)
+        features = extractor.process_packet(pkt, ts)
         if features is None:
             return
-        print(f"Extracted features: {len(features)}")
-        if is_packet_malicious(features):
-            msg = "Malicious packet detected [Live]"
-            logging.info(msg)
-            print("\033[91m" + msg + "\033[0m")
+
+        is_malicious, attack_type = is_packet_malicious(features, verbose=False)
+        if is_malicious:
+            logging.info(f"Detected {attack_type} [Live]")
+            src_ip = pkt[IP].src if IP in pkt else "N/A"
+            dst_ip = pkt[IP].dst if IP in pkt else "N/A"
+            protocol = pkt.proto if IP in pkt else "N/A"
+
+            with open(LOG_CSV_FILE, mode='a', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow([ts, src_ip, dst_ip, protocol, attack_type])
+
     except Exception as e:
-        print("Error processing packet:", e)
+        print("❌ Error processing packet:", e)
 
-# --- START SNIFFING ---
-# Ports based on Kitsune's attack types: web (80/443), DNS (53), SSH (22), RDP (3389), SSDP (1900), and custom IoT (47808)
-print("Sniffing live traffic (ports: 80, 443, 22, 53, 3389, 1900, 47808)...")
-sniff(
-    filter="tcp port 80 or tcp port 443 or port 22 or port 53 or port 3389 or udp port 1900 or udp port 47808",
-    prn=process_packet,
-    store=0
-)
+def graceful_shutdown(signum, frame):
+    print("\n🛑 Shutting down live sniffer.")
+    sys.exit(0)
+    
+signal.signal(signal.SIGTERM, graceful_shutdown)
 
 
-
+# --- Start Sniffing ---
+print("🚦 Monitoring live traffic...")
+sniff(filter=FILTER, prn=process_packet, store=0)
