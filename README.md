@@ -40,7 +40,7 @@ pip install -r requirements.txt
 
 ```bash
 python web_dashboard/app.py
-```
+
 Then open [http://localhost:5000](http://localhost:5000) in your browser.
 
 You can:
@@ -48,7 +48,7 @@ You can:
 - View real-time detection logs
 - Explore EDA visualizations
 - Check historical logs by date
-
+```
 ### 4. Folder Structure
 
 ```
