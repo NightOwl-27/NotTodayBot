@@ -1,5 +1,3 @@
-asdfasdfasdff
-
 # NotTodayBot - A Machine Learning Intrusion Prevention System (IPS)
 
 NotTodayBot is a real-time Intrusion Prevention System powered by machine learning. It detects and logs network threats using a voting ensemble of neural networks trained on the Kitsune Network Attack Dataset. The system combines live packet capture, feature extraction, anomaly detection, and a user-friendly Flask dashboard for monitoring.
