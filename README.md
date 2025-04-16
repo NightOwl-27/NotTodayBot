@@ -22,44 +22,49 @@ Each model in `models/` was trained on a specific attack from the Kitsune datase
 
 ### 1. Clone the repository
 
-Bash
+```bash
 git clone https://github.com/NightOwl-27/NotTodayBot.git
 cd NotTodayBot
-
+```
 
 ### 2. Setup Python Environment
 
+```bash
 python -m venv venv
-venv\Scripts\activate  # On Windows
+venv\Scripts\activate     # On Windows
 source venv/bin/activate  # On Mac/Linux
 pip install -r requirements.txt
-
+```
 
 ### 3. Run the Web Dashboard
 
+```bash
 python web_dashboard/app.py
+```
+Then open [http://localhost:5000](http://localhost:5000) in your browser.
 
-That launches the NotTodayBot dashbooard at http://localhost:5000. There you can:
-
-Toggle the live sniffer
-view real-time detection logs
-Explore EDA visualizations
-Check historical logs by date
+You can:
+- Toggle the live sniffer
+- View real-time detection logs
+- Explore EDA visualizations
+- Check historical logs by date
 
 ### 4. Folder Structure
 
+```
 NotTodayBot/
-├── web_dashboard/        # Flask dashboard UI and backend
-├── models/               # Trained Keras models + scalers
-├── pcap_files/           # Kitsune dataset attack traffic
-├── logs/                 # Live and historical detection logs
+├── web_dashboard/         # Flask dashboard UI and backend
+├── models/                # Trained Keras models + scalers
+├── pcap_files/            # Kitsune dataset attack traffic
+├── logs/                  # Live and historical detection logs
 │   ├── malicious_packets.log
 │   ├── malicious_packets_data.csv
 │   └── Live_Data.pcap
-├── my_feature_extractor/ # Real-time Kitsune-based extractor
-├── live_sniffer.py       # Live packet capture and detection
-├── simulate_from_pcap.py # Simulated packet replay from Kitsune
-└── simulate_from_real_pcap.py # Simulates detection using `Live_Data.pcap`
+├── my_feature_extractor/  # Real-time Kitsune-based feature extraction
+├── live_sniffer.py        # Live packet capture and classification
+├── simulate_from_pcap.py  # Simulated detection using Kitsune traffic
+└── simulate_from_real_pcap.py # Simulates detection using Live_Data.pcap
+```
 
 ### Disclaimer
 Due to differances between the kitsune dataset and real world pcap files live_sniffer.py
