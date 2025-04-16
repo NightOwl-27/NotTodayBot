@@ -1,0 +1,8 @@
+flask
+scapy
+numpy
+tensorflow
+joblib
+tqdm
+scikit-learn
+matplotlib
